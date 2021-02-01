@@ -1,11 +1,685 @@
-<!DOCTYPE html>
 <html lang="ko">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<!-- <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> -->
+		<meta
+			name="viewport"
+			content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+		/>
+		<meta name="title" content="" />
+		<meta name="description" content="" />
+		<meta name="kia-metrics-pagename" content="" />
+		<title>stinger</title>
+
+		<!-- style & font -->
+		<!-- 안드로이드 홈화면추가시 상단 주소창 제거 -->
+		<meta name="mobile-web-app-capable" content="yes" />
+		<link rel="icon" href="/img/pc/favicon.ico" />
+		<!-- ios홈화면추가시 상단 주소창 제거 -->
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<link rel="apple-touch-icon" href="/img/pc/favicon.ico" />
+
+		<link rel="stylesheet" href="css/font.css" />
+		<link rel="stylesheet" href="css/style.css" />
+
+		<script type="text/javascript" src="js/libs/jquery.min.js"></script>
+		<script type="text/javascript" src="js/libs/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="js/libs/imagesloaded.pkgd.js"></script>
+		<script type="text/javascript" src="js/libs/jquery.mousewheel.min.js"></script>
+		<script type="text/javascript" src="js/libs/bodyScrollLock.js"></script>
+		<script type="text/javascript" src="js/libs/hammer.min.js"></script>
+		<script type="text/javascript" src="js/libs/ScrollMagic.min.js"></script>
+		<script type="text/javascript" src="js/libs/TweenMax.min.js"></script>
+		<script type="text/javascript" src="js/libs/animation.gsap.js"></script>
+		<script type="text/javascript" src="js/libs/debug.addIndicators.min.js"></script>
+		<script type="text/javascript" src="js/stinger-microsite.js"></script>
 	</head>
 	<body>
-		<div>test</div>
+		<div id="ms-stinger" class="ms-stinger" role="main">
+			<div id="ms-container">
+				<div data-anchor-flag="home"></div>
+				<div class="ms-header pl320 pr48">
+					<div class="header-inner">
+						<button type="button" class="gnb-right" data-anchor-target="roadmovie">
+							<span>로드 무비</span>
+						</button>
+						<button type="button" class="gnb-right" data-anchor-target="familydrama">
+							<span>가족 드라마</span>
+						</button>
+						<button type="button" class="gnb-right" data-anchor-target="sportstar">
+							<span>스포츠 스타</span>
+						</button>
+						<h1 class="h1" data-anchor-target="home">
+							<img class="ms-pc" src="img/pc/ic-header-logo.png" alt="" />
+							<img class="ms-mo" src="img/mo/ic-header-logo.png" alt="" />
+						</h1>
+						<button type="button" class="gnb-menu">메뉴</button>
+					</div>
+				</div>
+
+				<div class="ms-progress"><div id="ms-progress-bar" class="ms-progress-bar"></div></div>
+
+				<div id="ms-wrap" class="ms-wrap">
+					<section class="ms-section ms-section1" data-section-idx="1" data-height="1">
+						<div id="parallax-trigger-section1-fadeout" class="parallax-trigger" style="top: 20%"></div>
+						<div class="ms-section-inner pl320 pr320">
+							<div class="section1-video-area">
+								<div class="ms-video-wrap">
+									<video class="ms-pc ms-video" autoplay muted loop playsinline>
+										<source src="img/pc/200825_KIA_Stinger_CF_Main_Web_v2.mp4" type="video/mp4" />
+									</video>
+									<video class="ms-mo ms-video" autoplay muted loop playsinline>
+										<source
+											src="img/mo/200825_KIA_Stinger_CF_Main_Mobile_v2.mp4#t=0.1"
+											type="video/mp4"
+										/>
+									</video>
+								</div>
+								<div class="ms-pc button-area">
+									<div class="button button-1" data-anchor-target="meisterof">
+										<div>
+											<strong><i>N</i><i>E</i><i>W</i></strong>
+											<span><i>특</i><i>징</i></span>
+											<em></em>
+										</div>
+									</div>
+									<a
+										class="button button-2"
+										href="https://www.kia.com/kr/shopping-tools/build-your-car/vehicle-lineup.trim.car=XCK.html"
+										target="_blank"
+									>
+										<span>간편 견적</span>
+									</a>
+									<a
+										class="button button-3"
+										href="https://www.kia.com/kr/experience-center/test-service/default.html"
+										target="_blank"
+									>
+										<span>시승 신청</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section class="ms-section ms-section2" data-section-idx="2" data-height="3">
+						<article class="ms-article ms-article1">
+							<div id="parallax-trigger-start-1" class="parallax-trigger" style="top: 25%"></div>
+							<div id="parallax-trigger-end-1" class="parallax-trigger" style="top: 100%"></div>
+							<div id="parallax-trigger-start-2" class="parallax-trigger" style="top: 45%"></div>
+							<div id="parallax-trigger-end-2" class="parallax-trigger" style="top: 100%"></div>
+							<div class="ms-article-inner">
+								<p class="text-1" id="parallax-target-1" style="display: none; opacity: 0">
+									있는 그대로의 당신이 가장 멋져요.
+								</p>
+								<p class="text-2" id="parallax-target-2" style="display: none; opacity: 0">
+									JUST THE WAY YOU ARE
+								</p>
+							</div>
+						</article>
+
+						<article class="ms-article ms-article2">
+							<div id="parallax-trigger-start-3" class="parallax-trigger" style="top: 25%"></div>
+							<div id="parallax-trigger-end-3" class="parallax-trigger" style="top: 75%"></div>
+							<div class="ms-article-inner">
+								<div
+									class="ms-article2-logo"
+									id="parallax-target-3"
+									style="display: none; opacity: 0"
+								></div>
+							</div>
+						</article>
+
+						<article class="ms-article ms-article3">
+							<div id="parallax-trigger-start-letter" class="parallax-trigger" style="top: 0%"></div>
+							<div id="parallax-trigger-end-letter" class="parallax-trigger" style="top: 50%"></div>
+							<div id="parallax-trigger-letter-scale" class="parallax-trigger" style="bottom: -30%"></div>
+							<div id="parallax-trigger-letter-fill" class="parallax-trigger" style="bottom: -50%"></div>
+							<div
+								id="parallax-trigger-start-section3-video"
+								class="parallax-trigger"
+								style="bottom: -30%"
+							></div>
+							<div class="ms-article-inner">
+								<div
+									class="letter-meister"
+									id="parallax-target-letter"
+									style="display: none; opacity: 0"
+								>
+									<img
+										class="letter letter-m"
+										id="parallax-letter-m"
+										src="img/pc/letter-meister-m.png"
+										alt="m"
+									/>
+									<img
+										class="letter letter-e"
+										id="parallax-letter-e"
+										src="img/pc/letter-meister-e.png"
+										alt="e"
+									/>
+									<img
+										class="letter letter-i"
+										id="parallax-letter-i"
+										src="img/pc/letter-meister-i.png"
+										alt="i"
+									/>
+									<img class="letter letter-s ms-mo" src="img/pc/letter-meister-s.png" alt="s" />
+									<div class="letter letter-s ms-pc">
+										<div class="svg-wrap" id="parallax-letter-s">
+											<svg
+												id="ms-svg"
+												xmlns="http://www.w3.org/2000/svg"
+												xmlns:xlink="http://www.w3.org/1999/xlink"
+												version="1.1"
+												viewBox="0 0 8043 6795"
+											>
+												<defs class="">
+													<mask id="s-mask">
+														<rect width="100%" height="100%" fill="#ffffff"></rect>
+														<g>
+															<path
+																d="M 5531.851562 1.125 C 5531.699219 1.351562 5518.425781 1.5 5502.300781 1.574219 C 5462.550781 1.800781 5380.800781 3.449219 5334.75 4.875 C 5203.800781 9.148438 5130.226562 12.449219 5028 18.75 C 3933.898438 86.398438 3082.425781 344.925781 2483.25 791.476562 C 2207.925781 996.675781 1987.050781 1239.601562 1818.375 1522.5 C 1762.875 1615.574219 1710.824219 1717.875 1667.625 1818.375 C 1633.574219 1897.800781 1605.824219 1971.898438 1591.199219 2022.375 C 1558.800781 2134.425781 1543.800781 2245.425781 1545.226562 2361 C 1545.898438 2413.648438 1548.824219 2453.550781 1555.574219 2500.050781 C 1559.476562 2527.125 1566.898438 2564.773438 1568.699219 2566.5 C 1569.074219 2566.875 2234.101562 2979.898438 3046.5 3484.425781 C 3858.898438 3988.949219 4523.925781 4402.199219 4524.300781 4402.726562 C 4524.675781 4403.398438 4488.226562 4497.375 4417.351562 4678.199219 C 4358.175781 4829.101562 4305.976562 4963.351562 4301.324219 4976.476562 C 4227.375 5186.25 4152.75 5339.175781 4063.273438 5464.425781 C 3934.351562 5644.875 3768.675781 5773.648438 3548.625 5864.25 C 3299.324219 5967 2968.726562 6022.949219 2547.375 6033.75 C 2530.5 6034.125 2512.574219 6034.726562 2507.625 6034.949219 C 2502.675781 6035.175781 1984.800781 6035.625 1356.898438 6035.851562 L 215.101562 6036.375 L 108 6340.125 C 49.050781 6507.148438 0.898438 6643.875 0.976562 6643.949219 C 1.050781 6643.949219 89.550781 6648.976562 197.625 6655.050781 C 305.699219 6661.125 508.050781 6672.449219 647.25 6680.25 C 786.449219 6688.125 1023.375 6701.398438 1173.75 6709.875 C 1324.125 6718.351562 1591.425781 6733.351562 1767.75 6743.25 C 1944.074219 6753.148438 2223.523438 6768.898438 2388.75 6778.199219 L 2689.125 6795.074219 L 2798.25 6794.699219 C 2858.25 6794.550781 2921.25 6794.023438 2938.125 6793.574219 C 3075.898438 6790.050781 3152.25 6787.273438 3249.75 6782.25 C 4181.625 6733.949219 4921.125 6558.074219 5484 6250.875 C 5748.75 6106.351562 5976.074219 5931 6163.5 5726.625 C 6358.726562 5513.851562 6511.5 5271.074219 6628.5 4987.875 C 6632.023438 4979.324219 6647.101562 4936.875 6663.449219 4889.25 C 6679.199219 4843.273438 6694.199219 4799.773438 6696.75 4792.574219 C 6724.5 4713.226562 6741 4619.101562 6745.5 4514.25 C 6746.324219 4494.824219 6745.875 4416.375 6744.824219 4398 C 6738.449219 4285.574219 6723.523438 4184.773438 6698.851562 4087.5 C 6695.175781 4072.875 6691.949219 4060.199219 6691.726562 4059.375 C 6691.5 4058.324219 6645.675781 4029.375 6541.273438 3964.425781 C 6458.699219 3912.976562 6225.074219 3767.550781 6022.125 3641.25 C 5819.175781 3514.875 5554.050781 3349.875 5433 3274.5 C 5311.949219 3199.125 5094.226562 3063.601562 4949.25 2973.375 C 4500.976562 2694.300781 4079.023438 2431.648438 3956.851562 2355.601562 C 3892.574219 2315.550781 3840 2282.625 3840 2282.324219 C 3840 2280.898438 3986.550781 1874.550781 3993.449219 1856.625 C 4086.449219 1617.523438 4182.976562 1445.324219 4301.699219 1306.875 C 4339.726562 1262.476562 4386.226562 1215.898438 4430.625 1177.875 C 4526.324219 1095.675781 4639.425781 1026.675781 4770 970.726562 C 5029.800781 859.351562 5373.675781 794.625 5827.125 771.75 C 5905.050781 767.851562 5995.574219 764.773438 6063 763.875 C 6080.101562 763.574219 6095.476562 763.199219 6097.125 762.976562 C 6098.773438 762.75 6492.824219 762.375 6972.824219 762.226562 L 7845.523438 761.925781 L 7944.226562 463.273438 C 7998.601562 299.023438 8043 164.175781 8043 163.648438 C 8043 163.199219 8042.324219 162.75 8041.5 162.75 C 8040.601562 162.75 7488.601562 126.300781 6814.726562 81.75 L 5589.449219 0.75 L 5560.800781 0.75 C 5545.050781 0.824219 5532.074219 0.976562 5531.851562 1.125 Z M 5531.851562 1.125 "
+															/>
+														</g>
+													</mask>
+												</defs>
+												<rect
+													width="100%"
+													height="100%"
+													fill="#ffffff"
+													style="mask: url('#s-mask')"
+												></rect>
+												<g
+													id="parallax-letter-s--g"
+													enable-background="new"
+													style="fill: rgba(0, 0, 0, 1)"
+												>
+													<g>
+														<path
+															d="M 5531.851562 1.125 C 5531.699219 1.351562 5518.425781 1.5 5502.300781 1.574219 C 5462.550781 1.800781 5380.800781 3.449219 5334.75 4.875 C 5203.800781 9.148438 5130.226562 12.449219 5028 18.75 C 3933.898438 86.398438 3082.425781 344.925781 2483.25 791.476562 C 2207.925781 996.675781 1987.050781 1239.601562 1818.375 1522.5 C 1762.875 1615.574219 1710.824219 1717.875 1667.625 1818.375 C 1633.574219 1897.800781 1605.824219 1971.898438 1591.199219 2022.375 C 1558.800781 2134.425781 1543.800781 2245.425781 1545.226562 2361 C 1545.898438 2413.648438 1548.824219 2453.550781 1555.574219 2500.050781 C 1559.476562 2527.125 1566.898438 2564.773438 1568.699219 2566.5 C 1569.074219 2566.875 2234.101562 2979.898438 3046.5 3484.425781 C 3858.898438 3988.949219 4523.925781 4402.199219 4524.300781 4402.726562 C 4524.675781 4403.398438 4488.226562 4497.375 4417.351562 4678.199219 C 4358.175781 4829.101562 4305.976562 4963.351562 4301.324219 4976.476562 C 4227.375 5186.25 4152.75 5339.175781 4063.273438 5464.425781 C 3934.351562 5644.875 3768.675781 5773.648438 3548.625 5864.25 C 3299.324219 5967 2968.726562 6022.949219 2547.375 6033.75 C 2530.5 6034.125 2512.574219 6034.726562 2507.625 6034.949219 C 2502.675781 6035.175781 1984.800781 6035.625 1356.898438 6035.851562 L 215.101562 6036.375 L 108 6340.125 C 49.050781 6507.148438 0.898438 6643.875 0.976562 6643.949219 C 1.050781 6643.949219 89.550781 6648.976562 197.625 6655.050781 C 305.699219 6661.125 508.050781 6672.449219 647.25 6680.25 C 786.449219 6688.125 1023.375 6701.398438 1173.75 6709.875 C 1324.125 6718.351562 1591.425781 6733.351562 1767.75 6743.25 C 1944.074219 6753.148438 2223.523438 6768.898438 2388.75 6778.199219 L 2689.125 6795.074219 L 2798.25 6794.699219 C 2858.25 6794.550781 2921.25 6794.023438 2938.125 6793.574219 C 3075.898438 6790.050781 3152.25 6787.273438 3249.75 6782.25 C 4181.625 6733.949219 4921.125 6558.074219 5484 6250.875 C 5748.75 6106.351562 5976.074219 5931 6163.5 5726.625 C 6358.726562 5513.851562 6511.5 5271.074219 6628.5 4987.875 C 6632.023438 4979.324219 6647.101562 4936.875 6663.449219 4889.25 C 6679.199219 4843.273438 6694.199219 4799.773438 6696.75 4792.574219 C 6724.5 4713.226562 6741 4619.101562 6745.5 4514.25 C 6746.324219 4494.824219 6745.875 4416.375 6744.824219 4398 C 6738.449219 4285.574219 6723.523438 4184.773438 6698.851562 4087.5 C 6695.175781 4072.875 6691.949219 4060.199219 6691.726562 4059.375 C 6691.5 4058.324219 6645.675781 4029.375 6541.273438 3964.425781 C 6458.699219 3912.976562 6225.074219 3767.550781 6022.125 3641.25 C 5819.175781 3514.875 5554.050781 3349.875 5433 3274.5 C 5311.949219 3199.125 5094.226562 3063.601562 4949.25 2973.375 C 4500.976562 2694.300781 4079.023438 2431.648438 3956.851562 2355.601562 C 3892.574219 2315.550781 3840 2282.625 3840 2282.324219 C 3840 2280.898438 3986.550781 1874.550781 3993.449219 1856.625 C 4086.449219 1617.523438 4182.976562 1445.324219 4301.699219 1306.875 C 4339.726562 1262.476562 4386.226562 1215.898438 4430.625 1177.875 C 4526.324219 1095.675781 4639.425781 1026.675781 4770 970.726562 C 5029.800781 859.351562 5373.675781 794.625 5827.125 771.75 C 5905.050781 767.851562 5995.574219 764.773438 6063 763.875 C 6080.101562 763.574219 6095.476562 763.199219 6097.125 762.976562 C 6098.773438 762.75 6492.824219 762.375 6972.824219 762.226562 L 7845.523438 761.925781 L 7944.226562 463.273438 C 7998.601562 299.023438 8043 164.175781 8043 163.648438 C 8043 163.199219 8042.324219 162.75 8041.5 162.75 C 8040.601562 162.75 7488.601562 126.300781 6814.726562 81.75 L 5589.449219 0.75 L 5560.800781 0.75 C 5545.050781 0.824219 5532.074219 0.976562 5531.851562 1.125 Z M 5531.851562 1.125 "
+														/>
+													</g>
+												</g>
+											</svg>
+											<div class="ms-pc svg-bg svg-bg-top"></div>
+											<div class="ms-pc svg-bg svg-bg-right"></div>
+											<div class="ms-pc svg-bg svg-bg-bottom"></div>
+											<div class="ms-pc svg-bg svg-bg-left"></div>
+										</div>
+									</div>
+									<img
+										class="letter letter-t"
+										id="parallax-letter-t"
+										src="img/pc/letter-meister-t.png"
+										alt="t"
+									/>
+									<img
+										class="letter letter-e2"
+										id="parallax-letter-e2"
+										src="img/pc/letter-meister-e.png"
+										alt="e"
+									/>
+									<img
+										class="letter letter-r"
+										id="parallax-letter-r"
+										src="img/pc/letter-meister-r.png"
+										alt="r"
+									/>
+								</div>
+								<canvas id="ms-canvas" style="background-color: #fff; visibility: hidden"></canvas>
+							</div>
+						</article>
+
+						<button class="scroll-content">
+							<img class="ms-pc scroll-content--mouse" src="img/pc/ic-scroll.png" alt="" />
+							<img class="ms-pc scroll-content--wheel" src="img/pc/ic-scroll-ball.png" alt="" />
+							<img class="ms-mo scroll-content--mouse" src="img/mo/ic-scroll-wh.png" alt="" />
+							<img class="ms-mo scroll-content--wheel" src="img/mo/ic-scroll-wh-ball.png" alt="" />
+						</button>
+
+						<div class="ms-mo button-area">
+							<div class="button button-1" data-anchor-target="meisterof">
+								<div><span>새로운 특징</span></div>
+							</div>
+							<a
+								class="button button-2"
+								href="https://www.kia.com/kr/shopping-tools/build-your-car/vehicle-lineup.trim.car=XCK.html"
+								target="_blank"
+							>
+								<span>간편 견적</span>
+							</a>
+							<a
+								class="button button-3"
+								href="https://www.kia.com/kr/experience-center/test-service/default.html"
+								target="_blank"
+							>
+								<span>시승 신청</span>
+							</a>
+						</div>
+					</section>
+
+					<section class="ms-section ms-section3" data-section-idx="3" data-height="6">
+						<div data-anchor-flag="tvc" style="position: absolute; top: 75.2%"></div>
+						<div
+							id="parallax-trigger-start-section3-text"
+							class="parallax-trigger"
+							style="top: 33.714285%"
+						></div>
+						<div
+							id="parallax-trigger-start-section3-text-eng"
+							class="parallax-trigger"
+							style="top: 45%"
+						></div>
+						<div
+							id="parallax-trigger-start-section3-text-line"
+							class="parallax-trigger"
+							style="top: 49%"
+						></div>
+						<div id="parallax-trigger-end-section3-video" class="parallax-trigger" style="bottom: 0%"></div>
+						<div
+							id="parallax-trigger-end-section3-text-2-appear"
+							class="parallax-trigger"
+							style="top: 62%"
+						></div>
+						<div
+							id="parallax-trigger-end-section3-text-2-fixed"
+							class="parallax-trigger"
+							style="top: 71.2%"
+						></div>
+						<div
+							id="parallax-trigger-start-section3-tvc-show"
+							class="parallax-trigger"
+							style="top: 61.2%"
+						></div>
+						<div
+							id="parallax-trigger-start-section3-tvc-appear"
+							class="parallax-trigger"
+							style="top: 80%"
+						></div>
+						<div class="ms-video-wrap" style="display: none">
+							<video class="ms-pc ms-video" autoplay muted loop playsinline>
+								<source src="img/pc/200825_KIA_Stinger_CF_BG_Web_v2.mp4" type="video/mp4" />
+							</video>
+							<video class="ms-mo ms-video" autoplay muted loop playsinline>
+								<source src="img/mo/200825_KIA_Stinger_CF_BG_Mobile_v2.mp4#t=0.1" type="video/mp4" />
+							</video>
+						</div>
+						<div class="ms-section-inner pl320 pr320" style="top: 38.285715%; height: 14.2857143%">
+							<p class="parallax-section3-text-1-row">
+								<span>치열한&nbsp;</span><span>삶&nbsp;</span><span>속에서도</span>
+							</p>
+							<p class="parallax-section3-text-1-row">
+								<span>끝없는&nbsp;</span><span>도전&nbsp;</span><span>앞에서도</span>
+							</p>
+							<p class="parallax-section3-text-1-row">
+								<span>여유를&nbsp;</span><span>잃지않는&nbsp;</span><span>당신</span>
+							</p>
+							<p class="parallax-section3-text-1-row"><span>지금,</span></p>
+							<p class="parallax-section3-text-1-row">
+								<span>그대로의&nbsp;</span><span>당신이&nbsp;</span><span>좋아요.</span>
+							</p>
+							<p class="parallax-section3-text-1-eng line">
+								<span>JUST&nbsp;</span><span>THE&nbsp;</span><span>WAY&nbsp;</span><span>YOU&nbsp;</span
+								><span>ARE</span><em class="ms-line"></em>
+							</p>
+
+							<p class="parallax-section3-text-2">
+								<i class="ms-pc"
+									>그대로의 당신은 어떤 모습인가요?<br />스팅어 마이스터와 함께 가장 빛나는 지금의
+									당신을 찾아보세요</i
+								>
+								<i class="ms-mo">
+									<span>그대로의&nbsp;</span><span>당신은&nbsp;</span><span>어떤&nbsp;</span
+									><span>모습인가요?</span><br /><span>스팅어&nbsp;</span><span>마이스터와&nbsp;</span
+									><span>함께</span><br /><span>가장&nbsp;</span><span>빛나는&nbsp;</span
+									><span>지금의&nbsp;</span><span>당신을&nbsp;</span><span>찾아보세요</span>
+								</i>
+							</p>
+
+							<div class="tvc-wrap">
+								<div class="tvc-item tvc-item-1" data-number="1">
+									<div class="ms-video-wrap">
+										<video class="ms-pc ms-video grayscale-img" muted loop playsinline>
+											<source
+												src="img/pc/200825_KIA_Stinger_CF_Travel_Web_v2.mp4"
+												type="video/mp4"
+											/>
+										</video>
+										<video class="ms-mo ms-video grayscale-img" muted loop playsinline>
+											<source
+												src="img/mo/200825_KIA_Stinger_CF_Travel_Mobile_v2.mp4#t=0.1"
+												type="video/mp4"
+											/>
+										</video>
+										<img class="ms-pc ic-play" src="img/pc/ic-play.png" />
+									</div>
+									<span class="ms-pc tvc-item-number">1</span>
+									<span class="ms-mo tvc-item-number">1</span>
+									<span class="tvc-item-subject">로드 무비</span>
+									<span class="tvc-item-title">바람처럼 자유로운 당신</span>
+								</div>
+								<div class="tvc-item tvc-item-2" data-number="2">
+									<div class="ms-video-wrap">
+										<video class="ms-pc ms-video grayscale-img" muted loop playsinline>
+											<source
+												src="img/pc/200825_KIA_Stinger_CF_Family_Web_v2.mp4"
+												type="video/mp4"
+											/>
+										</video>
+										<video class="ms-mo ms-video grayscale-img" muted loop playsinline>
+											<source
+												src="img/mo/200825_KIA_Stinger_CF_Family_Mobile_v2.mp4#t=0.1"
+												type="video/mp4"
+											/>
+										</video>
+										<img class="ms-pc ic-play" src="img/pc/ic-play.png" />
+									</div>
+									<span class="ms-pc tvc-item-number">2</span>
+									<span class="ms-mo tvc-item-number">2</span>
+									<span class="tvc-item-subject">가족 드라마</span>
+									<span class="tvc-item-title">바보타이틀만 세 개인 당신</span>
+								</div>
+								<div class="tvc-item tvc-item-3" data-number="3">
+									<div class="ms-video-wrap">
+										<video class="ms-pc ms-video grayscale-img" muted loop playsinline>
+											<source
+												src="img/pc/200825_KIA_Stinger_CF_Sport_star_Web_v2.mp4"
+												type="video/mp4"
+											/>
+										</video>
+										<video class="ms-mo ms-video grayscale-img" muted loop playsinline>
+											<source
+												src="img/mo/200825_KIA_Stinger_CF_Sport_star_Mobile_v2.mp4#t=0.1"
+												type="video/mp4"
+											/>
+										</video>
+										<img class="ms-pc ic-play" src="img/pc/ic-play.png" />
+									</div>
+									<span class="ms-pc tvc-item-number">3</span>
+									<span class="ms-mo tvc-item-number">3</span>
+									<span class="tvc-item-subject">스포츠 스타</span>
+									<span class="tvc-item-title">꿈을 향해 달리는 당신</span>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section class="ms-section ms-section4" data-section-idx="4" data-height="1">
+						<div data-anchor-flag="meisterof" style="position: absolute; top: 0"></div>
+						<div class="ms-section-inner pl240 pr240">
+							<div class="page-section">
+								<div class="page-section-title">
+									<p class="page-section-title-1">FEATURES</p>
+									<span class="page-section-title-line"></span>
+									<p class="page-section-title-2">MEISTER OF</p>
+								</div>
+								<article class="article">
+									<div class="usp-item usp-item-1" data-number="1">
+										<div class="usp-text-area">
+											<p class="usp-item-title">DAILY <br class="ms-mo" />PERFORMANCE</p>
+											<p class="usp-item-title-eng">
+												진화된 퍼포먼스가 선사하는 <br class="ms-mo" />드라이빙 경험
+											</p>
+											<span class="usp-item-number">1</span>
+										</div>
+										<div class="usp-banner">
+											<img class="ms-pc" src="img/pc/usp-banner-1.png" alt="" />
+											<img class="ms-mo" src="img/mo/usp-banner-1.png" alt="" />
+										</div>
+									</div>
+									<div class="usp-item usp-item-2" data-number="2">
+										<div class="usp-text-area">
+											<p class="usp-item-title">DYNAMIC <br class="ms-mo" />DESIGN</p>
+											<p class="usp-item-title-eng">
+												정교한 조형미로 완성된 <br class="ms-mo" />다이나믹 디자인
+											</p>
+											<span class="usp-item-number">2</span>
+										</div>
+										<div class="usp-banner">
+											<img class="ms-pc" src="img/pc/usp-banner-2.png" alt="" />
+											<img class="ms-mo" src="img/mo/usp-banner-2.png" alt="" />
+										</div>
+									</div>
+									<div class="usp-item usp-item-3" data-number="3">
+										<div class="usp-text-area">
+											<p class="usp-item-title">PREMIUM <br class="ms-mo" />INTERIOR</p>
+											<p class="usp-item-title-eng">완벽에 가까운 인테리어 디테일</p>
+											<span class="usp-item-number">3</span>
+										</div>
+										<div class="usp-banner">
+											<img class="ms-pc" src="img/pc/usp-banner-3.png" alt="" />
+											<img class="ms-mo" src="img/mo/usp-banner-3.png" alt="" />
+										</div>
+									</div>
+									<div class="usp-item usp-item-4" data-number="4">
+										<div class="usp-text-area">
+											<p class="usp-item-title">SAFE<br />CONVENIENCE</p>
+											<p class="usp-item-title-eng">첨단 ADAS로 강화된 주행 안전</p>
+											<span class="usp-item-number">4</span>
+										</div>
+										<div class="usp-banner">
+											<img class="ms-pc" src="img/pc/usp-banner-4.png" alt="" />
+											<img class="ms-mo" src="img/mo/usp-banner-4.png" alt="" />
+										</div>
+									</div>
+								</article>
+							</div>
+						</div>
+					</section>
+
+					<section class="ms-section ms-section5" data-section-idx="5" data-height="1">
+						<div data-anchor-flag="meistersedan" style="position: absolute; top: 0"></div>
+						<div class="ms-section-inner pl240 pr240">
+							<div class="page-section">
+								<div class="page-section-title">
+									<p class="page-section-title-1">MEISTER STORY</p>
+									<span class="page-section-title-line"></span>
+									<p class="page-section-title-2">마이스터의 세단</p>
+								</div>
+								<article class="article">
+									<p class="article-title-1">스팅어 x REAL 마이스터</p>
+									<p class="article-title-2">
+										자신의 분야에서 정상에 오른 마이스터들, <br class="ms-mo" />그들은 스팅어
+										마이스터를 이렇게 이야기합니다
+									</p>
+									<div class="meister-area">
+										<div class="meister-item meister-item-1" data-number="1">
+											<img class="ms-pc banner" src="img/pc/meister-banner-1.png" alt="" />
+											<div class="text-wrap">
+												<p class="job">Billiards</p>
+												<img class="ms-pc logo" src="img/pc/logo-white.png" alt="" />
+												<img class="ms-mo logo" src="img/mo/logo-white.png" alt="" />
+												<p class="name"><span>조</span><span>재</span><span>호</span></p>
+												<ul>
+													<li>당구도 300이상부터</li>
+													<li>차도 304마력부터</li>
+													<li>격이 다른 거죠</li>
+												</ul>
+											</div>
+										</div>
+										<div class="meister-item meister-item-2" data-number="2">
+											<img class="ms-pc banner" src="img/pc/meister-banner-2.png" alt="" />
+											<div class="text-wrap">
+												<p class="job">Barista</p>
+												<img class="ms-pc logo" src="img/pc/logo-white.png" alt="" />
+												<img class="ms-mo logo" src="img/mo/logo-white.png" alt="" />
+												<p class="name"><span>전</span><span>주</span><span>연</span></p>
+												<ul>
+													<li>로스팅이 잘 된 원두를</li>
+													<li>상상하게 하는</li>
+													<li>컬러와 촉감</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</article>
+							</div>
+						</div>
+						<div class="section5-footer">
+							<div class="relative">
+								<img class="ms-pc" src="img/pc/section5-footer-text.png" alt="" />
+								<img class="ms-mo" src="img/mo/section5-footer-text.png" alt="" />
+								<a href="https://www.youtube.com/watch?v=AmcOcmpziAU" target="_blank"></a>
+							</div>
+						</div>
+					</section>
+
+					<section id="youtube-popup" class="section-popup pl240 pr240" style="display: none">
+						<div class="popup-inner">
+							<button type="button" class="close-popup">
+								<img class="ms-pc" src="img/pc/ic-popup-close.png" alt="" />
+								<img class="ms-mo" src="img/mo/ic-popup-close-wh.png" alt="" />
+							</button>
+							<div class="iframe-wrap">
+								<iframe
+									id="tvc_ytplayer"
+									width="787"
+									height="444"
+									src=""
+									frameborder="0"
+									allowfullscreen
+									allow="autoplay"
+								></iframe>
+							</div>
+						</div>
+					</section>
+
+					<section id="usp-popup" class="section-popup pl240 pr240" style="display: none">
+						<div class="popup-inner">
+							<button type="button" class="close-popup">
+								<img class="ms-pc" src="img/pc/ic-popup-close.png" alt="" />
+								<img class="ms-mo" src="img/mo/ic-popup-close-wh.png" alt="" />
+							</button>
+							<div class="usp-img-wrap">
+								<img src="" alt="" style="display: none" />
+							</div>
+						</div>
+					</section>
+
+					<section id="sales-popup" class="section-popup pl240 pr240">
+						<ul>
+							<li>
+								<a
+									href="https://www.kia.com/kr/shopping-tools/build-your-car/vehicle-lineup.trim.car=XCK.html"
+									target="_blank"
+									title="간편 견적"
+								>
+									<p class="txt1">간편 견적</p>
+									<p class="txt2">ESTIMATE</p>
+								</a>
+							</li>
+							<li>
+								<a
+									href="https://www.kia.com/kr/experience-center/test-service/default.html"
+									target="_blank"
+									title="시승 신청"
+								>
+									<p class="txt1">시승 신청</p>
+									<p class="txt2">TEST-DRIVE</p>
+								</a>
+							</li>
+							<li>
+								<a
+									href="https://www.kia.com/content/dam/kwcms/kr/ko/files/XCK/catalog/catalog_stingermeister.pdf"
+									target="_blank"
+									title="카탈로그"
+								>
+									<p class="txt1">카탈로그</p>
+									<p class="txt2">CATALOGUE</p>
+								</a>
+							</li>
+							<li>
+								<a
+									href="https://www.kia.com/content/dam/kwcms/kr/ko/files/XCK/price/price_stingermeister.pdf"
+									target="_blank"
+									title="가격표"
+								>
+									<p class="txt1">가격표</p>
+									<p class="txt2">PRICE</p>
+								</a>
+							</li>
+							<button type="button" class="btn-go-top" data-anchor-target="home"></button>
+						</ul>
+					</section>
+
+					<div id="popup-bg" style="display: none"></div>
+					<section id="menu-popup" class="menu-popup pl320">
+						<button type="button" class="close-popup">
+							<img class="ms-pc" src="img/pc/ic-popup-close-bk.png" alt="" />
+							<img class="ms-mo" src="img/mo/ic-popup-close.png" alt="" />
+						</button>
+						<div class="anchor-wrap">
+							<dl>
+								<dt>TVC</dt>
+								<dd>
+									<button type="button" data-anchor-target="roadmovie"><span>로드 무비</span></button>
+								</dd>
+								<dd>
+									<button type="button" data-anchor-target="familydrama">
+										<span>가족 드라마</span>
+									</button>
+								</dd>
+								<dd>
+									<button type="button" data-anchor-target="sportstar">
+										<span>스포츠 스타</span>
+									</button>
+								</dd>
+							</dl>
+							<dl>
+								<dt>FEATURES</dt>
+								<dd>
+									<button type="button" data-anchor-target="meisterof"><span>MEISTER OF</span></button
+									><em class="ms-line"></em>
+								</dd>
+							</dl>
+							<dl>
+								<dt>MEISTER STORY</dt>
+								<dd>
+									<button type="button" data-anchor-target="meistersedan">
+										<span>마이스터의 세단</span>
+									</button>
+								</dd>
+							</dl>
+						</div>
+						<ul class="link-wrap">
+							<li>
+								<a
+									href="https://www.kia.com/kr/shopping-tools/build-your-car/vehicle-lineup.trim.car=XCK.html"
+									target="_blank"
+									>간편 견적</a
+								>
+							</li>
+							<li>
+								<a
+									href="https://www.kia.com/kr/experience-center/test-service/default.html"
+									target="_blank"
+									>시승 신청</a
+								>
+							</li>
+						</ul>
+					</section>
+				</div>
+
+				<div class="ms-footer ms-pc pl320 pr320">
+					<button type="button" class="bottombar-button-1" data-anchor-target="meisterof">
+						<img src="img/pc/bottombar-button-1.png" alt="" />
+					</button>
+					<a
+						href="https://www.kia.com/kr/shopping-tools/build-your-car/vehicle-lineup.trim.car=XCK.html"
+						target="_blank"
+						class="bottombar-button-2"
+						><img src="img/pc/bottombar-button-2.png" alt=""
+					/></a>
+					<a
+						href="https://www.kia.com/kr/experience-center/test-service/default.html"
+						target="_blank"
+						class="bottombar-button-3"
+						><img src="img/pc/bottombar-button-3.png" alt=""
+					/></a>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>

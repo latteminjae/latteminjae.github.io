@@ -1,0 +1,88 @@
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Noto Sans KR Thin'),
+  url('//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff2') format('woff2'),
+  url('//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff') format('woff'),
+  url('//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Noto Sans KR Light'),
+  url('//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff2') format('woff2'),
+  url('//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff') format('woff'),
+  url('//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Noto Sans KR Regular'),
+  url('//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2') format('woff2'),
+  url('//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff') format('woff'),
+  url('//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Access';
+  src: url('../font/Access-Bold.eot');
+  src: url('../font/Access-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../font/Access-Bold.woff2') format('woff2'),
+      url('../font/Access-Bold.woff') format('woff'),
+      url('../font/Access-Bold.ttf') format('truetype'),
+      url('../font/Access-Bold.svg#Access-Bold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Access';
+  src: url('../font/Access-ExtraBold.eot');
+  src: url('../font/Access-ExtraBold.eot?#iefix') format('embedded-opentype'),
+      url('../font/Access-ExtraBold.woff2') format('woff2'),
+      url('../font/Access-ExtraBold.woff') format('woff'),
+      url('../font/Access-ExtraBold.ttf') format('truetype'),
+      url('../font/Access-ExtraBold.svg#Access-ExtraBold') format('svg');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Access';
+  src: url('../font/Access-Regular.eot');
+  src: url('../font/Access-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../font/Access-Regular.woff2') format('woff2'),
+      url('../font/Access-Regular.woff') format('woff'),
+      url('../font/Access-Regular.ttf') format('truetype'),
+      url('../font/Access-Regular.svg#Access-Regular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Access';
+  src: url('../font/Access-Light.eot');
+  src: url('../font/Access-Light.eot?#iefix') format('embedded-opentype'),
+      url('../font/Access-Light.woff2') format('woff2'),
+      url('../font/Access-Light.woff') format('woff'),
+      url('../font/Access-Light.ttf') format('truetype'),
+      url('../font/Access-Light.svg#Access-Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+/* 
+@font-face {
+  font-family: 'Access Distorted';
+  src: url('../font/Access-Distorted.eot');
+  src: url('../font/Access-Distorted.eot?#iefix') format('embedded-opentype'),
+      url('../font/Access-Distorted.woff2') format('woff2'),
+      url('../font/Access-Distorted.woff') format('woff'),
+      url('../font/Access-Distorted.ttf') format('truetype'),
+      url('../font/Access-Distorted.svg#Access-Distorted') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+ */
