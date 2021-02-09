@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+		/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="title" content="" />
+		<meta name="description" content="" />
+		<meta name="kia-metrics-pagename" content="" />
+
+		<!-- title 수정 -->
+		<title>title</title>
+
+		<!-- 안드로이드 홈화면추가시 상단 주소창 제거 -->
+		<meta name="mobile-web-app-capable" content="yes" />
+		<!-- <link rel="icon" href="/img/pc/favicon.ico" /> -->
+		<!-- ios홈화면추가시 상단 주소창 제거 -->
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<!-- <link rel="apple-touch-icon" href="/img/pc/favicon.ico" /> -->
+
+		<!-- font, css -->
+		<link rel="stylesheet" href="./css/font.css" />
+		<link rel="stylesheet" href="./css/index.css" />
+		<link rel="stylesheet" href="./css/lib.css" />
+	</head>
+	<body>
+		<!-- TODO img alt 채우기 -->
+		<!-- TODO 숫자만 있는건 모두 이미지로 들어갈 것. 기아폰트가 못겨겨서 그럼 -->
+
+		<div id="content" class="k8-section-wrap" role="main">
+			<section class="ms-section0 hide">
+				<div class="center-wrap">
+					<div class="logo mb55">
+						<img src="./static/img/section0-logo.png" alt="kia logo" />
+					</div>
+					<div class="p-box">
+						<p class="fs52 mb30 m-fs38">The Secret Number of K</p>
+						<p class="fs20 m-fs16">K의 새로운 넘버를 소개합니다</p>
+					</div>
+				</div>
+				<div class="bg-wrap">
+					<!-- TODO 영상추가예정 임시이미지로 대체-->
+					<img src="./static/img/section0-sampleImg.jpg" style="width: 100%; height: 100%" alt="" />
+				</div>
+			</section>
+			<section class="ms-section1 hide">
+				<div class="center-wrap">
+					<!-- TODO section0영상 끝나고 아래서부터 올라오기 -->
+					<div class="box-tb top-box">
+						<button class="m-fs15">BACK</button>
+						<span class="line ms-pc"></span>
+					</div>
+					<div class="box-tb bottom-box">
+						<span class="line ms-pc"></span>
+						<button class="m-fs15">
+							SKIP
+							<!-- FIXME 디자인과 다름. font-weight: 400 -> 700. 
+                                reason: 회색이라 너무 폰트가 얇게보여서 임의수정. -->
+						</button>
+					</div>
+
+					<div class="p-box">
+						<p class="fs40 m-fs30">K의 새로운 넘버는 어떤 숫자일까요?</p>
+						<p class="fs16 m-fs16">아래에서 연상되는 숫자를 입력해보세요</p>
+					</div>
+
+					<div class="num-wrap">
+						<div class="input-box">
+							<ul class="fs90 m-fs55">
+								<li><span>3</span></li>
+								<li class="bar"></li>
+								<li><span>5</span></li>
+								<li class="bar"></li>
+								<li><span>?</span></li>
+								<li class="bar"></li>
+								<li><span>9</span></li>
+							</ul>
+						</div>
+						<div class="num-pad">
+							<ul class="fs24 m-fs22">
+								<li>
+									<button>1</button>
+									<span></span>
+								</li>
+								<li>
+									<button>2</button>
+									<span></span>
+								</li>
+								<li>
+									<button>3</button>
+									<span></span>
+								</li>
+								<li>
+									<button>4</button>
+									<span></span>
+								</li>
+								<li>
+									<button>5</button>
+									<span></span>
+								</li>
+								<li>
+									<button>6</button>
+									<span></span>
+								</li>
+								<li>
+									<button>7</button>
+									<span></span>
+								</li>
+								<li>
+									<button>8</button>
+									<span></span>
+								</li>
+								<li>
+									<button>9</button>
+									<span></span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="bg-wrap">
+					<div class="ms-mo">
+						<img src="./static/img/section1-m-bg-layer1.png" alt="" />
+						<img src="./static/img/section1-m-bg-layer2.png" alt="" />
+					</div>
+					<img class="ms-pc" src="./static/img/section1-bg-layer1.png" alt="" />
+					<img class="ms-pc" src="./static/img/section1-bg-layer2.png" alt="" />
+					<img class="ms-pc" src="./static/img/section1-bg-layer3.png" alt="" />
+					<img class="ms-pc" src="./static/img/section1-bg-layer4.png" alt="" />
+					<img class="ms-pc" src="./static/img/section1-bg-layer5.png" alt="" />
+					<img class="ms-pc" src="./static/img/section1-bg-layer6.png" alt="" />
+				</div>
+			</section>
+			<section class="ms-section2 hide">
+				<div class="center-wrap">
+					<button class="top-left m-fs15">
+						<img src="./static/img/icon_close.png" alt="" />
+						CLOSE
+					</button>
+
+					<button class="bottom-right">
+						MUTE
+						<span class="icon-mute"></span>
+					</button>
+
+					<!-- TODO 그냥 section2 열때 youtube api로 매번 영상 붙이자  -->
+					<div class="iframe-wrap">
+						<div id="iframe-div"></div>
+						<!-- TODO 유튜브 sound만 컨트롤 가능한지? api찾기 -->
+					</div>
+				</div>
+			</section>
+			<section class="ms-section3">
+				<div class="center-wrap full">
+					<div class="timer-wrap">
+						<p class="fs70 m-fs58">
+							<span>22</span>
+							<span>32</span>
+							<span>00</span>
+							<span>01</span>
+						</p>
+						<p class="fs14 m-fs12">
+							<span>DAY</span>
+							<span>HOURS</span>
+							<span>MINUTES</span>
+							<span>SECONDS</span>
+						</p>
+					</div>
+					<div class="p-box">
+						<p class="fs16">2021년 3월 10일, K8이 공개됩니다.</p>
+					</div>
+					<ul class="owl-carousel">
+						<li>
+							<img style="width: 120px" src="./static/img/sample.jpg" alt="" />
+						</li>
+						<li>
+							<img style="width: 120px" src="./static/img/sample.jpg" alt="" />
+						</li>
+						<li>
+							<img style="width: 220px" src="./static/img/sample.jpg" alt="" />
+						</li>
+						<li>
+							<img style="width: 320px" src="./static/img/sample.jpg" alt="" />
+						</li>
+						<li>
+							<img style="width: 520px" src="./static/img/sample.jpg" alt="" />
+						</li>
+						<li>
+							<img style="width: 320px" src="./static/img/sample.jpg" alt="" />
+						</li>
+						<li>
+							<img style="width: 320px" src="./static/img/sample.jpg" alt="" />
+						</li>
+					</ul>
+
+					<div class="btn-wrap">
+						<button class="fs16 gray m-fs14">
+							<span>다시보기</span>
+						</button>
+						<button class="fs16 blue m-fs14">
+							<span>처음으로</span>
+						</button>
+					</div>
+				</div>
+				<div class="bg-wrap">
+					<!-- FIXME <img src="./static/img/section3-sampleBg.jpg" alt="bg" /> -->
+				</div>
+			</section>
+		</div>
+
+		<!-- js -->
+		<script>
+			// iframe youtube 영상 제어용 api
+			var tag = document.createElement('script');
+			tag.src = 'https://www.youtube.com/iframe_api';
+			var firstScriptTag = document.getElementsByTagName('script')[0];
+			firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+		</script>
+		<script type="text/javascript" src="./js/libs/jquery.min.js"></script>
+		<script type="text/javascript" src="./js/libs/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="./js/libs/imagesloaded.pkgd.js"></script>
+		<script type="text/javascript" src="./js/libs/jquery.mousewheel.min.js"></script>
+		<script type="text/javascript" src="./js/libs/bodyScrollLock.js"></script>
+		<script type="text/javascript" src="./js/libs/hammer.min.js"></script>
+		<script type="text/javascript" src="./js/libs/ScrollMagic.min.js"></script>
+		<script type="text/javascript" src="./js/libs/TweenMax.min.js"></script>
+		<script type="text/javascript" src="./js/libs/animation.gsap.js"></script>
+		<script type="text/javascript" src="./js/libs/debug.addIndicators.min.js"></script>
+		<script type="text/javascript" src="./js/libs/owlSlide.min.js"></script>
+		<script src="./js/index.js"></script>
+	</body>
+</html>
