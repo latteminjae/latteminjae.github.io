@@ -85,6 +85,7 @@ $col-gray: #4e4e4e;
 	}
 	.ms-section0 {
 		.logo {
+			margin-bottom: 60px;
 			img {
 				width: 97px;
 				height: 26px;
@@ -95,11 +96,14 @@ $col-gray: #4e4e4e;
 		.p-box {
 			text-align: center;
 			p {
+				top: -20px;
+				opacity: 0;
 				position: relative;
+				margin-bottom: 30px;
+				font-weight: 300;
 				span {
 					position: relative;
-					// top: -20px;
-					// opacity: 0;
+					font-weight: 700;
 				}
 			}
 		}
@@ -114,14 +118,16 @@ $col-gray: #4e4e4e;
 	.ms-section1 {
 		width: 100%;
 		height: 100%;
-		background: #020c14;
-		top: '100%';
+		background: #1b1f24;
+		top: 100%;
+
 		.box-tb {
 			width: 1684px;
 			height: 34px;
 			display: flex;
 			align-items: center;
 			position: absolute;
+			opacity: 0;
 
 			button {
 				width: 92px;
@@ -131,13 +137,12 @@ $col-gray: #4e4e4e;
 			}
 			.line {
 				display: block;
-				background: #0e171f;
+				background: #262a2e;
 				height: 2px;
 				width: calc(100% - 92px);
 			}
 
 			&.top-box {
-				left: '2000px';
 				top: 80px;
 				left: 0;
 				button {
@@ -148,7 +153,7 @@ $col-gray: #4e4e4e;
 				}
 			}
 			&.bottom-box {
-				right: 2000px;
+				right: 0;
 				bottom: 64px;
 				button {
 					background: url(../static/img/arrow_r_gray.png) no-repeat right;
@@ -165,12 +170,17 @@ $col-gray: #4e4e4e;
 			margin: 90px 0 100px;
 			p {
 				position: relative;
+
 				&:first-child {
 					margin-bottom: 30px;
+					span {
+						top: -20px;
+						opacity: 0;
+					}
 				}
-				span {
-					left: '-20px';
+				&:last-child {
 					opacity: 0;
+					top: -20px;
 				}
 			}
 		}
@@ -188,26 +198,21 @@ $col-gray: #4e4e4e;
 
 					> li {
 						opacity: 0;
-						width: 34px;
-						color: #fff;
-						text-align: center;
-						font-weight: 300;
 						margin: 0 30px;
 
-						&:nth-child(5) {
-							span {
-								color: #0049c3;
-								animation: 0.9s 0s linear infinite alternate cursorAni;
-								@keyframes cursorAni {
-									from {
-										opacity: 0.2;
-									}
-									80% {
-										opacity: 1;
-									}
-									to {
-										opacity: 1;
-									}
+						img.num-cursor {
+							color: #32363a;
+							animation: 0.7s 0s linear infinite alternate cursorAni;
+
+							@keyframes cursorAni {
+								from {
+									opacity: 0.02;
+								}
+								80% {
+									opacity: 0.1;
+								}
+								to {
+									opacity: 0.1;
 								}
 							}
 						}
@@ -240,7 +245,7 @@ $col-gray: #4e4e4e;
 							position: relative;
 							font-size: 24px;
 							z-index: 1;
-							border: 2px solid #0a131b;
+							border: 2px solid #212529;
 							border-radius: 6px;
 							box-sizing: border-box;
 							width: 76px;
@@ -251,13 +256,13 @@ $col-gray: #4e4e4e;
 							cursor: pointer;
 
 							&:hover {
-								border: 2px solid #04398e;
-								background: #020c14;
+								border: 2px solid #a3a5a7;
+								background: #1b1f24;
 							}
 							&.on {
-								background: #020c14;
+								background: #1b1f24;
 								& ~ span {
-									box-shadow: 0 0 40px 14px #04398e60;
+									box-shadow: 0 0 40px 14px #ffffff60;
 								}
 							}
 						}
@@ -276,7 +281,7 @@ $col-gray: #4e4e4e;
 									box-shadow: 0 0 4px 1px transparent;
 								}
 								50% {
-									box-shadow: 0 0 40px 14px #04398e60;
+									box-shadow: 0 0 40px 14px #ffffff60;
 								}
 								to {
 									box-shadow: 0 0 4px 1px transparent;
@@ -378,20 +383,20 @@ $col-gray: #4e4e4e;
 			z-index: 1;
 			overflow: hidden;
 
-			&:hover::after {
-				right: 9px;
-			}
-			&::after {
-				display: block;
-				width: 54px;
-				height: 1px;
-				background: #fff;
-				content: '';
-				position: absolute;
-				right: -64px;
-				top: 27px;
-				transition: all 0.3s;
-			}
+			// &:hover::after {
+			// 	right: 9px;
+			// }
+			// &::after {
+			// 	display: block;
+			// 	width: 54px;
+			// 	height: 1px;
+			// 	background: #fff;
+			// 	content: '';
+			// 	position: absolute;
+			// 	right: -64px;
+			// 	top: 27px;
+			// 	transition: all 0.3s;
+			// }
 			&.top-left {
 				img {
 					margin-right: 10px;
@@ -402,7 +407,10 @@ $col-gray: #4e4e4e;
 			&.bottom-right {
 				bottom: 70px;
 				right: 0px;
-				&.off {
+				&.mute {
+					span {
+						background: url(../static/img/icon_mute_off.png) no-repeat center center;
+					}
 				}
 
 				&:hover::after {
@@ -417,7 +425,7 @@ $col-gray: #4e4e4e;
 					top: -5px;
 					display: block;
 					margin-left: 10px;
-					width: 16px;
+					width: 22px;
 					height: 28px;
 					background: url(../static/img/icon_sound_sprite.png) no-repeat right center;
 				}
@@ -443,40 +451,51 @@ $col-gray: #4e4e4e;
 		}
 	}
 	.ms-section3 {
-		top: 200px;
 		.timer-wrap {
 			font-weight: 300;
 			text-align: center;
 			margin: 55px 0 40px;
 
 			p {
-				width: 480px;
 				display: flex;
 				margin: auto;
+				justify-content: center;
 				span {
 					position: relative;
-					width: 25%;
-					bottom: '-20px';
+					top: 15px;
 					opacity: 0;
+					padding: 0 30px;
+					img {
+						&:first-child {
+							margin-right: 6px;
+						}
+					}
 				}
 			}
 
 			p:first-child {
-				margin-bottom: 10px;
+				margin-bottom: 16px;
 				span {
+					display: flex;
 					color: #fff;
 					position: relative;
+					&::before,
 					&::after {
 						position: absolute;
-						top: 14px;
+						top: 16px;
 						right: -3px;
 						content: '';
 						width: 6px;
-						height: 35px;
+						height: 6px;
 						display: block;
-						background: url('../static/img/section3-colon.jpg') no-repeat;
+						background: #3c3c3c;
+						border-radius: 50%;
+					}
+					&::after {
+						top: 44px;
 					}
 					&:last-child {
+						&::before,
 						&::after {
 							display: none;
 						}
@@ -488,38 +507,59 @@ $col-gray: #4e4e4e;
 				color: #3c3c3c;
 				margin: auto;
 				span {
-					width: 25%;
+					width: 86px;
 				}
 			}
 		}
 		.p-box {
 			text-align: center;
-			span {
+			font-weight: 300;
+			margin-bottom: 20px;
+			p {
+				position: relative;
+				top: 20px;
 				opacity: 0;
+				&:first-child {
+					margin-bottom: 18px;
+				}
+			}
+			span {
+				// opacity: 0;
 			}
 		}
 		.owl-carousel {
 			opacity: 0;
+			margin-bottom: 20px;
+
+			.owl-item img {
+				width: auto;
+			}
 		}
 		.owl-nav {
 			position: absolute;
-			top: 0;
+			top: -90px;
 			left: 50%;
 			margin-left: -710px;
-			height: 100%;
 			width: 1420px;
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
+
 			span {
+				position: absolute;
+				top: 300px;
 				display: block;
 				width: 90px;
 				height: 90px;
 				border-radius: 50%;
 				background: rgba(255, 255, 255, 0.2) url(../static/img/arrow_l_white2.png) no-repeat center center;
 				transition: all 0.3s;
-				&.next {
+				&.prev {
 					transform: scaleX(-1);
+					right: 0;
+				}
+				&.next {
+					left: 0;
 				}
 				&:hover {
 					background-color: rgba(0, 0, 0, 0.5);
@@ -528,7 +568,7 @@ $col-gray: #4e4e4e;
 		}
 		.btn-wrap {
 			opacity: 0;
-			bottom: '-100px';
+			bottom: -100px;
 			display: flex;
 			justify-content: center;
 			position: relative;
@@ -539,6 +579,30 @@ $col-gray: #4e4e4e;
 				overflow: hidden;
 				position: relative;
 				margin-right: 20px;
+				border: 2px solid #fff;
+				background: transparent;
+				transition: all 0.25s;
+
+				&.btn-black {
+					&::after {
+						background: #fff;
+					}
+					&:hover {
+						color: #000;
+					}
+				}
+
+				&.btn-white {
+					background: #fff;
+					color: #000;
+					&::after {
+						background: #000;
+					}
+					&:hover {
+						color: #fff;
+					}
+				}
+
 				&:last-child {
 					margin: 0;
 				}
@@ -546,21 +610,6 @@ $col-gray: #4e4e4e;
 				span {
 					position: relative;
 					z-index: 1;
-				}
-				&.gray {
-					border: 2px solid #3c3c3c;
-					background: transparent;
-					&::after {
-						background: #3c3c3c;
-					}
-				}
-				&.blue {
-					border: 2px solid #0049c3;
-					background: transparent;
-
-					&::after {
-						background: #0049c3;
-					}
 				}
 
 				&::after {
@@ -582,7 +631,7 @@ $col-gray: #4e4e4e;
 			}
 		}
 		.bg-wrap {
-			background: url(../static/img/section3-sampleBg.jpg) no-repeat center bottom;
+			background: url(../static/img/section3-bg.jpg) no-repeat center bottom;
 		}
 	}
 
@@ -598,6 +647,17 @@ $col-gray: #4e4e4e;
 		-moz-user-drag: none;
 		-o-user-drag: none;
 		user-drag: none;
+	}
+
+	.numImg {
+		// FIXME 현재 이미지 num_0이 없음!
+		display: inline;
+		&.num-fs12 {
+			width: 12px;
+		}
+		&.num-fs40 {
+			width: 40px;
+		}
 	}
 
 	button {
@@ -653,13 +713,34 @@ $col-gray: #4e4e4e;
 	}
 }
 
-@media (max-width: 1420px) {
-	.k8-section-wrap .ms-section3 .owl-nav {
-		left: 0;
-		margin-left: 0;
-		width: 100%;
-		padding: 0 60px;
-		box-sizing: border-box;
+@media (max-width: 1420px) and (min-width: 1025px) {
+	.k8-section-wrap {
+		.ms-section0 {
+			.logo {
+				img {
+					position: relative;
+					left: 30px;
+				}
+			}
+		}
+
+		.ms-section1 {
+			.box-tb {
+				&.top-box {
+					left: 30px;
+				}
+				&.bottom-box {
+					right: 30px;
+				}
+			}
+		}
+		.ms-section3 .owl-nav {
+			left: 0;
+			margin-left: 0;
+			width: 100%;
+			padding: 0 60px;
+			box-sizing: border-box;
+		}
 	}
 }
 
@@ -672,7 +753,9 @@ $col-gray: #4e4e4e;
 // 태블릿, 모바일
 @media (max-width: 1024px) {
 	.k8-section-wrap {
-		height: 780px;
+		height: calc(100vh - 150px);
+		max-height: 780px;
+		min-height: 640px;
 		> section {
 			> .center-wrap {
 				padding-top: 60px;
@@ -685,7 +768,7 @@ $col-gray: #4e4e4e;
 		}
 		.ms-section0 {
 			.logo {
-				margin-bottom: 40px;
+				margin-bottom: 50px;
 				img {
 					margin: auto;
 				}
@@ -707,7 +790,7 @@ $col-gray: #4e4e4e;
 				}
 				&.bottom-box {
 					right: 45px;
-					bottom: 80px;
+					bottom: 30px;
 					justify-content: flex-end;
 					button {
 						background: url(../static/img/icon_close_gray.png) no-repeat right;
@@ -717,23 +800,37 @@ $col-gray: #4e4e4e;
 				}
 			}
 			.p-box {
-				margin: 70px 0 90px;
+				@include px2vh(margin-top, 60);
+				@include px2vh(margin-bottom, 80);
 			}
 			.num-wrap {
 				.input-box {
+					@include px2vh(margin-bottom, 90);
 					> ul {
 						> li {
-							margin: 0 37px;
+							margin: 0 20px;
 							&.bar {
 								margin: 0;
-								width: 22px;
+								width: 20px;
+							}
+						}
+					}
+				}
+				.num-pad {
+					> ul {
+						width: 218px;
+						> li {
+							> button {
+								width: 66px;
+								height: 66px;
+								line-height: 65px;
 							}
 						}
 					}
 				}
 			}
 			.bg-wrap {
-				top: 240px;
+				top: 190px;
 				.ms-mo {
 					img {
 						width: 540px;
@@ -757,7 +854,8 @@ $col-gray: #4e4e4e;
 				}
 			}
 			#iframe-div {
-				max-height: 540px;
+				height: 50vh;
+				max-height: 575px;
 			}
 		}
 		.ms-section3 {
@@ -765,18 +863,40 @@ $col-gray: #4e4e4e;
 				padding-top: 95px;
 			}
 			.timer-wrap {
+				margin: 0 0 30px 0;
 				p {
+					span {
+						padding: 0 20px;
+					}
 					&:first-child {
 						margin-bottom: 13px;
+						span {
+							&::before,
+							&::after {
+								top: 5px;
+								right: -3px;
+								width: 5px;
+								height: 5px;
+							}
+							&::after {
+								top: 23px;
+							}
+						}
+					}
+					&:last-child {
+						span {
+							padding: 0 18px;
+							box-sizing: border-box;
+						}
 					}
 				}
 			}
 			.p-box {
-				margin-bottom: 55px;
+				// margin-bottom: 40px;
 			}
 			.owl-carousel {
 				height: 300px;
-				margin-bottom: 55px;
+				// margin-bottom: 35px;
 
 				.owl-stage {
 					max-height: 300px;
@@ -793,6 +913,7 @@ $col-gray: #4e4e4e;
 					width: 150px;
 					height: 45px;
 					margin-right: 16px;
+					border: 1px solid #fff;
 				}
 			}
 		}
@@ -803,8 +924,8 @@ $col-gray: #4e4e4e;
 			.m-fs38 {
 				font-size: 38px;
 			}
-			.m-fs38 {
-				font-size: 38px;
+			.m-fs34 {
+				font-size: 34px;
 			}
 			.m-fs16 {
 				font-size: 16px;
@@ -843,6 +964,18 @@ $col-gray: #4e4e4e;
 				font-size: 14px;
 			}
 		}
+
+		.numImg {
+			&.num-m-fs11 {
+				width: 11px;
+			}
+			&.num-m-fs30 {
+				width: 30px;
+			}
+			&.num-m-fs22 {
+				width: 22px;
+			}
+		}
 	}
 	.ms-pc {
 		display: none !important;
@@ -855,4 +988,15 @@ $col-gray: #4e4e4e;
 
 // 모바일
 @media (max-width: 767px) {
+}
+
+// 모바일 400
+@media (max-width: 400px) {
+	.k8-section-wrap {
+		section {
+			.m2-fs26 {
+				font-size: 26px;
+			}
+		}
+	}
 }

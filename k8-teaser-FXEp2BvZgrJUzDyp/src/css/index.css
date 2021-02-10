@@ -104,6 +104,10 @@ table {
   height: 100%;
 }
 
+.k8-section-wrap .ms-section0 .logo {
+  margin-bottom: 60px;
+}
+
 .k8-section-wrap .ms-section0 .logo img {
   width: 97px;
   height: 26px;
@@ -117,11 +121,16 @@ table {
 }
 
 .k8-section-wrap .ms-section0 .p-box p {
+  top: -20px;
+  opacity: 0;
   position: relative;
+  margin-bottom: 30px;
+  font-weight: 300;
 }
 
 .k8-section-wrap .ms-section0 .p-box p span {
   position: relative;
+  font-weight: 700;
 }
 
 .k8-section-wrap .ms-section0 .bg-wrap {
@@ -139,8 +148,8 @@ table {
 .k8-section-wrap .ms-section1 {
   width: 100%;
   height: 100%;
-  background: #020c14;
-  top: '100%';
+  background: #1b1f24;
+  top: 100%;
 }
 
 .k8-section-wrap .ms-section1 .box-tb {
@@ -153,6 +162,7 @@ table {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
+  opacity: 0;
 }
 
 .k8-section-wrap .ms-section1 .box-tb button {
@@ -165,13 +175,12 @@ table {
 
 .k8-section-wrap .ms-section1 .box-tb .line {
   display: block;
-  background: #0e171f;
+  background: #262a2e;
   height: 2px;
   width: calc(100% - 92px);
 }
 
 .k8-section-wrap .ms-section1 .box-tb.top-box {
-  left: '2000px';
   top: 80px;
   left: 0;
 }
@@ -184,7 +193,7 @@ table {
 }
 
 .k8-section-wrap .ms-section1 .box-tb.bottom-box {
-  right: 2000px;
+  right: 0;
   bottom: 64px;
 }
 
@@ -210,9 +219,14 @@ table {
   margin-bottom: 30px;
 }
 
-.k8-section-wrap .ms-section1 .p-box p span {
-  left: '-20px';
+.k8-section-wrap .ms-section1 .p-box p:first-child span {
+  top: -20px;
   opacity: 0;
+}
+
+.k8-section-wrap .ms-section1 .p-box p:last-child {
+  opacity: 0;
+  top: -20px;
 }
 
 .k8-section-wrap .ms-section1 .num-wrap > div {
@@ -239,40 +253,36 @@ table {
 
 .k8-section-wrap .ms-section1 .num-wrap .input-box > ul > li {
   opacity: 0;
-  width: 34px;
-  color: #fff;
-  text-align: center;
-  font-weight: 300;
   margin: 0 30px;
 }
 
-.k8-section-wrap .ms-section1 .num-wrap .input-box > ul > li:nth-child(5) span {
-  color: #0049c3;
-  -webkit-animation: 0.9s 0s linear infinite alternate cursorAni;
-          animation: 0.9s 0s linear infinite alternate cursorAni;
+.k8-section-wrap .ms-section1 .num-wrap .input-box > ul > li img.num-cursor {
+  color: #32363a;
+  -webkit-animation: 0.7s 0s linear infinite alternate cursorAni;
+          animation: 0.7s 0s linear infinite alternate cursorAni;
 }
 
 @-webkit-keyframes cursorAni {
   from {
-    opacity: 0.2;
+    opacity: 0.02;
   }
   80% {
-    opacity: 1;
+    opacity: 0.1;
   }
   to {
-    opacity: 1;
+    opacity: 0.1;
   }
 }
 
 @keyframes cursorAni {
   from {
-    opacity: 0.2;
+    opacity: 0.02;
   }
   80% {
-    opacity: 1;
+    opacity: 0.1;
   }
   to {
-    opacity: 1;
+    opacity: 0.1;
   }
 }
 
@@ -306,7 +316,7 @@ table {
   position: relative;
   font-size: 24px;
   z-index: 1;
-  border: 2px solid #0a131b;
+  border: 2px solid #212529;
   border-radius: 6px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -320,17 +330,17 @@ table {
 }
 
 .k8-section-wrap .ms-section1 .num-wrap .num-pad > ul > li > button:hover {
-  border: 2px solid #04398e;
-  background: #020c14;
+  border: 2px solid #a3a5a7;
+  background: #1b1f24;
 }
 
 .k8-section-wrap .ms-section1 .num-wrap .num-pad > ul > li > button.on {
-  background: #020c14;
+  background: #1b1f24;
 }
 
 .k8-section-wrap .ms-section1 .num-wrap .num-pad > ul > li > button.on ~ span {
-  -webkit-box-shadow: 0 0 40px 14px #04398e60;
-          box-shadow: 0 0 40px 14px #04398e60;
+  -webkit-box-shadow: 0 0 40px 14px #ffffff60;
+          box-shadow: 0 0 40px 14px #ffffff60;
 }
 
 .k8-section-wrap .ms-section1 .num-wrap .num-pad > ul > li > span {
@@ -352,8 +362,8 @@ table {
             box-shadow: 0 0 4px 1px transparent;
   }
   50% {
-    -webkit-box-shadow: 0 0 40px 14px #04398e60;
-            box-shadow: 0 0 40px 14px #04398e60;
+    -webkit-box-shadow: 0 0 40px 14px #ffffff60;
+            box-shadow: 0 0 40px 14px #ffffff60;
   }
   to {
     -webkit-box-shadow: 0 0 4px 1px transparent;
@@ -367,8 +377,8 @@ table {
             box-shadow: 0 0 4px 1px transparent;
   }
   50% {
-    -webkit-box-shadow: 0 0 40px 14px #04398e60;
-            box-shadow: 0 0 40px 14px #04398e60;
+    -webkit-box-shadow: 0 0 40px 14px #ffffff60;
+            box-shadow: 0 0 40px 14px #ffffff60;
   }
   to {
     -webkit-box-shadow: 0 0 4px 1px transparent;
@@ -452,23 +462,6 @@ table {
   overflow: hidden;
 }
 
-.k8-section-wrap .ms-section2 button:hover::after {
-  right: 9px;
-}
-
-.k8-section-wrap .ms-section2 button::after {
-  display: block;
-  width: 54px;
-  height: 1px;
-  background: #fff;
-  content: '';
-  position: absolute;
-  right: -64px;
-  top: 27px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
 .k8-section-wrap .ms-section2 button.top-left img {
   margin-right: 10px;
   position: relative;
@@ -478,6 +471,10 @@ table {
 .k8-section-wrap .ms-section2 button.bottom-right {
   bottom: 70px;
   right: 0px;
+}
+
+.k8-section-wrap .ms-section2 button.bottom-right.mute span {
+  background: url(../static/img/icon_mute_off.png) no-repeat center center;
 }
 
 .k8-section-wrap .ms-section2 button.bottom-right:hover::after {
@@ -494,7 +491,7 @@ table {
   top: -5px;
   display: block;
   margin-left: 10px;
-  width: 16px;
+  width: 22px;
   height: 28px;
   background: url(../static/img/icon_sound_sprite.png) no-repeat right center;
 }
@@ -526,10 +523,6 @@ table {
   overflow: hidden;
 }
 
-.k8-section-wrap .ms-section3 {
-  top: 200px;
-}
-
 .k8-section-wrap .ms-section3 .timer-wrap {
   font-weight: 300;
   text-align: center;
@@ -537,41 +530,55 @@ table {
 }
 
 .k8-section-wrap .ms-section3 .timer-wrap p {
-  width: 480px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .k8-section-wrap .ms-section3 .timer-wrap p span {
   position: relative;
-  width: 25%;
-  bottom: '-20px';
+  top: 15px;
   opacity: 0;
+  padding: 0 30px;
+}
+
+.k8-section-wrap .ms-section3 .timer-wrap p span img:first-child {
+  margin-right: 6px;
 }
 
 .k8-section-wrap .ms-section3 .timer-wrap p:first-child {
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 }
 
 .k8-section-wrap .ms-section3 .timer-wrap p:first-child span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   color: #fff;
   position: relative;
 }
 
-.k8-section-wrap .ms-section3 .timer-wrap p:first-child span::after {
+.k8-section-wrap .ms-section3 .timer-wrap p:first-child span::before, .k8-section-wrap .ms-section3 .timer-wrap p:first-child span::after {
   position: absolute;
-  top: 14px;
+  top: 16px;
   right: -3px;
   content: '';
   width: 6px;
-  height: 35px;
+  height: 6px;
   display: block;
-  background: url("../static/img/section3-colon.jpg") no-repeat;
+  background: #3c3c3c;
+  border-radius: 50%;
 }
 
-.k8-section-wrap .ms-section3 .timer-wrap p:first-child span:last-child::after {
+.k8-section-wrap .ms-section3 .timer-wrap p:first-child span::after {
+  top: 44px;
+}
+
+.k8-section-wrap .ms-section3 .timer-wrap p:first-child span:last-child::before, .k8-section-wrap .ms-section3 .timer-wrap p:first-child span:last-child::after {
   display: none;
 }
 
@@ -584,27 +591,39 @@ table {
 }
 
 .k8-section-wrap .ms-section3 .timer-wrap p:last-child span {
-  width: 25%;
+  width: 86px;
 }
 
 .k8-section-wrap .ms-section3 .p-box {
   text-align: center;
+  font-weight: 300;
+  margin-bottom: 20px;
 }
 
-.k8-section-wrap .ms-section3 .p-box span {
+.k8-section-wrap .ms-section3 .p-box p {
+  position: relative;
+  top: 20px;
   opacity: 0;
+}
+
+.k8-section-wrap .ms-section3 .p-box p:first-child {
+  margin-bottom: 18px;
 }
 
 .k8-section-wrap .ms-section3 .owl-carousel {
   opacity: 0;
+  margin-bottom: 20px;
+}
+
+.k8-section-wrap .ms-section3 .owl-carousel .owl-item img {
+  width: auto;
 }
 
 .k8-section-wrap .ms-section3 .owl-nav {
   position: absolute;
-  top: 0;
+  top: -90px;
   left: 50%;
   margin-left: -710px;
-  height: 100%;
   width: 1420px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -618,6 +637,8 @@ table {
 }
 
 .k8-section-wrap .ms-section3 .owl-nav span {
+  position: absolute;
+  top: 300px;
   display: block;
   width: 90px;
   height: 90px;
@@ -627,9 +648,14 @@ table {
   transition: all 0.3s;
 }
 
-.k8-section-wrap .ms-section3 .owl-nav span.next {
+.k8-section-wrap .ms-section3 .owl-nav span.prev {
   -webkit-transform: scaleX(-1);
           transform: scaleX(-1);
+  right: 0;
+}
+
+.k8-section-wrap .ms-section3 .owl-nav span.next {
+  left: 0;
 }
 
 .k8-section-wrap .ms-section3 .owl-nav span:hover {
@@ -638,7 +664,7 @@ table {
 
 .k8-section-wrap .ms-section3 .btn-wrap {
   opacity: 0;
-  bottom: '-100px';
+  bottom: -100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -654,6 +680,31 @@ table {
   overflow: hidden;
   position: relative;
   margin-right: 20px;
+  border: 2px solid #fff;
+  background: transparent;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.k8-section-wrap .ms-section3 .btn-wrap > button.btn-black::after {
+  background: #fff;
+}
+
+.k8-section-wrap .ms-section3 .btn-wrap > button.btn-black:hover {
+  color: #000;
+}
+
+.k8-section-wrap .ms-section3 .btn-wrap > button.btn-white {
+  background: #fff;
+  color: #000;
+}
+
+.k8-section-wrap .ms-section3 .btn-wrap > button.btn-white::after {
+  background: #000;
+}
+
+.k8-section-wrap .ms-section3 .btn-wrap > button.btn-white:hover {
+  color: #fff;
 }
 
 .k8-section-wrap .ms-section3 .btn-wrap > button:last-child {
@@ -663,24 +714,6 @@ table {
 .k8-section-wrap .ms-section3 .btn-wrap > button span {
   position: relative;
   z-index: 1;
-}
-
-.k8-section-wrap .ms-section3 .btn-wrap > button.gray {
-  border: 2px solid #3c3c3c;
-  background: transparent;
-}
-
-.k8-section-wrap .ms-section3 .btn-wrap > button.gray::after {
-  background: #3c3c3c;
-}
-
-.k8-section-wrap .ms-section3 .btn-wrap > button.blue {
-  border: 2px solid #0049c3;
-  background: transparent;
-}
-
-.k8-section-wrap .ms-section3 .btn-wrap > button.blue::after {
-  background: #0049c3;
 }
 
 .k8-section-wrap .ms-section3 .btn-wrap > button::after {
@@ -700,7 +733,7 @@ table {
 }
 
 .k8-section-wrap .ms-section3 .bg-wrap {
-  background: url(../static/img/section3-sampleBg.jpg) no-repeat center bottom;
+  background: url(../static/img/section3-bg.jpg) no-repeat center bottom;
 }
 
 .k8-section-wrap .hide {
@@ -718,6 +751,18 @@ table {
   -moz-user-drag: none;
   -o-user-drag: none;
   user-drag: none;
+}
+
+.k8-section-wrap .numImg {
+  display: inline;
+}
+
+.k8-section-wrap .numImg.num-fs12 {
+  width: 12px;
+}
+
+.k8-section-wrap .numImg.num-fs40 {
+  width: 40px;
 }
 
 .k8-section-wrap button {
@@ -785,7 +830,17 @@ table {
   color: #3c3c3c;
 }
 
-@media (max-width: 1420px) {
+@media (max-width: 1420px) and (min-width: 1025px) {
+  .k8-section-wrap .ms-section0 .logo img {
+    position: relative;
+    left: 30px;
+  }
+  .k8-section-wrap .ms-section1 .box-tb.top-box {
+    left: 30px;
+  }
+  .k8-section-wrap .ms-section1 .box-tb.bottom-box {
+    right: 30px;
+  }
   .k8-section-wrap .ms-section3 .owl-nav {
     left: 0;
     margin-left: 0;
@@ -804,7 +859,9 @@ table {
 
 @media (max-width: 1024px) {
   .k8-section-wrap {
-    height: 780px;
+    height: calc(100vh - 150px);
+    max-height: 780px;
+    min-height: 640px;
   }
   .k8-section-wrap > section > .center-wrap {
     padding-top: 60px;
@@ -815,7 +872,7 @@ table {
     margin-left: 0;
   }
   .k8-section-wrap .ms-section0 .logo {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
   }
   .k8-section-wrap .ms-section0 .logo img {
     margin: auto;
@@ -832,7 +889,7 @@ table {
   }
   .k8-section-wrap .ms-section1 .box-tb.bottom-box {
     right: 45px;
-    bottom: 80px;
+    bottom: 30px;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
@@ -843,17 +900,29 @@ table {
     background-position: right center;
   }
   .k8-section-wrap .ms-section1 .p-box {
-    margin: 70px 0 90px;
+    margin-top: 5.71429vh;
+    margin-bottom: 7.61905vh;
+  }
+  .k8-section-wrap .ms-section1 .num-wrap .input-box {
+    margin-bottom: 8.57143vh;
   }
   .k8-section-wrap .ms-section1 .num-wrap .input-box > ul > li {
-    margin: 0 37px;
+    margin: 0 20px;
   }
   .k8-section-wrap .ms-section1 .num-wrap .input-box > ul > li.bar {
     margin: 0;
-    width: 22px;
+    width: 20px;
+  }
+  .k8-section-wrap .ms-section1 .num-wrap .num-pad > ul {
+    width: 218px;
+  }
+  .k8-section-wrap .ms-section1 .num-wrap .num-pad > ul > li > button {
+    width: 66px;
+    height: 66px;
+    line-height: 65px;
   }
   .k8-section-wrap .ms-section1 .bg-wrap {
-    top: 240px;
+    top: 190px;
   }
   .k8-section-wrap .ms-section1 .bg-wrap .ms-mo img {
     width: 540px;
@@ -871,20 +940,37 @@ table {
     right: 32px;
   }
   .k8-section-wrap .ms-section2 #iframe-div {
-    max-height: 540px;
+    height: 50vh;
+    max-height: 575px;
   }
   .k8-section-wrap .ms-section3 .center-wrap {
     padding-top: 95px;
   }
+  .k8-section-wrap .ms-section3 .timer-wrap {
+    margin: 0 0 30px 0;
+  }
+  .k8-section-wrap .ms-section3 .timer-wrap p span {
+    padding: 0 20px;
+  }
   .k8-section-wrap .ms-section3 .timer-wrap p:first-child {
     margin-bottom: 13px;
   }
-  .k8-section-wrap .ms-section3 .p-box {
-    margin-bottom: 55px;
+  .k8-section-wrap .ms-section3 .timer-wrap p:first-child span::before, .k8-section-wrap .ms-section3 .timer-wrap p:first-child span::after {
+    top: 5px;
+    right: -3px;
+    width: 5px;
+    height: 5px;
+  }
+  .k8-section-wrap .ms-section3 .timer-wrap p:first-child span::after {
+    top: 23px;
+  }
+  .k8-section-wrap .ms-section3 .timer-wrap p:last-child span {
+    padding: 0 18px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
   .k8-section-wrap .ms-section3 .owl-carousel {
     height: 300px;
-    margin-bottom: 55px;
   }
   .k8-section-wrap .ms-section3 .owl-carousel .owl-stage {
     max-height: 300px;
@@ -899,12 +985,13 @@ table {
     width: 150px;
     height: 45px;
     margin-right: 16px;
+    border: 1px solid #fff;
   }
   .k8-section-wrap section .m-fs38 {
     font-size: 38px;
   }
-  .k8-section-wrap section .m-fs38 {
-    font-size: 38px;
+  .k8-section-wrap section .m-fs34 {
+    font-size: 34px;
   }
   .k8-section-wrap section .m-fs16 {
     font-size: 16px;
@@ -942,8 +1029,23 @@ table {
   .k8-section-wrap section .m-fs14 {
     font-size: 14px;
   }
+  .k8-section-wrap .numImg.num-m-fs11 {
+    width: 11px;
+  }
+  .k8-section-wrap .numImg.num-m-fs30 {
+    width: 30px;
+  }
+  .k8-section-wrap .numImg.num-m-fs22 {
+    width: 22px;
+  }
   .ms-pc {
     display: none !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .k8-section-wrap section .m2-fs26 {
+    font-size: 26px;
   }
 }
 /*# sourceMappingURL=index.css.map */

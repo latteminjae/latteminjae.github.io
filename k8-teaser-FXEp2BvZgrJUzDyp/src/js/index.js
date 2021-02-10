@@ -1,11 +1,5 @@
 window.onload = function () {
 	sectionOnOff(0, true);
-	setTimeout(function () {
-		sectionOnOff(0, false);
-		setTimeout(function () {
-			sectionOnOff(1, true);
-		}, 2000);
-	}, 9000);
 };
 
 // youtube
@@ -42,7 +36,7 @@ function wrapSpan(txt) {
 		.map((v) => (v !== ' ' ? `<span>${v}</span>` : v))
 		.join('');
 }
-const pBoxP = document.querySelectorAll('.ms-section0 .p-box p, .ms-section1 .p-box p, .ms-section3 .p-box p');
+const pBoxP = document.querySelectorAll('.ms-section1 .p-box p, .ms-section3 .p-box p');
 for (let i = 0; i < pBoxP.length; i++) {
 	pBoxP[i].innerHTML = wrapSpan(pBoxP[i].innerHTML);
 }
@@ -59,20 +53,24 @@ function sectionOnOff(num, on) {
 	if (num === 0) {
 		if (on) {
 			sectionOpen(0);
-			TweenMax.to('.ms-section0 .logo img', 1, { opacity: '1' });
-			TweenMax.staggerFromTo(
-				'.ms-section0 .p-box p span',
-				0.5,
-				{ top: '-20px', opacity: 0 },
-				{ top: 0, opacity: 1, delay: 1.2 },
-				0.1
-			);
-			TweenMax.to('.ms-section0 .bg-wrap img', 2, { transform: 'translateZ(600px)', delay: 3 });
+			TweenMax.to('.ms-section0 .logo img', 0.8, { opacity: 1 });
+			TweenMax.to('.ms-section0 .p-box p', 0.7, { top: 0, opacity: 1, delay: 0.7 });
+			TweenMax.to('.ms-section0 .bg-wrap img', 2, { transform: 'translateZ(600px)', delay: 2 });
+
+			setTimeout(function () {
+				sectionOnOff(0, false);
+				setTimeout(function () {
+					sectionOnOff(1, true);
+				}, 1300);
+			}, 6000);
 		} else {
 			TweenMax.to('.ms-section0 .bg-wrap img', 1, { opacity: 0 });
-			TweenMax.to('.ms-section0 .p-box p:last-child', 1, { left: '500px', opacity: 0 });
-			TweenMax.to('.ms-section0 .p-box p:first-child', 1, { left: '-700px', opacity: 0 });
-			TweenMax.to('.ms-section0 .logo img', 1, { opacity: 0 });
+			TweenMax.to('.ms-section0 .p-box p:last-child', 0.5, { top: '-20px', opacity: 0 });
+			TweenMax.to('.ms-section0 .p-box p:first-child', 0.5, { top: '-20px', opacity: 0, delay: 0.3 });
+			TweenMax.to('.ms-section0 .logo img', 0.5, { opacity: 0 });
+			setTimeout(function () {
+				TweenMax.to('.ms-section0 .bg-wrap img', 0.1, { opacity: 1, transform: 'translateZ(0px)' });
+			}, 1000);
 		}
 	}
 	// section1
@@ -81,46 +79,66 @@ function sectionOnOff(num, on) {
 			sectionOpen(1);
 
 			// 전체 화면
-			TweenMax.to('.ms-section1', 1.5, { top: 0, ease: 'ease-in' });
+			TweenMax.fromTo('.ms-section1', 0.8, { top: '100%' }, { top: 0, ease: 'ease-in-out' });
 
 			// back, skip
-			TweenMax.to('.ms-section1 .top-box', 0.5, { left: '0px', ease: 'ease-in', delay: 2 });
-			TweenMax.to('.ms-section1 .bottom-box', 0.5, { right: '0px', ease: 'ease-in', delay: 2.3 });
+			TweenMax.fromTo(
+				'.ms-section1 .top-box, .ms-section1 .bottom-box',
+				0.5,
+				{
+					opacity: 0,
+				},
+				{
+					opacity: 1,
+					ease: 'ease-in',
+					delay: 0.8,
+				}
+			);
 
 			// p-box
-			TweenMax.staggerTo('.ms-section1 .p-box p span', 0.5, { left: 0, opacity: 1, delay: 3 }, 0.1);
+			TweenMax.staggerTo('.ms-section1 .p-box p:first-child span', 0.5, { top: 0, opacity: 1, delay: 1.2 }, 0.1);
+			TweenMax.to('.ms-section1 .p-box p:last-child', 0.8, { top: 0, opacity: 1, delay: 1.5 });
 
 			// bg, num, keypad
+			TweenMax.staggerTo('.ms-section1 .bg-wrap img', 0.3, { top: '0', opacity: 1, delay: 2 }, 0.1);
 
-			// FIXME 이거 pc, mobile 구분해서 좌우에서 이미지 들어오도록??
-			TweenMax.staggerTo('.ms-section1 .bg-wrap img', 1, { top: '0', opacity: 1, delay: 6 }, 0.5);
-
-			TweenMax.staggerTo('.ms-section1 .input-box>ul>li', 1, { opacity: 1, delay: 7 }, 0.2);
-			TweenMax.staggerTo('.ms-section1 .num-pad>ul>li', 1, { delay: 10, opacity: 1 }, 0.1);
+			TweenMax.staggerTo('.ms-section1 .input-box>ul>li', 0.5, { opacity: 1, delay: 2 }, 0.1);
+			TweenMax.staggerTo('.ms-section1 .num-pad>ul>li', 0.5, { opacity: 1, delay: 2 }, 0.1);
 		} else {
+			// 전체 화면
+
 			// back, skip 버튼
-			TweenMax.to('.ms-section1 .top-box', 0.5, { left: '2000px', ease: 'ease-out' });
-			TweenMax.to('.ms-section1 .bottom-box', 0.5, { right: '2000px', ease: 'ease-out' });
+			TweenMax.to('.ms-section1 .top-box', 0.5, { opacity: 0, ease: 'ease-out' });
+			TweenMax.to('.ms-section1 .bottom-box', 0.5, { opacity: 0, ease: 'ease-out' });
 
 			// p-box
-			TweenMax.to('.ms-section1 .p-box p:first-child', 0.5, { left: '1600px', ease: 'ease-out', delay: 0.5 });
-			TweenMax.to('.ms-section1 .p-box p:last-child', 0.5, { left: '-1600px', ease: 'ease-out', delay: 0.5 });
-
-			// num, keypad, bg
 			TweenMax.staggerTo(
-				'.ms-section1 .num-pad>ul>li, .ms-section1 .input-box>ul>li, .ms-section1 .bg-wrap img',
-				1,
-				{ opacity: 0, delay: 1.5 },
+				'.ms-section1 .p-box p:first-child span',
+				0.5,
+				{ opacity: 0, ease: 'ease-out', delay: 0.3 },
 				0.1
 			);
+			TweenMax.to('.ms-section1 .p-box p:last-child', 0.5, { opacity: 0, ease: 'ease-out', delay: 0.2 });
+
+			// num, keypad, bg
+			TweenMax.staggerTo('.ms-section1 .num-pad>ul>li', 1, { opacity: 0 }, 0.1);
+			TweenMax.staggerTo('.ms-section1 .input-box>ul>li', 1, { opacity: 0 }, 0.1);
+			TweenMax.staggerTo('.ms-section1 .bg-wrap img', 1, { opacity: 0 }, 0.1);
+
+			TweenMax.to('.ms-section1', 0.8, { top: '100%', ease: 'ease-in-out', delay: 1.5 });
+
+			setTimeout(function () {
+				document.querySelector('.num-wrap .input-box>ul>li:nth-child(5)>img').src = './static/img/num_q.png';
+			}, 2000);
 		}
 	}
 	// section2
 	else if (num === 2) {
 		if (on) {
 			sectionOpen(2);
-			playerplayVideo();
+			player.playVideo();
 		} else {
+			sectionOnOff(3, true);
 			player.stopVideo();
 		}
 	}
@@ -128,18 +146,20 @@ function sectionOnOff(num, on) {
 	else if (num === 3) {
 		if (on) {
 			sectionOpen(3);
-			TweenMax.to('.ms-section3', 1, { top: 0, ease: 'ease-in' });
-			TweenMax.staggerTo('.ms-section3 .timer-wrap span', 0.3, { bottom: 0, opacity: 1, ease: 'ease-in' }, -0.1);
-			TweenMax.staggerTo('.ms-section3 .p-box span', 0.1, { opacity: 1, delay: 1.5 }, 0.1);
-			TweenMax.to('.ms-section3 .owl-carousel', 2, { opacity: 1, delay: 5 });
-			TweenMax.to('.ms-section3 .btn-wrap', 1, { opacity: 1, bottom: 0, delay: 4 });
+			TweenMax.staggerTo(
+				'.ms-section3 .timer-wrap p span',
+				0.3,
+				{ top: 0, opacity: 1, ease: 'ease-in', delay: 0.3 },
+				0.1
+			);
+			TweenMax.staggerTo('.ms-section3 .p-box p', 0.2, { opacity: 1, top: 0, delay: 1 }, 0.2);
+			TweenMax.to('.ms-section3 .btn-wrap', 1, { opacity: 1, bottom: 0, delay: 1.1 });
+			TweenMax.to('.ms-section3 .owl-carousel', 3, { opacity: 1, delay: 1.8 });
 		} else {
-			TweenMax.to('.ms-section3 .btn-wrap', 0.5, { opacity: 0 });
-
-			TweenMax.to('.ms-section3 .owl-carousel', 1, { opacity: 0, delay: 0.5 });
-
-			TweenMax.to('.ms-section3', 1, { top: '200px', delay: 1 });
-			TweenMax.to('.ms-section3 .timer-wrap, .ms-section3 .p-box', 1, { top: '30px', opacity: 0, delay: 1 });
+			TweenMax.to('.ms-section3 .btn-wrap', 0.5, { opacity: 0, bottom: '-100px' });
+			TweenMax.to('.ms-section3 .timer-wrap span', 0.3, { top: '30px', opacity: 0, delay: 0.3 });
+			TweenMax.to('.ms-section3 .p-box p', 0.2, { opacity: 0, top: '20px', delay: 0.3 });
+			TweenMax.to('.ms-section3 .owl-carousel', 0.5, { opacity: 0, delay: 0.7 });
 		}
 	}
 }
@@ -147,7 +167,7 @@ function sectionOnOff(num, on) {
 // gate - 숫자패드 클릭 이벤트
 let count = 0;
 const nums = document.querySelectorAll('.num-pad>ul>li>button');
-const numCursor = document.querySelector('.num-wrap .input-box>ul>li:nth-child(5)>span');
+const numCursor = document.querySelector('.num-wrap .input-box>ul>li:nth-child(5)>img');
 
 for (let i = 0; i < nums.length; i++) {
 	(function (ind) {
@@ -156,15 +176,15 @@ for (let i = 0; i < nums.length; i++) {
 				return;
 			} else {
 				// e.target.classList.add('on')
-				e.target.style.animation = '.7s alternate testAni ';
+				nums[ind].style.animation = '.7s alternate testAni ';
 				setTimeout(function () {
-					e.target.style.animation = '';
+					nums[ind].style.animation = '';
 				}, 700);
 			}
 
 			// 8클릭시
-			if (nums[ind].innerHTML === '8') {
-				numCursor.innerHTML = '8';
+			if (nums[ind].children[0].src.slice(-5, -4) === '8') {
+				numCursor.src = './static/img/num_8.png';
 				return;
 			}
 
@@ -174,14 +194,15 @@ for (let i = 0; i < nums.length; i++) {
 				sectionOnOff(1, false);
 				setTimeout(function () {
 					sectionOnOff(2, true);
+					// FIXME timeout 시간 조정
 				}, 2600);
 				return;
 			}
 
 			// 좌측 커서엔 클릭한 숫자로, 클릭한 숫자패드는 8로 변경
 			// TODO 좌측커서에 숫자바뀌는걸 이펙트를 줘야하나
-			numCursor.innerHTML = nums[ind].innerHTML;
-			e.target.innerHTML = '8';
+			numCursor.src = nums[ind].children[0].src;
+			e.target.children[0].src = './static/img/num_8.png';
 		});
 
 		// nums[ind].addEventListener('transitionend', function (e) {
@@ -190,12 +211,24 @@ for (let i = 0; i < nums.length; i++) {
 	})(i);
 }
 
-// section2 youtube
-
-// TODO
 // section1 back, skip
-// section2 close mute
-// section3 다시보기(section2로), 처음으로(section0으로)
+document.querySelector('.ms-section1 .top-box button').addEventListener('click', function () {
+	sectionOnOff(1, false);
+	setTimeout(function () {
+		sectionOnOff(0, true);
+	}, 3000);
+});
+document.querySelector('.ms-section1 .bottom-box button').addEventListener('click', function () {
+	sectionOnOff(1, false);
+	setTimeout(function () {
+		sectionOnOff(2, true);
+	}, 3000);
+});
+// section2 close
+document.querySelector('.ms-section2 button.top-left').addEventListener('click', function () {
+	sectionOnOff(2, false);
+});
+document.querySelector('.ms-section2 button.bottom-right').addEventListener('click', function (e) {});
 
 // section2 mute btn
 const muteBtn = document.querySelector('.ms-section2 button.bottom-right');
@@ -231,35 +264,62 @@ muteBtn.addEventListener('mouseout', function (e) {
 	muteBtnSpan.style.backgroundPosition = 'right';
 	clearInterval(muteBtnInterval);
 });
+
+// TODO youtube mute btn을 눌렀을때 mute이미지도 바껴야 한다 api event살펴볼것
 muteBtn.addEventListener('click', function (e) {
-	// TODO mute off이미지 활성화, youtube api - sound off
+	if (player.isMuted()) {
+		player.unMute();
+		muteBtn.classList.remove('mute');
+	} else {
+		player.mute();
+		muteBtn.classList.add('mute');
+	}
+});
+
+// section3 다시보기(section2로), 처음으로(section0으로)
+document.querySelector('.ms-section3 .btn-wrap button.replay').addEventListener('click', function () {
+	sectionOnOff(3, false);
+	setTimeout(function () {
+		sectionOnOff(2, true);
+	}, 1500);
+});
+
+document.querySelector('.ms-section3 .btn-wrap button.goFirst').addEventListener('click', function () {
+	sectionOnOff(3, false);
+	setTimeout(function () {
+		sectionOnOff(0, true);
+	}, 1500);
 });
 
 // section3 타이머
-const timerP = document.querySelectorAll('.ms-section3 .timer-wrap>p:first-child span');
+const timerP = document.querySelectorAll('.ms-section3 .timer-wrap>p:first-child span img');
 const openDate = new Date('2021-03-10T00:00:00').getTime();
 function getDTime() {
 	const timer = (openDate - Date.now()) / 1000;
+	let timerTxt = '';
 
-	let sec = Math.floor(timer % 60).toString();
-	let min = Math.floor((timer / 60) % 60)
-		.toString()
-		.slice(0, 2);
+	let day = Math.floor(timer / 60 / 60 / 24).toString();
 	let hor = Math.floor((timer / 60 / 60) % 24)
 		.toString()
 		.slice(0, 2);
-	const day = Math.floor(timer / 60 / 60 / 24);
+	let min = Math.floor((timer / 60) % 60)
+		.toString()
+		.slice(0, 2);
+	let sec = Math.floor(timer % 60).toString();
 
 	sec.length < 2 ? (sec = '0' + sec) : null;
 	min.length < 2 ? (min = '0' + min) : null;
 	hor.length < 2 ? (hor = '0' + hor) : null;
 
-	timerP[0].innerHTML = day;
-	timerP[1].innerHTML = hor;
-	timerP[2].innerHTML = min;
-	timerP[3].innerHTML = sec;
+	timerTxt = (day + hor + min + sec).split('');
+
+	for (let i = 0; i < timerTxt.length; i++) {
+		timerP[i].src = `./static/img/num_${timerTxt[i]}.png`;
+	}
 }
-setInterval(getDTime, 500);
+getDTime();
+// FIXME num_0 받고 해제
+// setInterval(getDTime, 500);
 
 // section3 owl slide
 $('.owl-carousel').owlCarousel({
@@ -280,7 +340,7 @@ $('.owl-carousel').owlCarousel({
 			items: 1,
 		},
 		1025: {
-			items: 3,
+			items: 1,
 		},
 	},
 });
