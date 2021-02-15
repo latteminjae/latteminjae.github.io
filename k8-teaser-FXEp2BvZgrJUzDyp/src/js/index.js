@@ -1,3 +1,14 @@
+var isMobile =
+	navigator.userAgent.match(/Android/i) ||
+	navigator.userAgent.match(/webOS/i) ||
+	navigator.userAgent.match(/iPhone/i) ||
+	navigator.userAgent.match(/iPad/i) ||
+	navigator.userAgent.match(/iPod/i) ||
+	navigator.userAgent.match(/BlackBerry/i) ||
+	navigator.userAgent.match(/Windows Phone/i)
+		? true
+		: false;
+
 window.onload = function () {
 	sectionOnOff(0, true);
 };
@@ -43,9 +54,10 @@ for (let i = 0; i < pBoxP.length; i++) {
 	pBoxP[i].innerHTML = wrapSpan(pBoxP[i].innerHTML);
 }
 
-// section0 on/off ----------------------------------------
+// section on/off ----------------------------------------
 function sectionOnOff(num, on) {
 	// (num : number 0 ~ 3, on : boolean) : void
+
 	if (num > 3 || num < 0) {
 		console.error('sectionOnOff - num의 숫자가 크거나 작음');
 		return;
@@ -138,10 +150,14 @@ function sectionOnOff(num, on) {
 	else if (num === 2) {
 		if (on) {
 			sectionOpen(2);
-			player.playVideo();
+			if (!isMobile) {
+				player.playVideo();
+			}
 		} else {
 			sectionOnOff(3, true);
-			player.stopVideo();
+			if (!isMobile) {
+				player.stopVideo();
+			}
 		}
 	}
 	// section3
