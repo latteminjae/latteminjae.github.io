@@ -654,9 +654,11 @@ $col-gray: #4e4e4e;
 		display: inline;
 		&.num-fs12 {
 			width: 12px;
+			height: 18px;
 		}
 		&.num-fs40 {
 			width: 40px;
+			height: 60px;
 		}
 	}
 
@@ -966,14 +968,17 @@ $col-gray: #4e4e4e;
 		}
 
 		.numImg {
-			&.num-m-fs11 {
-				width: 11px;
+			&.num-m-fs12 {
+				width: 12px;
+				height: 18px;
 			}
 			&.num-m-fs30 {
 				width: 30px;
+				height: 45px;
 			}
 			&.num-m-fs22 {
 				width: 22px;
+				height: 33px;
 			}
 		}
 	}
@@ -1011,6 +1016,21 @@ $col-gray: #4e4e4e;
 					}
 				}
 			}
+			.bg-wrap {
+				top: 180px;
+				left: 50%;
+				margin-left: -250px;
+				min-width: 500px;
+			}
+		}
+		.ms-section3 {
+			.p-box {
+				p {
+					&:first-child {
+						margin-bottom: 10px;
+					}
+				}
+			}
 		}
 
 		// num26
@@ -1028,6 +1048,8 @@ $col-gray: #4e4e4e;
 		.numImg {
 			&.num-m2-fs22 {
 				width: 22px;
+				height: 33px;
+				height: 33px;
 			}
 		}
 	}

@@ -686,10 +686,12 @@ table {
 
 .k8-section-wrap .numImg.num-fs12 {
   width: 12px;
+  height: 18px;
 }
 
 .k8-section-wrap .numImg.num-fs40 {
   width: 40px;
+  height: 60px;
 }
 
 .k8-section-wrap button {
@@ -952,14 +954,17 @@ table {
   .k8-section-wrap section .m-fs14 {
     font-size: 14px;
   }
-  .k8-section-wrap .numImg.num-m-fs11 {
-    width: 11px;
+  .k8-section-wrap .numImg.num-m-fs12 {
+    width: 12px;
+    height: 18px;
   }
   .k8-section-wrap .numImg.num-m-fs30 {
     width: 30px;
+    height: 45px;
   }
   .k8-section-wrap .numImg.num-m-fs22 {
     width: 22px;
+    height: 33px;
   }
   .ms-pc {
     display: none !important;
@@ -976,6 +981,15 @@ table {
   .k8-section-wrap .ms-section1 .p-box p:first-child {
     margin-bottom: 14px;
   }
+  .k8-section-wrap .ms-section1 .bg-wrap {
+    top: 180px;
+    left: 50%;
+    margin-left: -250px;
+    min-width: 500px;
+  }
+  .k8-section-wrap .ms-section3 .p-box p:first-child {
+    margin-bottom: 10px;
+  }
   .k8-section-wrap section .m2-fs26 {
     font-size: 26px;
   }
@@ -987,5 +1001,7 @@ table {
   }
   .k8-section-wrap .numImg.num-m2-fs22 {
     width: 22px;
+    height: 33px;
+    height: 33px;
   }
 }

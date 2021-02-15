@@ -320,8 +320,7 @@ function getDTime() {
 	}
 }
 getDTime();
-// FIXME num_0 받고 해제
-// setInterval(getDTime, 500);
+setInterval(getDTime, 500);
 
 // section3 owl slide
 $('.owl-carousel').owlCarousel({
@@ -330,9 +329,9 @@ $('.owl-carousel').owlCarousel({
 	center: true,
 	nav: true,
 	autoWidth: true,
-	autoplay: true,
-	autoplayTimeout: 6000,
-	autoplaySpeed: 6000,
+	// autoplay: true,
+	// autoplayTimeout: 6000,
+	// autoplaySpeed: 6000,
 	slideTransition: 'linear',
 	navSpeed: 2000,
 	navText: ['<span class="slide-btn prev"></span>', '<span class="slide-btn next"></span>'],
