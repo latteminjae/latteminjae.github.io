@@ -180,7 +180,7 @@ function sectionOnOff(num, on) {
 				{ top: 0, opacity: 1, ease: 'ease-in', delay: 0.3 },
 				0.1
 			);
-			TweenMax.staggerTo('.ms-section3 .p-box p', 0.2, { opacity: 1, top: 0, delay: 1 }, 0.2);
+			TweenMax.staggerTo('.ms-section3 .p-box p', 0.8, { opacity: 1, top: 0, delay: 1 }, 0.2);
 			TweenMax.to('.ms-section3 .btn-wrap', 1, { opacity: 1, bottom: 0, delay: 1.1 });
 			TweenMax.to('.ms-section3 .owl-carousel', 3, { opacity: 1, delay: 1.8 });
 		} else {

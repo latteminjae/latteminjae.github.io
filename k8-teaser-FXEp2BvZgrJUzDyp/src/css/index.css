@@ -924,11 +924,12 @@ table {
     width: 100%;
     left: 0;
     margin-left: 0;
+    top: 0;
   }
   .k8-section-wrap .ms-section3 .owl-nav span {
     width: 45px;
     height: 45px;
-    top: 190px;
+    top: 122px;
   }
   .k8-section-wrap .ms-section3 .owl-nav span.prev {
     right: 30px;
