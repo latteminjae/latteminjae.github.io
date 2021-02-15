@@ -199,20 +199,12 @@ table {
 
 .k8-section-wrap .ms-section1 .p-box p {
   position: relative;
+  top: -20px;
+  opacity: 0;
 }
 
 .k8-section-wrap .ms-section1 .p-box p:first-child {
   margin-bottom: 30px;
-}
-
-.k8-section-wrap .ms-section1 .p-box p:first-child span {
-  top: -20px;
-  opacity: 0;
-}
-
-.k8-section-wrap .ms-section1 .p-box p:last-child {
-  opacity: 0;
-  top: -20px;
 }
 
 .k8-section-wrap .ms-section1 .num-wrap > div {
@@ -434,7 +426,7 @@ table {
 }
 
 .k8-section-wrap .ms-section2 button.bottom-right.mute span {
-  background: url(../static/img/icon_mute_off.png) no-repeat center center;
+  background: url(../static/img/icon_mute_off.png) no-repeat center;
 }
 
 .k8-section-wrap .ms-section2 button.bottom-right:hover::after {
@@ -453,7 +445,7 @@ table {
   margin-left: 10px;
   width: 22px;
   height: 28px;
-  background: url(../static/img/icon_sound_sprite.png) no-repeat right center;
+  background: url(../static/img/icon_sound_sprite.png) no-repeat right;
 }
 
 .k8-section-wrap .ms-section2 .iframe-wrap {
@@ -987,6 +979,9 @@ table {
     margin-left: -250px;
     min-width: 500px;
   }
+  .k8-section-wrap .ms-section3 .timer-wrap p span img:first-child {
+    margin-right: 3px;
+  }
   .k8-section-wrap .ms-section3 .p-box p:first-child {
     margin-bottom: 10px;
   }
@@ -1001,7 +996,6 @@ table {
   }
   .k8-section-wrap .numImg.num-m2-fs22 {
     width: 22px;
-    height: 33px;
     height: 33px;
   }
 }

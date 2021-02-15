@@ -110,14 +110,17 @@ function sectionOnOff(num, on) {
 			);
 
 			// p-box
-			TweenMax.staggerTo('.ms-section1 .p-box p:first-child span', 0.5, { top: 0, opacity: 1, delay: 1.2 }, 0.1);
-			TweenMax.to('.ms-section1 .p-box p:last-child', 0.8, { top: 0, opacity: 1, delay: 1.5 });
+			TweenMax.staggerTo('.ms-section1 .p-box p', 0.5, { top: 0, opacity: 1, delay: 1 }, 0.2);
+
+			// FIXME 아직 확정아님
+			// TweenMax.staggerTo('.ms-section1 .p-box p:first-child span', 0.5, { top: 0, opacity: 1, delay: 1.2 }, 0.1);
+			// TweenMax.to('.ms-section1 .p-box p:last-child', 0.8, { top: 0, opacity: 1, delay: 1.5 });
 
 			// bg, num, keypad
-			TweenMax.staggerTo('.ms-section1 .bg-wrap img', 0.3, { top: '0', opacity: 1, delay: 2 }, 0.1);
+			TweenMax.staggerTo('.ms-section1 .bg-wrap img', 0.3, { top: '0', opacity: 1, delay: 1.5 }, 0.1);
 
-			TweenMax.staggerTo('.ms-section1 .input-box>ul>li', 0.5, { opacity: 1, delay: 2 }, 0.1);
-			TweenMax.staggerTo('.ms-section1 .num-pad>ul>li', 0.5, { opacity: 1, delay: 2 }, 0.1);
+			TweenMax.staggerTo('.ms-section1 .input-box>ul>li', 0.5, { opacity: 1, delay: 1.5 }, 0.1);
+			TweenMax.staggerTo('.ms-section1 .num-pad>ul>li', 0.5, { opacity: 1, delay: 1.5 }, 0.1);
 		} else {
 			// 전체 화면
 
@@ -153,11 +156,13 @@ function sectionOnOff(num, on) {
 			if (!isMobile) {
 				player.playVideo();
 			}
+			muteCheckInterval = setInterval(muteCheckFunc, 100);
 		} else {
 			sectionOnOff(3, true);
 			if (!isMobile) {
 				player.stopVideo();
 			}
+			clearInterval(muteCheckInterval);
 		}
 	}
 	// section3
@@ -210,6 +215,7 @@ for (let i = 0; i < nums.length; i++) {
 			// 8이 4개 이상일 경우 티저영상페이지로 넘어가는 이벤트
 			if (count >= 3) {
 				sectionOnOff(1, false);
+				count = 0;
 				setTimeout(function () {
 					sectionOnOff(2, true);
 					// FIXME timeout 시간 조정
@@ -251,6 +257,8 @@ document.querySelector('.ms-section2 button.bottom-right').addEventListener('cli
 // section2 mute btn
 const muteBtn = document.querySelector('.ms-section2 button.bottom-right');
 const muteBtnSpan = document.querySelector('.ms-section2 button.bottom-right span');
+
+// muteBtn hover interaction
 let muteBtnInterval = null;
 function muteBtnFunc() {
 	switch (muteBtn.children[0].style.backgroundPosition) {
@@ -267,6 +275,17 @@ function muteBtnFunc() {
 			muteBtn.children[0].style.backgroundPosition = 'right center';
 	}
 }
+
+// youtube player mute 와 muteBtn 상태 동기화
+let muteCheckInterval = null;
+function muteCheckFunc() {
+	if (player.isMuted() && !muteBtn.classList.contains('mute')) {
+		muteBtn.classList.add('mute');
+	} else if (!player.isMuted() && muteBtn.classList.contains('mute')) {
+		muteBtn.classList.remove('mute');
+	}
+}
+
 muteBtn.addEventListener('mouseover', function (e) {
 	if (muteBtnSpan.classList.contains('off')) {
 		return;
@@ -283,7 +302,7 @@ muteBtn.addEventListener('mouseout', function (e) {
 	clearInterval(muteBtnInterval);
 });
 
-// TODO youtube mute btn을 눌렀을때 mute이미지도 바껴야 한다 api event살펴볼것
+// muteBtn 눌렀을때
 muteBtn.addEventListener('click', function (e) {
 	if (player.isMuted()) {
 		player.unMute();
@@ -349,7 +368,7 @@ $('.owl-carousel').owlCarousel({
 	// autoplayTimeout: 6000,
 	// autoplaySpeed: 6000,
 	slideTransition: 'linear',
-	navSpeed: 2000,
+	navSpeed: 1000,
 	navText: ['<span class="slide-btn prev"></span>', '<span class="slide-btn next"></span>'],
 	responsiveClass: true,
 	responsive: {
