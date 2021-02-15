@@ -231,6 +231,10 @@ table {
   animation: 0.7s 0s linear infinite alternate cursorAni;
 }
 
+.k8-section-wrap .ms-section1 .num-wrap .input-box > ul > li img.num-cursor.on {
+  animation: 0.7s 0s linear infinite alternate cursorAni2;
+}
+
 @keyframes cursorAni {
   from {
     opacity: 0.02;
@@ -240,6 +244,18 @@ table {
   }
   to {
     opacity: 0.1;
+  }
+}
+
+@keyframes cursorAni2 {
+  from {
+    opacity: 0.2;
+  }
+  80% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
   }
 }
 
@@ -543,7 +559,7 @@ table {
 }
 
 .k8-section-wrap .ms-section3 .p-box p:first-child {
-  margin-bottom: 18px;
+  margin-bottom: 12px;
 }
 
 .k8-section-wrap .ms-section3 .owl-carousel {
@@ -655,7 +671,11 @@ table {
 }
 
 .k8-section-wrap .ms-section3 .bg-wrap {
-  background: url(../static/img/section3-bg.jpg) no-repeat center bottom;
+  width: 100%;
+  left: 0;
+  margin: 0;
+  background: #1b1f24 url(../static/img/section3-bg.png) no-repeat center bottom;
+  background-size: contain;
 }
 
 .k8-section-wrap .hide {
@@ -766,8 +786,13 @@ table {
     left: 0;
     margin-left: 0;
     width: 100%;
-    padding: 0 60px;
     box-sizing: border-box;
+  }
+  .k8-section-wrap .ms-section3 .owl-nav span.prev {
+    right: 60px;
+  }
+  .k8-section-wrap .ms-section3 .owl-nav span.next {
+    left: 60px;
   }
 }
 
@@ -896,13 +921,33 @@ table {
     max-height: 300px;
   }
   .k8-section-wrap .ms-section3 .owl-nav {
-    display: none;
+    width: 100%;
+    left: 0;
+    margin-left: 0;
+  }
+  .k8-section-wrap .ms-section3 .owl-nav span {
+    width: 45px;
+    height: 45px;
+    top: 190px;
+  }
+  .k8-section-wrap .ms-section3 .owl-nav span.prev {
+    right: 30px;
+  }
+  .k8-section-wrap .ms-section3 .owl-nav span.next {
+    left: 30px;
+  }
+  .k8-section-wrap .ms-section3 .owl-nav span:hover {
+    background-color: rgba(255, 255, 255, 0.2);
   }
   .k8-section-wrap .ms-section3 .btn-wrap > button {
     width: 150px;
     height: 45px;
     margin-right: 16px;
     border: 1px solid #fff;
+  }
+  .k8-section-wrap .ms-section3 .bg-wrap {
+    background: #1b1f24 url(../static/img/section3-bg-m.png) no-repeat center bottom;
+    background-size: contain;
   }
   .k8-section-wrap section .m-fs38 {
     font-size: 38px;
@@ -984,6 +1029,12 @@ table {
   }
   .k8-section-wrap .ms-section3 .p-box p:first-child {
     margin-bottom: 10px;
+  }
+  .k8-section-wrap .ms-section3 .owl-nav span.prev {
+    right: 15px;
+  }
+  .k8-section-wrap .ms-section3 .owl-nav span.next {
+    left: 15px;
   }
   .k8-section-wrap section .m2-fs26 {
     font-size: 26px;

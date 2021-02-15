@@ -200,29 +200,24 @@ const numCursor = document.querySelector('.num-wrap .input-box>ul>li:nth-child(5
 for (let i = 0; i < nums.length; i++) {
 	(function (ind) {
 		nums[ind].addEventListener('click', function (e) {
-			if (e.target.classList.contains('on')) {
-				return;
-			} else {
-				// e.target.classList.add('on')
-				nums[ind].style.animation = '.7s alternate testAni';
-				setTimeout(function () {
-					nums[ind].style.animation = '';
-				}, 700);
-			}
+			nums[ind].style.animation = '.7s alternate testAni';
+			setTimeout(function () {
+				nums[ind].style.animation = '';
+			}, 700);
 
-			// 8클릭시
-			if (nums[ind].children[0].src.slice(-5, -4) === '8') {
-				numCursor.src = './static/img/num_8.png';
-				return;
-			}
+            numCursor.classList.add('on');
 
-			count++;
+			// FIXME 임시삭제 8클릭시
+			// if (nums[ind].children[0].src.slice(-5, -4) === '8') {
+			// numCursor.src = './static/img/num_8.png';
+			// return;
+			// }
 
-			// 좌측 커서엔 클릭한 숫자로, 클릭한 숫자패드는 8로 변경
-			// TODO 좌측커서에 숫자바뀌는걸 이펙트를 줘야하나
 			numCursor.src = nums[ind].children[0].src;
+			// numCursor.src = './static/img/num_8.png';
 			nums[ind].children[0].src = './static/img/num_8.png';
 
+			count++;
 			// 8이 4개 이상일 경우 티저영상페이지로 넘어가는 이벤트
 			if (count >= 3) {
 				sectionOnOff(1, false);
@@ -360,29 +355,30 @@ function getDTime() {
 		timerP[i].src = './static/img/num_' + timerTxt[i] + '.png';
 	}
 }
+
 getDTime();
 setInterval(getDTime, 500);
 
 // section3 owl slide
-$('.owl-carousel').owlCarousel({
-	loop: true,
-	margin: 80,
-	center: true,
-	nav: true,
-	autoWidth: true,
-	// autoplay: true,
-	// autoplayTimeout: 6000,
-	// autoplaySpeed: 6000,
-	slideTransition: 'linear',
-	navSpeed: 1000,
-	navText: ['<span class="slide-btn prev"></span>', '<span class="slide-btn next"></span>'],
-	responsiveClass: true,
-	responsive: {
-		0: {
-			items: 1,
-		},
-		1025: {
-			items: 1,
-		},
-	},
-});
+// $('.owl-carousel').owlCarousel({
+// 	loop: true,
+// 	margin: 80,
+// 	center: true,
+// 	nav: true,
+// 	autoWidth: true,
+// 	// autoplay: true,
+// 	// autoplayTimeout: 6000,
+// 	// autoplaySpeed: 6000,
+// 	slideTransition: 'linear',
+// 	navSpeed: 1000,
+// 	navText: ['<span class="slide-btn next"></span>', '<span class="slide-btn prev"></span>'],
+// 	responsiveClass: true,
+// 	responsive: {
+// 		0: {
+// 			items: 1,
+// 		},
+// 		1025: {
+// 			items: 1,
+// 		},
+// 	},
+// });

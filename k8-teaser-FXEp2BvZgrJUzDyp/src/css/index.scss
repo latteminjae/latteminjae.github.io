@@ -206,6 +206,10 @@ $col-gray: #4e4e4e;
 							color: #32363a;
 							animation: 0.7s 0s linear infinite alternate cursorAni;
 
+							&.on {
+								animation: 0.7s 0s linear infinite alternate cursorAni2;
+							}
+
 							@keyframes cursorAni {
 								from {
 									opacity: 0.02;
@@ -215,6 +219,18 @@ $col-gray: #4e4e4e;
 								}
 								to {
 									opacity: 0.1;
+								}
+							}
+
+							@keyframes cursorAni2 {
+								from {
+									opacity: 0.2;
+								}
+								80% {
+									opacity: 1;
+								}
+								to {
+									opacity: 1;
 								}
 							}
 						}
@@ -522,7 +538,7 @@ $col-gray: #4e4e4e;
 				top: 20px;
 				opacity: 0;
 				&:first-child {
-					margin-bottom: 18px;
+					margin-bottom: 12px;
 				}
 			}
 			span {
@@ -633,7 +649,11 @@ $col-gray: #4e4e4e;
 			}
 		}
 		.bg-wrap {
-			background: url(../static/img/section3-bg.jpg) no-repeat center bottom;
+			width: 100%;
+			left: 0;
+			margin: 0;
+			background: #1b1f24 url(../static/img/section3-bg.png) no-repeat center bottom;
+			background-size: contain;
 		}
 	}
 
@@ -652,7 +672,6 @@ $col-gray: #4e4e4e;
 	}
 
 	.numImg {
-		// FIXME 현재 이미지 num_0이 없음!
 		display: inline;
 		&.num-fs12 {
 			width: 12px;
@@ -742,8 +761,15 @@ $col-gray: #4e4e4e;
 			left: 0;
 			margin-left: 0;
 			width: 100%;
-			padding: 0 60px;
 			box-sizing: border-box;
+			span {
+				&.prev {
+					right: 60px;
+				}
+				&.next {
+					left: 60px;
+				}
+			}
 		}
 	}
 }
@@ -910,7 +936,25 @@ $col-gray: #4e4e4e;
 				}
 			}
 			.owl-nav {
-				display: none;
+				// display: none;
+				width: 100%;
+				left: 0;
+				margin-left: 0;
+
+				span {
+					width: 45px;
+					height: 45px;
+					top: 190px;
+					&.prev {
+						right: 30px;
+					}
+					&.next {
+						left: 30px;
+					}
+					&:hover {
+						background-color: rgba(255, 255, 255, 0.2);
+					}
+				}
 			}
 			.btn-wrap {
 				> button {
@@ -919,6 +963,10 @@ $col-gray: #4e4e4e;
 					margin-right: 16px;
 					border: 1px solid #fff;
 				}
+			}
+			.bg-wrap {
+				background: #1b1f24 url(../static/img/section3-bg-m.png) no-repeat center bottom;
+				background-size: contain;
 			}
 		}
 	}
@@ -1039,6 +1087,16 @@ $col-gray: #4e4e4e;
 				p {
 					&:first-child {
 						margin-bottom: 10px;
+					}
+				}
+			}
+			.owl-nav {
+				span {
+					&.prev {
+						right: 15px;
+					}
+					&.next {
+						left: 15px;
 					}
 				}
 			}
