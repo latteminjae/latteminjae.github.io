@@ -212,6 +212,12 @@ for (let i = 0; i < nums.length; i++) {
 			}
 
 			count++;
+
+			// 좌측 커서엔 클릭한 숫자로, 클릭한 숫자패드는 8로 변경
+			// TODO 좌측커서에 숫자바뀌는걸 이펙트를 줘야하나
+			numCursor.src = nums[ind].children[0].src;
+			nums[ind].children[0].src = './static/img/num_8.png';
+
 			// 8이 4개 이상일 경우 티저영상페이지로 넘어가는 이벤트
 			if (count >= 3) {
 				sectionOnOff(1, false);
@@ -222,11 +228,6 @@ for (let i = 0; i < nums.length; i++) {
 				}, 2600);
 				return;
 			}
-
-			// 좌측 커서엔 클릭한 숫자로, 클릭한 숫자패드는 8로 변경
-			// TODO 좌측커서에 숫자바뀌는걸 이펙트를 줘야하나
-			numCursor.src = nums[ind].children[0].src;
-			e.target.children[0].src = './static/img/num_8.png';
 		});
 
 		// nums[ind].addEventListener('transitionend', function (e) {
