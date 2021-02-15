@@ -33,7 +33,9 @@ function wrapSpan(txt) {
 	// (txt : String) : String {}
 	return txt
 		.split('')
-		.map((v) => (v !== ' ' ? `<span>${v}</span>` : v))
+		.map(function (v) {
+			return v !== ' ' ? '<span>' + v + '</span>' : v;
+		})
 		.join('');
 }
 const pBoxP = document.querySelectorAll('.ms-section1 .p-box p, .ms-section3 .p-box p');
@@ -314,7 +316,7 @@ function getDTime() {
 	timerTxt = (day + hor + min + sec).split('');
 
 	for (let i = 0; i < timerTxt.length; i++) {
-		timerP[i].src = `./static/img/num_${timerTxt[i]}.png`;
+		timerP[i].src = './static/img/num_' + timerTxt[i] + '.png';
 	}
 }
 getDTime();

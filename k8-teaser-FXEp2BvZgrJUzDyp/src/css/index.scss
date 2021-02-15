@@ -990,12 +990,44 @@ $col-gray: #4e4e4e;
 @media (max-width: 767px) {
 }
 
-// 모바일 400
-@media (max-width: 400px) {
+// 모바일 500
+@media (max-width: 500px) {
 	.k8-section-wrap {
+		.ms-section0 {
+			.p-box {
+				p:first-child {
+					font-size: 26px;
+				}
+			}
+		}
+		.ms-section1 {
+			> .center-wrap {
+				padding-top: 70px;
+			}
+			.p-box {
+				p {
+					&:first-child {
+						margin-bottom: 14px;
+					}
+				}
+			}
+		}
+
+		// num26
 		section {
 			.m2-fs26 {
 				font-size: 26px;
+			}
+			.m2-fs22 {
+				font-size: 22px;
+			}
+			.m2-fs14 {
+				font-size: 14px;
+			}
+		}
+		.numImg {
+			&.num-m2-fs22 {
+				width: 22px;
 			}
 		}
 	}
