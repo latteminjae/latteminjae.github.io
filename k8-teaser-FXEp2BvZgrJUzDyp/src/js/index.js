@@ -146,6 +146,11 @@ function sectionOnOff(num, on) {
 
 			setTimeout(function () {
 				document.querySelector('.num-wrap .input-box>ul>li:nth-child(5)>img').src = './static/img/num_q.png';
+				TweenMax.to('.ms-section1 .p-box p:first-child span', 0, { opacity: 1 });
+				TweenMax.to('.ms-section1 .p-box p', 0, { top: '-20px', opacity: 0 });
+				for (let i = 0; i < nums.length; i++) {
+					nums[i].children[0].src = './static/img/num_' + (i + 1) + '.png';
+				}
 			}, 2000);
 		}
 	}
@@ -199,7 +204,7 @@ for (let i = 0; i < nums.length; i++) {
 				return;
 			} else {
 				// e.target.classList.add('on')
-				nums[ind].style.animation = '.7s alternate testAni ';
+				nums[ind].style.animation = '.7s alternate testAni';
 				setTimeout(function () {
 					nums[ind].style.animation = '';
 				}, 700);
