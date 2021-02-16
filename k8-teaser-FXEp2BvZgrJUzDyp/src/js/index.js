@@ -98,7 +98,6 @@ function sectionOnOff(num, on) {
 	// section1
 	else if (num === 1) {
 		if (on) {
-			// sectionOpen(1);
 			sections[1].classList.remove('hide');
 			setTimeout(function () {
 				sections[0].classList.add('hide');
@@ -123,10 +122,6 @@ function sectionOnOff(num, on) {
 
 			// p-box
 			TweenMax.staggerTo('.ms-section1 .p-box p', 0.5, { top: 0, opacity: 1, delay: 1 }, 0.2);
-
-			// FIXME 아직 확정아님
-			// TweenMax.staggerTo('.ms-section1 .p-box p:first-child span', 0.5, { top: 0, opacity: 1, delay: 1.2 }, 0.1);
-			// TweenMax.to('.ms-section1 .p-box p:last-child', 0.8, { top: 0, opacity: 1, delay: 1.5 });
 
 			// bg, num, keypad
 			TweenMax.staggerTo('.ms-section1 .bg-wrap img', 0.3, { top: '0', opacity: 1, delay: 1.5 }, 0.1);
@@ -175,16 +170,17 @@ function sectionOnOff(num, on) {
 			outroMovies[1].play();
 
 			setTimeout(function () {
-				TweenMax.to('.ms-section2 .bg-wrap video', 0.5, { opacity: 1 });
-				TweenMax.to('.ms-section2 .center-wrap', 0.7, { opacity: 1, top: 0, delay: 1 });
+				TweenMax.to('.ms-section2 .bg-wrap video', 0.5, { opacity: 0 });
+				TweenMax.to('.ms-section2 .center-wrap', 1, { display: 'block', opacity: 1, top: 0, delay: .4 });
 				if (!isMobile) {
 					player.playVideo();
 				}
-			}, 2700);
+			}, 2400);
 		} else {
 			sectionOnOff(3, true);
 
-			TweenMax.to('.ms-section2 .center-wrap', 0.5, { opacity: 0, top: '-20px' });
+			TweenMax.to('.ms-section2 .bg-wrap video', 0, { opacity: 1 });
+			TweenMax.to('.ms-section2 .center-wrap', 0, { display: 'none', opacity: 0, top: '-20px' });
 
 			if (!isMobile) {
 				player.stopVideo();

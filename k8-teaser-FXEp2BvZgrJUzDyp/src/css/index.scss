@@ -310,7 +310,6 @@ $col-gray: #4e4e4e;
 					}
 				}
 			}
-
 		}
 		.bg-wrap {
 			top: 300px;
@@ -329,6 +328,7 @@ $col-gray: #4e4e4e;
 		align-items: center;
 
 		.center-wrap {
+			display: none;
 			opacity: 0;
 			top: -20px;
 		}

@@ -433,6 +433,7 @@ table {
 }
 
 .k8-section-wrap .ms-section2 .center-wrap {
+  display: none;
   opacity: 0;
   top: -20px;
 }
