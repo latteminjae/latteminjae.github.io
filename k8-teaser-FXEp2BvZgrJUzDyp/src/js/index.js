@@ -30,16 +30,10 @@ const numCursor = document.querySelector('.num-wrap .input-box>ul>li:nth-child(5
 const timerP = document.querySelectorAll('.ms-section3 .timer-wrap>p:first-child span img');
 const openDate = new Date('2021-03-10T00:00:00').getTime();
 
-// functions ---------------------------------------------------------------------
+// section2 youtube iframe
+const youtubeIframe = document.getElementById('iframe-div');
 
-// youtube
-function onYouTubeIframeAPIReady() {
-	player = new YT.Player('iframe-div', {
-		height: '720',
-		width: '1280',
-		videoId: 'reQwksJ-yjU',
-	});
-}
+// functions ---------------------------------------------------------------------
 
 // text에 각 글자마다 span입히는 함수
 // tweenMax로 한글자씩 transition하기 위해 span을 입힌다.
@@ -175,19 +169,14 @@ function sectionOnOff(num, on) {
 			setTimeout(function () {
 				TweenMax.to('.ms-section2 .bg-wrap video', 0.5, { opacity: 0 });
 				TweenMax.to('.ms-section2 .center-wrap', 1, { display: 'block', opacity: 1, top: 0, delay: 0.4 });
-				if (!isMobile) {
-					player.playVideo();
-				}
+				youtubeIframe.src =
+					'https://www.youtube.com/embed/reQwksJ-yjU?rel=0&autoplay=1&playsinline=1&enablejsapi=1&version=3&playerapiid=ytplayer';
 			}, 2400);
 		} else {
 			sectionOnOff(3, true);
-
+			youtubeIframe.src = '';
 			TweenMax.to('.ms-section2 .bg-wrap video', 0, { opacity: 1 });
 			TweenMax.to('.ms-section2 .center-wrap', 0, { display: 'none', opacity: 0, top: '-20px' });
-
-			if (!isMobile) {
-				player.stopVideo();
-			}
 		}
 	}
 	// section3
