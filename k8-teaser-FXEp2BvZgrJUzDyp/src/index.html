@@ -2,25 +2,37 @@
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8" />
-		<!-- FIXME <meta
-			name="viewport"
-			content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
-		/> -->
-		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="title" content="" />
-		<meta name="description" content="" />
-		<meta name="kia-metrics-pagename" content="" />
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+		<meta name="keywords" content="" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="robots" content="NOODP, NOYDIR" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
 
-		<!-- title 수정 -->
-		<title>title</title>
+		<!-- FIXME title 수정 -->
+		<title>타이틀을 수정해주세요</title>
 
-		<!-- 안드로이드 홈화면추가시 상단 주소창 제거 -->
-		<meta name="mobile-web-app-capable" content="yes" />
-		<!-- <link rel="icon" href="/img/pc/favicon.ico" /> -->
-		<!-- ios홈화면추가시 상단 주소창 제거 -->
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<!-- <link rel="apple-touch-icon" href="/img/pc/favicon.ico" /> -->
+		<!-- FIXME temporary meta tag START -->
+		<!-- <meta name="kia_metrics_pagename" content="showroom|k7|features" />
+		<meta name="title" content="기아 K8 티저페이지 | 기아 공식 사이트" />
+		<meta name="description" content="기아자동차 K8 티저페이지에 오신것을 환영합니다." />
+
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="FUN_KIA" />
+		<meta name="twitter:title" content="기아 K7 특징 - 승차감 좋은 대한민국 대표 준대형 | 기아 공식 사이트" />
+		<meta
+			name="twitter:description"
+			content="기아자동차 K7 페이지에 오신것을 환영합니다. 승차감 좋은 대한민국 대표 준대형 기아 K7의 다양한 정보를 제공합니다."
+		/>
+
+		<meta property="og:site_name" content="KIA" />
+		<meta property="og:title" content="기아 K8 티저페이지 | 기아 공식 사이트" />
+		<meta property="og:type" content="website" />
+		<meta property="og:description" content="기아자동차 K8 티저페이지에 오신것을 환영합니다." />
+
+		<meta itemprop="name" content="기아 K8 티저페이지 | 기아 공식 사이트" />
+		<meta itemprop="description" content="기아자동차 K8 티저페이지에 오신것을 환영합니다." /> -->
+		<!-- FIXME temporary meta tag END -->
 
 		<!-- font, css -->
 		<link rel="stylesheet" href="./css/font.css" />
@@ -28,7 +40,7 @@
 		<link rel="stylesheet" href="./css/lib.css" />
 	</head>
 	<body>
-		<!-- TODO img alt 채우기 -->
+		<!-- content div -->
 		<div id="content" class="k8-section-wrap" role="main">
 			<section class="ms-section0 hide">
 				<h2>Intro section</h2>
@@ -41,8 +53,8 @@
 					</div>
 				</div>
 				<div class="bg-wrap">
-					<!-- TODO 영상추가예정 임시이미지로 대체-->
-					<img src="./static/img/section0-sampleImg.jpg" style="width: 100%; height: 100%" alt="number" />
+					<video class="ms-pc introMovie" muted src="./static/vod/pc/intro.mp4"></video>
+					<video class="ms-mo introMovie" muted src="./static/vod/mo/intro.mp4"></video>
 				</div>
 			</section>
 			<section class="ms-section1 hide">
@@ -212,17 +224,13 @@
 						<img src="./static/img/icon_close.png" alt="number" />
 						CLOSE
 					</button>
-
-					<button class="bottom-right">
-						MUTE
-						<span class="icon-mute"></span>
-					</button>
-
-					<!-- TODO 그냥 section2 열때 youtube api로 매번 영상 붙이자  -->
 					<div class="iframe-wrap">
 						<div id="iframe-div"></div>
-						<!-- TODO 유튜브 sound만 컨트롤 가능한지? api찾기 -->
 					</div>
+				</div>
+				<div class="bg-wrap">
+					<video class="ms-pc outroMovie" muted src="./static/vod/pc/outro.mp4"></video>
+					<video class="ms-mo outroMovie" muted src="./static/vod/mo/outro.mp4"></video>
 				</div>
 			</section>
 			<section class="ms-section3 hide">
@@ -310,9 +318,6 @@
 				center: true,
 				nav: true,
 				autoWidth: true,
-				// autoplay: true,
-				// autoplayTimeout: 6000,
-				// autoplaySpeed: 6000,
 				slideTransition: 'linear',
 				navSpeed: 1000,
 				navText: ['<span class="slide-btn next"></span>', '<span class="slide-btn prev"></span>'],

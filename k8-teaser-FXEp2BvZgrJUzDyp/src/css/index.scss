@@ -1,6 +1,5 @@
 @import './reset.scss';
 
-// 이거는 브랜딩에서나 쓸듯
 @mixin px2vw($property, $valueList) {
 	$vwList: ();
 	$pxList: ();
@@ -111,10 +110,16 @@ $col-gray: #4e4e4e;
 			}
 		}
 		.bg-wrap {
-			perspective: 500px;
-			img {
-				transition: all 2s 1s ease-in;
-				transform: translateZ(0px);
+			video {
+				position: absolute;
+				top: 0;
+				left: 0;
+
+				width: 100%;
+				height: 100%;
+
+				&.ms-mo {
+				}
 			}
 		}
 	}
@@ -123,6 +128,7 @@ $col-gray: #4e4e4e;
 		height: 100%;
 		background: #1b1f24;
 		top: 100%;
+		z-index: 1;
 
 		.box-tb {
 			width: 1684px;
@@ -178,14 +184,6 @@ $col-gray: #4e4e4e;
 
 				&:first-child {
 					margin-bottom: 30px;
-					span {
-						// top: -20px;
-						// opacity: 0;
-					}
-				}
-				&:last-child {
-					// opacity: 0;
-					// top: -20px;
 				}
 			}
 		}
@@ -312,78 +310,13 @@ $col-gray: #4e4e4e;
 					}
 				}
 			}
-			.num-padImg {
-				.image {
-					// 모자이크 fadeout에 활용하면 될듯?
-					width: 310px;
-					height: 300px;
-					background: url(http://jaschagoltermann.de/wp-content/themes/jg/assets/img/profile_build_jg.png);
-					background-position: -4960px;
-					position: absolute;
-					margin: auto;
-					top: 0;
-					left: 0;
-					bottom: 0;
-					right: 0;
-					-webkit-animation-name: gif;
-					-webkit-animation-delay: 1s;
-					-webkit-animation-timing-function: steps(17, start);
-					-webkit-animation-duration: 1.5s;
-					-webkit-animation-iteration-count: 1;
-					-webkit-animation-fill-mode: forwards;
-					-moz-animation: gif 1s steps(17, start) 1.5s 1 forwards;
-					-ms-animation: gif 1s steps(17, start) 1.5s 1 forwards;
-					-o-animation: gif 1s steps(17, start) 1.5s 1 forwards;
-					animation: gif 1s steps(17, start) 1.5s 1 forwards;
-				}
-				@-webkit-keyframes gif {
-					0% {
-						background-position: -5270px;
-					}
-					100% {
-						background-position: 1px;
-					}
-				}
-				@-moz-keyframes gif {
-					from {
-						background-position: -5270px;
-					}
-					to {
-						background-position: 1px;
-					}
-				}
-				@-ms-keyframes gif {
-					from {
-						background-position: -5270px;
-					}
-					to {
-						background-position: 1px;
-					}
-				}
-				@-o-keyframes gif {
-					from {
-						background-position: -5270px;
-					}
-					to {
-						background-position: 1px;
-					}
-				}
-				@keyframes gif {
-					from {
-						background-position: -5270px;
-					}
-					to {
-						background-position: 0;
-					}
-				}
-			}
+
 		}
 		.bg-wrap {
 			top: 300px;
 			img {
 				opacity: 0;
 				position: absolute;
-				// top: -500px;
 				left: 0;
 			}
 		}
@@ -395,6 +328,10 @@ $col-gray: #4e4e4e;
 		justify-content: center;
 		align-items: center;
 
+		.center-wrap {
+			opacity: 0;
+			top: -20px;
+		}
 		button {
 			display: flex;
 			font-size: 15px;
@@ -404,51 +341,11 @@ $col-gray: #4e4e4e;
 			z-index: 1;
 			overflow: hidden;
 
-			// &:hover::after {
-			// 	right: 9px;
-			// }
-			// &::after {
-			// 	display: block;
-			// 	width: 54px;
-			// 	height: 1px;
-			// 	background: #fff;
-			// 	content: '';
-			// 	position: absolute;
-			// 	right: -64px;
-			// 	top: 27px;
-			// 	transition: all 0.3s;
-			// }
 			&.top-left {
 				img {
 					margin-right: 10px;
 					position: relative;
 					top: 2px;
-				}
-			}
-			&.bottom-right {
-				bottom: 70px;
-				right: 0px;
-				&.mute {
-					span {
-						background: url(../static/img/icon_mute_off.png) no-repeat center;
-					}
-				}
-
-				&:hover::after {
-					left: 8px;
-				}
-				&::after {
-					left: -64px;
-					width: 45px;
-				}
-				span {
-					position: relative;
-					top: -5px;
-					display: block;
-					margin-left: 10px;
-					width: 22px;
-					height: 28px;
-					background: url(../static/img/icon_sound_sprite.png) no-repeat right;
 				}
 			}
 		}
@@ -470,12 +367,18 @@ $col-gray: #4e4e4e;
 			max-height: 590px;
 			overflow: hidden;
 		}
+		.bg-wrap {
+			video {
+				width: 100%;
+				height: 100%;
+			}
+		}
 	}
 	.ms-section3 {
 		.timer-wrap {
 			font-weight: 300;
 			text-align: center;
-			margin: 55px 0 40px;
+			margin: 35px 0 40px;
 
 			p {
 				display: flex;
@@ -535,7 +438,7 @@ $col-gray: #4e4e4e;
 		.p-box {
 			text-align: center;
 			font-weight: 300;
-			margin-bottom: 20px;
+			margin-bottom: 40px;
 			p {
 				position: relative;
 				top: 20px;
@@ -543,9 +446,6 @@ $col-gray: #4e4e4e;
 				&:first-child {
 					margin-bottom: 12px;
 				}
-			}
-			span {
-				// opacity: 0;
 			}
 		}
 		.owl-carousel {
@@ -923,12 +823,8 @@ $col-gray: #4e4e4e;
 					}
 				}
 			}
-			.p-box {
-				// margin-bottom: 40px;
-			}
 			.owl-carousel {
 				height: 300px;
-				// margin-bottom: 35px;
 
 				.owl-stage {
 					max-height: 300px;
@@ -938,7 +834,6 @@ $col-gray: #4e4e4e;
 				}
 			}
 			.owl-nav {
-				// display: none;
 				width: 100%;
 				left: 0;
 				margin-left: 0;
@@ -1040,12 +935,10 @@ $col-gray: #4e4e4e;
 	}
 }
 
-// 태블릿
-@media (max-width: 1024px) {
-}
-
-// 모바일
-@media (max-width: 767px) {
+@media (min-width: 501px) {
+	.ms-mo1 {
+		display: none !important;
+	}
 }
 
 // 모바일 500
@@ -1105,7 +998,6 @@ $col-gray: #4e4e4e;
 			}
 		}
 
-		// num26
 		section {
 			.m2-fs26 {
 				font-size: 26px;
@@ -1123,5 +1015,9 @@ $col-gray: #4e4e4e;
 				height: 33px;
 			}
 		}
+	}
+
+	.ms-pc1 {
+		display: none !important;
 	}
 }
