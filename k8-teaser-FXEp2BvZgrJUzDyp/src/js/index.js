@@ -155,6 +155,9 @@ function sectionOnOff(num, on) {
 				document.querySelector('.num-wrap .input-box>ul>li:nth-child(5)>img').src = './static/img/num_q.png';
 				TweenMax.to('.ms-section1 .p-box p:first-child span', 0, { opacity: 1 });
 				TweenMax.to('.ms-section1 .p-box p', 0, { top: '-20px', opacity: 0 });
+				if (numCursor.classList.contains('on')) {
+					numCursor.classList.remove('on');
+				}
 				for (let i = 0; i < nums.length; i++) {
 					nums[i].children[0].src = './static/img/num_' + (i + 1) + '.png';
 				}
@@ -171,7 +174,7 @@ function sectionOnOff(num, on) {
 
 			setTimeout(function () {
 				TweenMax.to('.ms-section2 .bg-wrap video', 0.5, { opacity: 0 });
-				TweenMax.to('.ms-section2 .center-wrap', 1, { display: 'block', opacity: 1, top: 0, delay: .4 });
+				TweenMax.to('.ms-section2 .center-wrap', 1, { display: 'block', opacity: 1, top: 0, delay: 0.4 });
 				if (!isMobile) {
 					player.playVideo();
 				}
@@ -241,7 +244,7 @@ function getDTime() {
 for (let i = 0; i < nums.length; i++) {
 	(function (ind) {
 		nums[ind].addEventListener('click', function (e) {
-			nums[ind].style.animation = '.7s alternate testAni';
+			nums[ind].style.animation = '.7s alternate clickAni';
 			setTimeout(function () {
 				nums[ind].style.animation = '';
 			}, 700);

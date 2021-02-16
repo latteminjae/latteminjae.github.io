@@ -254,8 +254,8 @@ $col-gray: #4e4e4e;
 					> li {
 						opacity: 0;
 						margin: 0 10px 10px 0;
-
 						position: relative;
+
 						&:nth-child(3n) {
 							margin: 0 0 10px 0;
 						}
@@ -295,7 +295,7 @@ $col-gray: #4e4e4e;
 							border-radius: 50%;
 							transition: 0.3s all;
 
-							@keyframes testAni {
+							@keyframes clickAni {
 								from {
 									box-shadow: 0 0 4px 1px transparent;
 								}
