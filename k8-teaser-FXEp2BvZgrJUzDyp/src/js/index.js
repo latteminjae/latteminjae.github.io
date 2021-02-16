@@ -53,9 +53,9 @@ function wrapSpan(txt) {
 		.join('');
 }
 
-// section class hide toggle 
+// section class hide toggle
 function sectionOpen(num) {
-    // (num : number) : void
+	// (num : number) : void
 	for (let i = 0; i < sections.length; i++) {
 		if (!sections[i].classList.contains('hide')) {
 			sections[i].classList.add('hide');
@@ -64,7 +64,7 @@ function sectionOpen(num) {
 	sections[num].classList.remove('hide');
 }
 
-// section on/off 
+// section on/off
 function sectionOnOff(num, on) {
 	// (num : number 0 ~ 3, on : boolean) : void
 
@@ -85,10 +85,9 @@ function sectionOnOff(num, on) {
 
 			setTimeout(function () {
 				sectionOnOff(0, false);
-			}, 4000);
+			}, 3000);
 		} else {
-			TweenMax.to('.ms-section0 .p-box p:last-child', 0.5, { top: '-20px', opacity: 0 });
-			TweenMax.to('.ms-section0 .p-box p:first-child', 0.5, { top: '-20px', opacity: 0 });
+			TweenMax.to('.ms-section0 .p-box p', 0.5, { top: '-20px', opacity: 0 });
 			TweenMax.to('.ms-section0 .logo img', 0.5, { opacity: 0 });
 
 			setTimeout(function () {
@@ -135,8 +134,6 @@ function sectionOnOff(num, on) {
 			TweenMax.staggerTo('.ms-section1 .input-box>ul>li', 0.5, { opacity: 1, delay: 1.5 }, 0.1);
 			TweenMax.staggerTo('.ms-section1 .num-pad>ul>li', 0.5, { opacity: 1, delay: 1.5 }, 0.1);
 		} else {
-			sections[2].classList.remove('hide');
-
 			// back, skip 버튼
 			TweenMax.to('.ms-section1 .top-box', 0.5, { opacity: 0, ease: 'ease-out' });
 			TweenMax.to('.ms-section1 .bottom-box', 0.5, { opacity: 0, ease: 'ease-out' });
@@ -218,7 +215,7 @@ function sectionOnOff(num, on) {
 
 // section3 make timer text
 function getDTime() {
-    // () : void
+	// () : void
 	const timer = (openDate - Date.now()) / 1000;
 	let timerTxt = '';
 
@@ -262,6 +259,7 @@ for (let i = 0; i < nums.length; i++) {
 
 			// 숫자패드 클릭횟수 3번 이상일 경우 티저영상페이지로 넘어간다
 			if (count >= 3) {
+				sections[2].classList.remove('hide');
 				sectionOnOff(1, false);
 				count = 0;
 				setTimeout(function () {
@@ -282,6 +280,7 @@ document.querySelector('.ms-section1 .top-box button').addEventListener('click',
 });
 document.querySelector('.ms-section1 .bottom-box button').addEventListener('click', function () {
 	sectionOnOff(1, false);
+	sections[2].classList.remove('hide');
 	setTimeout(function () {
 		sectionOnOff(2, true);
 	}, 2200);
@@ -313,7 +312,7 @@ for (let i = 0; i < pBoxP.length; i++) {
 	pBoxP[i].innerHTML = wrapSpan(pBoxP[i].innerHTML);
 }
 
-// section0 open, interval - section3 timer 
+// section0 open, interval - section3 timer
 window.onload = function () {
 	sectionOnOff(0, true);
 	setInterval(getDTime, 500);
