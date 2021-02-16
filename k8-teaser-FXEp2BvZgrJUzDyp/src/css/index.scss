@@ -61,6 +61,9 @@ $col-gray: #4e4e4e;
 		display: flex;
 		justify-content: center;
 
+		h2 {
+			display: none;
+		}
 		> .center-wrap {
 			width: 100%;
 			height: 100%;
@@ -380,7 +383,7 @@ $col-gray: #4e4e4e;
 			img {
 				opacity: 0;
 				position: absolute;
-				top: '-500px';
+				// top: -500px;
 				left: 0;
 			}
 		}
@@ -668,7 +671,6 @@ $col-gray: #4e4e4e;
 		-khtml-user-drag: none;
 		-moz-user-drag: none;
 		-o-user-drag: none;
-		user-drag: none;
 	}
 
 	.numImg {

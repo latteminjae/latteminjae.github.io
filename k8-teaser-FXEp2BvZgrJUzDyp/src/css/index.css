@@ -75,6 +75,10 @@ table {
   justify-content: center;
 }
 
+.k8-section-wrap > section h2 {
+  display: none;
+}
+
 .k8-section-wrap > section > .center-wrap {
   width: 100%;
   height: 100%;
@@ -408,7 +412,6 @@ table {
 .k8-section-wrap .ms-section1 .bg-wrap img {
   opacity: 0;
   position: absolute;
-  top: '-500px';
   left: 0;
 }
 
@@ -689,7 +692,6 @@ table {
   -khtml-user-drag: none;
   -moz-user-drag: none;
   -o-user-drag: none;
-  user-drag: none;
 }
 
 .k8-section-wrap .numImg {
