@@ -195,6 +195,7 @@ function sectionOnOff(num, on) {
 			// FIXME AB테스트 끝나면 하나 삭제
 			TweenMax.to('.ms-section3 .slick-carousel', 3, { opacity: 1, delay: 1.8 });
 			TweenMax.to('.ms-section3 .owl-carousel', 3, { opacity: 1, delay: 1.8 });
+			$('.slick-carousel').slick('slickGoTo', 0);
 		} else {
 			TweenMax.to('.ms-section3 .btn-wrap', 0.5, { opacity: 0, bottom: '-100px' });
 			TweenMax.to('.ms-section3 .timer-wrap span', 0.3, { top: '30px', opacity: 0, delay: 0.3 });
