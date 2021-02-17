@@ -340,6 +340,7 @@ table {
   z-index: 1;
   border: 2px solid #212529;
   border-radius: 6px;
+  background: #1b1f24;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 76px;
@@ -353,7 +354,6 @@ table {
 
 .k8-section-wrap .ms-section1 .num-wrap .num-pad > ul > li > button:hover {
   border: 2px solid #a3a5a7;
-  background: #1b1f24;
 }
 
 .k8-section-wrap .ms-section1 .num-wrap .num-pad > ul > li > button.on {

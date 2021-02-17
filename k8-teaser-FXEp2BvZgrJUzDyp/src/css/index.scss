@@ -266,6 +266,7 @@ $col-gray: #4e4e4e;
 							z-index: 1;
 							border: 2px solid #212529;
 							border-radius: 6px;
+							background: #1b1f24;
 							box-sizing: border-box;
 							width: 76px;
 							height: 76px;
@@ -276,7 +277,6 @@ $col-gray: #4e4e4e;
 
 							&:hover {
 								border: 2px solid #a3a5a7;
-								background: #1b1f24;
 							}
 							&.on {
 								background: #1b1f24;
