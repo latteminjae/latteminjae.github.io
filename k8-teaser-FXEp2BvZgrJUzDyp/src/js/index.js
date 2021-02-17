@@ -191,11 +191,17 @@ function sectionOnOff(num, on) {
 			);
 			TweenMax.staggerTo('.ms-section3 .p-box p', 0.8, { opacity: 1, top: 0, delay: 1 }, 0.2);
 			TweenMax.to('.ms-section3 .btn-wrap', 1, { opacity: 1, bottom: 0, delay: 1.1 });
+
+			// FIXME AB테스트 끝나면 하나 삭제
+			TweenMax.to('.ms-section3 .slick-carousel', 3, { opacity: 1, delay: 1.8 });
 			TweenMax.to('.ms-section3 .owl-carousel', 3, { opacity: 1, delay: 1.8 });
 		} else {
 			TweenMax.to('.ms-section3 .btn-wrap', 0.5, { opacity: 0, bottom: '-100px' });
 			TweenMax.to('.ms-section3 .timer-wrap span', 0.3, { top: '30px', opacity: 0, delay: 0.3 });
 			TweenMax.to('.ms-section3 .p-box p', 0.2, { opacity: 0, top: '20px', delay: 0.3 });
+
+			// FIXME AB테스트 끝나면 하나 삭제
+			TweenMax.to('.ms-section3 .slick-carousel', 0.5, { opacity: 0, delay: 0.7 });
 			TweenMax.to('.ms-section3 .owl-carousel', 0.5, { opacity: 0, delay: 0.7 });
 		}
 	}
@@ -306,5 +312,5 @@ window.onload = function () {
 	setInterval(getDTime, 500);
 };
 
-// section3 owl slide
+// section3 slide
 // 클라이언트에게 각 타입 테스트를 위해 index.html, index2.html에 스크립트를 각각 나누어 놓았음

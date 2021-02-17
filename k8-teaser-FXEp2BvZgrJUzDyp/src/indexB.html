@@ -274,7 +274,7 @@
 						<p class="fs16 m2-fs14">낯선것으로부터 K8</p>
 						<p class="fs16 m2-fs14">2021년 3월 10일 K8 디자인의 모든 것이 공개됩니다</p>
 					</div>
-					<ul class="slick-carousel">
+					<ul class="owl-carousel">
 						<li>
 							<img src="./static/img/section3-slideItem1.jpg" alt="gallery item" />
 						</li>
@@ -320,29 +320,33 @@
 		<script src="./js/libs/animation.gsap.js"></script>
 		<script src="./js/libs/debug.addIndicators.min.js"></script>
 		<script src="./js/libs/slick.min.js"></script>
+		<script src="./js/libs/owlSlide.min.js"></script>
 		<script src="./js/index.js"></script>
 		<script>
-			$('.slick-carousel').slick({
-				infinite: false,
-				speed: 300,
-				slidesToShow: 1,
-				centerMode: true,
-				variableWidth: true,
-				responsive: [
-					{
-						breakpoint: 1024,
-						settings: {
-							slidesToShow: 1,
-						},
+			$('.owl-carousel').owlCarousel({
+				loop: true,
+				margin: 80,
+				center: true,
+				nav: false,
+
+				mouseDrag: false,
+				touchDrag: false,
+				pullDrag: false,
+
+				autoWidth: true,
+				autoplay: true,
+				autoplayTimeout: 6000,
+				autoplaySpeed: 6000,
+				slideTransition: 'linear',
+				responsiveClass: true,
+				responsive: {
+					0: {
+						items: 1,
 					},
-					{
-						breakpoint: 500,
-						settings: {
-							slidesToShow: 1,
-							slidesToScroll: 1,
-						},
+					1025: {
+						items: 1,
 					},
-				],
+				},
 			});
 		</script>
 	</body>

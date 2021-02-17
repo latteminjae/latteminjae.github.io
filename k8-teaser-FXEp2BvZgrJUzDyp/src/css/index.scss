@@ -447,6 +447,46 @@ $col-gray: #4e4e4e;
 				}
 			}
 		}
+		.slick-carousel {
+			height: 420px;
+			margin-bottom: 30px;
+			opacity: 0;
+			li {
+				margin-right: 70px;
+				height: 420px;
+				display: flex;
+				align-items: center;
+				img {
+					max-height: 420px;
+				}
+			}
+			button {
+				position: absolute;
+				z-index: 2;
+				top: 50%;
+				display: block;
+				width: 90px;
+				height: 90px;
+				border-radius: 50%;
+				background: rgba(255, 255, 255, 0.2) url(../static/img/arrow_l_white2.png) no-repeat center center;
+				transition: all 0.3s;
+				left: calc(50% - 90px);
+
+				&::before {
+					display: none;
+				}
+				&.slick-next {
+					margin-left: -710px;
+				}
+				&.slick-prev {
+					margin-left: 710px;
+					transform: translateY(-45px) rotateZ(180deg);
+				}
+				&:hover {
+					background-color: rgba(0, 0, 0, 0.5);
+				}
+			}
+		}
 		.owl-carousel {
 			opacity: 0;
 			margin-bottom: 20px;
@@ -486,6 +526,7 @@ $col-gray: #4e4e4e;
 				}
 			}
 		}
+
 		.btn-wrap {
 			opacity: 0;
 			bottom: -100px;
@@ -658,17 +699,31 @@ $col-gray: #4e4e4e;
 				}
 			}
 		}
-		.ms-section3 .owl-nav {
-			left: 0;
-			margin-left: 0;
-			width: 100%;
-			box-sizing: border-box;
-			span {
-				&.prev {
-					right: 60px;
+		.ms-section3 {
+			.slick-carousel {
+				button {
+					&.slick-next {
+						left: 30px;
+						margin: 0;
+					}
+					&.slick-prev {
+						right: 30px;
+						left: auto;
+					}
 				}
-				&.next {
-					left: 60px;
+			}
+			.owl-nav {
+				left: 0;
+				margin-left: 0;
+				width: 100%;
+				box-sizing: border-box;
+				span {
+					&.prev {
+						right: 60px;
+					}
+					&.next {
+						left: 60px;
+					}
 				}
 			}
 		}
@@ -822,6 +877,25 @@ $col-gray: #4e4e4e;
 					}
 				}
 			}
+			.slick-carousel {
+				img {
+					max-height: 300px;
+				}
+				button {
+					width: 45px;
+					height: 45px;
+
+					&.slick-next {
+						left: 30px;
+						margin: 0;
+					}
+					&.slick-prev {
+						right: 30px;
+						left: auto;
+						transform: translateY(-22px) rotateZ(180deg);
+					}
+				}
+			}
 			.owl-carousel {
 				height: 300px;
 
@@ -853,6 +927,7 @@ $col-gray: #4e4e4e;
 					}
 				}
 			}
+
 			.btn-wrap {
 				> button {
 					width: 150px;
@@ -982,6 +1057,16 @@ $col-gray: #4e4e4e;
 				p {
 					&:first-child {
 						margin-bottom: 10px;
+					}
+				}
+			}
+			.slick-carousel {
+				button {
+					&.slick-next {
+						left: 15px;
+					}
+					&.slick-prev {
+						right: 15px;
 					}
 				}
 			}
