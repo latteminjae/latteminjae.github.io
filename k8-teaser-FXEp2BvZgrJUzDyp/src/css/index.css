@@ -1003,7 +1003,13 @@ table {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  .k8-section-wrap .ms-section3 .slick-carousel img {
+  .k8-section-wrap .ms-section3 .slick-carousel {
+    height: 300px;
+  }
+  .k8-section-wrap .ms-section3 .slick-carousel li {
+    height: 300px;
+  }
+  .k8-section-wrap .ms-section3 .slick-carousel li img {
     max-height: 300px;
   }
   .k8-section-wrap .ms-section3 .slick-carousel button {

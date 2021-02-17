@@ -878,8 +878,12 @@ $col-gray: #4e4e4e;
 				}
 			}
 			.slick-carousel {
-				img {
-					max-height: 300px;
+				height: 300px;
+				li {
+					height: 300px;
+					img {
+						max-height: 300px;
+					}
 				}
 				button {
 					width: 45px;
