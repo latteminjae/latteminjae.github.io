@@ -233,9 +233,9 @@ function getDTime() {
 for (let i = 0; i < nums.length; i++) {
 	(function (ind) {
 		nums[ind].addEventListener('click', function (e) {
-			nums[ind].style.animation = '.7s alternate clickAni';
+			nums[ind].nextElementSibling.style.animation = '.7s alternate clickAni';
 			setTimeout(function () {
-				nums[ind].style.animation = '';
+				nums[ind].nextElementSibling.style.animation = '';
 			}, 700);
 
 			numCursor.classList.add('on');
