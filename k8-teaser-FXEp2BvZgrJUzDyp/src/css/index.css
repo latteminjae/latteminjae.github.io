@@ -1445,13 +1445,13 @@
     -webkit-transform: translateY(-22px) rotateZ(180deg);
             transform: translateY(-22px) rotateZ(180deg);
   }
-  .ms_k8-section-wrap .ms-section3 .owl-carousel {
+  .ms_k8-section-wrap .ms-section3 .slick-carousel {
     height: 300px;
   }
-  .ms_k8-section-wrap .ms-section3 .owl-carousel .owl-stage {
+  .ms_k8-section-wrap .ms-section3 .slick-carousel .owl-stage {
     max-height: 300px;
   }
-  .ms_k8-section-wrap .ms-section3 .owl-carousel img {
+  .ms_k8-section-wrap .ms-section3 .slick-carousel img {
     max-height: 300px;
   }
   .ms_k8-section-wrap .ms-section3 .owl-nav {
