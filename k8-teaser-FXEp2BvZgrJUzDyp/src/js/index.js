@@ -127,9 +127,10 @@ $(document).ready(function () {
 	});
 
 	// start ---------------------------------------------------------------------------
-	// section0 open
 
-	if (window.location.hash === '#test') {
+    console.log(window.location.hash);
+	console.log(window.location.hash === '#gallery');
+	if (window.location.hash === '#gallery') {
 		sectionOnOff(3, true);
 	} else {
 		sectionOnOff(0, true);
