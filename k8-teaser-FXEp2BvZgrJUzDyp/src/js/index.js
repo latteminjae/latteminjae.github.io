@@ -128,8 +128,12 @@ $(document).ready(function () {
 
 	// start ---------------------------------------------------------------------------
 	// section0 open
-	sectionOnOff(0, true);
-	setInterval(getDTime, 500);
+
+	if (window.location.hash === '#test') {
+		sectionOnOff(3, true);
+	} else {
+		sectionOnOff(0, true);
+	}
 });
 
 // functions ---------------------------------------------------------------------

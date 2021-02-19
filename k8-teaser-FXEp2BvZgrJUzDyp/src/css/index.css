@@ -1387,12 +1387,11 @@
   .ms_k8-section-wrap .ms-section0 .p-box p:first-child {
     margin-bottom: 25px;
   }
-  .ms_k8-section-wrap .ms-section1 .box-tb.top-box {
-    top: 30px;
-    left: 35px;
+  .ms_k8-section-wrap .ms-section1 .center-wrap {
+    padding-top: 20px;
   }
-  .ms_k8-section-wrap .ms-section1 .box-tb.top-box button {
-    background: url(../static/img/icon_close.png) no-repeat left;
+  .ms_k8-section-wrap .ms-section1 .box-tb.top-box {
+    display: none;
   }
   .ms_k8-section-wrap .ms-section1 .box-tb.bottom-box {
     right: 45px;
@@ -1594,13 +1593,13 @@
     font-size: 26px;
   }
   .ms_k8-section-wrap .ms-section1 > .center-wrap {
-    padding-top: 70px;
+    padding-top: 30px;
   }
   .ms_k8-section-wrap .ms-section1 .p-box p:first-child {
     margin-bottom: 14px;
   }
   .ms_k8-section-wrap .ms-section1 .bg-wrap {
-    top: 180px;
+    top: 130px;
     left: 50%;
     margin-left: -250px;
     min-width: 500px;
