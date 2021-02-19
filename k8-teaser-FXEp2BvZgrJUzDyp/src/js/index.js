@@ -26,10 +26,6 @@ let count = 0;
 let nums;
 let numCursor;
 
-// section3 타이머
-let timerP;
-let openDate;
-
 // section2 youtube iframe
 let youtubeIframe;
 
@@ -40,8 +36,6 @@ $(document).ready(function () {
 	outroMovies = document.querySelectorAll('.ms-section2 .bg-wrap .outroMovie');
 	nums = document.querySelectorAll('.num-pad>ul>li>button');
 	numCursor = document.querySelector('.num-wrap .input-box>ul>li:nth-child(5)>img');
-	timerP = document.querySelectorAll('.ms-section3 .timer-wrap>p:first-child span img');
-	openDate = new Date('2021-03-10T00:00:00').getTime();
 	youtubeIframe = document.getElementById('iframe-div');
 
 	// addEventListener -----------------------------------------------------------------
@@ -133,7 +127,7 @@ $(document).ready(function () {
 	});
 
 	// start ---------------------------------------------------------------------------
-	// section0 open, interval - section3 timer
+	// section0 open
 	sectionOnOff(0, true);
 	setInterval(getDTime, 500);
 });
@@ -288,12 +282,7 @@ function sectionOnOff(num, on) {
 	else if (num === 3) {
 		if (on) {
 			sectionOpen(3);
-			TweenMax.staggerTo(
-				'.ms-section3 .timer-wrap p span',
-				0.3,
-				{ top: 0, opacity: 1, ease: 'ease-in', delay: 0.3 },
-				0.1
-			);
+
 			TweenMax.staggerTo('.ms-section3 .p-box p', 0.8, { opacity: 1, top: 0, delay: 1 }, 0.2);
 			TweenMax.to('.ms-section3 .btn-wrap', 1, { opacity: 1, bottom: 0, delay: 1.1 });
 
@@ -301,37 +290,10 @@ function sectionOnOff(num, on) {
 			$('.slick-carousel').slick('slickGoTo', 0);
 		} else {
 			TweenMax.to('.ms-section3 .btn-wrap', 0.5, { opacity: 0, bottom: '-100px' });
-			TweenMax.to('.ms-section3 .timer-wrap span', 0.3, { top: '30px', opacity: 0, delay: 0.3 });
 			TweenMax.to('.ms-section3 .p-box p', 0.2, { opacity: 0, top: '20px', delay: 0.3 });
 
 			TweenMax.to('.ms-section3 .slick-carousel', 0.5, { opacity: 0, delay: 0.7 });
 		}
-	}
-}
-
-// section3 make timer text
-function getDTime() {
-	// () : void
-	const timer = (openDate - Date.now()) / 1000;
-	let timerTxt = '';
-
-	let day = Math.floor(timer / 60 / 60 / 24).toString();
-	let hor = Math.floor((timer / 60 / 60) % 24)
-		.toString()
-		.slice(0, 2);
-	let min = Math.floor((timer / 60) % 60)
-		.toString()
-		.slice(0, 2);
-	let sec = Math.floor(timer % 60).toString();
-
-	sec.length < 2 ? (sec = '0' + sec) : null;
-	min.length < 2 ? (min = '0' + min) : null;
-	hor.length < 2 ? (hor = '0' + hor) : null;
-
-	timerTxt = (day + hor + min + sec).split('');
-
-	for (let i = 0; i < timerTxt.length; i++) {
-		timerP[i].src = './static/img/num_' + timerTxt[i] + '.png';
 	}
 }
 

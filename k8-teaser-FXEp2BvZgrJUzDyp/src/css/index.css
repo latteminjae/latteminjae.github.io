@@ -434,75 +434,8 @@
   height: 100%;
 }
 
-.ms_k8-section-wrap .ms-section3 .timer-wrap {
-  font-weight: 300;
-  text-align: center;
-  margin: 35px 0 40px;
-}
-
-.ms_k8-section-wrap .ms-section3 .timer-wrap p {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: auto;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.ms_k8-section-wrap .ms-section3 .timer-wrap p span {
-  position: relative;
-  top: 15px;
-  opacity: 0;
-  padding: 0 30px;
-}
-
-.ms_k8-section-wrap .ms-section3 .timer-wrap p span img:first-child {
-  margin-right: 6px;
-}
-
-.ms_k8-section-wrap .ms-section3 .timer-wrap p:first-child {
-  margin-bottom: 16px;
-}
-
-.ms_k8-section-wrap .ms-section3 .timer-wrap p:first-child span {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  color: #fff;
-  position: relative;
-}
-
-.ms_k8-section-wrap .ms-section3 .timer-wrap p:first-child span::before, .ms_k8-section-wrap .ms-section3 .timer-wrap p:first-child span::after {
-  position: absolute;
-  top: 16px;
-  right: -3px;
-  content: '';
-  width: 6px;
-  height: 6px;
-  display: block;
-  background: #3c3c3c;
-  border-radius: 50%;
-}
-
-.ms_k8-section-wrap .ms-section3 .timer-wrap p:first-child span::after {
-  top: 44px;
-}
-
-.ms_k8-section-wrap .ms-section3 .timer-wrap p:first-child span:last-child::before, .ms_k8-section-wrap .ms-section3 .timer-wrap p:first-child span:last-child::after {
-  display: none;
-}
-
-.ms_k8-section-wrap .ms-section3 .timer-wrap p:last-child {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  color: #5c5c5c;
-  margin: auto;
-}
-
-.ms_k8-section-wrap .ms-section3 .timer-wrap p:last-child span {
-  width: 86px;
+.ms_k8-section-wrap .ms-section3 .center-wrap {
+  padding-top: 120px;
 }
 
 .ms_k8-section-wrap .ms-section3 .p-box {
@@ -518,7 +451,11 @@
 }
 
 .ms_k8-section-wrap .ms-section3 .p-box p:first-child {
-  margin-bottom: 12px;
+  margin-bottom: 30px;
+}
+
+.ms_k8-section-wrap .ms-section3 .p-box p:nth-child(2) {
+  margin-bottom: 50px;
 }
 
 .ms_k8-section-wrap .ms-section3 .slick-carousel {
@@ -791,12 +728,16 @@
   font-size: 16px;
 }
 
-.ms_k8-section-wrap .fs16 {
-  font-size: 16px;
+.ms_k8-section-wrap .fs22 {
+  font-size: 22px;
 }
 
 .ms_k8-section-wrap .col_gray {
   color: #3c3c3c;
+}
+
+.ms_k8-section-wrap .col_gray2 {
+  color: #7e8284;
 }
 
 .ms_k8-section-wrap ol,
@@ -1510,30 +1451,10 @@
     max-height: 575px;
   }
   .ms_k8-section-wrap .ms-section3 .center-wrap {
-    padding-top: 60px;
+    padding-top: 90px;
   }
-  .ms_k8-section-wrap .ms-section3 .timer-wrap {
-    margin: 0 0 30px 0;
-  }
-  .ms_k8-section-wrap .ms-section3 .timer-wrap p span {
-    padding: 0 20px;
-  }
-  .ms_k8-section-wrap .ms-section3 .timer-wrap p:first-child {
-    margin-bottom: 13px;
-  }
-  .ms_k8-section-wrap .ms-section3 .timer-wrap p:first-child span::before, .ms_k8-section-wrap .ms-section3 .timer-wrap p:first-child span::after {
-    top: 5px;
-    right: -3px;
-    width: 5px;
-    height: 5px;
-  }
-  .ms_k8-section-wrap .ms-section3 .timer-wrap p:first-child span::after {
-    top: 23px;
-  }
-  .ms_k8-section-wrap .ms-section3 .timer-wrap p:last-child span {
-    padding: 0 18px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+  .ms_k8-section-wrap .ms-section3 .p-box p:nth-child(2) {
+    margin-bottom: 30px;
   }
   .ms_k8-section-wrap .ms-section3 .slick-carousel {
     height: 300px;
@@ -1596,6 +1517,12 @@
   .ms_k8-section-wrap .ms-section3 .bg-wrap {
     background: #1b1f24 url(../static/img/section3-bg-m.png) no-repeat center bottom;
     background-size: contain;
+  }
+  .ms_k8-section-wrap section .m-fs46 {
+    font-size: 46px;
+  }
+  .ms_k8-section-wrap section .m-fs20 {
+    font-size: 20px;
   }
   .ms_k8-section-wrap section .m-fs38 {
     font-size: 38px;
@@ -1678,11 +1605,11 @@
     margin-left: -250px;
     min-width: 500px;
   }
-  .ms_k8-section-wrap .ms-section3 .timer-wrap p span img:first-child {
-    margin-right: 3px;
-  }
   .ms_k8-section-wrap .ms-section3 .p-box p:first-child {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  .ms_k8-section-wrap .ms-section3 .p-box p:nth-child(2) {
+    margin-bottom: 30px;
   }
   .ms_k8-section-wrap .ms-section3 .slick-carousel button.slick-next {
     left: 15px;
@@ -1704,6 +1631,15 @@
   }
   .ms_k8-section-wrap section .m2-fs14 {
     font-size: 14px;
+  }
+  .ms_k8-section-wrap section .m2-fs12 {
+    font-size: 12px;
+  }
+  .ms_k8-section-wrap section .m2-fs16 {
+    font-size: 16px;
+  }
+  .ms_k8-section-wrap section .m2-fs34 {
+    font-size: 34px;
   }
   .ms_k8-section-wrap .numImg.num-m2-fs22 {
     width: 22px;
