@@ -128,8 +128,6 @@ $(document).ready(function () {
 
 	// start ---------------------------------------------------------------------------
 
-    console.log(window.location.hash);
-	console.log(window.location.hash === '#gallery');
 	if (window.location.hash === '#gallery') {
 		sectionOnOff(3, true);
 	} else {

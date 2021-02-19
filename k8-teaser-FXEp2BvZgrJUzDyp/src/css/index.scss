@@ -269,8 +269,9 @@ $col-gray2: #7e8284;
 							box-sizing: border-box;
 							width: 76px;
 							height: 76px;
-							line-height: 75px;
-							text-align: center;
+							display: flex;
+							justify-content: center;
+							align-items: center;
 							transition: 0.3s all;
 							cursor: pointer;
 
@@ -440,38 +441,6 @@ $col-gray2: #7e8284;
 				width: auto;
 			}
 		}
-		.owl-nav {
-			position: absolute;
-			top: -90px;
-			left: 50%;
-			margin-left: -710px;
-			width: 1420px;
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-
-			span {
-				position: absolute;
-				top: 300px;
-				display: block;
-				width: 90px;
-				height: 90px;
-				border-radius: 50%;
-				background: rgba(255, 255, 255, 0.2) url(../static/img/arrow_l_white2.png) no-repeat center center;
-				transition: all 0.3s;
-				&.prev {
-					transform: scaleX(-1);
-					right: 0;
-				}
-				&.next {
-					left: 0;
-				}
-				&:hover {
-					background-color: rgba(0, 0, 0, 0.5);
-				}
-			}
-		}
-
 		.btn-wrap {
 			opacity: 0;
 			bottom: -100px;
@@ -1153,7 +1122,7 @@ $col-gray2: #7e8284;
 		.owl-stage {
 			display: flex;
 			align-items: center;
-			height: 500px;
+			height: 420px;
 		}
 	}
 }

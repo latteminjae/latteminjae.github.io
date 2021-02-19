@@ -293,8 +293,15 @@
           box-sizing: border-box;
   width: 76px;
   height: 76px;
-  line-height: 75px;
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
   cursor: pointer;
@@ -518,49 +525,6 @@
 
 .ms_k8-section-wrap .ms-section3 .owl-carousel .owl-item img {
   width: auto;
-}
-
-.ms_k8-section-wrap .ms-section3 .owl-nav {
-  position: absolute;
-  top: -90px;
-  left: 50%;
-  margin-left: -710px;
-  width: 1420px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.ms_k8-section-wrap .ms-section3 .owl-nav span {
-  position: absolute;
-  top: 300px;
-  display: block;
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.2) url(../static/img/arrow_l_white2.png) no-repeat center center;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.ms_k8-section-wrap .ms-section3 .owl-nav span.prev {
-  -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);
-  right: 0;
-}
-
-.ms_k8-section-wrap .ms-section3 .owl-nav span.next {
-  left: 0;
-}
-
-.ms_k8-section-wrap .ms-section3 .owl-nav span:hover {
-  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .ms_k8-section-wrap .ms-section3 .btn-wrap {
@@ -1321,7 +1285,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 500px;
+  height: 420px;
 }
 
 @media (max-width: 1420px) and (min-width: 1025px) {
