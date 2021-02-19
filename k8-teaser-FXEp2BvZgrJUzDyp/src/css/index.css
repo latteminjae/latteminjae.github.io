@@ -1451,7 +1451,10 @@
     max-height: 575px;
   }
   .ms_k8-section-wrap .ms-section3 .center-wrap {
-    padding-top: 90px;
+    padding-top: 70px;
+  }
+  .ms_k8-section-wrap .ms-section3 .p-box p:first-child {
+    margin-bottom: 20px;
   }
   .ms_k8-section-wrap .ms-section3 .p-box p:nth-child(2) {
     margin-bottom: 30px;
@@ -1536,14 +1539,14 @@
   .ms_k8-section-wrap section .m-fs15 {
     font-size: 15px;
   }
-  .ms_k8-section-wrap section .m-fs15 {
-    font-size: 15px;
+  .ms_k8-section-wrap section .m-fs40 {
+    font-size: 40px;
   }
   .ms_k8-section-wrap section .m-fs30 {
     font-size: 30px;
   }
-  .ms_k8-section-wrap section .m-fs16 {
-    font-size: 16px;
+  .ms_k8-section-wrap section .m-fs18 {
+    font-size: 18px;
   }
   .ms_k8-section-wrap section .m-fs55 {
     font-size: 55px;
@@ -1559,9 +1562,6 @@
   }
   .ms_k8-section-wrap section .m-fs12 {
     font-size: 12px;
-  }
-  .ms_k8-section-wrap section .m-fs14 {
-    font-size: 14px;
   }
   .ms_k8-section-wrap section .m-fs14 {
     font-size: 14px;
