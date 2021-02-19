@@ -12,26 +12,131 @@ const isMobile =
 let player;
 
 // sections
-const sections = document.querySelectorAll('#content > section');
+let sections;
 
 // 일부 p tag
-const pBoxP = document.querySelectorAll('.ms-section1 .p-box p, .ms-section3 .p-box p');
+let pBoxP;
 
 // intro, outro Movie
-const introMovies = document.querySelectorAll('.ms-section0 .bg-wrap .introMovie');
-const outroMovies = document.querySelectorAll('.ms-section2 .bg-wrap .outroMovie');
+let introMovies;
+let outroMovies;
 
 // gate - 숫자패드 클릭 이벤트
 let count = 0;
-const nums = document.querySelectorAll('.num-pad>ul>li>button');
-const numCursor = document.querySelector('.num-wrap .input-box>ul>li:nth-child(5)>img');
+let nums;
+let numCursor;
 
 // section3 타이머
-const timerP = document.querySelectorAll('.ms-section3 .timer-wrap>p:first-child span img');
-const openDate = new Date('2021-03-10T00:00:00').getTime();
+let timerP;
+let openDate;
 
 // section2 youtube iframe
-const youtubeIframe = document.getElementById('iframe-div');
+let youtubeIframe;
+
+$(document).ready(function () {
+	sections = document.querySelectorAll('#content > section');
+	pBoxP = document.querySelectorAll('.ms-section1 .p-box p, .ms-section3 .p-box p');
+	introMovies = document.querySelectorAll('.ms-section0 .bg-wrap .introMovie');
+	outroMovies = document.querySelectorAll('.ms-section2 .bg-wrap .outroMovie');
+	nums = document.querySelectorAll('.num-pad>ul>li>button');
+	numCursor = document.querySelector('.num-wrap .input-box>ul>li:nth-child(5)>img');
+	timerP = document.querySelectorAll('.ms-section3 .timer-wrap>p:first-child span img');
+	openDate = new Date('2021-03-10T00:00:00').getTime();
+	youtubeIframe = document.getElementById('iframe-div');
+
+	// addEventListener -----------------------------------------------------------------
+
+	// 각 숫자패드 클릭 이벤트
+	for (let i = 0; i < nums.length; i++) {
+		(function (ind) {
+			nums[ind].addEventListener('click', function (e) {
+				nums[ind].nextElementSibling.style.animation = '.7s alternate clickAni';
+				setTimeout(function () {
+					nums[ind].nextElementSibling.style.animation = '';
+				}, 700);
+
+				numCursor.classList.add('on');
+
+				numCursor.src = nums[ind].children[0].src;
+				nums[ind].children[0].src = './static/img/num_8.png';
+
+				count++;
+
+				// 숫자패드 클릭횟수 3번 이상일 경우 티저영상페이지로 넘어간다
+				if (count >= 3) {
+					sections[2].classList.remove('hide');
+					sectionOnOff(1, false);
+					count = 0;
+					setTimeout(function () {
+						sectionOnOff(2, true);
+					}, 2200);
+					return;
+				}
+			});
+		})(i);
+	}
+
+	// section1 back, skip
+	document.querySelector('.ms-section1 .top-box button').addEventListener('click', function () {
+		sectionOnOff(1, false);
+		setTimeout(function () {
+			sectionOnOff(0, true);
+		}, 3000);
+	});
+	document.querySelector('.ms-section1 .bottom-box button').addEventListener('click', function () {
+		sectionOnOff(1, false);
+		sections[2].classList.remove('hide');
+		setTimeout(function () {
+			sectionOnOff(2, true);
+		}, 2200);
+	});
+
+	// section2 close
+	document.querySelector('.ms-section2 button.top-left').addEventListener('click', function () {
+		sectionOnOff(2, false);
+	});
+
+	// section3 다시보기(section2로), 처음으로(section0으로)
+	document.querySelector('.ms-section3 .btn-wrap button.replay').addEventListener('click', function () {
+		sectionOnOff(3, false);
+		setTimeout(function () {
+			sectionOnOff(2, true);
+		}, 1500);
+	});
+	document.querySelector('.ms-section3 .btn-wrap button.goFirst').addEventListener('click', function () {
+		sectionOnOff(3, false);
+		setTimeout(function () {
+			sectionOnOff(0, true);
+		}, 1500);
+	});
+
+	// dom change ----------------------------------------------------------------------------
+	// 한글자씩 transition하기위해 글자마다 span을 입히는 작업
+	for (let i = 0; i < pBoxP.length; i++) {
+		pBoxP[i].innerHTML = wrapSpan(pBoxP[i].innerHTML);
+	}
+
+	$('.slick-carousel').slick({
+		infinite: false,
+		speed: 300,
+		slidesToShow: 1,
+		centerMode: true,
+		variableWidth: true,
+		responsive: [
+			{
+				breakpoint: 500,
+				settings: {
+					centerPadding: '0',
+				},
+			},
+		],
+	});
+
+	// start ---------------------------------------------------------------------------
+	// section0 open, interval - section3 timer
+	sectionOnOff(0, true);
+	setInterval(getDTime, 500);
+});
 
 // functions ---------------------------------------------------------------------
 
@@ -171,7 +276,7 @@ function sectionOnOff(num, on) {
 				TweenMax.to('.ms-section2 .center-wrap', 1, { display: 'block', opacity: 1, top: 0, delay: 0.4 });
 				youtubeIframe.src =
 					'https://www.youtube.com/embed/reQwksJ-yjU?rel=0&autoplay=1&playsinline=1&enablejsapi=1&version=3&playerapiid=ytplayer';
-			}, 2400);
+			}, 900);
 		} else {
 			sectionOnOff(3, true);
 			youtubeIframe.src = '';
@@ -192,18 +297,14 @@ function sectionOnOff(num, on) {
 			TweenMax.staggerTo('.ms-section3 .p-box p', 0.8, { opacity: 1, top: 0, delay: 1 }, 0.2);
 			TweenMax.to('.ms-section3 .btn-wrap', 1, { opacity: 1, bottom: 0, delay: 1.1 });
 
-			// FIXME AB테스트 끝나면 하나 삭제
 			TweenMax.to('.ms-section3 .slick-carousel', 3, { opacity: 1, delay: 1.8 });
-			TweenMax.to('.ms-section3 .owl-carousel', 3, { opacity: 1, delay: 1.8 });
 			$('.slick-carousel').slick('slickGoTo', 0);
 		} else {
 			TweenMax.to('.ms-section3 .btn-wrap', 0.5, { opacity: 0, bottom: '-100px' });
 			TweenMax.to('.ms-section3 .timer-wrap span', 0.3, { top: '30px', opacity: 0, delay: 0.3 });
 			TweenMax.to('.ms-section3 .p-box p', 0.2, { opacity: 0, top: '20px', delay: 0.3 });
 
-			// FIXME AB테스트 끝나면 하나 삭제
 			TweenMax.to('.ms-section3 .slick-carousel', 0.5, { opacity: 0, delay: 0.7 });
-			TweenMax.to('.ms-section3 .owl-carousel', 0.5, { opacity: 0, delay: 0.7 });
 		}
 	}
 }
@@ -233,85 +334,6 @@ function getDTime() {
 		timerP[i].src = './static/img/num_' + timerTxt[i] + '.png';
 	}
 }
-
-// addEventListener -----------------------------------------------------------------
-
-// 각 숫자패드 클릭 이벤트
-for (let i = 0; i < nums.length; i++) {
-	(function (ind) {
-		nums[ind].addEventListener('click', function (e) {
-			nums[ind].nextElementSibling.style.animation = '.7s alternate clickAni';
-			setTimeout(function () {
-				nums[ind].nextElementSibling.style.animation = '';
-			}, 700);
-
-			numCursor.classList.add('on');
-
-			numCursor.src = nums[ind].children[0].src;
-			nums[ind].children[0].src = './static/img/num_8.png';
-
-			count++;
-
-			// 숫자패드 클릭횟수 3번 이상일 경우 티저영상페이지로 넘어간다
-			if (count >= 3) {
-				sections[2].classList.remove('hide');
-				sectionOnOff(1, false);
-				count = 0;
-				setTimeout(function () {
-					sectionOnOff(2, true);
-				}, 2200);
-				return;
-			}
-		});
-	})(i);
-}
-
-// section1 back, skip
-document.querySelector('.ms-section1 .top-box button').addEventListener('click', function () {
-	sectionOnOff(1, false);
-	setTimeout(function () {
-		sectionOnOff(0, true);
-	}, 3000);
-});
-document.querySelector('.ms-section1 .bottom-box button').addEventListener('click', function () {
-	sectionOnOff(1, false);
-	sections[2].classList.remove('hide');
-	setTimeout(function () {
-		sectionOnOff(2, true);
-	}, 2200);
-});
-
-// section2 close
-document.querySelector('.ms-section2 button.top-left').addEventListener('click', function () {
-	sectionOnOff(2, false);
-});
-
-// section3 다시보기(section2로), 처음으로(section0으로)
-document.querySelector('.ms-section3 .btn-wrap button.replay').addEventListener('click', function () {
-	sectionOnOff(3, false);
-	setTimeout(function () {
-		sectionOnOff(2, true);
-	}, 1500);
-});
-document.querySelector('.ms-section3 .btn-wrap button.goFirst').addEventListener('click', function () {
-	sectionOnOff(3, false);
-	setTimeout(function () {
-		sectionOnOff(0, true);
-	}, 1500);
-});
-
-// init ----------------------------------------------------------------------------
-
-// 한글자씩 transition하기위해 글자마다 span을 입히는 작업
-for (let i = 0; i < pBoxP.length; i++) {
-	pBoxP[i].innerHTML = wrapSpan(pBoxP[i].innerHTML);
-}
-
-// section0 open, interval - section3 timer
-window.onload = function () {
-	sectionOnOff(0, true);
-	setInterval(getDTime, 500);
-};
 
 // section3 slide
 // 클라이언트에게 각 타입 테스트를 위해 index.html, index2.html에 스크립트를 각각 나누어 놓았음
