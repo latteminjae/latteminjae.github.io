@@ -1553,3 +1553,41 @@ $col-gray2: #7e8284;
 		}
 	}
 }
+
+// 모바일 360 이하
+@media (max-width: 360px) {
+	.ms_k8-section-wrap {
+		.ms-section1 {
+			.p-box {
+				p {
+					&:first-child {
+						margin-bottom: 14px;
+					}
+				}
+			}
+			.num-wrap {
+				.input-box {
+					> ul {
+						> li {
+							margin: 0 16px;
+						}
+					}
+				}
+			}
+		}
+		section {
+			.m3-fs18 {
+				font-size: 18px;
+			}
+			.m3-fs11 {
+				font-size: 11px;
+			}
+		}
+		.numImg {
+			&.num-m3-fs18 {
+				width: 18px;
+				height: 27px;
+			}
+		}
+	}
+}

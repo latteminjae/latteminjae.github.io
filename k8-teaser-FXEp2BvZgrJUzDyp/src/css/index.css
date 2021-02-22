@@ -1612,4 +1612,23 @@
     display: none !important;
   }
 }
+
+@media (max-width: 360px) {
+  .ms_k8-section-wrap .ms-section1 .p-box p:first-child {
+    margin-bottom: 14px;
+  }
+  .ms_k8-section-wrap .ms-section1 .num-wrap .input-box > ul > li {
+    margin: 0 16px;
+  }
+  .ms_k8-section-wrap section .m3-fs18 {
+    font-size: 18px;
+  }
+  .ms_k8-section-wrap section .m3-fs11 {
+    font-size: 11px;
+  }
+  .ms_k8-section-wrap .numImg.num-m3-fs18 {
+    width: 18px;
+    height: 27px;
+  }
+}
 /*# sourceMappingURL=index.css.map */
