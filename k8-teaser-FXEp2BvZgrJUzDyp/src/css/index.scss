@@ -468,13 +468,17 @@ $col-gray2: #7e8284;
 				}
 
 				&.btn-white {
-					background: #fff;
+					background: transparent;
 					color: #000;
 					&::after {
-						background: #000;
+						background: #fff;
+						left: 0;
 					}
 					&:hover {
 						color: #fff;
+						&::after {
+							left: -173px;
+						}
 					}
 				}
 

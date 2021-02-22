@@ -560,16 +560,21 @@
 }
 
 .ms_k8-section-wrap .ms-section3 .btn-wrap > button.btn-white {
-  background: #fff;
+  background: transparent;
   color: #000;
 }
 
 .ms_k8-section-wrap .ms-section3 .btn-wrap > button.btn-white::after {
-  background: #000;
+  background: #fff;
+  left: 0;
 }
 
 .ms_k8-section-wrap .ms-section3 .btn-wrap > button.btn-white:hover {
   color: #fff;
+}
+
+.ms_k8-section-wrap .ms-section3 .btn-wrap > button.btn-white:hover::after {
+  left: -173px;
 }
 
 .ms_k8-section-wrap .ms-section3 .btn-wrap > button:last-child {
