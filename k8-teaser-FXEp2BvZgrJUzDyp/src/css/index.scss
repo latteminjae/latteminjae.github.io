@@ -1514,7 +1514,7 @@ $col-gray2: #7e8284;
 					max-width: 100vw;
 					height: auto;
 					img {
-						max-width: calc(100% - 80px);
+						max-width: calc(100% - 80px) !important;
 						margin: auto;
 					}
 				}

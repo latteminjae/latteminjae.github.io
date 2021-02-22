@@ -1588,7 +1588,7 @@
     height: auto;
   }
   .ms_k8-section-wrap .ms-section3 .slick-carousel li img {
-    max-width: calc(100% - 80px);
+    max-width: calc(100% - 80px) !important;
     margin: auto;
   }
   .ms_k8-section-wrap .ms-section3 .owl-nav span.prev {
