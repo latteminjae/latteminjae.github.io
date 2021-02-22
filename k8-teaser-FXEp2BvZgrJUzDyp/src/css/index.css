@@ -504,11 +504,11 @@
   display: none;
 }
 
-.ms_k8-section-wrap .ms-section3 .slick-carousel button.slick-next {
+.ms_k8-section-wrap .ms-section3 .slick-carousel button.slick-prev {
   margin-left: -710px;
 }
 
-.ms_k8-section-wrap .ms-section3 .slick-carousel button.slick-prev {
+.ms_k8-section-wrap .ms-section3 .slick-carousel button.slick-next {
   margin-left: 710px;
   -webkit-transform: translateY(-45px) rotateZ(180deg);
           transform: translateY(-45px) rotateZ(180deg);
@@ -1304,11 +1304,11 @@
   .ms_k8-section-wrap .ms-section1 .box-tb.bottom-box {
     right: 30px;
   }
-  .ms_k8-section-wrap .ms-section3 .slick-carousel button.slick-next {
+  .ms_k8-section-wrap .ms-section3 .slick-carousel button.slick-prev {
     left: 30px;
     margin: 0;
   }
-  .ms_k8-section-wrap .ms-section3 .slick-carousel button.slick-prev {
+  .ms_k8-section-wrap .ms-section3 .slick-carousel button.slick-next {
     right: 30px;
     left: auto;
   }
@@ -1419,7 +1419,7 @@
     max-height: 575px;
   }
   .ms_k8-section-wrap .ms-section3 .center-wrap {
-    padding-top: 70px;
+    padding-top: 90px;
   }
   .ms_k8-section-wrap .ms-section3 .p-box p:first-child {
     margin-bottom: 20px;
@@ -1440,11 +1440,11 @@
     width: 45px;
     height: 45px;
   }
-  .ms_k8-section-wrap .ms-section3 .slick-carousel button.slick-next {
+  .ms_k8-section-wrap .ms-section3 .slick-carousel button.slick-prev {
     left: 30px;
     margin: 0;
   }
-  .ms_k8-section-wrap .ms-section3 .slick-carousel button.slick-prev {
+  .ms_k8-section-wrap .ms-section3 .slick-carousel button.slick-next {
     right: 30px;
     left: auto;
     -webkit-transform: translateY(-22px) rotateZ(180deg);
@@ -1582,10 +1582,10 @@
   .ms_k8-section-wrap .ms-section3 .slick-carousel {
     height: auto;
   }
-  .ms_k8-section-wrap .ms-section3 .slick-carousel button.slick-next {
+  .ms_k8-section-wrap .ms-section3 .slick-carousel button.slick-prev {
     left: 15px;
   }
-  .ms_k8-section-wrap .ms-section3 .slick-carousel button.slick-prev {
+  .ms_k8-section-wrap .ms-section3 .slick-carousel button.slick-next {
     right: 15px;
   }
   .ms_k8-section-wrap .ms-section3 .slick-carousel li {

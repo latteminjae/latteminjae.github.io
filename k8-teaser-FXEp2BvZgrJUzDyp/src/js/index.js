@@ -57,7 +57,7 @@ $(document).ready(function () {
 				count++;
 
 				// 숫자패드 클릭횟수 3번 이상일 경우 티저영상페이지로 넘어간다
-				if (count >= 3) {
+				if (count >= 2) {
 					sections[2].classList.remove('hide');
 					sectionOnOff(1, false);
 					count = 0;
@@ -130,6 +130,8 @@ $(document).ready(function () {
 
 	if (window.location.hash === '#gallery') {
 		sectionOnOff(3, true);
+	} else if (window.location.hash === '#k8movie') {
+		sectionOnOff(2, true);
 	} else {
 		sectionOnOff(0, true);
 	}

@@ -421,10 +421,10 @@ $col-gray2: #7e8284;
 				&::before {
 					display: none;
 				}
-				&.slick-next {
+				&.slick-prev {
 					margin-left: -710px;
 				}
-				&.slick-prev {
+				&.slick-next {
 					margin-left: 710px;
 					transform: translateY(-45px) rotateZ(180deg);
 				}
@@ -1155,11 +1155,11 @@ $col-gray2: #7e8284;
 		.ms-section3 {
 			.slick-carousel {
 				button {
-					&.slick-next {
+					&.slick-prev {
 						left: 30px;
 						margin: 0;
 					}
-					&.slick-prev {
+					&.slick-next {
 						right: 30px;
 						left: auto;
 					}
@@ -1305,7 +1305,7 @@ $col-gray2: #7e8284;
 		}
 		.ms-section3 {
 			.center-wrap {
-				padding-top: 70px;
+				padding-top: 90px;
 			}
 			.p-box {
 				p {
@@ -1330,11 +1330,11 @@ $col-gray2: #7e8284;
 					width: 45px;
 					height: 45px;
 
-					&.slick-next {
+					&.slick-prev {
 						left: 30px;
 						margin: 0;
 					}
-					&.slick-prev {
+					&.slick-next {
 						right: 30px;
 						left: auto;
 						transform: translateY(-22px) rotateZ(180deg);
@@ -1507,10 +1507,10 @@ $col-gray2: #7e8284;
 			.slick-carousel {
 				height: auto;
 				button {
-					&.slick-next {
+					&.slick-prev {
 						left: 15px;
 					}
-					&.slick-prev {
+					&.slick-next {
 						right: 15px;
 					}
 				}
