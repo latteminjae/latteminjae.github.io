@@ -183,7 +183,7 @@ function sectionOnOff(num, on) {
 
 			setTimeout(function () {
 				sectionOnOff(0, false);
-			}, 3000);
+			}, 4000);
 		} else {
 			TweenMax.to('.ms-section0 .p-box p', 0.5, { top: '-20px', opacity: 0 });
 			TweenMax.to('.ms-section0 .logo img', 0.5, { opacity: 0 });
