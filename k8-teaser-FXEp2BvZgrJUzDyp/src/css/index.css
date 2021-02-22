@@ -1574,11 +1574,22 @@
   .ms_k8-section-wrap .ms-section3 .p-box p:nth-child(2) {
     margin-bottom: 30px;
   }
+  .ms_k8-section-wrap .ms-section3 .slick-carousel {
+    height: auto;
+  }
   .ms_k8-section-wrap .ms-section3 .slick-carousel button.slick-next {
     left: 15px;
   }
   .ms_k8-section-wrap .ms-section3 .slick-carousel button.slick-prev {
     right: 15px;
+  }
+  .ms_k8-section-wrap .ms-section3 .slick-carousel li {
+    max-width: 100vw;
+    height: auto;
+  }
+  .ms_k8-section-wrap .ms-section3 .slick-carousel li img {
+    max-width: calc(100% - 80px);
+    margin: auto;
   }
   .ms_k8-section-wrap .ms-section3 .owl-nav span.prev {
     right: 15px;
@@ -1620,11 +1631,17 @@
   .ms_k8-section-wrap .ms-section1 .num-wrap .input-box > ul > li {
     margin: 0 16px;
   }
+  .ms_k8-section-wrap .ms-section3 .btn-wrap > button {
+    width: 120px;
+  }
   .ms_k8-section-wrap section .m3-fs18 {
     font-size: 18px;
   }
   .ms_k8-section-wrap section .m3-fs11 {
     font-size: 11px;
+  }
+  .ms_k8-section-wrap section .m3-fs22 {
+    font-size: 22px;
   }
   .ms_k8-section-wrap .numImg.num-m3-fs18 {
     width: 18px;

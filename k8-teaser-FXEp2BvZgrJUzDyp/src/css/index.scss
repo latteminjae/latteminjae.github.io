@@ -1501,12 +1501,21 @@ $col-gray2: #7e8284;
 				}
 			}
 			.slick-carousel {
+				height: auto;
 				button {
 					&.slick-next {
 						left: 15px;
 					}
 					&.slick-prev {
 						right: 15px;
+					}
+				}
+				li {
+					max-width: 100vw;
+					height: auto;
+					img {
+						max-width: calc(100% - 80px);
+						margin: auto;
 					}
 				}
 			}
@@ -1575,12 +1584,22 @@ $col-gray2: #7e8284;
 				}
 			}
 		}
+		.ms-section3 {
+			.btn-wrap {
+				> button {
+					width: 120px;
+				}
+			}
+		}
 		section {
 			.m3-fs18 {
 				font-size: 18px;
 			}
 			.m3-fs11 {
 				font-size: 11px;
+			}
+			.m3-fs22 {
+				font-size: 22px;
 			}
 		}
 		.numImg {
