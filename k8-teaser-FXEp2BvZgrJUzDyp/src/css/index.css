@@ -391,24 +391,6 @@
   top: -20px;
 }
 
-.ms_k8-section-wrap .ms-section2 button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 15px;
-  font-weight: 700;
-  padding: 10px;
-  position: absolute;
-  z-index: 1;
-  overflow: hidden;
-}
-
-.ms_k8-section-wrap .ms-section2 button.top-left img {
-  margin-right: 10px;
-  position: relative;
-  top: 2px;
-}
-
 .ms_k8-section-wrap .ms-section2 .iframe-wrap {
   position: relative;
   width: 100%;
@@ -425,6 +407,49 @@
   padding-bottom: 140px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.ms_k8-section-wrap .ms-section2 .iframe-wrap > button {
+  margin-top: 20px;
+  max-width: 1050px;
+  width: 100%;
+  height: 52px;
+  overflow: hidden;
+  position: relative;
+  border: 2px solid #fff;
+  background: transparent;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.ms_k8-section-wrap .ms-section2 .iframe-wrap > button span {
+  position: relative;
+  z-index: 1;
+}
+
+.ms_k8-section-wrap .ms-section2 .iframe-wrap > button::after {
+  position: absolute;
+  top: -1px;
+  background: #fff;
+  display: block;
+  content: '';
+  left: -100%;
+  width: 100%;
+  height: 52px;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.ms_k8-section-wrap .ms-section2 .iframe-wrap > button:hover {
+  color: #000;
+}
+
+.ms_k8-section-wrap .ms-section2 .iframe-wrap > button:hover::after {
+  left: 0;
 }
 
 .ms_k8-section-wrap .ms-section2 #iframe-div {
@@ -1406,13 +1431,8 @@
     left: auto;
     right: 0;
   }
-  .ms_k8-section-wrap .ms-section2 button.top-left {
-    top: 20px;
-    left: 20px;
-  }
-  .ms_k8-section-wrap .ms-section2 button.bottom-right {
-    bottom: 32px;
-    right: 32px;
+  .ms_k8-section-wrap .ms-section2 .iframe-wrap > button {
+    max-width: calc(100% - 40px);
   }
   .ms_k8-section-wrap .ms-section2 #iframe-div {
     height: 50vh;

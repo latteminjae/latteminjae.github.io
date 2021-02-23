@@ -49,22 +49,27 @@ $(document).ready(function () {
 					nums[ind].nextElementSibling.style.animation = '';
 				}, 700);
 
-				numCursor.classList.add('on');
-
-				numCursor.src = nums[ind].children[0].src;
-				nums[ind].children[0].src = './static/img/num_8.png';
+				if (!numCursor.classList.contains('on')) {
+					numCursor.classList.add('on');
+				}
 
 				count++;
 
-				// 숫자패드 클릭횟수 3번 이상일 경우 티저영상페이지로 넘어간다
+				// 숫자패드 클릭횟수 2번 이상일 경우 티저영상페이지로 넘어간다
 				if (count >= 2) {
+					numCursor.src = './static/img/num_8.png';
+					nums[ind].children[0].src = './static/img/num_8.png';
 					sections[2].classList.remove('hide');
-					sectionOnOff(1, false);
+					setTimeout(function () {
+						sectionOnOff(1, false);
+					}, 800);
 					count = 0;
 					setTimeout(function () {
 						sectionOnOff(2, true);
-					}, 2200);
-					return;
+					}, 3000);
+				} else {
+					numCursor.src = nums[ind].children[0].src;
+					nums[ind].children[0].src = './static/img/num_8.png';
 				}
 			});
 		})(i);
@@ -86,7 +91,7 @@ $(document).ready(function () {
 	});
 
 	// section2 close
-	document.querySelector('.ms-section2 button.top-left').addEventListener('click', function () {
+	document.querySelector('.ms-section2 button.section-close').addEventListener('click', function () {
 		sectionOnOff(2, false);
 	});
 
@@ -274,7 +279,7 @@ function sectionOnOff(num, on) {
 				TweenMax.to('.ms-section2 .bg-wrap video', 0.5, { opacity: 0 });
 				TweenMax.to('.ms-section2 .center-wrap', 1, { display: 'block', opacity: 1, top: 0, delay: 0.4 });
 				youtubeIframe.src =
-					'https://www.youtube.com/embed/d1Qdrx9jnTM?rel=0&autoplay=1&playsinline=1&enablejsapi=1&version=3&playerapiid=ytplayer';
+					'https://www.youtube.com/embed/99kK628Umw8?rel=0&autoplay=1&playsinline=1&enablejsapi=1&version=3&playerapiid=ytplayer';
 			}, 900);
 		} else {
 			sectionOnOff(3, true);
