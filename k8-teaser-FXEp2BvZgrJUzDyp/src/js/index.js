@@ -227,7 +227,7 @@ function sectionOnOff(num, on) {
 			TweenMax.staggerTo('.ms-section1 .p-box p', 0.5, { top: 0, opacity: 1, delay: 1 }, 0.2);
 
 			// bg, num, keypad
-			TweenMax.staggerTo('.ms-section1 .bg-wrap img', 0.3, { top: '0', opacity: 1, delay: 1.5 }, 0.1);
+			TweenMax.staggerTo('.ms-section1 .bg-wrap span', 0.3, { top: '0', opacity: 1, delay: 1.5 }, 0.1);
 
 			TweenMax.staggerTo('.ms-section1 .input-box>ul>li', 0.5, { opacity: 1, delay: 1.5 }, 0.1);
 			TweenMax.staggerTo('.ms-section1 .num-pad>ul>li', 0.5, { opacity: 1, delay: 1.5 }, 0.1);
@@ -248,7 +248,7 @@ function sectionOnOff(num, on) {
 			// num, keypad, bg
 			TweenMax.staggerTo('.ms-section1 .num-pad>ul>li', 1, { opacity: 0 }, 0.1);
 			TweenMax.staggerTo('.ms-section1 .input-box>ul>li', 1, { opacity: 0 }, 0.1);
-			TweenMax.staggerTo('.ms-section1 .bg-wrap img', 1, { opacity: 0 }, 0.1);
+			TweenMax.staggerTo('.ms-section1 .bg-wrap span', 1, { opacity: 0 }, 0.1);
 
 			// 전체 화면
 			TweenMax.to('.ms-section1', 0.8, { top: '100%', ease: 'ease-in-out', delay: 1.5 });
