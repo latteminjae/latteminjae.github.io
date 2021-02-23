@@ -293,10 +293,10 @@ function sectionOnOff(num, on) {
 		if (on) {
 			sectionOpen(3);
 
-			TweenMax.staggerTo('.ms-section3 .p-box p', 0.8, { opacity: 1, top: 0, delay: 1 }, 0.2);
-			TweenMax.to('.ms-section3 .btn-wrap', 1, { opacity: 1, bottom: 0, delay: 1.1 });
+			TweenMax.to('.ms-section3 .p-box p', 1, { opacity: 1, top: 0, delay: 0.8 });
+			TweenMax.to('.ms-section3 .btn-wrap', 0.8, { opacity: 1, bottom: 0, delay: 1.1 });
 
-			TweenMax.to('.ms-section3 .slick-carousel', 3, { opacity: 1, delay: 1.8 });
+			TweenMax.to('.ms-section3 .slick-carousel', 3, { opacity: 1, delay: 1.7 });
 			$('.slick-carousel').slick('slickGoTo', 0);
 		} else {
 			TweenMax.to('.ms-section3 .btn-wrap', 0.5, { opacity: 0, bottom: '-100px' });

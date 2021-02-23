@@ -407,7 +407,7 @@ $col-gray2: #7e8284;
 				top: 20px;
 				opacity: 0;
 				&:first-child {
-					margin-bottom: 30px;
+					margin-bottom: 100px;
 				}
 				&:nth-child(2) {
 					margin-bottom: 50px;
@@ -1326,10 +1326,7 @@ $col-gray2: #7e8284;
 			.p-box {
 				p {
 					&:first-child {
-						margin-bottom: 20px;
-					}
-					&:nth-child(2) {
-						margin-bottom: 30px;
+						margin-bottom: 60px;
 					}
 				}
 			}
@@ -1513,10 +1510,7 @@ $col-gray2: #7e8284;
 			.p-box {
 				p {
 					&:first-child {
-						margin-bottom: 20px;
-					}
-					&:nth-child(2) {
-						margin-bottom: 30px;
+						margin-bottom: 60px;
 					}
 				}
 			}

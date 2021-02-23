@@ -483,7 +483,7 @@
 }
 
 .ms_k8-section-wrap .ms-section3 .p-box p:first-child {
-  margin-bottom: 30px;
+  margin-bottom: 100px;
 }
 
 .ms_k8-section-wrap .ms-section3 .p-box p:nth-child(2) {
@@ -1442,10 +1442,7 @@
     padding-top: 90px;
   }
   .ms_k8-section-wrap .ms-section3 .p-box p:first-child {
-    margin-bottom: 20px;
-  }
-  .ms_k8-section-wrap .ms-section3 .p-box p:nth-child(2) {
-    margin-bottom: 30px;
+    margin-bottom: 60px;
   }
   .ms_k8-section-wrap .ms-section3 .slick-carousel {
     height: 300px;
@@ -1594,10 +1591,7 @@
     min-width: 500px;
   }
   .ms_k8-section-wrap .ms-section3 .p-box p:first-child {
-    margin-bottom: 20px;
-  }
-  .ms_k8-section-wrap .ms-section3 .p-box p:nth-child(2) {
-    margin-bottom: 30px;
+    margin-bottom: 60px;
   }
   .ms_k8-section-wrap .ms-section3 .slick-carousel {
     height: auto;
