@@ -1,0 +1,1051 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.ms_k8-section-wrap {
+  font-family: 'Kia', 'Noto Sans KR', Arial, sans-serif;
+  font-weight: 400;
+  color: #fff;
+  height: 970px;
+  max-width: 1920px;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  background: #000;
+  position: relative;
+}
+
+.ms_k8-section-wrap > section {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.ms_k8-section-wrap > section .contentWrap > div {
+  position: relative;
+  z-index: 2;
+}
+
+.ms_k8-section-wrap > section .contentWrap > div.bgWrap {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 50%;
+  margin-left: -960px;
+  width: 1920px;
+  height: 100%;
+}
+
+.ms_k8-section-wrap > section.msSection0 {
+  -webkit-clip-path: polygon(100% 100%, 0% 100%, 0% 0%, 100% 0%);
+          clip-path: polygon(100% 100%, 0% 100%, 0% 0%, 100% 0%);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.ms_k8-section-wrap > section.msSection0.fadeout {
+  -webkit-clip-path: polygon(100% 100%, 100% 100%, 100% 0%, 100% 0%);
+          clip-path: polygon(100% 100%, 100% 100%, 100% 0%, 100% 0%);
+}
+
+.ms_k8-section-wrap > section.msSection0 .contentWrap {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background: #ff1184;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.ms_k8-section-wrap > section.msSection0 .contentWrap.top {
+  top: -100%;
+}
+
+.ms_k8-section-wrap > section.msSection0 .contentWrap.center {
+  top: 0px;
+  z-index: 2;
+}
+
+.ms_k8-section-wrap > section.msSection0 .contentWrap.bottom {
+  top: 100%;
+}
+
+.ms_k8-section-wrap > section.msSection0 .contentWrap .centerBox {
+  margin: 230px auto 0;
+  width: 450px;
+}
+
+.ms_k8-section-wrap > section.msSection0 .contentWrap .centerBox .pBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.ms_k8-section-wrap > section.msSection0 .contentWrap .centerBox .pBox .head {
+  width: 140px;
+  font-size: 34px;
+}
+
+.ms_k8-section-wrap > section.msSection0 .contentWrap .centerBox .pBox .body {
+  font-size: 30px;
+}
+
+.ms_k8-section-wrap > section.msSection0 .contentWrap .centerBox .pBox .body p:first-child {
+  margin-bottom: 20px;
+  line-height: 36px;
+}
+
+.ms_k8-section-wrap > section.msSection0 .contentWrap .centerBox .pBox .body p:last-child {
+  font-size: 13px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.ms_k8-section-wrap > section.msSection0 .contentWrap .centerBox .pBox .body p:last-child span {
+  background: #96a4b2;
+  height: 2px;
+  width: 170px;
+  position: relative;
+  top: 4px;
+}
+
+.ms_k8-section-wrap > section.msSection0 .contentWrap .centerBox .btnBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.ms_k8-section-wrap > section.msSection0 .contentWrap .centerBox .btnBox button {
+  margin-right: 20px;
+}
+
+.ms_k8-section-wrap > section.msSection0 .contentWrap .centerBox .btnBox button:first-child {
+  width: 306px;
+}
+
+.ms_k8-section-wrap > section.msSection0 .contentWrap .centerBox .btnBox button:last-child {
+  width: 120px;
+}
+
+.ms_k8-section-wrap > section.msSection0 .contentWrap .centerBox .btnBox button:last-child {
+  margin: 0;
+}
+
+.ms_k8-section-wrap > section.msSection0 .contentWrap .centerBox .btnBox button.galleryBtn {
+  border: 2px solid #5f6f73;
+}
+
+.ms_k8-section-wrap > section.msSection0 .contentWrap .centerBox .btnBox button.galleryBtn span {
+  color: #8b8b8b;
+}
+
+.ms_k8-section-wrap > section.msSection0 .contentWrap .centerBox .btnBox button.galleryBtn::after {
+  background: #5f6f73;
+}
+
+.ms_k8-section-wrap > section.msSection0 .contentWrap .centerBox .btnBox button.galleryBtn:hover span {
+  color: #000000;
+}
+
+.ms_k8-section-wrap > section.msSection0 .contentWrap .botBox {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.ms_k8-section-wrap > section.msSection0 .contentWrap .botBox .lightDiv {
+  width: 8px;
+  height: 26px;
+  margin: 0 auto 25px;
+}
+
+.ms_k8-section-wrap > section.msSection0 .contentWrap .botBox .lightDiv span {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fff;
+  margin-bottom: 2px;
+}
+
+.ms_k8-section-wrap > section.msSection0 .contentWrap .botBox .lightDiv span:nth-child(1) {
+  -webkit-animation: 2s 0s ease-in infinite light-1;
+          animation: 2s 0s ease-in infinite light-1;
+}
+
+.ms_k8-section-wrap > section.msSection0 .contentWrap .botBox .lightDiv span:nth-child(2) {
+  -webkit-animation: 2s 0s ease-in infinite light-2;
+          animation: 2s 0s ease-in infinite light-2;
+}
+
+.ms_k8-section-wrap > section.msSection0 .contentWrap .botBox .lightDiv span:nth-child(3) {
+  -webkit-animation: 2s 0s ease-in infinite light-3;
+          animation: 2s 0s ease-in infinite light-3;
+}
+
+@-webkit-keyframes light-1 {
+  from {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.4;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  60% {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes light-1 {
+  from {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.4;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  60% {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes light-2 {
+  from {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  70% {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes light-2 {
+  from {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  70% {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes light-3 {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes light-3 {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.ms_k8-section-wrap > section.msSection0 .contentWrap .botBox p {
+  font-size: 12px;
+  -webkit-animation: 2s 0s ease-in infinite light-4;
+          animation: 2s 0s ease-in infinite light-4;
+}
+
+@-webkit-keyframes light-4 {
+  from {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes light-4 {
+  from {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.ms_k8-section-wrap > section.msSection1 {
+  z-index: 2;
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  background: #000;
+}
+
+.ms_k8-section-wrap > section.msSection1.on {
+  opacity: 1;
+}
+
+.ms_k8-section-wrap > section.msSection1 .iframeWrap {
+  margin-top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.ms_k8-section-wrap > section.msSection1 .iframeWrap > iframe {
+  width: 100%;
+  max-width: 1025px;
+  max-height: 590px;
+  margin: auto;
+}
+
+.ms_k8-section-wrap > section.msSection1 .iframeWrap > button {
+  margin: auto;
+  width: 100%;
+  max-width: 1050px;
+  height: 70px;
+  margin-top: 20px;
+}
+
+.ms_k8-section-wrap > section.msSection1 .iframeWrap > button::after {
+  height: calc(100% + 2px);
+}
+
+.ms_k8-section-wrap > section.msSection2 {
+  z-index: 3;
+  top: 100%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  background-color: #1a1e21;
+}
+
+.ms_k8-section-wrap > section.msSection2.on {
+  top: 0;
+}
+
+.ms_k8-section-wrap > section.msSection2 .centerWrap {
+  width: 100%;
+  max-width: 1456px;
+  padding: 0 18px;
+  margin: auto;
+  margin-top: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+}
+
+.ms_k8-section-wrap > section.msSection2 .centerWrap .closeBtnBox {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  position: absolute;
+  top: 20px;
+  right: 18px;
+}
+
+.ms_k8-section-wrap > section.msSection2 .centerWrap .btnBox {
+  position: absolute;
+  left: 50%;
+  margin-left: -105px;
+}
+
+.ms_k8-section-wrap > section.msSection2 .centerWrap .btnBox button {
+  font-size: 20px;
+  padding: 20px;
+  color: #7e8284;
+}
+
+.ms_k8-section-wrap > section.msSection2 .centerWrap .btnBox button.on {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.ms_k8-section-wrap > section.msSection2 .centerWrap .btnBox span {
+  width: 2px;
+  height: 20px;
+  background: #4f5355;
+  display: inline-block;
+  position: relative;
+  top: 2px;
+}
+
+.ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox {
+  padding-top: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox img {
+  display: none;
+}
+
+.ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox img.on {
+  display: block;
+}
+
+.ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv {
+  width: calc(50% - 20px);
+  margin-right: 18px;
+  margin-bottom: 18px;
+}
+
+.ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv:nth-child(3), .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv:nth-child(4) {
+  margin-bottom: 0;
+}
+
+.ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv:nth-child(2), .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv:nth-child(4) {
+  width: calc(50% + 2px);
+  margin-right: 0;
+}
+
+.ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv .fixedDiv,
+.ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv .flexibleDiv,
+.ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv .fullDiv {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv .movieBtn {
+  cursor: pointer;
+}
+
+.ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv.option1 .fixedDiv {
+  width: 233px;
+}
+
+.ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv.option1 .flexibleDiv {
+  width: calc(100% - 251px);
+}
+
+.ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv.option3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv.option3 > div:first-child {
+  margin-right: 18px;
+}
+
+.ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv.option3 .fixedDiv {
+  width: 131px;
+}
+
+.ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv.option3 .flexibleDiv {
+  width: calc(100% - 149px);
+}
+
+.ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv.option4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv.option4 > div:first-child {
+  margin-right: 18px;
+}
+
+.ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv.option4 .fixedDiv {
+  width: 100px;
+}
+
+.ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv.option4 .flexibleDiv {
+  width: calc(100% - 118px);
+}
+
+.ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv .fullDiv {
+  width: 100%;
+}
+
+.ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv div {
+  overflow: hidden;
+}
+
+.ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv > div.row1 {
+  margin-bottom: 18px;
+}
+
+.ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv > div.row1 > div:last-child {
+  margin-left: 18px;
+}
+
+.ms_k8-section-wrap > section .logo {
+  width: 100%;
+  max-width: 1420px;
+  margin: 50px auto 0;
+}
+
+.ms_k8-section-wrap > section .logo img {
+  width: 100px;
+}
+
+.ms_k8-section-wrap > section .btn-1 {
+  overflow: hidden;
+  position: relative;
+  height: 56px;
+  border: 1px solid #fff;
+  color: #fff;
+  background: transparent;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+  cursor: pointer;
+}
+
+.ms_k8-section-wrap > section .btn-1 span {
+  position: relative;
+  z-index: 1;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.ms_k8-section-wrap > section .btn-1::after {
+  background: #fff;
+  position: absolute;
+  top: -1px;
+  display: block;
+  content: '';
+  left: -100%;
+  width: 100%;
+  height: calc(100% + 1px);
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.ms_k8-section-wrap > section .btn-1:hover {
+  color: #000;
+}
+
+.ms_k8-section-wrap > section .btn-1:hover::after {
+  left: 0;
+}
+
+.ms_k8-section-wrap > section .btn-2 {
+  padding: 20px;
+  font-size: 16px;
+  position: relative;
+  color: #7e8284;
+}
+
+.ms_k8-section-wrap > section .btn-2.on {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.ms_k8-section-wrap > section .btn-2.on::before, .ms_k8-section-wrap > section .btn-2.on::after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -9px;
+  display: block;
+  content: '';
+  background: #fff;
+  width: 10px;
+  height: 2px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.ms_k8-section-wrap > section .btn-2.on::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  margin-left: -3px;
+}
+
+.ms_k8-section-wrap .ms_mo {
+  display: none !important;
+}
+
+.ms_k8-section-wrap .ms_pc2 {
+  display: block !important;
+}
+
+.ms_k8-section-wrap .hide {
+  display: none !important;
+}
+
+.ms_k8-section-wrap img {
+  display: block;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
+.ms_k8-section-wrap button {
+  background: transparent;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  color: #fff;
+  cursor: pointer;
+}
+
+.ms_k8-section-wrap .unselectable {
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.ms_k8-section-wrap .fs52 {
+  font-size: 52px;
+}
+
+.ms_k8-section-wrap .fs20 {
+  font-size: 20px;
+}
+
+.ms_k8-section-wrap .fs40 {
+  font-size: 40px;
+}
+
+.ms_k8-section-wrap .fs16 {
+  font-size: 16px;
+}
+
+.ms_k8-section-wrap .fs90 {
+  font-size: 90px;
+}
+
+.ms_k8-section-wrap .fs24 {
+  font-size: 24px;
+}
+
+.ms_k8-section-wrap .fs70 {
+  font-size: 70px;
+}
+
+.ms_k8-section-wrap .fs14 {
+  font-size: 14px;
+}
+
+.ms_k8-section-wrap .fs16 {
+  font-size: 16px;
+}
+
+.ms_k8-section-wrap .fs16 {
+  font-size: 16px;
+}
+
+.ms_k8-section-wrap .fs16 {
+  font-size: 16px;
+}
+
+.ms_k8-section-wrap .col_gray {
+  color: #3c3c3c;
+}
+
+@media (max-width: 1420px) {
+  .ms_k8-section-wrap > section.msSection2 .centerWrap .closeBtnBox {
+    right: 36px;
+  }
+  .ms_k8-section-wrap > section .logo {
+    padding-left: 18px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .ms_k8-section-wrap {
+    height: calc(100vh - 150px);
+    max-height: 780px;
+    min-height: 780px;
+  }
+  .ms_k8-section-wrap > section .contentWrap > div.bg-wrap {
+    width: 100%;
+    left: 0;
+    margin-left: 0;
+  }
+  .ms_k8-section-wrap > section.msSection1 .iframeWrap {
+    margin-top: 30px;
+  }
+  .ms_k8-section-wrap > section.msSection1 .iframeWrap > iframe {
+    max-height: 520px;
+  }
+  .ms_k8-section-wrap > section.msSection1 .iframeWrap > button {
+    width: calc(100% - 36px);
+    height: 50px;
+  }
+  .ms_k8-section-wrap > section.msSection2 .centerWrap .closeBtnBox {
+    right: 18px;
+  }
+  .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv {
+    height: 300px;
+  }
+  .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv:nth-child(1) img, .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv:nth-child(2) img {
+    height: 100%;
+  }
+  .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv > div.row1 {
+    height: 180px;
+  }
+  .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv > div.row2 {
+    height: 102px;
+  }
+  .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv.option1 .row1 {
+    height: 180px;
+  }
+  .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv.option1 .row1 .fixedDiv {
+    width: 180px;
+  }
+  .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv.option1 .row1 .flexibleDiv {
+    width: calc(100% - 198px);
+  }
+  .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv.option1 .row2 {
+    height: 102px;
+  }
+  .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv.option1 .row2 img {
+    height: 100%;
+  }
+  .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv.option2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv.option3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv.option3 > div:first-child {
+    margin-right: 18px;
+  }
+  .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv.option3 .fixedDiv {
+    width: 100px;
+  }
+  .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv.option3 .flexibleDiv {
+    width: calc(100% - 118px);
+  }
+  .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv.option4 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv.option4 > div:first-child {
+    margin-right: 18px;
+  }
+  .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv.option4 .fixedDiv {
+    width: 80px;
+  }
+  .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv.option4 .flexibleDiv {
+    width: calc(100% - 98px);
+  }
+  .ms_k8-section-wrap > section .logo {
+    display: none;
+  }
+  .ms_k8-section-wrap section .m-fs38 {
+    font-size: 38px;
+  }
+  .ms_k8-section-wrap section .m-fs34 {
+    font-size: 34px;
+  }
+  .ms_k8-section-wrap section .m-fs16 {
+    font-size: 16px;
+  }
+  .ms_k8-section-wrap section .m-fs15 {
+    font-size: 15px;
+  }
+  .ms_k8-section-wrap section .m-fs15 {
+    font-size: 15px;
+  }
+  .ms_k8-section-wrap section .m-fs30 {
+    font-size: 30px;
+  }
+  .ms_k8-section-wrap section .m-fs16 {
+    font-size: 16px;
+  }
+  .ms_k8-section-wrap section .m-fs55 {
+    font-size: 55px;
+  }
+  .ms_k8-section-wrap section .m-fs22 {
+    font-size: 22px;
+  }
+  .ms_k8-section-wrap section .m-fs15 {
+    font-size: 15px;
+  }
+  .ms_k8-section-wrap section .m-fs58 {
+    font-size: 58px;
+  }
+  .ms_k8-section-wrap section .m-fs12 {
+    font-size: 12px;
+  }
+  .ms_k8-section-wrap section .m-fs14 {
+    font-size: 14px;
+  }
+  .ms_k8-section-wrap section .m-fs14 {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 540px) {
+  .ms_k8-section-wrap {
+    min-height: 640px;
+  }
+  .ms_k8-section-wrap > section.msSection0 .contentWrap:last-child .centerBox .pBox .body p:last-child span {
+    width: 36vw;
+  }
+  .ms_k8-section-wrap > section.msSection0 .contentWrap .centerBox {
+    width: calc(100% - 40px);
+    padding: 0 20px;
+  }
+  .ms_k8-section-wrap > section.msSection0 .contentWrap .centerBox .pBox .head {
+    width: 25vw;
+    font-size: 10vw;
+  }
+  .ms_k8-section-wrap > section.msSection0 .contentWrap .centerBox .pBox .body {
+    font-size: 6vw;
+  }
+  .ms_k8-section-wrap > section.msSection0 .contentWrap .centerBox .pBox .body p:last-child {
+    font-size: 11px;
+  }
+  .ms_k8-section-wrap > section.msSection0 .contentWrap .centerBox .pBox .body p:last-child span {
+    width: 26vw;
+  }
+  .ms_k8-section-wrap > section.msSection0 .contentWrap .centerBox .btnBox button {
+    height: 46px;
+  }
+  .ms_k8-section-wrap > section.msSection0 .contentWrap .centerBox .btnBox button:first-child {
+    width: calc(70vw - 60px);
+  }
+  .ms_k8-section-wrap > section.msSection0 .contentWrap .centerBox .btnBox button:last-child {
+    width: 30vw;
+  }
+  .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv:nth-child(1), .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv:nth-child(2), .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv:nth-child(3) {
+    width: 100%;
+  }
+  .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv.option1 {
+    height: 120px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv.option1 > .row1 {
+    height: 100%;
+    width: calc(100% - 138px);
+    margin-right: 18px;
+  }
+  .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv.option1 > .row1 .flexibleDiv {
+    width: calc(100% - 138px);
+  }
+  .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv.option1 > .row1 .fixedDiv {
+    width: 120px;
+  }
+  .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv.option1 > .row2 {
+    width: 120px;
+    height: auto;
+  }
+  .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv.option1 > .row2 .fullDiv {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv.option2 {
+    height: 200px;
+  }
+  .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv.option2 .fullDiv {
+    width: calc(100% - 98px);
+    margin-right: 18px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv.option2 .fullDiv img {
+    width: 100%;
+  }
+  .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv.option2 .fixedDiv {
+    width: 80px;
+  }
+  .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv.option2 .fixedDiv img {
+    width: 100%;
+    height: auto;
+  }
+  .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv.option3 {
+    height: 140px;
+    margin-right: 0;
+  }
+  .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv.option3 > div.flexibleDiv {
+    width: calc(50% - 9px);
+  }
+  .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv.option3 > div.flexibleDiv img {
+    min-height: 100%;
+    max-width: 130%;
+  }
+  .ms_k8-section-wrap .ms_mo {
+    display: block !important;
+  }
+  .ms_k8-section-wrap .ms_pc {
+    display: none !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv.option1 > .row1 {
+    width: 100%;
+    margin-right: 0;
+  }
+  .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv.option2 .fullDiv img {
+    width: auto;
+  }
+  .ms_k8-section-wrap .ms_pc2 {
+    display: none !important;
+  }
+}
+/*# sourceMappingURL=index.css.map */
