@@ -48,8 +48,8 @@ $(document).ready(function () {
 
 	const mc = new Hammer(section0);
 	mc.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
-	mc.on('swipe', function (ev) {
-        alert(ev)
+	mc.on('swipeup', function () {
+		slideContentWrap();
 	});
 
 	for (let i = 0; i < movieBtns.length; i++) {
