@@ -165,7 +165,7 @@ function slideContentWrap(direction) {
 
 function itemAnimation(parentEle) {
 	if (parentEle.classList.contains('contentWrap')) {
-		TweenMax.staggerFrom(
+		TweenMax.staggerFromTo(
 			[
 				parentEle.children[2].children[0].children[0],
 				parentEle.children[2].children[0].children[1].children[0],
@@ -174,10 +174,11 @@ function itemAnimation(parentEle) {
 			],
 			0.5,
 			{ opacity: 0, top: -10, position: 'relative', delay: 0.5 },
+			{ opacity: 1, top: 0, position: 'relative', delay: 0.5 },
 			0.2
 		);
 	} else if (parentEle.classList.contains('gridBox')) {
-		TweenMax.staggerFrom(section2GalleryImgBox, 1, { opacity: 0, delay: 0.5 }, 0.1);
+		TweenMax.staggerFromTo(section2GalleryImgBox, 1, { opacity: 0, delay: 0.5 }, { opacity: 1, delay: 0.5 }, 0.1);
 	}
 }
 

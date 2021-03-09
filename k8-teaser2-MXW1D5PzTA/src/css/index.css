@@ -847,7 +847,9 @@ table {
 @media (max-width: 1420px) {
   .ms_k8-section-wrap > section.msSection0 .contentWrap .navBox {
     margin-left: 0;
-    left: 18px;
+    right: 18px;
+    left: 0;
+    width: 100%;
   }
   .ms_k8-section-wrap > section.msSection2 .centerWrap .closeBtnBox {
     right: 36px;
