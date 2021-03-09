@@ -542,6 +542,9 @@
 
 			&:hover {
 				color: #000;
+				span {
+					color: #000;
+				}
 				&::after {
 					left: 0;
 				}
