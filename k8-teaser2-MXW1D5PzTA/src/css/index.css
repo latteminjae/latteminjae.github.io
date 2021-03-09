@@ -148,15 +148,18 @@ table {
   cursor: pointer;
   font-size: 18px;
   padding: 4px 16px;
+  color: #999;
 }
 
 .ms_k8-section-wrap > section.msSection0 .contentWrap .navBox li.on {
-  color: #999;
+  color: #fff;
+  text-decoration: none;
   cursor: auto;
 }
 
 .ms_k8-section-wrap > section.msSection0 .contentWrap .navBox li.on:hover {
   text-decoration: none;
+  color: #fff;
 }
 
 .ms_k8-section-wrap > section.msSection0 .contentWrap .navBox li:hover {
@@ -842,6 +845,10 @@ table {
 }
 
 @media (max-width: 1420px) {
+  .ms_k8-section-wrap > section.msSection0 .contentWrap .navBox {
+    margin-left: 0;
+    left: 18px;
+  }
   .ms_k8-section-wrap > section.msSection2 .centerWrap .closeBtnBox {
     right: 36px;
   }
@@ -862,8 +869,7 @@ table {
     margin-left: 0;
   }
   .ms_k8-section-wrap > section.msSection0 .contentWrap .navBox {
-    margin-left: 0;
-    left: 20px;
+    display: none;
   }
   .ms_k8-section-wrap > section.msSection1 .iframeWrap {
     margin-top: 30px;
@@ -1068,7 +1074,13 @@ table {
             align-items: center;
   }
   .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv.option2 .fullDiv img {
-    width: 100%;
+    width: 360px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -180px;
   }
   .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv.option2 .fixedDiv {
     width: 80px;
@@ -1087,6 +1099,11 @@ table {
   .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv.option3 > div.flexibleDiv img {
     min-height: 100%;
     max-width: 130%;
+  }
+  .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv .textBox {
+    font-size: 12px;
+    bottom: 12px;
+    left: 12px;
   }
   .ms_k8-section-wrap .ms_mo {
     display: block !important;
