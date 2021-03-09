@@ -657,6 +657,14 @@
 @media (max-width: 1420px) {
 	.ms_k8-section-wrap {
 		> section {
+			&.msSection0 {
+				.contentWrap {
+					.navBox {
+						margin-left: 0;
+						left: 18px;
+					}
+				}
+			}
 			&.msSection2 {
 				.centerWrap {
 					.closeBtnBox {
@@ -687,6 +695,11 @@
 			}
 
 			&.msSection0 {
+				.contentWrap {
+					.navBox {
+						display: none;
+					}
+				}
 			}
 
 			&.msSection1 {

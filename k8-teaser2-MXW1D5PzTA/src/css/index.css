@@ -712,6 +712,10 @@ table {
   color: #000;
 }
 
+.ms_k8-section-wrap > section .btn-1:hover span {
+  color: #000;
+}
+
 .ms_k8-section-wrap > section .btn-1:hover::after {
   left: 0;
 }
@@ -856,6 +860,10 @@ table {
     width: 100%;
     left: 0;
     margin-left: 0;
+  }
+  .ms_k8-section-wrap > section.msSection0 .contentWrap .navBox {
+    margin-left: 0;
+    left: 20px;
   }
   .ms_k8-section-wrap > section.msSection1 .iframeWrap {
     margin-top: 30px;

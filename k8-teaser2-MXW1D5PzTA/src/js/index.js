@@ -167,16 +167,14 @@ function itemAnimation(parentEle) {
 	if (parentEle.classList.contains('contentWrap')) {
 		TweenMax.staggerFrom(
 			[
-				parentEle.children[0],
-				parentEle.children[1].children,
 				parentEle.children[2].children[0].children[0],
-				parentEle.children[2].children[0].children[1].children,
+				parentEle.children[2].children[0].children[1].children[0],
+				parentEle.children[2].children[0].children[1].children[1],
 				parentEle.children[2].children[1].children,
-				parentEle.children[3],
 			],
-			1,
-			{ opacity: 0, delay: 0.5 },
-			0.15
+			0.5,
+			{ opacity: 0, top: -10, position: 'relative', delay: 0.5 },
+			0.2
 		);
 	} else if (parentEle.classList.contains('gridBox')) {
 		TweenMax.staggerFrom(section2GalleryImgBox, 1, { opacity: 0, delay: 0.5 }, 0.1);
