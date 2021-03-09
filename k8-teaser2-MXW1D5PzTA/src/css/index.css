@@ -124,6 +124,45 @@ table {
   top: 100%;
 }
 
+.ms_k8-section-wrap > section.msSection0 .contentWrap.none {
+  display: none;
+}
+
+.ms_k8-section-wrap > section.msSection0 .contentWrap .navBox {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  margin-left: -710px;
+  width: 1420px;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.ms_k8-section-wrap > section.msSection0 .contentWrap .navBox li {
+  cursor: pointer;
+  font-size: 18px;
+  padding: 4px 16px;
+}
+
+.ms_k8-section-wrap > section.msSection0 .contentWrap .navBox li.on {
+  color: #999;
+  cursor: auto;
+}
+
+.ms_k8-section-wrap > section.msSection0 .contentWrap .navBox li.on:hover {
+  text-decoration: none;
+}
+
+.ms_k8-section-wrap > section.msSection0 .contentWrap .navBox li:hover {
+  text-decoration: underline;
+}
+
 .ms_k8-section-wrap > section.msSection0 .contentWrap .centerBox {
   margin: 230px auto 0;
   width: 450px;
@@ -534,6 +573,7 @@ table {
 .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv .fixedDiv,
 .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv .flexibleDiv,
 .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv .fullDiv {
+  position: relative;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -593,6 +633,19 @@ table {
 
 .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv .fullDiv {
   width: 100%;
+}
+
+.ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv .textBox {
+  position: absolute;
+  bottom: 28px;
+  left: 36px;
+  font-size: 20px;
+  color: #fff;
+  display: none;
+}
+
+.ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv .textBox.on {
+  display: block;
 }
 
 .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv div {

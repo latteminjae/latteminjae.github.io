@@ -18,39 +18,60 @@ let youtubeIframe;
 let section0;
 let section1;
 let section2;
+let section0NavBtnBoxs;
+let section0NavBtnBtns;
 let section2YoutubeBtn;
 let section2SectionBtns;
 let section2ImagesDesign;
 let section2ImagesTeaser;
-let galleryCloseBtn;
+let section2GalleryCloseBtn;
+let section2GalleryGridBox;
+let section2GalleryImgBox;
 
 $(document).ready(function () {
 	// dom declaration
 	contentWraps = document.querySelectorAll('.ms_k8-section-wrap .msSection0 .contentWrap');
 	galleryBtns = document.querySelectorAll('.ms_k8-section-wrap button.galleryBtn');
 	movieBtns = document.querySelectorAll('.ms_k8-section-wrap .msSection0 button.movieBtn');
-	galleryCloseBtn = document.querySelector('.ms_k8-section-wrap button.galleryCloseBtn');
+	section2GalleryCloseBtn = document.querySelector('.ms_k8-section-wrap button.galleryCloseBtn');
 	youtubeIframe = document.querySelector('.ms_k8-section-wrap #iframeDiv');
 	section0 = document.querySelector('.ms_k8-section-wrap .msSection0');
 	section1 = document.querySelector('.ms_k8-section-wrap .msSection1');
 	section2 = document.querySelector('.ms_k8-section-wrap .msSection2');
+	section0NavBtnBoxs = document.querySelectorAll('.ms_k8-section-wrap .msSection0 .navBox');
+	section0NavBtnBtns = document.querySelectorAll('.ms_k8-section-wrap .msSection0 .navBox li');
 	section2YoutubeBtn = document.querySelector('.ms_k8-section-wrap .msSection2 .movieBtn');
 	section2SectionBtns = document.querySelectorAll('.ms_k8-section-wrap .msSection2 .btnBox button');
-	section2ImagesDesign = document.querySelectorAll('.ms_k8-section-wrap .msSection2 .gridBox img.designImg');
-	section2ImagesTeaser = document.querySelectorAll('.ms_k8-section-wrap .msSection2 .gridBox img.teaserImg');
+	section2ImagesDesign = document.querySelectorAll('.ms_k8-section-wrap .msSection2 .gridBox .designImg');
+	section2ImagesTeaser = document.querySelectorAll('.ms_k8-section-wrap .msSection2 .gridBox .teaserImg');
+	section2GalleryGridBox = document.querySelector('.ms_k8-section-wrap .msSection2 .gridBox');
+	section2GalleryImgBox = document.querySelectorAll('.ms_k8-section-wrap .msSection2 .gridBox .imgBox');
 
 	// add event listeners
+
+	// section0 scroll - mouse wheel
 	section0.addEventListener('wheel', function (e) {
 		if (e.wheelDelta < 0) {
-			slideContentWrap();
+			slideContentWrap(true);
+		} else {
+			slideContentWrap(false);
 		}
 	});
 
+	// section0 scroll - mobile swipe
 	const mc = new Hammer(section0);
 	mc.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
 	mc.on('swipeup', function () {
-		slideContentWrap();
+		slideContentWrap(true);
 	});
+	mc.on('swipedown', function () {
+		slideContentWrap(false);
+	});
+
+	// section0 navBtn
+	for (let i = 0; i < section0NavBtnBoxs.length; i++) {
+		section0NavBtnBoxs[i].addEventListener('click', function (e) {});
+	}
 
 	for (let i = 0; i < movieBtns.length; i++) {
 		movieBtns[i].addEventListener('click', function (e) {
@@ -67,12 +88,17 @@ $(document).ready(function () {
 		});
 	}
 
-	galleryCloseBtn.addEventListener('click', function () {
+	for (let i = 0; i < section0NavBtnBtns.length; i++) {
+		section0NavBtnBtns[i].addEventListener('click', function (e) {
+			section0Nav(e);
+		});
+	}
+
+	section2GalleryCloseBtn.addEventListener('click', function () {
 		galleryOnOff(false);
 	});
 
 	section2YoutubeBtn.addEventListener('click', function (e) {
-		console.log(e.target.classList.contains('design'));
 		if (e.target.classList.contains('design')) {
 			openMovieSection('section2', 'design');
 		} else if (e.target.classList.contains('teaser')) {
@@ -82,31 +108,15 @@ $(document).ready(function () {
 
 	for (let i = 0; i < section2SectionBtns.length; i++) {
 		section2SectionBtns[i].addEventListener('click', function (e) {
-			if (e.target.classList.contains('on')) {
-				return;
-			}
-
-			e.target.classList.add('on');
-			if (e.target.classList.contains('designSection')) {
-				section2SectionBtns[1].classList.remove('on');
-				for (let j = 0; j < section2ImagesDesign.length; j++) {
-					section2ImagesDesign[j].classList.add('on');
-					section2ImagesTeaser[j].classList.remove('on');
-				}
-			} else if (e.target.classList.contains('teaserSection')) {
-				section2SectionBtns[0].classList.remove('on');
-				for (let j = 0; j < section2ImagesDesign.length; j++) {
-					section2ImagesDesign[j].classList.remove('on');
-					section2ImagesTeaser[j].classList.add('on');
-				}
-			}
+			section2Btn(e);
 		});
 	}
 });
 
 // section0 scroll
-function slideContentWrap() {
-	// () : void
+function slideContentWrap(direction) {
+	// (direction : boolean) : void
+	// true -> scroll down(swipe up), false -> scroll up(swipe down)
 
 	if (!scrollOn) {
 		return;
@@ -115,30 +125,62 @@ function slideContentWrap() {
 
 	for (let i = 0; i < contentWraps.length; i++) {
 		switch (contentWraps[i].classList[1]) {
+			case 'top':
+				contentWraps[i].classList.remove('top');
+				contentWraps[i].classList.add(direction ? 'none' : 'center');
+				if (!direction) {
+					itemAnimation(contentWraps[i]);
+				}
+				break;
 			case 'center':
 				contentWraps[i].classList.remove('center');
-				contentWraps[i].classList.add('top');
+				contentWraps[i].classList.add(direction ? 'top' : 'bottom');
 				break;
 			case 'bottom':
 				contentWraps[i].classList.remove('bottom');
-				contentWraps[i].classList.add('center');
+				contentWraps[i].classList.add(direction ? 'center' : 'none');
+				if (direction) {
+					itemAnimation(contentWraps[i]);
+				}
+				break;
+			case 'none':
+				contentWraps[i].classList.remove('none');
+				contentWraps[i].classList.add(direction ? 'bottom' : 'top');
 				break;
 			default:
 				break;
 		}
 	}
 
+	let section0NavBtnTeaserOn = section0NavBtnBoxs[0].children[1].classList.contains('on');
+	for (let i = 0; i < section0NavBtnBoxs.length; i++) {
+		section0NavBtnBoxs[i].children[section0NavBtnTeaserOn ? 1 : 2].classList.remove('on');
+		section0NavBtnBoxs[i].children[!section0NavBtnTeaserOn ? 1 : 2].classList.add('on');
+	}
+
 	setTimeout(function () {
-		for (let i = 0; i < contentWraps.length; i++) {
-			if (contentWraps[i].classList[1] === 'top') {
-				contentWraps[i].classList.remove('top');
-				contentWraps[i].classList.add('bottom');
-			}
-		}
-		setTimeout(function () {
-			scrollOn = true;
-		}, 500);
-	}, 1000);
+		scrollOn = true;
+	}, 1500);
+}
+
+function itemAnimation(parentEle) {
+	if (parentEle.classList.contains('contentWrap')) {
+		TweenMax.staggerFrom(
+			[
+				parentEle.children[0],
+				parentEle.children[1].children,
+				parentEle.children[2].children[0].children[0],
+				parentEle.children[2].children[0].children[1].children,
+				parentEle.children[2].children[1].children,
+				parentEle.children[3],
+			],
+			1,
+			{ opacity: 0, delay: 0.5 },
+			0.15
+		);
+	} else if (parentEle.classList.contains('gridBox')) {
+		TweenMax.staggerFrom(section2GalleryImgBox, 1, { opacity: 0, delay: 0.5 }, 0.1);
+	}
 }
 
 // section0 movieBtn event - open youbute iframe section
@@ -166,6 +208,7 @@ function galleryOnOff(open) {
 		section2.classList.add('on');
 		youtubeIframe.src = '';
 
+		itemAnimation(section2GalleryGridBox);
 		setTimeout(function () {
 			if (section1.classList.contains('on')) {
 				section0.classList.remove('fadeout');
@@ -178,6 +221,7 @@ function galleryOnOff(open) {
 	}
 }
 
+// youtube section on
 function youtubeOn(movie) {
 	// (movie : "design" || "teaser") : void
 
@@ -188,5 +232,40 @@ function youtubeOn(movie) {
 	} else if (movie === 'teaser') {
 		youtubeIframe.src =
 			'https://www.youtube.com/embed/99kK628Umw8?rel=0&autoplay=1&playsinline=1&enablejsapi=1&version=3&playerapiid=ytplayer';
+	}
+}
+
+// section2 sectionBtn
+function section2Btn(e) {
+	if (e.target.classList.contains('on')) {
+		return;
+	}
+
+	e.target.classList.add('on');
+	if (e.target.classList.contains('designSection')) {
+		section2SectionBtns[1].classList.remove('on');
+		for (let j = 0; j < section2ImagesDesign.length; j++) {
+			section2ImagesDesign[j].classList.add('on');
+			section2ImagesTeaser[j].classList.remove('on');
+		}
+	} else if (e.target.classList.contains('teaserSection')) {
+		section2SectionBtns[0].classList.remove('on');
+		for (let j = 0; j < section2ImagesDesign.length; j++) {
+			section2ImagesDesign[j].classList.remove('on');
+			section2ImagesTeaser[j].classList.add('on');
+		}
+	}
+}
+
+// section0 navBtn
+function section0Nav(e) {
+	if (e.target.classList.contains('on')) {
+		return;
+	}
+
+	if (e.target.classList.contains('galleryBtn')) {
+		galleryOnOff(true);
+	} else {
+		slideContentWrap(true);
 	}
 }
