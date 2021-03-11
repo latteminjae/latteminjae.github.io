@@ -445,15 +445,35 @@ table {
 }
 
 .ms_k8-section-wrap > section.msSection1 {
-  z-index: 2;
+  z-index: 3;
   opacity: 0;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   background: #000;
+  display: none;
 }
 
 .ms_k8-section-wrap > section.msSection1.on {
+  display: block;
   opacity: 1;
+}
+
+.ms_k8-section-wrap > section.msSection1 .closeBtnBox {
+  width: 100%;
+  max-width: 1456px;
+  padding: 0 18px;
+  margin: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+}
+
+.ms_k8-section-wrap > section.msSection1 .closeBtnBox button {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  position: absolute;
+  top: 20px;
+  right: 18px;
 }
 
 .ms_k8-section-wrap > section.msSection1 .iframeWrap {
@@ -487,7 +507,7 @@ table {
 }
 
 .ms_k8-section-wrap > section.msSection2 {
-  z-index: 3;
+  z-index: 2;
   top: 100%;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;

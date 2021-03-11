@@ -21,6 +21,7 @@ let section2;
 let section0NavBtnBoxs;
 let section0NavBtnBtns;
 let section0BgVideo;
+let section1CloseBtn;
 let section2YoutubeBtn;
 let section2SectionBtns;
 let section2ImagesDesign;
@@ -29,95 +30,7 @@ let section2GalleryCloseBtn;
 let section2GalleryGridBox;
 let section2GalleryImgBox;
 
-$(document).ready(function () {
-	// dom declaration ------------------------------------------------------------
-	contentWraps = document.querySelectorAll('.ms_k8-section-wrap .msSection0 .contentWrap');
-	galleryBtns = document.querySelectorAll('.ms_k8-section-wrap button.galleryBtn');
-	movieBtns = document.querySelectorAll('.ms_k8-section-wrap .msSection0 button.movieBtn');
-	section2GalleryCloseBtn = document.querySelector('.ms_k8-section-wrap button.galleryCloseBtn');
-	youtubeIframe = document.querySelector('.ms_k8-section-wrap #iframeDiv');
-	section0 = document.querySelector('.ms_k8-section-wrap .msSection0');
-	section1 = document.querySelector('.ms_k8-section-wrap .msSection1');
-	section2 = document.querySelector('.ms_k8-section-wrap .msSection2');
-	section0NavBtnBoxs = document.querySelectorAll('.ms_k8-section-wrap .msSection0 .navBox');
-	section0NavBtnBtns = document.querySelectorAll('.ms_k8-section-wrap .msSection0 .navBox li');
-	section0BgVideo = document.querySelectorAll('.ms_k8-section-wrap .msSection0 .bgWrap video');
-	section2YoutubeBtn = document.querySelector('.ms_k8-section-wrap .msSection2 .movieBtn');
-	section2SectionBtns = document.querySelectorAll('.ms_k8-section-wrap .msSection2 .btnBox button');
-	section2ImagesDesign = document.querySelectorAll('.ms_k8-section-wrap .msSection2 .gridBox .designImg');
-	section2ImagesTeaser = document.querySelectorAll('.ms_k8-section-wrap .msSection2 .gridBox .teaserImg');
-	section2GalleryGridBox = document.querySelector('.ms_k8-section-wrap .msSection2 .gridBox');
-	section2GalleryImgBox = document.querySelectorAll('.ms_k8-section-wrap .msSection2 .gridBox .imgBox');
-
-	// add event listeners -------------------------------------------
-
-	// section0 scroll - mouse wheel
-	section0.addEventListener('wheel', function (e) {
-		e.preventDefault();
-		if (e.wheelDelta < 0) {
-			slideContentWrap(true);
-		} else {
-			slideContentWrap(false);
-		}
-	});
-
-	// section0 scroll - mobile swipe
-	const mc = new Hammer(section0);
-	mc.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
-	mc.on('swipeup', function () {
-		slideContentWrap(true);
-	});
-	mc.on('swipedown', function () {
-		slideContentWrap(false);
-	});
-
-	// section0 navBtn
-	for (let i = 0; i < section0NavBtnBoxs.length; i++) {
-		section0NavBtnBoxs[i].addEventListener('click', function (e) {});
-	}
-
-	for (let i = 0; i < movieBtns.length; i++) {
-		movieBtns[i].addEventListener('click', function (e) {
-			if (e.target.classList.contains('design')) {
-				openMovieSection('section0', 'design');
-			} else if (e.target.classList.contains('teaser')) {
-				openMovieSection('section0', 'teaser');
-			}
-		});
-	}
-	for (let i = 0; i < galleryBtns.length; i++) {
-		galleryBtns[i].addEventListener('click', function (e) {
-			galleryOnOff(true);
-		});
-	}
-
-	for (let i = 0; i < section0NavBtnBtns.length; i++) {
-		section0NavBtnBtns[i].addEventListener('click', function (e) {
-			section0Nav(e);
-		});
-	}
-
-	section2GalleryCloseBtn.addEventListener('click', function () {
-		galleryOnOff(false);
-	});
-
-	section2YoutubeBtn.addEventListener('click', function (e) {
-		if (e.target.classList.contains('design')) {
-			openMovieSection('section2', 'design');
-		} else if (e.target.classList.contains('teaser')) {
-			openMovieSection('section2', 'teaser');
-		}
-	});
-
-	for (let i = 0; i < section2SectionBtns.length; i++) {
-		section2SectionBtns[i].addEventListener('click', function (e) {
-			section2Btn(e);
-		});
-	}
-
-	// open animation ------------------------------------------------------------
-	itemAnimation(contentWraps[1]);
-});
+// functions --------------------------------------------------------------
 
 // section0 scroll
 function slideContentWrap(direction) {
@@ -173,6 +86,7 @@ function slideContentWrap(direction) {
 	}, 1500);
 }
 
+// section0, section2 item animation
 function itemAnimation(parentEle) {
 	if (parentEle.classList.contains('contentWrap')) {
 		TweenMax.staggerFromTo(
@@ -201,7 +115,6 @@ function openMovieSection(from, movie) {
 		section1.classList.remove('hide');
 		section1.classList.add('on');
 	} else if (from === 'section2') {
-		section2.classList.remove('on');
 		section1.classList.remove('hide');
 		section1.classList.add('on');
 	}
@@ -244,6 +157,14 @@ function youtubeOn(movie) {
 	}
 }
 
+// section1 close
+function section1Close() {
+    // () : void
+	youtubeIframe.src = '';
+	section0.classList.remove('fadeout');
+	section1.classList.remove('on');
+}
+
 // section2 sectionBtn
 function section2Btn(e) {
 	if (e.target.classList.contains('on')) {
@@ -278,3 +199,99 @@ function section0Nav(e) {
 		slideContentWrap(true);
 	}
 }
+
+// start ----------------------------------------------------------------
+$(document).ready(function () {
+	// dom declaration ------------------------------------------------------------
+	contentWraps = document.querySelectorAll('.ms_k8-section-wrap .msSection0 .contentWrap');
+	galleryBtns = document.querySelectorAll('.ms_k8-section-wrap button.galleryBtn');
+	movieBtns = document.querySelectorAll('.ms_k8-section-wrap .msSection0 button.movieBtn');
+	section2GalleryCloseBtn = document.querySelector('.ms_k8-section-wrap .msSection2 button.galleryCloseBtn');
+	youtubeIframe = document.querySelector('.ms_k8-section-wrap #iframeDiv');
+	section0 = document.querySelector('.ms_k8-section-wrap .msSection0');
+	section1 = document.querySelector('.ms_k8-section-wrap .msSection1');
+	section2 = document.querySelector('.ms_k8-section-wrap .msSection2');
+	section0NavBtnBoxs = document.querySelectorAll('.ms_k8-section-wrap .msSection0 .navBox');
+	section0NavBtnBtns = document.querySelectorAll('.ms_k8-section-wrap .msSection0 .navBox li');
+	section0BgVideo = document.querySelectorAll('.ms_k8-section-wrap .msSection0 .bgWrap video');
+	section1CloseBtn = document.querySelector('.ms_k8-section-wrap .msSection1 .movieCloseBtn');
+	section2YoutubeBtn = document.querySelector('.ms_k8-section-wrap .msSection2 .movieBtn');
+	section2SectionBtns = document.querySelectorAll('.ms_k8-section-wrap .msSection2 .btnBox button');
+	section2ImagesDesign = document.querySelectorAll('.ms_k8-section-wrap .msSection2 .gridBox .designImg');
+	section2ImagesTeaser = document.querySelectorAll('.ms_k8-section-wrap .msSection2 .gridBox .teaserImg');
+	section2GalleryGridBox = document.querySelector('.ms_k8-section-wrap .msSection2 .gridBox');
+	section2GalleryImgBox = document.querySelectorAll('.ms_k8-section-wrap .msSection2 .gridBox .imgBox');
+
+	// add event listeners -------------------------------------------
+
+	// section0 scroll - mouse wheel
+	section0.addEventListener('wheel', function (e) {
+		e.preventDefault();
+		if (e.wheelDelta < 0) {
+			slideContentWrap(true);
+		} else {
+			slideContentWrap(false);
+		}
+	});
+
+	// section0 scroll - mobile swipe
+	const mc = new Hammer(section0);
+	mc.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+	mc.on('swipeup', function () {
+		slideContentWrap(true);
+	});
+	mc.on('swipedown', function () {
+		slideContentWrap(false);
+	});
+
+	// section0 navBtn
+	for (let i = 0; i < section0NavBtnBoxs.length; i++) {
+		section0NavBtnBoxs[i].addEventListener('click', function (e) {});
+	}
+
+	for (let i = 0; i < movieBtns.length; i++) {
+		movieBtns[i].addEventListener('click', function (e) {
+			if (e.target.classList.contains('design')) {
+				openMovieSection('section0', 'design');
+			} else if (e.target.classList.contains('teaser')) {
+				openMovieSection('section0', 'teaser');
+			}
+		});
+	}
+	for (let i = 0; i < galleryBtns.length; i++) {
+		galleryBtns[i].addEventListener('click', function (e) {
+			galleryOnOff(true);
+		});
+	}
+
+	for (let i = 0; i < section0NavBtnBtns.length; i++) {
+		section0NavBtnBtns[i].addEventListener('click', function (e) {
+			section0Nav(e);
+		});
+	}
+
+	section1CloseBtn.addEventListener('click', function () {
+		section1Close();
+	});
+
+	section2GalleryCloseBtn.addEventListener('click', function () {
+		galleryOnOff(false);
+	});
+
+	section2YoutubeBtn.addEventListener('click', function (e) {
+		if (e.target.classList.contains('design')) {
+			openMovieSection('section2', 'design');
+		} else if (e.target.classList.contains('teaser')) {
+			openMovieSection('section2', 'teaser');
+		}
+	});
+
+	for (let i = 0; i < section2SectionBtns.length; i++) {
+		section2SectionBtns[i].addEventListener('click', function (e) {
+			section2Btn(e);
+		});
+	}
+
+	// open animation ------------------------------------------------------------
+	itemAnimation(contentWraps[1]);
+});

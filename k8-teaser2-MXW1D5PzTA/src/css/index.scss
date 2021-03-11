@@ -310,13 +310,31 @@
 			}
 		}
 		&.msSection1 {
-			z-index: 2;
+			z-index: 3;
 			opacity: 0;
 			transition: all 0.5s;
 			background: #000;
+			display: none;
 
 			&.on {
+				display: block;
 				opacity: 1;
+			}
+
+			.closeBtnBox {
+				width: 100%;
+				max-width: 1456px;
+				padding: 0 18px;
+				margin: auto;
+				box-sizing: border-box;
+				position: relative;
+
+				button {
+					transition: all 0.3s;
+					position: absolute;
+					top: 20px;
+					right: 18px;
+				}
 			}
 
 			.iframeWrap {
@@ -343,7 +361,7 @@
 			}
 		}
 		&.msSection2 {
-			z-index: 3;
+			z-index: 2;
 			top: 100%;
 			transition: all 0.5s;
 			background-color: #1a1e21;
