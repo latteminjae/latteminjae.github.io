@@ -1021,13 +1021,13 @@ table {
   .ms_k8-section-wrap {
     min-height: 640px;
   }
-  .ms_k8-section-wrap > section.msSection0 .contentWrap:last-child .centerBox .pBox {
+  .ms_k8-section-wrap > section.msSection0 .contentWrap .centerBox .pBox {
     margin-bottom: 40px;
   }
-  .ms_k8-section-wrap > section.msSection0 .contentWrap:last-child .centerBox .pBox .body p:first-child {
+  .ms_k8-section-wrap > section.msSection0 .contentWrap .centerBox .pBox .body p:first-child {
     margin-bottom: 14px;
   }
-  .ms_k8-section-wrap > section.msSection0 .contentWrap:last-child .centerBox .pBox .body p:last-child span {
+  .ms_k8-section-wrap > section.msSection0 .contentWrap .centerBox .pBox .body p:last-child span {
     width: 36vw;
   }
   .ms_k8-section-wrap > section.msSection0 .contentWrap .centerBox {
@@ -1063,6 +1063,7 @@ table {
   .ms_k8-section-wrap > section.msSection0 .contentWrap .bgWrap img {
     min-width: 540px;
     max-width: 100%;
+    max-height: 780px;
   }
   .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv:nth-child(1), .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv:nth-child(2), .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv:nth-child(3) {
     width: 100%;
