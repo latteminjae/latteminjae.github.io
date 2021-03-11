@@ -20,6 +20,7 @@ let section1;
 let section2;
 let section0NavBtnBoxs;
 let section0NavBtnBtns;
+let section0BgVideo;
 let section2YoutubeBtn;
 let section2SectionBtns;
 let section2ImagesDesign;
@@ -29,7 +30,7 @@ let section2GalleryGridBox;
 let section2GalleryImgBox;
 
 $(document).ready(function () {
-	// dom declaration
+	// dom declaration ------------------------------------------------------------
 	contentWraps = document.querySelectorAll('.ms_k8-section-wrap .msSection0 .contentWrap');
 	galleryBtns = document.querySelectorAll('.ms_k8-section-wrap button.galleryBtn');
 	movieBtns = document.querySelectorAll('.ms_k8-section-wrap .msSection0 button.movieBtn');
@@ -40,6 +41,7 @@ $(document).ready(function () {
 	section2 = document.querySelector('.ms_k8-section-wrap .msSection2');
 	section0NavBtnBoxs = document.querySelectorAll('.ms_k8-section-wrap .msSection0 .navBox');
 	section0NavBtnBtns = document.querySelectorAll('.ms_k8-section-wrap .msSection0 .navBox li');
+	section0BgVideo = document.querySelectorAll('.ms_k8-section-wrap .msSection0 .bgWrap video');
 	section2YoutubeBtn = document.querySelector('.ms_k8-section-wrap .msSection2 .movieBtn');
 	section2SectionBtns = document.querySelectorAll('.ms_k8-section-wrap .msSection2 .btnBox button');
 	section2ImagesDesign = document.querySelectorAll('.ms_k8-section-wrap .msSection2 .gridBox .designImg');
@@ -47,10 +49,11 @@ $(document).ready(function () {
 	section2GalleryGridBox = document.querySelector('.ms_k8-section-wrap .msSection2 .gridBox');
 	section2GalleryImgBox = document.querySelectorAll('.ms_k8-section-wrap .msSection2 .gridBox .imgBox');
 
-	// add event listeners
+	// add event listeners -------------------------------------------
 
 	// section0 scroll - mouse wheel
 	section0.addEventListener('wheel', function (e) {
+		e.preventDefault();
 		if (e.wheelDelta < 0) {
 			slideContentWrap(true);
 		} else {
@@ -111,6 +114,9 @@ $(document).ready(function () {
 			section2Btn(e);
 		});
 	}
+
+	// open animation ------------------------------------------------------------
+	itemAnimation(contentWraps[1]);
 });
 
 // section0 scroll
@@ -156,6 +162,10 @@ function slideContentWrap(direction) {
 	for (let i = 0; i < section0NavBtnBoxs.length; i++) {
 		section0NavBtnBoxs[i].children[section0NavBtnTeaserOn ? 1 : 2].classList.remove('on');
 		section0NavBtnBoxs[i].children[!section0NavBtnTeaserOn ? 1 : 2].classList.add('on');
+	}
+
+	for (let i = 0; i < section0BgVideo.length; i++) {
+		section0BgVideo[i].load();
 	}
 
 	setTimeout(function () {

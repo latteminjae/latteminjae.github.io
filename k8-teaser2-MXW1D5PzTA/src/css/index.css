@@ -78,16 +78,6 @@ table {
   z-index: 2;
 }
 
-.ms_k8-section-wrap > section .contentWrap > div.bgWrap {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 50%;
-  margin-left: -960px;
-  width: 1920px;
-  height: 100%;
-}
-
 .ms_k8-section-wrap > section.msSection0 {
   -webkit-clip-path: polygon(100% 100%, 0% 100%, 0% 0%, 100% 0%);
           clip-path: polygon(100% 100%, 0% 100%, 0% 0%, 100% 0%);
@@ -153,16 +143,12 @@ table {
 
 .ms_k8-section-wrap > section.msSection0 .contentWrap .navBox li.on {
   color: #fff;
-  text-decoration: none;
+  text-decoration: underline;
   cursor: auto;
 }
 
-.ms_k8-section-wrap > section.msSection0 .contentWrap .navBox li.on:hover {
-  text-decoration: none;
-  color: #fff;
-}
-
 .ms_k8-section-wrap > section.msSection0 .contentWrap .navBox li:hover {
+  color: #fff;
   text-decoration: underline;
 }
 
@@ -440,6 +426,22 @@ table {
   to {
     opacity: 0;
   }
+}
+
+.ms_k8-section-wrap > section.msSection0 .contentWrap .bgWrap {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 50%;
+  margin-left: -960px;
+  width: 1920px;
+  height: 100%;
+}
+
+.ms_k8-section-wrap > section.msSection0 .contentWrap .bgWrap video,
+.ms_k8-section-wrap > section.msSection0 .contentWrap .bgWrap img {
+  min-height: 100%;
+  min-width: 100%;
 }
 
 .ms_k8-section-wrap > section.msSection1 {
@@ -873,6 +875,28 @@ table {
   .ms_k8-section-wrap > section.msSection0 .contentWrap .navBox {
     display: none;
   }
+  .ms_k8-section-wrap > section.msSection0 .contentWrap .centerBox {
+    margin: 230px auto 0;
+  }
+  .ms_k8-section-wrap > section.msSection0 .contentWrap .botBox {
+    top: calc(100% - 90px);
+    bottom: 0;
+  }
+  .ms_k8-section-wrap > section.msSection0 .contentWrap .bgWrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    left: 0;
+    margin: 0;
+    width: 100%;
+  }
+  .ms_k8-section-wrap > section.msSection0 .contentWrap .bgWrap video,
+  .ms_k8-section-wrap > section.msSection0 .contentWrap .bgWrap img {
+    min-width: auto;
+  }
   .ms_k8-section-wrap > section.msSection1 .iframeWrap {
     margin-top: 30px;
   }
@@ -997,6 +1021,12 @@ table {
   .ms_k8-section-wrap {
     min-height: 640px;
   }
+  .ms_k8-section-wrap > section.msSection0 .contentWrap:last-child .centerBox .pBox {
+    margin-bottom: 40px;
+  }
+  .ms_k8-section-wrap > section.msSection0 .contentWrap:last-child .centerBox .pBox .body p:first-child {
+    margin-bottom: 14px;
+  }
   .ms_k8-section-wrap > section.msSection0 .contentWrap:last-child .centerBox .pBox .body p:last-child span {
     width: 36vw;
   }
@@ -1025,6 +1055,14 @@ table {
   }
   .ms_k8-section-wrap > section.msSection0 .contentWrap .centerBox .btnBox button:last-child {
     width: 30vw;
+  }
+  .ms_k8-section-wrap > section.msSection0 .contentWrap .bgWrap {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .ms_k8-section-wrap > section.msSection0 .contentWrap .bgWrap img {
+    min-width: 540px;
+    max-width: 100%;
   }
   .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv:nth-child(1), .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv:nth-child(2), .ms_k8-section-wrap > section.msSection2 .centerWrap .gridBox .gridDiv:nth-child(3) {
     width: 100%;
@@ -1112,6 +1150,15 @@ table {
   }
   .ms_k8-section-wrap .ms_pc {
     display: none !important;
+  }
+}
+
+@media (max-height: 756px) and (max-width: 1024px) {
+  .ms_k8-section-wrap > section.msSection0 .contentWrap .centerBox {
+    margin: calc(50vh - 180px) auto 0;
+  }
+  .ms_k8-section-wrap > section.msSection0 .contentWrap .botBox {
+    top: calc(100vh - 200px);
   }
 }
 
