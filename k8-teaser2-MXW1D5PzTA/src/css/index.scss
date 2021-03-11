@@ -750,7 +750,7 @@
 					margin-top: 30px;
 
 					> iframe {
-						max-height: 520px;
+						max-height: 576px;
 					}
 
 					> button {
@@ -960,6 +960,17 @@
 					}
 				}
 			}
+			&.msSection1 {
+				.iframeWrap {
+					margin-top: 80px;
+					> iframe {
+						max-height: 303px;
+					}
+					> button {
+						margin-top: 10px;
+					}
+				}
+			}
 			&.msSection2 {
 				.centerWrap {
 					.gridBox {
@@ -1072,6 +1083,13 @@
 @media (max-width: 400px) {
 	.ms_k8-section-wrap {
 		> section {
+			&.msSection1 {
+				.iframeWrap {
+					> iframe {
+						max-height: 225px;
+					}
+				}
+			}
 			&.msSection2 {
 				.centerWrap {
 					.gridBox {
