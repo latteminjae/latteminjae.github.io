@@ -108,6 +108,12 @@ function itemAnimation(section) {
 	// (section : section0 || section1 || gallery) :void
 
 	if (section === 'section0') {
+		TweenMax.fromTo(
+			'.ms_k8-section-wrap .msSection0 .contentWrap.center .bgWrap',
+			2,
+			{ opacity: 0 },
+			{ opacity: 1, delay: 0.3 }
+		);
 		TweenMax.staggerFromTo(
 			[
 				'.ms_k8-section-wrap .msSection0 .contentWrap.center .p1',
@@ -204,17 +210,17 @@ function itemAnimation(section) {
 		// gallery item
 		TweenMax.staggerFromTo(
 			'.ms_k8-section-wrap .msSection1 .contentBox.galleryBox .gridBox .rowBox>div',
-			0.4,
+			1,
 			{
 				opacity: 0,
-				top: '500px',
+				top: '50px',
 			},
 			{
 				opacity: 1,
 				top: 0,
-				delay: 1.5,
+				delay: 0.5,
 			},
-			0.15
+			0.2
 		);
 	}
 }
@@ -587,7 +593,7 @@ $(document).ready(function () {
 		section1Scroll(false, e);
 	});
 
-    // section1 scroll
+	// section1 scroll
 	section1.addEventListener('wheel', function (e) {
 		if (e.wheelDelta < 0) {
 			section1Scroll(true, e);
@@ -596,7 +602,7 @@ $(document).ready(function () {
 		}
 	});
 
-    // gallery swipe
+	// gallery swipe
 	const mc3 = new Hammer(galleryScrollBox);
 	mc3.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
 	mc3.on('swipeup', function (e) {
@@ -628,3 +634,7 @@ $(document).ready(function () {
 		openGallery();
 	}
 });
+
+// TODO section1 close -> open contentBox 1 open 하도록
+// section0 pBox, 우측 넘버박스 중간에 오도록
+

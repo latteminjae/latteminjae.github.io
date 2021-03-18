@@ -657,7 +657,7 @@ html {
 }
 .ms_k8-section-wrap > section.msSection1 .contentList .contentBox .bgWrap img {
   opacity: 0;
-  transition: all 1.5s;
+  transition: all 2.5s;
 }
 .ms_k8-section-wrap > section.modalWrapper {
   display: none;
@@ -1292,19 +1292,19 @@ html {
   }
   .ms_k8-section-wrap > section.msSection0 .contentWrap .centerBox .boxWrap .leftBox p.p1 {
     font-size: 2.7vw;
-    margin-bottom: 25px;
+    margin-bottom: 5vw;
   }
   .ms_k8-section-wrap > section.msSection0 .contentWrap .centerBox .boxWrap .leftBox p.p2 {
-    font-size: 8.3vw;
-    margin-bottom: 25px;
+    font-size: 10vw;
+    margin-bottom: 5.4vw;
   }
   .ms_k8-section-wrap > section.msSection0 .contentWrap .centerBox .boxWrap .leftBox p.p2 span {
     display: block;
-    height: 20px;
+    height: 3.33vw;
   }
   .ms_k8-section-wrap > section.msSection0 .contentWrap .centerBox .boxWrap .leftBox p.p3 {
     font-size: 3.3vw;
-    margin-bottom: 40px;
+    margin-bottom: 6.4vw;
   }
   .ms_k8-section-wrap > section.msSection0 .contentWrap .centerBox .boxWrap .leftBox p.mt {
     margin-top: 0;
