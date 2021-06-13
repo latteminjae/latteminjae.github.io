@@ -1,0 +1,1206 @@
+@import "./func.scss";
+@import "./font.scss";
+
+body,
+html {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+$black: #05141f;
+
+// pc
+#ms_k9-launching-wrap {
+    @import "./reset.scss";
+    @import "./libs.scss";
+    @import "./common.scss";
+
+    background: #fff;
+    font-family: "Kia", "Noto Sans KR", Arial, sans-serif;
+    font-weight: 400;
+    color: #fff;
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    color: $black;
+
+    > div {
+        position: relative;
+
+        &.sectionwrap {
+            position: relative;
+            z-index: 1;
+            height: 200vh;
+            top: 0;
+            transition: all 0.5s;
+            display: flex;
+            flex-direction: column;
+
+            &.on {
+                top: -100%;
+
+                .sectionScrollBox {
+                    height: 100vh;
+                }
+            }
+
+            .sectionScrollBox {
+                height: 0;
+                overflow-x: hidden;
+                overflow-y: auto;
+            }
+
+            section {
+                position: relative;
+
+                &.section1,
+                &.section2,
+                &.section3,
+                &.section4,
+                &.section5,
+                &.section6 {
+                    height: 950px;
+                }
+
+                &.section0 {
+                    height: 100vh;
+                    overflow: hidden;
+                    position: relative;
+
+                    &.on {
+                        .section0-0 {
+                            .pBox,
+                            .btnBox,
+                            .footBox {
+                                opacity: 0;
+                            }
+                        }
+                        .section0-1 {
+                            top: 0;
+                        }
+                    }
+
+                    .section0-0 {
+                        height: 100%;
+                        position: relative;
+                        color: #fff;
+
+                        > div {
+                            position: absolute;
+                            z-index: 2;
+                        }
+
+                        .pBox,
+                        .btnBox,
+                        .footBox {
+                            transition: all 0.3s;
+                        }
+
+                        .pBox {
+                            top: 390px;
+                            left: 326px;
+
+                            p {
+                                &.big {
+                                    margin-bottom: 20px;
+                                }
+                                &.small {
+                                    margin-bottom: 14px;
+                                }
+                            }
+                        }
+
+                        .btnBox {
+                            right: 130px;
+                            bottom: 136px;
+                            display: flex;
+
+                            a {
+                                width: 190px;
+                                height: 62px;
+                                @extend %flexCenter;
+                                font-size: 15px;
+                                background-color: #1d2536;
+
+                                &:last-child {
+                                    background-color: #2f384b;
+                                }
+                            }
+                        }
+
+                        .footBox {
+                            bottom: 40px;
+                            left: 50%;
+                            margin-left: -100px;
+                            display: flex;
+
+                            .imgBox {
+                                width: 27px;
+                                height: 17px;
+                                margin-right: 15px;
+                                display: inline-block;
+                                overflow: hidden;
+
+                                img {
+                                    position: relative;
+                                    left: 5px;
+                                    top: 1px;
+                                    animation: 2s infinite ease-in-out downArrow;
+                                    width: 17px;
+                                    height: 10px;
+                                }
+                            }
+
+                            p {
+                                position: relative;
+                                font-size: 15px;
+                            }
+                        }
+
+                        .bgBox {
+                            z-index: 1;
+
+                            img,
+                            video {
+                                min-width: auto;
+                            }
+                        }
+                    }
+
+                    .section0-1 {
+                        @extend %absoWrap;
+                        color: #fff;
+                        top: 100%;
+                        transition: all 0.5s;
+
+                        > div {
+                            position: absolute;
+                            z-index: 3;
+                        }
+
+                        .pBox {
+                            z-index: 4;
+                            top: 352px;
+                            left: 530px;
+
+                            p {
+                                &.big {
+                                    margin-bottom: 24px;
+                                }
+                                &:nth-child(2) {
+                                    margin-bottom: 42px;
+                                }
+                                &.small {
+                                    margin-bottom: 50px;
+                                }
+                            }
+                            .btnBox {
+                                display: flex;
+
+                                button {
+                                    @extend %flexCenter;
+                                    width: 336px;
+                                    height: 47px;
+                                    border: 2px solid #fff;
+                                    box-sizing: border-box;
+                                    margin-right: 10px;
+
+                                    &:last-child {
+                                        background: #fff;
+                                        color: $black;
+                                    }
+                                }
+                            }
+                        }
+
+                        .bgBox {
+                            @extend %absoWrap;
+
+                            .itemBox {
+                                > li {
+                                    position: absolute;
+                                    z-index: 1;
+                                    &:nth-child(1) {
+                                        margin-top: 115px;
+                                        left: 190px;
+                                    }
+                                    &:nth-child(2) {
+                                        margin-top: 276px;
+                                        left: 1536px;
+                                    }
+                                    &:nth-child(3) {
+                                        margin-top: 686px;
+                                        left: 58px;
+                                    }
+                                    &:nth-child(4) {
+                                        margin-top: 816px;
+                                        left: 756px;
+                                    }
+                                    &:nth-child(5) {
+                                        margin-top: 728px;
+                                        left: 1260px;
+                                    }
+                                }
+                            }
+
+                            .dimDiv {
+                                @extend %absoWrap;
+                                background: linear-gradient(0deg, rgba(17, 22, 32, 1) 80%, rgba(0, 212, 255, 0) 100%);
+                            }
+                        }
+                    }
+                }
+                &.section1 {
+                    display: flex;
+
+                    > div {
+                        height: 100%;
+                    }
+
+                    .leftBox {
+                        width: 928px;
+                        padding-top: 175px;
+                        padding-left: 240px;
+
+                        .pBox {
+                            &.opt1 {
+                                p {
+                                    margin-bottom: 40px;
+                                }
+                            }
+
+                            &.opt2 {
+                                position: relative;
+                                margin-bottom: 95px;
+
+                                .em {
+                                    display: block;
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 2px;
+                                    height: 100%;
+                                    background: #000;
+
+                                    &::after {
+                                        display: block;
+                                        content: "";
+                                        position: absolute;
+                                        bottom: -44px;
+                                        left: 0;
+                                        width: 2px;
+                                        height: 44px;
+                                        background: #dedede;
+                                    }
+                                }
+
+                                p {
+                                    padding-left: 26px;
+                                    margin-bottom: 12px;
+                                }
+                            }
+                        }
+
+                        > img,
+                        video {
+                            position: relative;
+                            left: -165px;
+                        }
+                    }
+
+                    .rightBox {
+                        width: 992px;
+
+                        img,
+                        video {
+                            min-width: 100%;
+                            min-height: 100%;
+                        }
+                    }
+                }
+                &.section2 {
+                    .pBox {
+                        padding-top: 150px;
+                        padding-left: 240px;
+                        position: relative;
+                        z-index: 2;
+
+                        p {
+                            &:nth-child(1) {
+                                margin-bottom: 32px;
+                            }
+                            &:nth-child(3) {
+                                margin-bottom: 26px;
+                            }
+                        }
+
+                        img {
+                            margin-bottom: 56px;
+                        }
+                    }
+                    .bgBox {
+                        @extend %absoWrap;
+
+                        img,
+                        video {
+                            min-width: 100%;
+                            min-height: 100%;
+                        }
+                    }
+                }
+                &.section3 {
+                    .flexBox {
+                        padding-top: 110px;
+                        padding-left: 240px;
+                        width: 1395px;
+                        justify-content: space-between;
+
+                        .pBox {
+                            padding-top: 14px;
+                            position: relative;
+
+                            p {
+                                margin-bottom: 26px;
+
+                                &:nth-child(1) {
+                                    margin-bottom: 36px;
+                                }
+                            }
+
+                            .absoBox {
+                                position: absolute;
+                                top: 204px;
+                                left: 400px;
+                                width: 684px;
+
+                                p {
+                                    text-align: right;
+                                    margin-bottom: 10px;
+                                }
+
+                                .em {
+                                    width: 100%;
+                                    height: 1px;
+                                    display: block;
+                                    background: $black;
+                                }
+                            }
+                        }
+
+                        .movieBtn {
+                            position: relative;
+
+                            img,
+                            video {
+                                position: absolute;
+                                z-index: 3;
+                            }
+
+                            .shadow {
+                                @extend %absoWrap;
+                                z-index: 1;
+                            }
+
+                            .playBtnImg {
+                                z-index: 4;
+                                top: 50%;
+                                left: 50%;
+                                margin-top: -30px;
+                                margin-left: -30px;
+                            }
+
+                            p {
+                                color: #fff;
+                                width: 100%;
+                                position: absolute;
+                                z-index: 4;
+                                bottom: 54px;
+                                text-align: center;
+                            }
+                        }
+                    }
+
+                    > img {
+                        position: relative;
+                        z-index: 2;
+                        left: 130px;
+                        top: -35px;
+                    }
+                }
+                &.section4 {
+                    padding-top: 170px;
+                    padding-left: 240px;
+                    box-sizing: border-box;
+
+                    &.open0 {
+                        .imgBox {
+                            div {
+                                display: none;
+
+                                &:nth-child(1) {
+                                    display: block;
+                                }
+                            }
+                        }
+                        .btnBox {
+                            button {
+                                img {
+                                    display: none;
+                                    .on {
+                                        display: block;
+                                    }
+                                }
+                                &:nth-child(2) {
+                                    background: transparent;
+                                    color: $black;
+                                }
+                                &:nth-child(1) {
+                                    img {
+                                        display: block;
+                                        &.on {
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .itemBox > ul:nth-child(1) {
+                            display: flex;
+                        }
+                    }
+
+                    &.open1 {
+                        .imgBox {
+                            div {
+                                display: none;
+
+                                &:nth-child(2) {
+                                    display: block;
+                                }
+                            }
+                        }
+                        .btnBox {
+                            button {
+                                img {
+                                    display: none;
+                                    .on {
+                                        display: block;
+                                    }
+                                }
+                                &:nth-child(1) {
+                                    background: transparent;
+                                    color: $black;
+                                }
+                                &:nth-child(2) {
+                                    img {
+                                        display: block;
+                                        &.on {
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .itemBox > ul:nth-child(2) {
+                            display: flex;
+                        }
+                    }
+
+                    .imgBox {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                    }
+
+                    .pBox {
+                        margin-bottom: 10px;
+                        position: relative;
+                        z-index: 1;
+
+                        p {
+                            margin-bottom: 30px;
+                        }
+                    }
+
+                    .btnBox {
+                        display: flex;
+                        margin-bottom: 35px;
+
+                        button {
+                            margin-right: 10px;
+                            width: 256px;
+                            height: 60px;
+                            border: 2px solid #08141e;
+                            background: #08141e;
+                            @extend %flexCenter;
+                            position: relative;
+
+                            img {
+                                position: absolute;
+                                top: 20px;
+                                right: 20px;
+                            }
+                        }
+                    }
+                    .itemBox {
+                        > ul {
+                            display: none;
+                            width: 1440px;
+                            justify-content: space-between;
+
+                            > li {
+                                width: 468px;
+
+                                .topBox {
+                                    position: relative;
+                                    color: #fff;
+
+                                    p {
+                                        &.big3 {
+                                            bottom: 72px;
+                                        }
+                                        position: absolute;
+                                        bottom: 40px;
+                                        left: 38px;
+                                    }
+                                }
+                                .botBox {
+                                    height: 143px;
+                                    box-sizing: border-box;
+                                    background: #f2f2f2;
+                                    padding-top: 30px;
+                                    padding-left: 38px;
+
+                                    p {
+                                        margin-bottom: 8px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.section5 {
+                    padding-top: 170px;
+                    padding-left: 240px;
+                    box-sizing: border-box;
+
+                    .pBox {
+                        margin-bottom: 148px;
+
+                        .big {
+                            margin-bottom: 40px;
+                            position: relative;
+                            display: inline-block;
+
+                            .ref {
+                                position: absolute;
+                                top: -16px;
+                                right: -42px;
+                                font-size: 27px;
+                            }
+                        }
+                    }
+
+                    .slideBox {
+                        height: 450px;
+                        overflow: hidden;
+
+                        .swiper-wrapper,
+                        .swiper-container {
+                            height: 100%;
+                        }
+                        .swiper-scrollbar {
+                            display: none;
+                        }
+                        .swiper-slide {
+                            cursor: pointer;
+                            > img {
+                                width: 100%;
+                                height: 100%;
+                            }
+                            &:hover {
+                                .hoverDiv {
+                                    opacity: 1;
+                                }
+                            }
+                            .hoverDiv {
+                                transition: all 0.2s;
+                                opacity: 0;
+                                z-index: 1;
+                                @extend %absoWrap;
+                                @extend %flexCenter;
+
+                                img {
+                                    position: relative;
+                                    z-index: 2;
+                                }
+                                .dimDiv {
+                                    @extend %absoWrap;
+                                    background: #000;
+                                    opacity: 0.5;
+                                }
+                            }
+                        }
+                        .swiper-button-prev,
+                        .swiper-button-next {
+                            top: 0;
+                            p {
+                                font-size: 13px;
+                            }
+
+                            &::after {
+                                display: none;
+                            }
+                        }
+                        .swiper-pagination-bullet {
+                            background: #d9d9d9;
+                            opacity: 1;
+                        }
+                        .swiper-pagination-bullet-active {
+                            background: #000;
+                        }
+
+                        .swiper-pagination {
+                            bottom: 0;
+                        }
+                    }
+                }
+                &.section6 {
+                    height: 550px;
+                    padding-top: 232px;
+                    box-sizing: border-box;
+
+                    .btnList {
+                        display: flex;
+                        width: 1430px;
+                        justify-content: space-between;
+                        margin: auto;
+                        position: relative;
+                        z-index: 2;
+
+                        > li {
+                            button,
+                            a {
+                                transition: all 0.2s;
+                                color: #7b7b7b;
+                                width: 350px;
+                                height: 80px;
+                                font-weight: 300;
+                                font-size: 22px;
+                                @extend %flexCenter;
+                                position: relative;
+
+                                &:hover {
+                                    color: #fff;
+                                    &::after {
+                                        background: #fff;
+                                    }
+                                }
+
+                                &::after {
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 0;
+                                    display: block;
+                                    width: 100%;
+                                    height: 2px;
+                                    content: "";
+                                    background: #7b7b7b;
+                                    transition: all 0.2s;
+                                }
+                            }
+                        }
+                    }
+                }
+                &.section7 {
+                    height: 100px;
+                    background: #171717;
+
+                    .flexBox {
+                        width: 1660px;
+                        margin: auto;
+                        justify-content: space-between;
+                        height: 100%;
+
+                        p {
+                            line-height: 99px;
+                            padding-left: 30px;
+                            color: #fff;
+                            font-size: 17px;
+
+                            span {
+                                color: #868686;
+
+                                &:last-child {
+                                    margin-left: 20px;
+                                    font-size: 13px;
+                                }
+                            }
+                        }
+
+                        button {
+                            display: flex;
+                            height: 100%;
+                            padding: 0 30px;
+                            align-items: center;
+
+                            span {
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.fixedwrap {
+            @extend %absoWrap;
+            height: 0;
+            position: fixed;
+            color: #fff;
+            z-index: 1;
+
+            > div {
+                z-index: 2;
+            }
+            .topBox {
+                width: 1565px;
+                height: 70px;
+                margin-left: 225px;
+                display: flex;
+                justify-content: space-between;
+
+                .white {
+                    display: block;
+                }
+
+                .black {
+                    display: none;
+                }
+
+                .blackOn {
+                    color: $black;
+
+                    button {
+                        color: $black;
+                    }
+
+                    .white {
+                        display: none;
+                    }
+
+                    .black {
+                        display: block;
+                    }
+                }
+
+                .leftBox {
+                    display: flex;
+                    align-items: center;
+                    transition: all 0.3s;
+
+                    button {
+                        padding: 15px;
+                        margin-right: 15px;
+                    }
+
+                    p {
+                        font-size: 20px;
+                        cursor: pointer;
+                    }
+                }
+
+                .rightBox {
+                    width: 190px;
+                    height: 100%;
+                    transition: all 0.3s;
+
+                    button {
+                        @extend %flexCenter;
+                        width: 100%;
+                        height: 100%;
+                        box-sizing: border-box;
+                        padding: 15px;
+
+                        .imgBox {
+                            width: 27px;
+                            height: 17px;
+                            margin-right: 10px;
+                            display: inline-block;
+                            overflow: hidden;
+
+                            img {
+                                position: relative;
+                                left: 5px;
+                                top: 1px;
+                                animation: 2s infinite ease-in-out downArrow;
+                                width: 14px;
+                                height: 8px;
+                            }
+                        }
+                    }
+                    p {
+                        font-size: 17px;
+                    }
+                }
+            }
+            .footBox {
+                position: absolute;
+                top: 100vh;
+                margin-top: -71px;
+                right: 160px;
+                display: flex;
+                z-index: 3;
+
+                &.off {
+                    display: none;
+                }
+
+                &.blackOn {
+                    color: $black;
+                }
+
+                .imgBox {
+                    margin-right: 30px;
+                }
+
+                p {
+                    position: relative;
+                    top: 4px;
+                    animation: ani2 1s ease-in infinite alternate;
+
+                    @keyframes ani2 {
+                        0% {
+                            top: -3px;
+                        }
+                        100% {
+                            top: 9px;
+                        }
+                    }
+                }
+            }
+            .lineBox {
+                &.blackOn {
+                    span {
+                        background: #05141f;
+                    }
+                }
+
+                &.last {
+                    span {
+                        &.line3 {
+                            height: 70px;
+                        }
+                    }
+                }
+                span {
+                    opacity: 0.1;
+                    background: #fff;
+                    display: block;
+                    transition: all 0.3s;
+
+                    &.line1 {
+                        position: absolute;
+                        left: 0;
+                        top: 70px;
+                        width: 100%;
+                        height: 1px;
+                    }
+                    &.line2 {
+                        position: absolute;
+                        left: 130px;
+                        top: 70px;
+                        width: 1px;
+                        height: calc(100vh - 70px);
+                    }
+                    &.line3 {
+                        position: absolute;
+                        right: 320px;
+                        top: 0;
+                        width: 1px;
+                        height: 100vh;
+                    }
+                    &.line4 {
+                        position: absolute;
+                        position: absolute;
+                        right: 130px;
+                        top: 70px;
+                        width: 1px;
+                        height: calc(100vh - 70px);
+                    }
+                }
+            }
+        }
+
+        &.navBox {
+            @extend %absoWrap;
+            left: 0;
+
+            &.on {
+                nav {
+                    left: 0;
+                }
+                .dim {
+                    opacity: 0.7;
+                    z-index: 4;
+                }
+            }
+
+            nav {
+                position: relative;
+                z-index: 5;
+                height: 100%;
+                width: 710px;
+                background: #fff;
+                left: -710px;
+                transition: all 0.5s;
+                padding: 26px 40px 26px 130px;
+                box-sizing: border-box;
+
+                > button {
+                    margin-bottom: 64px;
+                }
+
+                .menuList {
+                    margin-bottom: -14px;
+
+                    > li {
+                        margin-bottom: 64px;
+                        cursor: pointer;
+
+                        .pBox {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            margin-bottom: 26px;
+
+                            p {
+                                &.big {
+                                    font-size: 27px;
+                                }
+                                &.small {
+                                    font-size: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .btnBox {
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+
+                    a {
+                        margin-left: 30px;
+                        color: $black;
+                        display: flex;
+                        align-items: center;
+
+                        img {
+                            margin-right: 14px;
+                        }
+                    }
+                }
+            }
+
+            .dim {
+                @extend %absoWrap;
+                position: fixed;
+                left: 0;
+                z-index: -1;
+                background: #000;
+                opacity: 0;
+                transition: all 0.5s;
+            }
+        }
+
+        &.layerBox {
+            @extend %absoWrap;
+            position: fixed;
+            z-index: 6;
+            top: 100%;
+            transition: all 0.5s;
+
+            &.on {
+                top: 0;
+            }
+
+            .layer-0 {
+                width: 100%;
+                height: 100%;
+                background: rgba(255, 255, 255, 0.95);
+                padding-top: 96px;
+                position: relative;
+
+                .closeBtn {
+                    position: absolute;
+                    top: 96px;
+                    right: 353px;
+                }
+
+                .imgList {
+                    width: 1114px;
+                    height: 100vh;
+                    overflow-y: auto;
+                    margin: auto;
+                    padding-bottom: 50vh;
+                    box-sizing: border-box;
+
+                    > li {
+                        margin-bottom: 26px;
+                        width: 100%;
+                        height: 586px;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.modalWrapper {
+            display: none;
+            opacity: 0;
+            transition: all 0.3s;
+            z-index: 6;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            &.on {
+                display: flex;
+                opacity: 1;
+            }
+
+            .bgDiv {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: 2;
+                background: #000;
+                opacity: 0.9;
+
+                .btnWrap {
+                    width: 100%;
+                    max-width: 1420px;
+                    margin: auto;
+                    position: relative;
+
+                    .modalCloseBtn {
+                        position: absolute;
+                        right: 34px;
+                        top: 34px;
+                    }
+                }
+            }
+
+            iframe {
+                z-index: 3;
+                max-width: 1280px;
+                width: 100%;
+                height: 720px;
+                max-height: calc(100% - 160px);
+            }
+        }
+    }
+
+    // common
+    div {
+        @keyframes downArrow {
+            0% {
+                top: -300%;
+            }
+            40% {
+                top: 10%;
+            }
+            50% {
+                top: 20%;
+            }
+            70% {
+                top: 20%;
+            }
+            100% {
+                top: 200%;
+            }
+        }
+        p {
+            &.big {
+                font-size: 54px;
+                font-weight: 700;
+            }
+            &.big2 {
+                font-size: 45px;
+                font-weight: 700;
+            }
+            &.big3 {
+                font-size: 23px;
+                font-weight: 700;
+            }
+            &.small {
+                font-size: 17px;
+                font-weight: 300;
+            }
+        }
+
+        .h15 {
+            height: 15px;
+        }
+
+        .shadow {
+            box-shadow: 10px 10px 30px 6px #a4a4a4;
+        }
+
+        .bgBox {
+            @extend %flexCenter;
+            @extend %absoWrap;
+            z-index: 1;
+
+            img,
+            video {
+                min-width: 100%;
+                min-height: 100%;
+            }
+        }
+
+        .movieBtn {
+            cursor: pointer;
+        }
+
+        .tween1 {
+            position: relative;
+            top: -20px;
+            opacity: 0;
+        }
+
+        .tween2,
+        .tween3 {
+            opacity: 0;
+        }
+
+        .tween4 {
+            position: relative;
+            top: 50px;
+            opacity: 0;
+        }
+    }
+
+    // 상단에 위치하면 css 우선순위가 밀리므로 하단에 위치하였다
+    @import "./responsive.scss";
+}
+
+@media (max-width: 1024px) {
+    #ms_k9-launching-wrap {
+        height: calc(var(--vh, 1vh) * 100);
+    }
+}

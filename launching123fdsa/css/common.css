@@ -1,0 +1,420 @@
+div .ms_tab,
+div .ms_tab_inline,
+div .ms_tab_flex {
+  display: none !important;
+}
+div .ms_nontab {
+  display: block !important;
+}
+div .ms_nontab_flex {
+  display: flex !important;
+}
+div .ms_nontab_inline {
+  display: inline !important;
+}
+
+@media (max-width: 1024px) {
+  div .ms_tab {
+    display: block !important;
+  }
+  div .ms_tab_inline {
+    display: inline !important;
+  }
+  div .ms_tab_flex {
+    display: flex !important;
+  }
+  div .ms_nontab,
+div .ms_nontab_flex,
+div .ms_nontab_inline {
+    display: none !important;
+  }
+}
+div .flexBox {
+  display: flex;
+}
+div .hide {
+  display: none !important;
+}
+div img {
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+div strong {
+  font-weight: 700;
+}
+div .light {
+  font-weight: 300 !important;
+}
+div .regular {
+  font-weight: 400 !important;
+}
+div p {
+  line-height: 1em;
+}
+div a {
+  color: #fff;
+  text-decoration: none;
+}
+div button {
+  font-family: "Kia", "Noto Sans KR", Arial, sans-serif;
+  background: transparent;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  color: #fff;
+  cursor: pointer;
+}
+div .unselectable {
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+div .bgDim {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.4;
+  z-index: 1;
+}
+div div {
+  scrollbar-base-color: transparent;
+  scrollbar-face-color: transparent;
+  scrollbar-3dlight-color: transparent;
+  scrollbar-highlight-color: transparent;
+  scrollbar-track-color: transparent;
+  scrollbar-arrow-color: transparent;
+  scrollbar-shadow-color: transparent;
+  scrollbar-dark-shadow-color: transparent;
+}
+div .scrollBox::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background: transparent;
+  position: absolute;
+}
+div .scrollBox::-webkit-scrollbar-track {
+  border-radius: 0;
+  background: transparent;
+}
+div .scrollBox::-webkit-scrollbar-thumb {
+  border-radius: 0;
+  background: transparent;
+}
+div .scrollBox .scrollWhite::-webkit-scrollbar-thumb {
+  border-radius: 0;
+  background: transparent;
+}
+div .scrollBox::-webkit-scrollbar-corner {
+  background: transparent;
+}
+div .blank {
+  width: 1rem;
+  display: inline-block;
+}
+
+div .size14x8 {
+  width: 14px;
+  height: 8px;
+}
+div .size14x10 {
+  width: 14px;
+  height: 10px;
+}
+div .size20x19 {
+  width: 20px;
+  height: 19px;
+}
+div .size22x13 {
+  width: 22px;
+  height: 13px;
+}
+div .size22x71 {
+  width: 22px;
+  height: 71px;
+}
+div .size25x17 {
+  width: 25px;
+  height: 17px;
+}
+div .size28x28 {
+  width: 28px;
+  height: 28px;
+}
+div .size60x61 {
+  width: 60px;
+  height: 61px;
+}
+div .size538x145 {
+  width: 538px;
+  height: 145px;
+}
+div .size227x372 {
+  width: 227px;
+  height: 372px;
+}
+div .size468x317 {
+  width: 468px;
+  height: 317px;
+}
+div .size255x356 {
+  width: 255px;
+  height: 356px;
+}
+div .size269x400 {
+  width: 269px;
+  height: 400px;
+}
+div .size388x206 {
+  width: 388px;
+  height: 206px;
+}
+div .size363x134 {
+  width: 363px;
+  height: 134px;
+}
+div .size660x224 {
+  width: 660px;
+  height: 224px;
+}
+div .size668x316 {
+  width: 668px;
+  height: 316px;
+}
+div .size725x304 {
+  width: 725px;
+  height: 304px;
+}
+div .size992x950 {
+  width: 992px;
+  height: 950px;
+}
+div .size1554x446 {
+  width: 1554px;
+  height: 446px;
+}
+div .size1660x376 {
+  width: 1660px;
+  height: 376px;
+}
+div .size1707x596 {
+  width: 1707px;
+  height: 596px;
+}
+div .size1920x550 {
+  width: 1920px;
+  height: 550px;
+}
+
+@media (min-width: 1025px) {
+  div .size14x8 {
+    width: 0.7291666667vw;
+    height: 0.4166666667vw;
+  }
+  div .size14x10 {
+    width: 0.7291666667vw;
+    height: 0.5208333333vw;
+  }
+  div .size20x19 {
+    width: 1.0416666667vw;
+    height: 0.9895833333vw;
+  }
+  div .size22x13 {
+    width: 1.1458333333vw;
+    height: 0.6770833333vw;
+  }
+  div .size22x71 {
+    width: 1.1458333333vw;
+    height: 3.6979166667vw;
+  }
+  div .size25x17 {
+    width: 1.3020833333vw;
+    height: 0.8854166667vw;
+  }
+  div .size28x28 {
+    width: 1.4583333333vw;
+    height: 1.4583333333vw;
+  }
+  div .size35x35 {
+    width: 1.8229166667vw;
+    height: 1.8229166667vw;
+  }
+  div .size60x61 {
+    width: 3.125vw;
+    height: 3.1770833333vw;
+  }
+  div .size538x145 {
+    width: 28.0208333333vw;
+    height: 7.5520833333vw;
+  }
+  div .size227x372 {
+    width: 11.8229166667vw;
+    height: 19.375vw;
+  }
+  div .size468x317 {
+    width: 24.375vw;
+    height: 16.5104166667vw;
+  }
+  div .size255x356 {
+    width: 13.28125vw;
+    height: 18.5416666667vw;
+  }
+  div .size269x400 {
+    width: 14.0104166667vw;
+    height: 20.8333333333vw;
+  }
+  div .size388x206 {
+    width: 20.2083333333vw;
+    height: 10.7291666667vw;
+  }
+  div .size363x134 {
+    width: 18.90625vw;
+    height: 6.9791666667vw;
+  }
+  div .size609x322 {
+    width: 31.71875vw;
+    height: 16.7708333333vw;
+  }
+  div .size660x224 {
+    width: 34.375vw;
+    height: 11.6666666667vw;
+  }
+  div .size668x316 {
+    width: 34.7916666667vw;
+    height: 16.4583333333vw;
+  }
+  div .size725x304 {
+    width: 37.7604166667vw;
+    height: 15.8333333333vw;
+  }
+  div .size992x950 {
+    width: 51.6666666667vw;
+    height: 49.4791666667vw;
+  }
+  div .size1114x586 {
+    width: 58.0208333333vw;
+    height: 30.5208333333vw;
+  }
+  div .size1554x446 {
+    width: 80.9375vw;
+    height: 23.2291666667vw;
+  }
+  div .size1660x376 {
+    width: 86.4583333333vw;
+    height: 19.5833333333vw;
+  }
+  div .size1707x596 {
+    width: 88.90625vw;
+    height: 31.0416666667vw;
+  }
+  div .size1920x550 {
+    width: 100vw;
+    height: 28.6458333333vw;
+  }
+}
+@media (max-width: 1024px) {
+  div .size20x19 {
+    width: 1.8518518519vw;
+    height: 1.7592592593vw;
+  }
+  div .sizem58x42 {
+    width: 5.3703703704vw;
+    height: 3.8888888889vw;
+  }
+  div .sizem30x17 {
+    width: 2.7777777778vw;
+    height: 1.5740740741vw;
+  }
+  div .sizem54x54 {
+    width: 5vw;
+    height: 5vw;
+  }
+  div .sizem940x240 {
+    width: 87.037037037vw;
+    height: 22.2222222222vw;
+  }
+  div .sizem318x231 {
+    width: 29.4444444444vw;
+    height: 21.3888888889vw;
+  }
+  div .sizem312x557 {
+    width: 28.8888888889vw;
+    height: 51.5740740741vw;
+  }
+  div .sizem358x247 {
+    width: 33.1481481481vw;
+    height: 22.8703703704vw;
+  }
+  div .sizem514x378 {
+    width: 47.5925925926vw;
+    height: 35vw;
+  }
+  div .sizem668x316 {
+    width: 61.8518518519vw;
+    height: 29.2592592593vw;
+  }
+  div .sizem1008x999 {
+    width: 93.3333333333vw;
+    height: 92.5vw;
+  }
+  div .sizem940x393 {
+    width: 87.037037037vw;
+    height: 36.3888888889vw;
+  }
+  div .sizem1080x1656 {
+    width: 100vw;
+    height: 153.3333333333vw;
+  }
+  div .sizem438x600 {
+    width: 40.5555555556vw;
+    height: 55.5555555556vw;
+  }
+  div .sizem140x141 {
+    width: 12.962962963vw;
+    height: 13.0555555556vw;
+  }
+  div .sizem1080x420 {
+    width: 100vw;
+    height: 38.8888888889vw;
+  }
+  div .sizem1080x922 {
+    width: 100vw;
+    height: 85.3703703704vw;
+  }
+  div .sizem34x18 {
+    width: 3.1481481481vw;
+    height: 1.6666666667vw;
+  }
+  div .sizem862x574 {
+    width: 79.8148148148vw;
+    height: 53.1481481481vw;
+  }
+  div .sizem950x503 {
+    width: 87.962962963vw;
+    height: 46.5740740741vw;
+  }
+  div .sizem1080x1286 {
+    width: 100vw;
+    height: 119.0740740741vw;
+  }
+  div .size1114x586 {
+    width: 100vw;
+    height: 119.0740740741vw;
+  }
+  div .sizem {
+    width: 0vw;
+    height: 0vw;
+  }
+  div .sizem {
+    width: 0vw;
+    height: 0vw;
+  }
+}
