@@ -67,6 +67,7 @@ html {
   color: #fff;
   width: 100%;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   margin: auto;
   overflow: hidden;
   position: relative;
@@ -1044,6 +1045,7 @@ html {
 }
 #ms_k9-launching-wrap > div.sectionwrap.on .sectionScrollBox {
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
 }
 #ms_k9-launching-wrap > div.sectionwrap .sectionScrollBox {
   height: 0;
@@ -1058,6 +1060,7 @@ html {
 }
 #ms_k9-launching-wrap > div.sectionwrap section.section0 {
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   overflow: hidden;
   position: relative;
 }
@@ -1678,6 +1681,7 @@ html {
 #ms_k9-launching-wrap > div.fixedwrap .footBox {
   position: absolute;
   top: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   margin-top: -71px;
   right: 160px;
   display: flex;
@@ -1730,6 +1734,7 @@ html {
   top: 70px;
   width: 1px;
   height: calc(100vh - 70px);
+  height: calc(var(--vh, 1vh) * 100);
 }
 #ms_k9-launching-wrap > div.fixedwrap .lineBox span.line3 {
   position: absolute;
@@ -1737,6 +1742,7 @@ html {
   top: 0;
   width: 1px;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
 }
 #ms_k9-launching-wrap > div.fixedwrap .lineBox span.line4 {
   position: absolute;
@@ -1745,6 +1751,7 @@ html {
   top: 70px;
   width: 1px;
   height: calc(100vh - 70px);
+  height: calc(var(--vh, 1vh) * 100);
 }
 #ms_k9-launching-wrap > div.navBox {
   left: 0;
@@ -1835,6 +1842,7 @@ html {
 #ms_k9-launching-wrap > div.layerBox .layer-0 .imgList {
   width: 1114px;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   overflow-y: auto;
   margin: auto;
   padding-bottom: 50vh;
