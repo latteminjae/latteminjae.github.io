@@ -1,0 +1,560 @@
+@import "./func.scss";
+@import "./font.scss";
+
+// pc
+#ms_k9-prelaunching-wrap {
+    @import "./reset.scss";
+    @import "./libs.scss";
+    @import "./common.scss";
+    background: #fff;
+
+    // kia.com header - 160px
+    font-family: "Kia", "Noto Sans KR", Arial, sans-serif;
+    font-weight: 400;
+    width: 100%;
+    max-width: 1920px;
+    height: 790px;
+    margin: auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background: #fff;
+    position: relative;
+    line-height: 1em;
+    font-size: 100%;
+
+    > section {
+        position: relative;
+
+        &.msSection0 {
+            height: 100%;
+            position: relative;
+
+            &.off {
+                & ~ .msSection1 {
+                    top: 0;
+                }
+                .dim {
+                    opacity: 0.4;
+                }
+            }
+
+            > div {
+                z-index: 2;
+                position: relative;
+                color: #fff;
+            }
+
+            > .head {
+                position: relative;
+                width: 1420px;
+                margin: auto;
+                box-sizing: border-box;
+                padding-top: 70px;
+
+                .pBox {
+                    opacity: 0;
+                    top: 50px;
+                    position: relative;
+
+                    &.opt1 {
+                        margin-bottom: 30px;
+
+                        p {
+                            font-size: 36px;
+                            display: inline;
+                        }
+                    }
+
+                    &.opt2 {
+                        margin-bottom: 24px;
+
+                        p {
+                            font-size: 17px;
+                            margin-bottom: 12px;
+
+                            &.inline {
+                                display: inline-block;
+                            }
+                        }
+                    }
+                }
+                .em {
+                    opacity: 0;
+                    top: 50px;
+                    position: relative;
+                    width: 2px;
+                    height: 56px;
+                    background: #fff;
+                    display: block;
+                    margin-bottom: 20px;
+                    margin-bottom: 20px;
+                }
+                a {
+                    opacity: 0;
+                    top: 50px;
+                    position: relative;
+                    width: 212px;
+                    height: 50px;
+                    background: #02131f;
+                    padding: 0 20px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size: 14px;
+                    color: #fff;
+                    box-sizing: border-box;
+                    span {
+                        position: relative;
+                        top: 1px;
+                    }
+                    img {
+                        width: 20px;
+                        height: 17px;
+                    }
+                }
+            }
+
+            > .body {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+
+                .nums {
+                    position: absolute;
+                    left: 234px;
+                    bottom: 98px;
+
+                    .circle {
+                        opacity: 0;
+                        top: 50px;
+                        position: relative;
+                        margin-top: 10px;
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        background: #03141f;
+                        color: #fff;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 15px;
+
+                        &.on {
+                            color: #000;
+                            background-color: #fff;
+                        }
+
+                        &:last-child {
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .pBox {
+                    position: absolute;
+                    left: 234px;
+                    bottom: 50px;
+                    display: flex;
+
+                    .imgBox {
+                        width: 27px;
+                        height: 17px;
+                        margin-right: 15px;
+                        display: inline-block;
+                        overflow: hidden;
+                        opacity: 0;
+
+                        img {
+                            position: relative;
+                            left: 5px;
+                            top: 1px;
+                            animation: 2s infinite ease-in-out downArrow;
+                            width: 17px;
+                            height: 10px;
+                        }
+
+                        @keyframes downArrow {
+                            0% {
+                                top: -300%;
+                            }
+                            40% {
+                                top: 10%;
+                            }
+                            50% {
+                                top: 20%;
+                            }
+                            70% {
+                                top: 20%;
+                            }
+                            100% {
+                                top: 200%;
+                            }
+                        }
+                    }
+
+                    p {
+                        opacity: 0;
+                        top: 50px;
+                        position: relative;
+                        font-size: 15px;
+                    }
+                }
+            }
+
+            > .bgBox {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 1920px;
+                height: 790px;
+                margin: auto;
+                z-index: 1;
+
+                img,
+                video {
+                    min-width: 100%;
+                    min-height: 100%;
+                }
+            }
+
+            .dim {
+                z-index: 1;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: #03141f;
+                opacity: 0;
+                transition: all 0.5s;
+            }
+        }
+
+        &.msSection1 {
+            position: absolute;
+            top: 120%;
+            width: 100%;
+            height: calc(100% - 50px);
+            margin-top: 50px;
+            transition: all 0.5s;
+            background: #fff;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            z-index: 3;
+
+            .closeBtn {
+                position: absolute;
+                right: 263px;
+                top: -17px;
+                width: 36px;
+                height: 36px;
+                background: #000;
+                border-radius: 50%;
+                @extend %flexCenter;
+
+                img {
+                    width: 12px;
+                    height: 15px;
+                }
+            }
+
+            .scrollBox {
+                margin: 50px auto 0;
+                width: 1811px;
+                height: 100%;
+                overflow: auto;
+
+                .movieBox {
+                    position: relative;
+                    margin-bottom: 46px;
+
+                    > img,
+                    video {
+                        width: 1811px;
+                        height: 380px;
+                        // opacity: 0;
+                    }
+
+                    button {
+                        // opacity: 0;
+                        background: transparent;
+                        padding: 0;
+                        position: absolute;
+                        width: 74px;
+                        height: 74px;
+                        top: 50%;
+                        left: 50%;
+                        margin-top: -37px;
+                        margin-left: -37px;
+                        z-index: 1;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+
+                .flexBox {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 214px;
+
+                    > .pBox {
+                        padding-left: 184px;
+
+                        p {
+                            // opacity: 0;
+                            // position: relative;
+                            // top: 50px;
+                            font-size: 33px;
+                            margin-bottom: 12px;
+
+                            &.small {
+                                font-size: 17px;
+                            }
+                            &.nontab_mb18 {
+                                margin-bottom: 18px;
+                            }
+                        }
+
+                        button {
+                            color: #000;
+                            font-size: 14px;
+                            // opacity: 0;
+                            // position: relative;
+                            // top: 50px;
+
+                            .borderBottom {
+                                width: 100%;
+                                height: 2px;
+                                background-color: #000;
+                                display: block;
+                                margin-top: 4px;
+                            }
+                        }
+                    }
+                    .itemBox {
+                        > ul {
+                            display: flex;
+                            width: 794px;
+                            margin-bottom: 30px;
+
+                            > li {
+                                // opacity: 0;
+                                position: relative;
+                                // top: 50px;
+                                margin-left: 14px;
+                                cursor: pointer;
+
+                                &:first-child {
+                                    margin-left: 0;
+                                }
+
+                                &:hover {
+                                    .plusBtn {
+                                        opacity: 1;
+                                    }
+                                    .bg {
+                                        opacity: 0.4;
+                                    }
+                                }
+
+                                .content {
+                                    width: 390px;
+                                    height: 71px;
+                                }
+                                .plusBtn {
+                                    width: 35px;
+                                    height: 35px;
+                                    margin-top: -17px;
+                                    margin-left: -17px;
+                                    @extend %absoCenter;
+                                    opacity: 0;
+                                    transition: all 0.2s;
+                                    z-index: 1;
+                                }
+                                .bg {
+                                    @extend %absoWrap;
+                                    background: #000;
+                                    opacity: 0;
+                                    transition: all 0.2s;
+                                }
+                            }
+                        }
+                        .pBox {
+                            // opacity: 0;
+                            position: relative;
+                            // top: 50px;
+
+                            p {
+                                display: inline;
+                                font-size: 16px;
+                            }
+                            .em {
+                                margin: 0 18px;
+                                height: 1px;
+                                width: 310px;
+                                background-color: #000;
+                                display: inline-block;
+                                position: relative;
+                                top: -5px;
+                            }
+                        }
+                    }
+                }
+
+                .imgBox {
+                    width: 1448px;
+                    margin: auto;
+
+                    .pBox {
+                        margin-bottom: 60px;
+
+                        &.right {
+                            text-align: right;
+
+                            p.big span {
+                                &.em {
+                                    left: -100%;
+                                }
+                                &.txt {
+                                    padding-right: 0;
+                                    padding-left: 30px;
+                                }
+                            }
+                        }
+
+                        p {
+                            &.big {
+                                font-size: 33px;
+                                margin-bottom: 20px;
+                                position: relative;
+                                overflow: hidden;
+
+                                span {
+                                    &.em {
+                                        transition: all 1s;
+                                        width: 100%;
+                                        height: 1px;
+                                        display: block;
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 100%;
+                                        background: #000;
+                                    }
+
+                                    &.txt {
+                                        opacity: 0;
+                                        position: relative;
+                                        top: 50px;
+                                        transition: all 0.5s;
+                                        background: #fff;
+                                        padding-right: 30px;
+                                        z-index: 2;
+                                        position: relative;
+                                    }
+                                }
+                            }
+                            &.small {
+                                opacity: 0;
+                                position: relative;
+                                top: 50px;
+                                transition: all 0.5s;
+                                font-size: 16px;
+                            }
+                        }
+                    }
+
+                    .imgList {
+                        margin-bottom: 156px;
+                        > li {
+                            opacity: 0;
+                            top: 50px;
+                            position: relative;
+                            margin-bottom: 26px;
+                            transition: all 0.5s;
+
+                            img {
+                                width: 1028px;
+                                height: 516px;
+                                margin: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.modalWrapper {
+            display: none;
+            opacity: 0;
+            transition: all 0.3s;
+            z-index: 6;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            &.on {
+                display: flex;
+                opacity: 1;
+            }
+
+            .bgDiv {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: 2;
+                background: #000;
+                opacity: 0.9;
+
+                .btnWrap {
+                    width: 100%;
+                    max-width: 1420px;
+                    margin: auto;
+                    position: relative;
+
+                    .modalCloseBtn {
+                        position: absolute;
+                        right: 34px;
+                        top: 34px;
+                    }
+                }
+            }
+
+            iframe {
+                z-index: 3;
+                max-width: 1280px;
+                width: 100%;
+                height: 720px;
+                max-height: calc(100% - 160px);
+            }
+        }
+    }
+    p {
+        line-height: 1em;
+    }
+    button {
+        font-family: "Kia", "Noto Sans KR", Arial, sans-serif;
+    }
+
+    // 상단에 위치하면 css 우선순위가 밀리므로 하단에 위치하였다
+    @import "./responsive.scss";
+}
+
+@media (max-width: 1920px) {
+    #ms_k9-prelaunching-wrap {
+        @include px2vw("height", 790);
+    }
+}
+
+@media (max-width: 1024px) {
+    #ms_k9-prelaunching-wrap {
+        @include px2vwm("height", 1490);
+    }
+}
