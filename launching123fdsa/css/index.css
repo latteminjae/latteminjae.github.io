@@ -1135,10 +1135,6 @@ html {
 #ms_k9-launching-wrap > div.sectionwrap section.section0 .section0-0 .bgBox {
   z-index: 1;
 }
-#ms_k9-launching-wrap > div.sectionwrap section.section0 .section0-0 .bgBox img,
-#ms_k9-launching-wrap > div.sectionwrap section.section0 .section0-0 .bgBox video {
-  min-width: auto;
-}
 #ms_k9-launching-wrap > div.sectionwrap section.section0 .section0-1 {
   color: #fff;
   top: 100%;
@@ -1269,7 +1265,8 @@ html {
 #ms_k9-launching-wrap > div.sectionwrap section.section2 .pBox p:nth-child(3) {
   margin-bottom: 26px;
 }
-#ms_k9-launching-wrap > div.sectionwrap section.section2 .pBox img {
+#ms_k9-launching-wrap > div.sectionwrap section.section2 .pBox img,
+#ms_k9-launching-wrap > div.sectionwrap section.section2 .pBox video {
   margin-bottom: 56px;
 }
 #ms_k9-launching-wrap > div.sectionwrap section.section2 .bgBox img,
@@ -1673,11 +1670,7 @@ html {
 }
 #ms_k9-launching-wrap > div.fixedwrap .topBox .rightBox button .imgBox img {
   position: relative;
-  left: 5px;
-  top: 1px;
   animation: 2s infinite ease-in-out downArrow;
-  width: 14px;
-  height: 8px;
 }
 #ms_k9-launching-wrap > div.fixedwrap .topBox .rightBox p {
   font-size: 17px;
@@ -1945,6 +1938,7 @@ html {
 }
 #ms_k9-launching-wrap div .bgBox img,
 #ms_k9-launching-wrap div .bgBox video {
+  object-fit: cover;
   min-width: 100%;
   min-height: 100%;
 }
@@ -2526,9 +2520,10 @@ html {
     padding-left: 2.3148148148vw;
     margin-bottom: 2.2222222222vw;
   }
-  #ms_k9-launching-wrap > div.sectionwrap section.section1 .leftBox > img {
+  #ms_k9-launching-wrap > div.sectionwrap section.section1 .leftBox > img,
+#ms_k9-launching-wrap > div.sectionwrap section.section1 .leftBox video {
     position: absolute;
-    margin-top: 115.7407407407vw;
+    margin-top: 100vw;
     left: 34.9074074074vw;
   }
   #ms_k9-launching-wrap > div.sectionwrap section.section1 .rightBox {
@@ -2557,7 +2552,8 @@ html {
   #ms_k9-launching-wrap > div.sectionwrap section.section2 .pBox p.big2 {
     margin-bottom: 2.962962963vw;
   }
-  #ms_k9-launching-wrap > div.sectionwrap section.section2 .pBox img {
+  #ms_k9-launching-wrap > div.sectionwrap section.section2 .pBox img,
+#ms_k9-launching-wrap > div.sectionwrap section.section2 .pBox video {
     position: absolute;
     left: 6.4814814815vw;
     margin-top: 87.037037037vw;

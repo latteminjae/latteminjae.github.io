@@ -771,9 +771,10 @@ $black: #05141f;
                             }
                         }
 
-                        > img {
+                        > img,
+                        video {
                             position: absolute;
-                            @include px2vwm("margin-top", 1250);
+                            @include px2vwm("margin-top", 1080);
                             @include px2vwm("left", 377);
                         }
                     }
@@ -810,7 +811,8 @@ $black: #05141f;
                             }
                         }
 
-                        img {
+                        img,
+                        video {
                             position: absolute;
                             @include px2vwm("left", 70);
                             @include px2vwm("margin-top", 940);
@@ -1150,7 +1152,6 @@ $black: #05141f;
                             @include px2vwm("width", 64);
                             @include px2vwm("height", 40);
                             @include px2vwm("margin-right", 28);
-
                         }
                     }
                     p {

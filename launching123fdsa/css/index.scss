@@ -161,11 +161,6 @@ $black: #05141f;
 
                         .bgBox {
                             z-index: 1;
-
-                            img,
-                            video {
-                                min-width: auto;
-                            }
                         }
                     }
 
@@ -336,7 +331,8 @@ $black: #05141f;
                             }
                         }
 
-                        img {
+                        img,
+                        video {
                             margin-bottom: 56px;
                         }
                     }
@@ -833,11 +829,11 @@ $black: #05141f;
 
                             img {
                                 position: relative;
-                                left: 5px;
-                                top: 1px;
+                                // left: 5px;
+                                // top: 1px;
                                 animation: 2s infinite ease-in-out downArrow;
-                                width: 14px;
-                                height: 8px;
+                                // width: 14px;
+                                // height: 8px;
                             }
                         }
                     }
@@ -1168,6 +1164,7 @@ $black: #05141f;
 
             img,
             video {
+                object-fit: cover;
                 min-width: 100%;
                 min-height: 100%;
             }

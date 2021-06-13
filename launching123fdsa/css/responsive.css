@@ -560,9 +560,10 @@
     padding-left: 2.3148148148vw;
     margin-bottom: 2.2222222222vw;
   }
-  > div.sectionwrap section.section1 .leftBox > img {
+  > div.sectionwrap section.section1 .leftBox > img,
+> div.sectionwrap section.section1 .leftBox video {
     position: absolute;
-    margin-top: 115.7407407407vw;
+    margin-top: 100vw;
     left: 34.9074074074vw;
   }
   > div.sectionwrap section.section1 .rightBox {
@@ -591,7 +592,8 @@
   > div.sectionwrap section.section2 .pBox p.big2 {
     margin-bottom: 2.962962963vw;
   }
-  > div.sectionwrap section.section2 .pBox img {
+  > div.sectionwrap section.section2 .pBox img,
+> div.sectionwrap section.section2 .pBox video {
     position: absolute;
     left: 6.4814814815vw;
     margin-top: 87.037037037vw;
