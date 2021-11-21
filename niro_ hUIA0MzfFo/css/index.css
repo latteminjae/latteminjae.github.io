@@ -11646,7 +11646,7 @@
 #ms_niro-teaser-wrap .ms_container > div.contentBox .slideBox .swiper-button-prev {
   left: 50%;
   right: auto;
-  transform: translateX(calc(-100% - 550px));
+  transform: translateX(calc(-100% - 610px));
 }
 #ms_niro-teaser-wrap .ms_container > div.contentBox .slideBox .swiper-button-prev > img {
   transform: rotateY(180deg);
@@ -11654,7 +11654,7 @@
 #ms_niro-teaser-wrap .ms_container > div.contentBox .slideBox .swiper-button-next {
   left: 50%;
   right: auto;
-  transform: translateX(550px);
+  transform: translateX(610px);
 }
 #ms_niro-teaser-wrap .ms_container > div.contentBox .slideBox .swiper-button-prev::after,
 #ms_niro-teaser-wrap .ms_container > div.contentBox .slideBox .swiper-button-next::after {
