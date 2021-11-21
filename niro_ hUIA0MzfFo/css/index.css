@@ -45,19 +45,87 @@
 #ms_niro-teaser-wrap html {
   margin: 0;
 }
-#ms_niro-teaser-wrap html, #ms_niro-teaser-wrap body, #ms_niro-teaser-wrap div, #ms_niro-teaser-wrap span, #ms_niro-teaser-wrap applet, #ms_niro-teaser-wrap object, #ms_niro-teaser-wrap iframe,
-#ms_niro-teaser-wrap h1, #ms_niro-teaser-wrap h2, #ms_niro-teaser-wrap h3, #ms_niro-teaser-wrap h4, #ms_niro-teaser-wrap h5, #ms_niro-teaser-wrap h6, #ms_niro-teaser-wrap p, #ms_niro-teaser-wrap blockquote, #ms_niro-teaser-wrap pre,
-#ms_niro-teaser-wrap a, #ms_niro-teaser-wrap abbr, #ms_niro-teaser-wrap acronym, #ms_niro-teaser-wrap address, #ms_niro-teaser-wrap big, #ms_niro-teaser-wrap cite, #ms_niro-teaser-wrap code,
-#ms_niro-teaser-wrap del, #ms_niro-teaser-wrap dfn, #ms_niro-teaser-wrap em, #ms_niro-teaser-wrap img, #ms_niro-teaser-wrap ins, #ms_niro-teaser-wrap kbd, #ms_niro-teaser-wrap q, #ms_niro-teaser-wrap s, #ms_niro-teaser-wrap samp,
-#ms_niro-teaser-wrap small, #ms_niro-teaser-wrap strike, #ms_niro-teaser-wrap strong, #ms_niro-teaser-wrap sub, #ms_niro-teaser-wrap sup, #ms_niro-teaser-wrap tt, #ms_niro-teaser-wrap var,
-#ms_niro-teaser-wrap b, #ms_niro-teaser-wrap u, #ms_niro-teaser-wrap i, #ms_niro-teaser-wrap center,
-#ms_niro-teaser-wrap dl, #ms_niro-teaser-wrap dt, #ms_niro-teaser-wrap dd, #ms_niro-teaser-wrap ol, #ms_niro-teaser-wrap ul, #ms_niro-teaser-wrap li,
-#ms_niro-teaser-wrap fieldset, #ms_niro-teaser-wrap form, #ms_niro-teaser-wrap label, #ms_niro-teaser-wrap legend,
-#ms_niro-teaser-wrap table, #ms_niro-teaser-wrap caption, #ms_niro-teaser-wrap tbody, #ms_niro-teaser-wrap tfoot, #ms_niro-teaser-wrap thead, #ms_niro-teaser-wrap tr, #ms_niro-teaser-wrap th, #ms_niro-teaser-wrap td,
-#ms_niro-teaser-wrap article, #ms_niro-teaser-wrap aside, #ms_niro-teaser-wrap canvas, #ms_niro-teaser-wrap details, #ms_niro-teaser-wrap embed,
-#ms_niro-teaser-wrap figure, #ms_niro-teaser-wrap figcaption, #ms_niro-teaser-wrap footer, #ms_niro-teaser-wrap header, #ms_niro-teaser-wrap hgroup,
-#ms_niro-teaser-wrap menu, #ms_niro-teaser-wrap nav, #ms_niro-teaser-wrap output, #ms_niro-teaser-wrap ruby, #ms_niro-teaser-wrap section, #ms_niro-teaser-wrap summary,
-#ms_niro-teaser-wrap time, #ms_niro-teaser-wrap mark, #ms_niro-teaser-wrap audio, #ms_niro-teaser-wrap video {
+#ms_niro-teaser-wrap html,
+#ms_niro-teaser-wrap body,
+#ms_niro-teaser-wrap div,
+#ms_niro-teaser-wrap span,
+#ms_niro-teaser-wrap applet,
+#ms_niro-teaser-wrap object,
+#ms_niro-teaser-wrap iframe,
+#ms_niro-teaser-wrap h1,
+#ms_niro-teaser-wrap h2,
+#ms_niro-teaser-wrap h3,
+#ms_niro-teaser-wrap h4,
+#ms_niro-teaser-wrap h5,
+#ms_niro-teaser-wrap h6,
+#ms_niro-teaser-wrap p,
+#ms_niro-teaser-wrap blockquote,
+#ms_niro-teaser-wrap pre,
+#ms_niro-teaser-wrap a,
+#ms_niro-teaser-wrap abbr,
+#ms_niro-teaser-wrap acronym,
+#ms_niro-teaser-wrap address,
+#ms_niro-teaser-wrap big,
+#ms_niro-teaser-wrap cite,
+#ms_niro-teaser-wrap code,
+#ms_niro-teaser-wrap del,
+#ms_niro-teaser-wrap dfn,
+#ms_niro-teaser-wrap em,
+#ms_niro-teaser-wrap img,
+#ms_niro-teaser-wrap ins,
+#ms_niro-teaser-wrap kbd,
+#ms_niro-teaser-wrap q,
+#ms_niro-teaser-wrap s,
+#ms_niro-teaser-wrap samp,
+#ms_niro-teaser-wrap small,
+#ms_niro-teaser-wrap strike,
+#ms_niro-teaser-wrap strong,
+#ms_niro-teaser-wrap sub,
+#ms_niro-teaser-wrap sup,
+#ms_niro-teaser-wrap tt,
+#ms_niro-teaser-wrap var,
+#ms_niro-teaser-wrap b,
+#ms_niro-teaser-wrap u,
+#ms_niro-teaser-wrap i,
+#ms_niro-teaser-wrap center,
+#ms_niro-teaser-wrap dl,
+#ms_niro-teaser-wrap dt,
+#ms_niro-teaser-wrap dd,
+#ms_niro-teaser-wrap ol,
+#ms_niro-teaser-wrap ul,
+#ms_niro-teaser-wrap li,
+#ms_niro-teaser-wrap fieldset,
+#ms_niro-teaser-wrap form,
+#ms_niro-teaser-wrap label,
+#ms_niro-teaser-wrap legend,
+#ms_niro-teaser-wrap table,
+#ms_niro-teaser-wrap caption,
+#ms_niro-teaser-wrap tbody,
+#ms_niro-teaser-wrap tfoot,
+#ms_niro-teaser-wrap thead,
+#ms_niro-teaser-wrap tr,
+#ms_niro-teaser-wrap th,
+#ms_niro-teaser-wrap td,
+#ms_niro-teaser-wrap article,
+#ms_niro-teaser-wrap aside,
+#ms_niro-teaser-wrap canvas,
+#ms_niro-teaser-wrap details,
+#ms_niro-teaser-wrap embed,
+#ms_niro-teaser-wrap figure,
+#ms_niro-teaser-wrap figcaption,
+#ms_niro-teaser-wrap footer,
+#ms_niro-teaser-wrap header,
+#ms_niro-teaser-wrap hgroup,
+#ms_niro-teaser-wrap menu,
+#ms_niro-teaser-wrap nav,
+#ms_niro-teaser-wrap output,
+#ms_niro-teaser-wrap ruby,
+#ms_niro-teaser-wrap section,
+#ms_niro-teaser-wrap summary,
+#ms_niro-teaser-wrap time,
+#ms_niro-teaser-wrap mark,
+#ms_niro-teaser-wrap audio,
+#ms_niro-teaser-wrap video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -65,21 +133,34 @@
   font: inherit;
   vertical-align: baseline;
 }
-#ms_niro-teaser-wrap article, #ms_niro-teaser-wrap aside, #ms_niro-teaser-wrap details, #ms_niro-teaser-wrap figcaption, #ms_niro-teaser-wrap figure,
-#ms_niro-teaser-wrap footer, #ms_niro-teaser-wrap header, #ms_niro-teaser-wrap hgroup, #ms_niro-teaser-wrap menu, #ms_niro-teaser-wrap nav, #ms_niro-teaser-wrap section {
+#ms_niro-teaser-wrap article,
+#ms_niro-teaser-wrap aside,
+#ms_niro-teaser-wrap details,
+#ms_niro-teaser-wrap figcaption,
+#ms_niro-teaser-wrap figure,
+#ms_niro-teaser-wrap footer,
+#ms_niro-teaser-wrap header,
+#ms_niro-teaser-wrap hgroup,
+#ms_niro-teaser-wrap menu,
+#ms_niro-teaser-wrap nav,
+#ms_niro-teaser-wrap section {
   display: block;
 }
 #ms_niro-teaser-wrap body {
   line-height: 1;
 }
-#ms_niro-teaser-wrap ol, #ms_niro-teaser-wrap ul {
+#ms_niro-teaser-wrap ol,
+#ms_niro-teaser-wrap ul {
   list-style: none;
 }
-#ms_niro-teaser-wrap blockquote, #ms_niro-teaser-wrap q {
+#ms_niro-teaser-wrap blockquote,
+#ms_niro-teaser-wrap q {
   quotes: none;
 }
-#ms_niro-teaser-wrap blockquote:before, #ms_niro-teaser-wrap blockquote:after,
-#ms_niro-teaser-wrap q:before, #ms_niro-teaser-wrap q:after {
+#ms_niro-teaser-wrap blockquote:before,
+#ms_niro-teaser-wrap blockquote:after,
+#ms_niro-teaser-wrap q:before,
+#ms_niro-teaser-wrap q:after {
   content: "";
   content: none;
 }
@@ -96,6 +177,9 @@
 }
 #ms_niro-teaser-wrap a {
   text-decoration: none;
+}
+#ms_niro-teaser-wrap p {
+  line-height: 1em;
 }
 @font-face {
   #ms_niro-teaser-wrap {
@@ -11399,8 +11483,15 @@
 #ms_niro-teaser-wrap .ms_container > div.mainBox p {
   position: relative;
   z-index: 1;
-  font-size: 39px;
   text-align: center;
+}
+#ms_niro-teaser-wrap .ms_container > div.mainBox p.main {
+  font-size: 39px;
+  margin-bottom: 16px;
+}
+#ms_niro-teaser-wrap .ms_container > div.mainBox p.sub {
+  font-size: 20px;
+  color: #3b3b3b;
 }
 #ms_niro-teaser-wrap .ms_container > div.mainBox img,
 #ms_niro-teaser-wrap .ms_container > div.mainBox video {
@@ -11680,11 +11771,14 @@
     height: 118.5185185185vw;
   }
   #ms_niro-teaser-wrap .ms_container > div.mainBox p {
-    margin-left: 0;
-    width: 100%;
-    text-align: center;
     top: 11.6666666667vw;
+  }
+  #ms_niro-teaser-wrap .ms_container > div.mainBox p.main {
     font-size: 6.4814814815vw;
+    margin-bottom: 2.962962963vw;
+  }
+  #ms_niro-teaser-wrap .ms_container > div.mainBox p.sub {
+    font-size: 3.7037037037vw;
   }
   #ms_niro-teaser-wrap .ms_container > div.mainBox img,
 #ms_niro-teaser-wrap .ms_container > div.mainBox video {
