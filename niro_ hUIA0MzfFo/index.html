@@ -13,9 +13,14 @@
 
         <!-- js -->
         <script src="./js/index.js"></script>
+        <script src="./js/jquery-3.6.0.slim.min.js"></script>
+        <script src="./js/slick.min.js"></script>
+        <script src="./js/index2.js"></script>
 
         <!-- font, css -->
         <link type="text/css" rel="stylesheet" href="./css/index.css" />
+        <link type="text/css" rel="stylesheet" href="./css/slick.css" />
+        <link type="text/css" rel="stylesheet" href="./css/slick-theme.css" />
     </head>
     <body>
         <div id="ms_niro-teaser-wrap">
@@ -25,73 +30,140 @@
                         The all-new Kia
                         <span class="fw7"> Niro</span>
                     </p>
-                    <p class="sub fw4 tween1">Coming Soon</p>
-                    <video playsinline muted autoplay loop class="ms_nontab" src="./static/main.mp4" alt=""></video>
-                    <video playsinline muted autoplay loop class="ms_tab" src="./static/main-m.mp4" alt=""></video>
+                    <img class="ms_nontab" src="./static/main.jpg" alt="" />
+                    <img class="ms_tab" src="./static/main-m.jpg" alt="" />
                 </div>
                 <div class="contentBox">
-                    <p class="boxName tween1">Film</p>
-                    <!-- iframe tween2 -->
-                    <div class="iframeBox tween2">
-                        <iframe
-                            id="iframeDiv"
-                            src="https://www.youtube.com/embed/eN1oV6CbjpE?rel=0&autoplay=0&playsinline=1&enablejsapi=1&version=3&playerapiid=ytplayer"
-                            width="1020"
-                            height="572"
-                            frameborder="0"
-                            allowfullscreen
-                            allow="autoplay"
-                        ></iframe>
+                    <div class="boxName">
+                        <p class="tween1">Design Gallery</p>
                     </div>
-                </div>
-                <div class="contentBox">
-                    <p class="boxName tween1">Gallery</p>
-                    <div class="slideBox tween2">
-                        <div>
-                            <div class="ms_tab slideCurtain">
-                                <div></div>
-                                <div></div>
+                    <div class="slideBox">
+                        <p class="slideName tween2">Exterior<span class="big">8</span><span class="bar"></span></p>
+                        <div class="slideDiv tween2">
+                            <div class="slideItem">
+                                <img data-gallery="0" src="./static/gallery-1.jpg" alt="" />
                             </div>
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <img class="bgImg ms_nontab" src="./static/gallery-1.jpg" alt="" />
-                                    <img class="bgImg ms_tab" src="./static/gallery-1-m.jpg" alt="" />
-                                </div>
-                                <div class="swiper-slide">
-                                    <img class="bgImg ms_nontab" src="./static/gallery-2.jpg" alt="" />
-                                    <img class="bgImg ms_tab" src="./static/gallery-2-m.jpg" alt="" />
-                                </div>
-                                <div class="swiper-slide">
-                                    <img class="bgImg ms_nontab" src="./static/gallery-3.jpg" alt="" />
-                                    <img class="bgImg ms_tab" src="./static/gallery-3-m.jpg" alt="" />
-                                </div>
-                                <div class="swiper-slide">
-                                    <img class="bgImg ms_nontab" src="./static/gallery-4.jpg" alt="" />
-                                    <img class="bgImg ms_tab" src="./static/gallery-4-m.jpg" alt="" />
-                                </div>
+                            <div class="slideItem">
+                                <img data-gallery="1" src="./static/gallery-2.jpg" alt="" />
                             </div>
-                            <div class="ms_nontab swiper-button-prev">
-                                <img class="ms_nontab" src="./static/slideBtn.png" alt="" />
-                                <img class="ms_tab" src="./static/slideBtn-m.png" alt="" />
+                            <div class="slideItem">
+                                <img data-gallery="2" src="./static/gallery-3.jpg" alt="" />
                             </div>
-                            <div class="ms_nontab swiper-button-next">
-                                <img class="ms_nontab" src="./static/slideBtn.png" alt="" />
-                                <img class="ms_tab" src="./static/slideBtn-m.png" alt="" />
+                            <div class="slideItem">
+                                <img data-gallery="3" src="./static/gallery-4.jpg" alt="" />
                             </div>
-                            <div class="ms_tab_flex btnBox">
-                                <p class="galleryActive">Exterior</p>
-                                <div class="swiper-button-prev">
-                                    <img class="ms_nontab" src="./static/slideBtn.png" alt="" />
-                                    <img class="ms_tab" src="./static/slideBtn-m.png" alt="" />
-                                </div>
-                                <div class="swiper-button-next">
-                                    <img class="ms_nontab" src="./static/slideBtn.png" alt="" />
-                                    <img class="ms_tab" src="./static/slideBtn-m.png" alt="" />
-                                </div>
+                            <div class="slideItem">
+                                <img data-gallery="4" src="./static/gallery-5.jpg" alt="" />
                             </div>
-                            <div class="swiper-pagination"></div>
+                            <div class="slideItem">
+                                <img data-gallery="5" src="./static/gallery-6.jpg" alt="" />
+                            </div>
+                            <div class="slideItem">
+                                <img data-gallery="6" src="./static/gallery-7.jpg" alt="" />
+                            </div>
+                            <div class="slideItem">
+                                <img data-gallery="7" src="./static/gallery-8.jpg" alt="" />
+                            </div>
                         </div>
                     </div>
+                    <div class="slideBox">
+                        <p class="slideName tween2">Interior<span class="big">7</span><span class="bar"></span></p>
+                        <div class="slideDiv tween2">
+                            <div class="slideItem">
+                                <img data-gallery="8" src="./static/gallery-9.jpg" alt="" />
+                            </div>
+                            <div class="slideItem">
+                                <img data-gallery="9" src="./static/gallery-10.jpg" alt="" />
+                            </div>
+                            <div class="slideItem">
+                                <img data-gallery="10" src="./static/gallery-11.jpg" alt="" />
+                            </div>
+                            <div class="slideItem">
+                                <img data-gallery="11" src="./static/gallery-12.jpg" alt="" />
+                            </div>
+                            <div class="slideItem">
+                                <img data-gallery="12" src="./static/gallery-13.jpg" alt="" />
+                            </div>
+                            <div class="slideItem">
+                                <img data-gallery="13" src="./static/gallery-14.jpg" alt="" />
+                            </div>
+                            <div class="slideItem">
+                                <img data-gallery="14" src="./static/gallery-15.jpg" alt="" />
+                            </div>
+                        </div>
+                        <div class="refBox tween2">
+                            <p>
+                                ※본 이미지는 글로벌 공개를 위해 제작된 것으로, 실제 판매 모델과 차이가 있을 수 있습니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ms_nontab_only modalWrapper">
+                <div class="contentDiv">
+                    <ul class="contentList">
+                        <li>
+                            <p>Exterior</p>
+                            <ul class="imgList">
+                                <li>
+                                    <img src="./static/gallery-1.jpg" alt="" />
+                                </li>
+                                <li>
+                                    <img src="./static/gallery-2.jpg" alt="" />
+                                </li>
+                                <li>
+                                    <img src="./static/gallery-3.jpg" alt="" />
+                                </li>
+                                <li>
+                                    <img src="./static/gallery-4.jpg" alt="" />
+                                </li>
+                                <li>
+                                    <img src="./static/gallery-5.jpg" alt="" />
+                                </li>
+                                <li>
+                                    <img src="./static/gallery-6.jpg" alt="" />
+                                </li>
+                                <li>
+                                    <img src="./static/gallery-7.jpg" alt="" />
+                                </li>
+                                <li>
+                                    <img src="./static/gallery-8.jpg" alt="" />
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p>Interior</p>
+                            <ul class="imgList">
+                                <li>
+                                    <img src="./static/gallery-9.jpg" alt="" />
+                                </li>
+                                <li>
+                                    <img src="./static/gallery-10.jpg" alt="" />
+                                </li>
+                                <li>
+                                    <img src="./static/gallery-11.jpg" alt="" />
+                                </li>
+                                <li>
+                                    <img src="./static/gallery-12.jpg" alt="" />
+                                </li>
+                                <li>
+                                    <img src="./static/gallery-13.jpg" alt="" />
+                                </li>
+                                <li>
+                                    <img src="./static/gallery-14.jpg" alt="" />
+                                </li>
+                                <li>
+                                    <img src="./static/gallery-15.jpg" alt="" />
+                                </li>
+                            </ul>
+                            <div class="refBox">
+                                <p>
+                                    ※본 이미지는 글로벌 공개를 위해 제작된 것으로, 실제 판매 모델과 차이가 있을 수
+                                    있습니다.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
