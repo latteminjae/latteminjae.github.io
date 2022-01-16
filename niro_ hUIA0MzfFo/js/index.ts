@@ -143,7 +143,7 @@ window.onload = function () {
 
     // 앵커
     const hash = window.location.hash.slice(1);
-    const sectionsName = ["film", "feature", "pillar", "gallery", "order"];
+    const sectionsName = ["film", "feature", "gallery", "order"];
     if (sectionsName.some((v) => v === hash)) {
         layerOpen();
 
