@@ -1,0 +1,597 @@
+@import "./func.scss";
+
+// display
+div {
+    .ms_tab,
+    .ms_tab_inline,
+    .ms_tab_flex {
+        display: none !important;
+    }
+    .ms_nontab {
+        display: block !important;
+    }
+    .ms_nontab_flex {
+        display: flex !important;
+    }
+    .ms_nontab_inline {
+        display: inline !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    div {
+        .ms_tab {
+            display: block !important;
+        }
+        .ms_tab_inline {
+            display: inline !important;
+        }
+        .ms_tab_flex {
+            display: flex !important;
+        }
+        .ms_nontab,
+        .ms_nontab_flex,
+        .ms_nontab_inline {
+            display: none !important;
+        }
+    }
+
+    .ms_nontab_only {
+        display: none !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    .ms_container {
+        height: calc((var(--vh, 1vh) * 100) - 116px);
+        min-height: auto;
+
+        .introSection {
+            .introContent {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+                height: 100%;
+            }
+            .pBox {
+                padding-top: 0;
+                @include px2vwm("margin-bottom", 136);
+                p {
+                    @include px2vwm("font-size", 50);
+
+                    span {
+                        display: block;
+                        margin-left: 0;
+                        @include px2vwm("margin-top", 70);
+                        @include px2vwm("font-size", 84);
+                    }
+                }
+            }
+            .btnBox {
+                flex-direction: column;
+                align-items: center;
+
+                button {
+                    @include px2vwm("height", 141);
+                    @include px2vwm("font-size", 38);
+
+                    span {
+                        @include px2vwm("top", 4);
+                    }
+
+                    img {
+                        @include px2vwm("margin-left", 34);
+                    }
+
+                    &.outlined {
+                        @include px2vwm("width", 463);
+                        @include px2vwm("border-radius", 141);
+                        @include px2vwm("margin-bottom", 24);
+
+                        margin-right: 0;
+
+                        span {
+                            @include px2vwm("margin-right", 38);
+                        }
+
+                        img {
+                            @include px2vwm("width", 43);
+                            @include px2vwm("height", 48);
+                        }
+                    }
+                    &.standard {
+                        @include px2vwm("padding", 0 34);
+
+                        img {
+                            @include px2vwm("width", 50);
+                            @include px2vwm("height", 41);
+                        }
+                    }
+                }
+            }
+            .scrollGuideBox {
+                @include px2vwm("bottom", 90);
+                p {
+                    @include px2vwm("font-size", 34);
+                }
+
+                .imgBox {
+                    @include px2vwm("width", 50);
+                    @include px2vwm("height", 50);
+                    @include px2vwm("margin-right", 34);
+                }
+
+                img {
+                    @include px2vwm("width", 49);
+                    @include px2vwm("height", 27);
+                }
+            }
+        }
+
+        .contentBox {
+            &.on {
+                @include px2vwm("top", 84);
+                .closeBtnBox {
+                    @include px2vwm("top", -42);
+                }
+            }
+
+            .closeBtnBox {
+                @include px2vwm("width", 956);
+                @include px2vwm("top", 42);
+
+                button {
+                    @include px2vwm("width", 112);
+                    @include px2vwm("height", 112);
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+
+            .contentSection {
+                @include px2vwm("padding", 126 0 54);
+                @include px2vwm("border-top-left-radius", 20);
+                @include px2vwm("border-top-right-radius", 20);
+
+                .section {
+                    @include px2vwm("margin-bottom", 240);
+
+                    .sectionTitle {
+                        @include px2vwm("font-size", 58);
+                        @include px2vwm("max-width", 948);
+                        @include px2vwm("margin-bottom", 64);
+
+                        .ref {
+                            @include px2vwm("font-size", 34);
+                            @include px2vwm("margin-top", 30);
+
+                        }
+                    }
+
+                    .sectionContent {
+                        &.movieBox {
+                            .flex {
+                                @include px2vwm("width", 948);
+                                flex-direction: column-reverse;
+                            }
+
+                            .row {
+                                @include px2vwm("width", 948);
+                                flex-direction: column;
+
+                                &.row_1 {
+                                    height: auto;
+                                    margin-bottom: 0;
+                                }
+
+                                &:last-of-type {
+                                    > div:last-of-type {
+                                        margin-bottom: 0;
+                                    }
+                                }
+                            }
+
+                            .filmBtn {
+                                @include px2vwm("margin-bottom", 36);
+
+                                p {
+                                    @include px2vwm("font-size", 42);
+
+                                    .slash {
+                                        @include px2vwm("margin-right", 42);
+                                    }
+                                    &.sub {
+                                        @include px2vwm("margin-bottom", 28);
+                                        @include px2vwm("line-height", 60);
+                                        text-align: right;
+                                    }
+                                    &.main {
+                                        @include px2vwm("margin-bottom", 48);
+                                    }
+                                }
+
+                                .playBtn {
+                                    @include px2vwm("width", 59);
+                                    @include px2vwm("height", 64);
+                                }
+
+                                .btnBg {
+                                }
+
+                                &.film_1 {
+                                    width: 100%;
+                                    @include px2vwm("height", 482);
+                                    @include px2vwm("padding", 0 64 116);
+                                }
+
+                                &.film_2,
+                                &.film_3 {
+                                    @include px2vwm("width", 456);
+                                    @include px2vwm("height", 482);
+                                    @include px2vwm("padding", 0 50 72);
+                                    margin: 0;
+                                }
+                                &.film_4 {
+                                    width: 100%;
+                                    @include px2vwm("height", 482);
+                                    @include px2vwm("padding", 0 64 116);
+                                }
+                            }
+                        }
+                        &.featureBox {
+                            .toggleBtnBox {
+                                @include px2vwm("max-width", 948);
+                                @include px2vwm("margin-bottom", 130);
+                                justify-content: space-between;
+                                margin-left: auto;
+                                margin-right: auto;
+
+                                button {
+                                    @include px2vwm("width", 460);
+                                    @include px2vwm("height", 116);
+                                    @include px2vwm("border-radius", 116);
+                                    @include px2vwm("border-width", 3);
+                                    @include px2vwm("font-size", 35);
+                                    margin-right: 0;
+
+                                    span img {
+                                        @include px2vwm("margin-left", 30);
+                                    }
+                                }
+                            }
+
+                            .featureList {
+                                @include px2vwm("width", 948);
+                                display: flex;
+                                position: relative;
+
+                                &.on {
+                                    @include px2vwm("height", 830);
+
+                                    &:first-of-type {
+                                        @include px2vwm("height", 1050);
+                                    }
+
+                                    .slideDiv {
+                                        z-index: 2;
+                                        opacity: 1;
+                                    }
+                                }
+
+                                .slideDiv {
+                                    width: 100%;
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    opacity: 0;
+
+                                    .slick-dots {
+                                        display: flex;
+                                        justify-content: center;
+
+                                        @include px2vwm("top", -70);
+                                        bottom: auto;
+
+                                        li {
+                                            transition: all 0.2s;
+                                            background: #c7c5c4;
+                                            @include px2vwm("width", 18);
+                                            @include px2vwm("height", 18);
+                                            @include px2vwm("border-radius", 18);
+                                            @include px2vwm("margin-left", 28);
+                                        }
+                                        button {
+                                            @include px2vwm("border-radius", 18);
+                                            width: 100%;
+                                            height: 100%;
+                                            &::before {
+                                                display: none;
+                                            }
+                                        }
+                                        .slick-active {
+                                            background: #0a1622;
+                                            @include px2vwm("width", 144);
+                                        }
+                                    }
+                                }
+
+                                .featureItem {
+                                    width: 100%;
+                                    margin-right: 0;
+
+                                    .imgBox {
+                                        @include px2vwm("height", 642);
+                                        @include px2vwm("margin-bottom", 20);
+
+                                        p {
+                                            width: 100%;
+                                            text-align: center;
+                                            left: 0;
+                                            @include px2vwm("bottom", 58);
+                                            @include px2vwm("font-size", 42);
+                                        }
+                                    }
+
+                                    .decBox {
+                                        padding: 0;
+                                        flex-direction: column;
+                                        align-items: center;
+
+                                        .verticalBar {
+                                            @include px2vwm("width", 4);
+                                            @include px2vwm("height", 40);
+                                            @include px2vwm("margin-bottom", 20);
+                                            margin-right: 0;
+                                        }
+
+                                        .decText {
+                                            text-align: center;
+                                            @include px2vwm("font-size", 38);
+                                            @include px2vwm("line-height", 60);
+                                            top: 0;
+
+                                            .main {
+                                                @include px2vwm("font-size", 38);
+                                                @include px2vwm("line-height", 60);
+                                                @include px2vwm("margin-bottom", 12);
+                                            }
+
+                                            .sub {
+                                                justify-content: center;
+                                                @include px2vwm("font-size", 34);
+                                                @include px2vwm("line-height", 50);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &.cPillarBox {
+                            width: 100%;
+
+                            .row {
+                                @include px2vwm("margin-bottom", 190);
+
+                                .pillarItem {
+                                    width: 50%;
+                                    @include px2vwm("height", 320);
+
+                                    .pillarName {
+                                        @include px2vwm("font-size", 34);
+                                        @include px2vwm("line-height", 50);
+                                        top: auto;
+                                        right: auto;
+                                        @include px2vwm("left", 66);
+                                        @include px2vwm("bottom", -136);
+                                    }
+                                }
+                            }
+
+                            .refBox {
+                                @include px2vwm("width", 948);
+                                margin: auto;
+                                p {
+                                    @include px2vwm("font-size", 28);
+                                    @include px2vwm("line-height", 46);
+
+                                    & + p {
+                                        margin-top: 0px;
+                                    }
+                                }
+                            }
+                        }
+                        &.slideDivBox {
+                            width: 100%;
+                            flex-direction: column;
+
+                            .slideBox {
+                                width: 100%;
+                                @include px2vwm("margin-bottom", 264);
+
+                                .slideTitle {
+                                    @include px2vwm("width", 948);
+                                    @include px2vwm("font-size", 50);
+                                    margin-left: auto;
+                                    margin-right: auto;
+                                    @include px2vwm("margin-bottom", 50);
+                                }
+
+                                .slideDiv {
+                                    width: 100%;
+                                    @include px2vwm("height", 630);
+
+                                    .slideItem {
+                                        width: 100%;
+                                        @include px2vwm("height", 630);
+                                        > img {
+                                            width: 100%;
+                                            @include px2vwm("height", 630);
+                                        }
+                                    }
+
+                                    .slick-arrow {
+                                        @include px2vwm("width", 105);
+                                        @include px2vwm("height", 105);
+                                        @include px2vwm("bottom", -152);
+                                        @include px2vwm("left", 66);
+
+                                        &.slick-next {
+                                            left: auto;
+                                            @include px2vwm("right", 66);
+                                        }
+                                    }
+
+                                    .slick-dots {
+                                        @include px2vwm("bottom", -110);
+
+                                        li {
+                                            @include px2vwm("width", 18);
+                                            @include px2vwm("height", 18);
+                                            @include px2vwm("border-radius", 18);
+                                            @include px2vwm("margin-left", 28);
+                                        }
+                                        button {
+                                            @include px2vwm("border-radius", 18);
+                                        }
+                                        .slick-active {
+                                            @include px2vwm("width", 144);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &.orderBox {
+                            padding-bottom: 40px;
+
+                            .pBox {
+                                @include px2vwm("height", 933);
+                                @include px2vwm("padding", 102 66);
+                                @include px2vwm("margin-bottom", 76);
+                                text-align: left;
+
+                                .main {
+                                    @include px2vwm("font-size", 58);
+                                    @include px2vwm("margin-bottom", 44);
+                                }
+
+                                .sub {
+                                    @include px2vwm("font-size", 36);
+                                    @include px2vwm("margin-bottom", 52);
+                                }
+
+                                button {
+                                    @include px2vwm("font-size", 34);
+                                    @include px2vwm("width", 410);
+                                    @include px2vwm("height", 115);
+                                    @include px2vwm("line-height", 115);
+                                }
+                            }
+                            .btnBox {
+                                @include px2vwm("width", 948);
+                                button {
+                                    @include px2vwm("width", 119);
+                                    @include px2vwm("height", 189);
+
+                                    img {
+                                        @include px2vwm("margin-bottom", 24);
+                                        @include px2vwm("width", 119);
+                                        @include px2vwm("height", 119);
+                                    }
+                                    p {
+                                        @include px2vwm("font-size", 26);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .mainBg {
+            video {
+                min-width: 100%;
+                width: 100%;
+            }
+
+            @media screen and (max-aspect-ratio: 700/1282) {
+                video {
+                    width: auto;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    > div.modalWrapper {
+        .contentDiv {
+            @include px2vwm("padding-top", 76);
+
+            .contentList {
+                width: 100%;
+
+                > li {
+                    @include px2vwm("margin-bottom", 100);
+
+                    > p {
+                        @include px2vwm("margin-bottom", 76);
+                        @include px2vwm("padding", 0 68);
+                        @include px2vwm("font-size", 58);
+                    }
+
+                    > .imgList {
+                        > li {
+                            img {
+                                width: 100%;
+                                @include px2vwm("height", 630);
+
+                                &.size1 {
+                                    @include px2vwm("height", 520);
+                                }
+                                &.size2 {
+                                    @include px2vwm("height", 415);
+                                }
+                            }
+                            + li {
+                                @include px2vwm("margin-top", 20);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .refBox {
+                width: 100%;
+                @include px2vwm("margin-top", 60);
+
+                p {
+                    @include px2vwm("font-size", 22);
+                    text-align: center;
+                }
+            }
+        }
+    }
+    .moviePopup {
+        .iframeBox {
+            @include px2vwm("width", 950);
+
+            button {
+                img {
+                    @include px2vwm("width", 54);
+                    @include px2vwm("height", 54);
+                }
+
+                @include px2vwm("margin-bottom", 40);
+            }
+
+            iframe {
+                width: 100%;
+                height: auto;
+                @include px2vwm("min-height", 534);
+            }
+        }
+    }
+}

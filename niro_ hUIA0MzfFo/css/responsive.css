@@ -1,0 +1,488 @@
+div .ms_tab,
+div .ms_tab_inline,
+div .ms_tab_flex {
+  display: none !important;
+}
+div .ms_nontab {
+  display: block !important;
+}
+div .ms_nontab_flex {
+  display: flex !important;
+}
+div .ms_nontab_inline {
+  display: inline !important;
+}
+
+@media (max-width: 1024px) {
+  div .ms_tab {
+    display: block !important;
+  }
+  div .ms_tab_inline {
+    display: inline !important;
+  }
+  div .ms_tab_flex {
+    display: flex !important;
+  }
+  div .ms_nontab,
+div .ms_nontab_flex,
+div .ms_nontab_inline {
+    display: none !important;
+  }
+
+  .ms_nontab_only {
+    display: none !important;
+  }
+}
+@media (max-width: 1024px) {
+  .ms_container {
+    height: calc((var(--vh, 1vh) * 100) - 116px);
+    min-height: auto;
+  }
+  .ms_container .introSection .introContent {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+  .ms_container .introSection .pBox {
+    padding-top: 0;
+    margin-bottom: 12.5925925926vw;
+  }
+  .ms_container .introSection .pBox p {
+    font-size: 4.6296296296vw;
+  }
+  .ms_container .introSection .pBox p span {
+    display: block;
+    margin-left: 0;
+    margin-top: 6.4814814815vw;
+    font-size: 7.7777777778vw;
+  }
+  .ms_container .introSection .btnBox {
+    flex-direction: column;
+    align-items: center;
+  }
+  .ms_container .introSection .btnBox button {
+    height: 13.0555555556vw;
+    font-size: 3.5185185185vw;
+  }
+  .ms_container .introSection .btnBox button span {
+    top: 0.3703703704vw;
+  }
+  .ms_container .introSection .btnBox button img {
+    margin-left: 3.1481481481vw;
+  }
+  .ms_container .introSection .btnBox button.outlined {
+    width: 42.8703703704vw;
+    border-radius: 13.0555555556vw;
+    margin-bottom: 2.2222222222vw;
+    margin-right: 0;
+  }
+  .ms_container .introSection .btnBox button.outlined span {
+    margin-right: 3.5185185185vw;
+  }
+  .ms_container .introSection .btnBox button.outlined img {
+    width: 3.9814814815vw;
+    height: 4.4444444444vw;
+  }
+  .ms_container .introSection .btnBox button.standard {
+    padding: 0vw 3.1481481481vw;
+  }
+  .ms_container .introSection .btnBox button.standard img {
+    width: 4.6296296296vw;
+    height: 3.7962962963vw;
+  }
+  .ms_container .introSection .scrollGuideBox {
+    bottom: 8.3333333333vw;
+  }
+  .ms_container .introSection .scrollGuideBox p {
+    font-size: 3.1481481481vw;
+  }
+  .ms_container .introSection .scrollGuideBox .imgBox {
+    width: 4.6296296296vw;
+    height: 4.6296296296vw;
+    margin-right: 3.1481481481vw;
+  }
+  .ms_container .introSection .scrollGuideBox img {
+    width: 4.537037037vw;
+    height: 2.5vw;
+  }
+  .ms_container .contentBox.on {
+    top: 7.7777777778vw;
+  }
+  .ms_container .contentBox.on .closeBtnBox {
+    top: -3.8888888889vw;
+  }
+  .ms_container .contentBox .closeBtnBox {
+    width: 88.5185185185vw;
+    top: 3.8888888889vw;
+  }
+  .ms_container .contentBox .closeBtnBox button {
+    width: 10.3703703704vw;
+    height: 10.3703703704vw;
+  }
+  .ms_container .contentBox .closeBtnBox button img {
+    width: 100%;
+    height: 100%;
+  }
+  .ms_container .contentBox .contentSection {
+    padding: 11.6666666667vw 0vw 5vw;
+    border-top-left-radius: 1.8518518519vw;
+    border-top-right-radius: 1.8518518519vw;
+  }
+  .ms_container .contentBox .contentSection .section {
+    margin-bottom: 22.2222222222vw;
+  }
+  .ms_container .contentBox .contentSection .section .sectionTitle {
+    font-size: 5.3703703704vw;
+    max-width: 87.7777777778vw;
+    margin-bottom: 5.9259259259vw;
+  }
+  .ms_container .contentBox .contentSection .section .sectionTitle .ref {
+    font-size: 3.1481481481vw;
+    margin-top: 2.7777777778vw;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.movieBox .flex {
+    width: 87.7777777778vw;
+    flex-direction: column-reverse;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.movieBox .row {
+    width: 87.7777777778vw;
+    flex-direction: column;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.movieBox .row.row_1 {
+    height: auto;
+    margin-bottom: 0;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.movieBox .row:last-of-type > div:last-of-type {
+    margin-bottom: 0;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.movieBox .filmBtn {
+    margin-bottom: 3.3333333333vw;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.movieBox .filmBtn p {
+    font-size: 3.8888888889vw;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.movieBox .filmBtn p .slash {
+    margin-right: 3.8888888889vw;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.movieBox .filmBtn p.sub {
+    margin-bottom: 2.5925925926vw;
+    line-height: 5.5555555556vw;
+    text-align: right;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.movieBox .filmBtn p.main {
+    margin-bottom: 4.4444444444vw;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.movieBox .filmBtn .playBtn {
+    width: 5.462962963vw;
+    height: 5.9259259259vw;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.movieBox .filmBtn.film_1 {
+    width: 100%;
+    height: 44.6296296296vw;
+    padding: 0vw 5.9259259259vw 10.7407407407vw;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.movieBox .filmBtn.film_2, .ms_container .contentBox .contentSection .section .sectionContent.movieBox .filmBtn.film_3 {
+    width: 42.2222222222vw;
+    height: 44.6296296296vw;
+    padding: 0vw 4.6296296296vw 6.6666666667vw;
+    margin: 0;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.movieBox .filmBtn.film_4 {
+    width: 100%;
+    height: 44.6296296296vw;
+    padding: 0vw 5.9259259259vw 10.7407407407vw;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.featureBox .toggleBtnBox {
+    max-width: 87.7777777778vw;
+    margin-bottom: 12.037037037vw;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.featureBox .toggleBtnBox button {
+    width: 42.5925925926vw;
+    height: 10.7407407407vw;
+    border-radius: 10.7407407407vw;
+    border-width: 0.2777777778vw;
+    font-size: 3.2407407407vw;
+    margin-right: 0;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.featureBox .toggleBtnBox button span img {
+    margin-left: 2.7777777778vw;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.featureBox .featureList {
+    width: 87.7777777778vw;
+    display: flex;
+    position: relative;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.featureBox .featureList.on {
+    height: 76.8518518519vw;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.featureBox .featureList.on:first-of-type {
+    height: 97.2222222222vw;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.featureBox .featureList.on .slideDiv {
+    z-index: 2;
+    opacity: 1;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.featureBox .featureList .slideDiv {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.featureBox .featureList .slideDiv .slick-dots {
+    display: flex;
+    justify-content: center;
+    top: -6.4814814815vw;
+    bottom: auto;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.featureBox .featureList .slideDiv .slick-dots li {
+    transition: all 0.2s;
+    background: #c7c5c4;
+    width: 1.6666666667vw;
+    height: 1.6666666667vw;
+    border-radius: 1.6666666667vw;
+    margin-left: 2.5925925926vw;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.featureBox .featureList .slideDiv .slick-dots button {
+    border-radius: 1.6666666667vw;
+    width: 100%;
+    height: 100%;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.featureBox .featureList .slideDiv .slick-dots button::before {
+    display: none;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.featureBox .featureList .slideDiv .slick-dots .slick-active {
+    background: #0a1622;
+    width: 13.3333333333vw;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.featureBox .featureList .featureItem {
+    width: 100%;
+    margin-right: 0;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.featureBox .featureList .featureItem .imgBox {
+    height: 59.4444444444vw;
+    margin-bottom: 1.8518518519vw;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.featureBox .featureList .featureItem .imgBox p {
+    width: 100%;
+    text-align: center;
+    left: 0;
+    bottom: 5.3703703704vw;
+    font-size: 3.8888888889vw;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.featureBox .featureList .featureItem .decBox {
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.featureBox .featureList .featureItem .decBox .verticalBar {
+    width: 0.3703703704vw;
+    height: 3.7037037037vw;
+    margin-bottom: 1.8518518519vw;
+    margin-right: 0;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.featureBox .featureList .featureItem .decBox .decText {
+    text-align: center;
+    font-size: 3.5185185185vw;
+    line-height: 5.5555555556vw;
+    top: 0;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.featureBox .featureList .featureItem .decBox .decText .main {
+    font-size: 3.5185185185vw;
+    line-height: 5.5555555556vw;
+    margin-bottom: 1.1111111111vw;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.featureBox .featureList .featureItem .decBox .decText .sub {
+    justify-content: center;
+    font-size: 3.1481481481vw;
+    line-height: 4.6296296296vw;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.cPillarBox {
+    width: 100%;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.cPillarBox .row {
+    margin-bottom: 17.5925925926vw;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.cPillarBox .row .pillarItem {
+    width: 50%;
+    height: 29.6296296296vw;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.cPillarBox .row .pillarItem .pillarName {
+    font-size: 3.1481481481vw;
+    line-height: 4.6296296296vw;
+    top: auto;
+    right: auto;
+    left: 6.1111111111vw;
+    bottom: -12.5925925926vw;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.cPillarBox .refBox {
+    width: 87.7777777778vw;
+    margin: auto;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.cPillarBox .refBox p {
+    font-size: 2.5925925926vw;
+    line-height: 4.2592592593vw;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.cPillarBox .refBox p + p {
+    margin-top: 0px;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.slideDivBox {
+    width: 100%;
+    flex-direction: column;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.slideDivBox .slideBox {
+    width: 100%;
+    margin-bottom: 24.4444444444vw;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.slideDivBox .slideBox .slideTitle {
+    width: 87.7777777778vw;
+    font-size: 4.6296296296vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4.6296296296vw;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.slideDivBox .slideBox .slideDiv {
+    width: 100%;
+    height: 58.3333333333vw;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.slideDivBox .slideBox .slideDiv .slideItem {
+    width: 100%;
+    height: 58.3333333333vw;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.slideDivBox .slideBox .slideDiv .slideItem > img {
+    width: 100%;
+    height: 58.3333333333vw;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.slideDivBox .slideBox .slideDiv .slick-arrow {
+    width: 9.7222222222vw;
+    height: 9.7222222222vw;
+    bottom: -14.0740740741vw;
+    left: 6.1111111111vw;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.slideDivBox .slideBox .slideDiv .slick-arrow.slick-next {
+    left: auto;
+    right: 6.1111111111vw;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.slideDivBox .slideBox .slideDiv .slick-dots {
+    bottom: -10.1851851852vw;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.slideDivBox .slideBox .slideDiv .slick-dots li {
+    width: 1.6666666667vw;
+    height: 1.6666666667vw;
+    border-radius: 1.6666666667vw;
+    margin-left: 2.5925925926vw;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.slideDivBox .slideBox .slideDiv .slick-dots button {
+    border-radius: 1.6666666667vw;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.slideDivBox .slideBox .slideDiv .slick-dots .slick-active {
+    width: 13.3333333333vw;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.orderBox {
+    padding-bottom: 40px;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.orderBox .pBox {
+    height: 86.3888888889vw;
+    padding: 9.4444444444vw 6.1111111111vw;
+    margin-bottom: 7.037037037vw;
+    text-align: left;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.orderBox .pBox .main {
+    font-size: 5.3703703704vw;
+    margin-bottom: 4.0740740741vw;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.orderBox .pBox .sub {
+    font-size: 3.3333333333vw;
+    margin-bottom: 4.8148148148vw;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.orderBox .pBox button {
+    font-size: 3.1481481481vw;
+    width: 37.962962963vw;
+    height: 10.6481481481vw;
+    line-height: 10.6481481481vw;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.orderBox .btnBox {
+    width: 87.7777777778vw;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.orderBox .btnBox button {
+    width: 11.0185185185vw;
+    height: 17.5vw;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.orderBox .btnBox button img {
+    margin-bottom: 2.2222222222vw;
+    width: 11.0185185185vw;
+    height: 11.0185185185vw;
+  }
+  .ms_container .contentBox .contentSection .section .sectionContent.orderBox .btnBox button p {
+    font-size: 2.4074074074vw;
+  }
+  .ms_container .mainBg video {
+    min-width: 100%;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1024px) and (max-aspect-ratio: 700/1282) {
+  .ms_container .mainBg video {
+    width: auto;
+    height: 100%;
+  }
+}
+@media (max-width: 1024px) {
+  > div.modalWrapper .contentDiv {
+    padding-top: 7.037037037vw;
+  }
+  > div.modalWrapper .contentDiv .contentList {
+    width: 100%;
+  }
+  > div.modalWrapper .contentDiv .contentList > li {
+    margin-bottom: 9.2592592593vw;
+  }
+  > div.modalWrapper .contentDiv .contentList > li > p {
+    margin-bottom: 7.037037037vw;
+    padding: 0vw 6.2962962963vw;
+    font-size: 5.3703703704vw;
+  }
+  > div.modalWrapper .contentDiv .contentList > li > .imgList > li img {
+    width: 100%;
+    height: 58.3333333333vw;
+  }
+  > div.modalWrapper .contentDiv .contentList > li > .imgList > li img.size1 {
+    height: 48.1481481481vw;
+  }
+  > div.modalWrapper .contentDiv .contentList > li > .imgList > li img.size2 {
+    height: 38.4259259259vw;
+  }
+  > div.modalWrapper .contentDiv .contentList > li > .imgList > li + li {
+    margin-top: 1.8518518519vw;
+  }
+  > div.modalWrapper .contentDiv .refBox {
+    width: 100%;
+    margin-top: 5.5555555556vw;
+  }
+  > div.modalWrapper .contentDiv .refBox p {
+    font-size: 2.037037037vw;
+    text-align: center;
+  }
+}
+@media (max-width: 1024px) {
+  .moviePopup .iframeBox {
+    width: 87.962962963vw;
+  }
+  .moviePopup .iframeBox button {
+    margin-bottom: 3.7037037037vw;
+  }
+  .moviePopup .iframeBox button img {
+    width: 5vw;
+    height: 5vw;
+  }
+  .moviePopup .iframeBox iframe {
+    width: 100%;
+    height: auto;
+    min-height: 49.4444444444vw;
+  }
+}

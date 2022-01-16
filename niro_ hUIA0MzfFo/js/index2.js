@@ -1,6 +1,5 @@
 $(document).ready(function () {
-    $("#ms_niro-teaser-wrap .slideDiv").slick({
+    $("#ms_niro-prelaunching-wrap .slideDiv").slick({
         dots: true,
     });
-    
 });
