@@ -13,7 +13,7 @@
 
 @for $i from 0 through 10 {
     .fw#{$i} {
-        font-weight: #{$i}00;
+        font-weight: #{$i}00 !important;
     }
     .transi#{$i} {
         transition: all #{$i}s;

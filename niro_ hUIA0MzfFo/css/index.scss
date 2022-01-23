@@ -8,7 +8,7 @@ body {
 }
 
 // pc
-#ms_niro-prelaunching-wrap {
+#ms_niro-launching-wrap {
     @import "./reset.scss";
     @import "./common.scss";
 
@@ -19,672 +19,373 @@ body {
         color: #fff;
         position: relative;
         width: 100%;
+        max-width: 1920px;
         overflow: hidden;
         height: calc(100vh - 159px);
         min-height: 740px;
         background: #000;
 
-        .introSection {
-            position: absolute;
-            height: 100%;
+        .sectionSlideBox {
+            position: relative;
             width: 100%;
-            text-align: center;
-            z-index: 3;
+            height: 100%;
 
-            .introContent {
+            .section {
                 position: absolute;
                 width: 100%;
-                height: auto;
-                top: 50%;
-                left: 0;
-                transform: translateY(-50%);
-            }
+                height: 100%;
+                top: 0;
+                background: #333;
+                transition: all 0.3s ease-in;
+                z-index: 1;
 
-            .pBox {
-                margin-bottom: 40px;
+                &.top {
+                    top: -100%;
+                }
 
-                p {
-                    font-size: 36px;
+                .contentBox {
+                    width: 100%;
+                    max-width: 1488px;
+                    margin: auto;
+                    padding: 114px 20px 0;
+                    color: #fff;
+                    position: relative;
+                    z-index: 2;
 
-                    span {
-                        margin-left: 42px;
+                    p,
+                    button {
+                        position: relative;
+                        z-index: 1;
+                    }
+
+                    .main {
+                        margin-bottom: 14px;
+
+                        p {
+                            font-size: 36px;
+                            font-weight: 700;
+                            margin-bottom: 20px;
+                        }
+                    }
+
+                    .sub {
+                        height: 125px;
+
+                        p {
+                            font-size: 17px;
+                            font-weight: 300;
+                            margin-bottom: 10px;
+                        }
+                    }
+
+                    .sub2 {
+                        & + .sub2 {
+                            margin-top: 50px;
+
+                            a {
+                                & ~ a {
+                                    button {
+                                        margin-top: 16px;
+                                    }
+                                }
+                                button {
+                                    margin-top: 24px;
+                                }
+                            }
+                        }
+
+                        p {
+                            font-size: 32px;
+                            margin-bottom: 14px;
+
+                            & + p {
+                                margin-bottom: 0;
+                            }
+                        }
+
+                        a {
+                            display: inline-block;
+                        }
+
+                        button {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            margin-top: 34px;
+                            width: 212px;
+                            height: 58px;
+                            position: relative;
+                            color: #fff;
+                            font-size: 16px;
+                            font-weight: 300;
+
+                            .bgDiv {
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                top: 0;
+                                left: 0;
+                                background: #fff;
+                                opacity: 0.2;
+                                border-radius: 58px;
+                            }
+
+                            img {
+                                margin-left: 16px;
+
+                                &.googleStore {
+                                    width: 20px;
+                                    height: 22px;
+                                }
+
+                                &.appStore {
+                                    width: 20px;
+                                    height: 25px;
+                                }
+                            }
+                        }
+                    }
+
+                    .btnBox {
+                        display: flex;
+
+                        &.col {
+                            flex-direction: column;
+                            align-items: flex-start;
+
+                            button {
+                                margin-right: 0;
+                                margin-bottom: 24px;
+                            }
+                        }
+
+                        button {
+                            height: 56px;
+                            line-height: 54px;
+                            padding: 0 34px 0 74px;
+                            position: relative;
+                            color: #fff;
+                            margin-right: 24px;
+
+                            .imgDiv {
+                                position: absolute;
+                                top: 0;
+                                left: -1px;
+                                width: 56px;
+                                height: 56px;
+
+                                img {
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+
+                            .border {
+                                position: absolute;
+                                box-sizing: border-box;
+                                margin: 0;
+                                top: 0;
+                                left: 0;
+                                display: block;
+                                width: 100%;
+                                height: 100%;
+                                border: 2px solid #fff;
+                                border-radius: 56px;
+                                opacity: 0.2;
+                            }
+
+                            span {
+                                opacity: 0.3;
+                                margin: 0 7px;
+                            }
+                        }
+                    }
+                }
+
+                .bgBox {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+
+                    .blackWrap {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: #000000;
+                        opacity: 0.3;
+                        transition: all 0.5s;
+                    }
+
+                    video,
+                    img {
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        width: auto;
+                        min-width: 1440px;
+                        min-height: 100%;
+                        transform: translate(-50%, -50%);
                     }
                 }
             }
 
-            .btnBox {
+            button {
+                position: relative;
+                z-index: 2;
+            }
+        }
+
+        .fixedBox {
+            .listBox {
+                position: absolute;
+                z-index: 2;
+                top: 50%;
+                right: 50%;
+                margin-right: -724px;
+                transform: translateY(-50%);
+
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+
+                    > li {
+                        display: flex;
+                        opacity: 0.2;
+                        color: #fff;
+                        margin-bottom: 13px;
+                        cursor: pointer;
+
+                        &.on {
+                            opacity: 1;
+                        }
+
+                        .circle {
+                            display: block;
+                            width: 13px;
+                            height: 13px;
+                            margin-left: 20px;
+                            background: #fff;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+
+            .footerBox {
+                position: absolute;
+                width: 100%;
+                max-width: 1448px;
+                bottom: 38px;
+                left: 50%;
+                margin-left: -724px;
+                z-index: 2;
+
                 display: flex;
                 justify-content: center;
 
-                button {
-                    height: 64px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    font-size: 17px;
+                .scrollGuideBox {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
                     color: #fff;
 
-                    span {
+                    > div {
+                        display: flex;
+                    }
+
+                    p {
+                        font-size: 15px;
+                    }
+
+                    .imgBox {
+                        margin-right: 12px;
+                        width: 17px;
+                        height: 17px;
+                        display: inline-block;
+                        overflow: hidden;
                         position: relative;
-                        top: 2px;
+                        top: -5px;
                     }
 
                     img {
-                        margin-left: 14px;
+                        position: relative;
+                        top: 0;
+                        animation: 2s infinite ease-in-out downArrow;
+                        width: 17px;
+                        height: 10px;
                     }
 
-                    &.outlined {
-                        width: 210px;
-                        border-radius: 64px;
-                        margin-right: 20px;
-                        border: 1px solid #fff;
+                    @keyframes downArrow {
+                        0% {
+                            top: -300%;
+                        }
+                        40% {
+                            top: 10%;
+                        }
+                        50% {
+                            top: 20%;
+                        }
+                        70% {
+                            top: 20%;
+                        }
+                        100% {
+                            top: 200%;
+                        }
+                    }
+                }
+
+                .linkBox {
+                    background: #02131e;
+                    width: 253px;
+                    height: 44px;
+                    border-radius: 44px;
+
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    padding-left: 26px;
+                    box-sizing: border-box;
+
+                    a {
+                        display: flex;
+                        align-items: center;
 
                         span {
-                            margin-right: 16px;
-                        }
-
-                        &:hover {
-                            text-decoration: underline;
-                        }
-                    }
-
-                    &.standard {
-                        padding: 0 20px;
-                        text-decoration: underline;
-                        &:hover {
-                            cursor: unset;
-                        }
-                    }
-                }
-            }
-
-            .scrollGuideBox {
-                position: absolute;
-                bottom: 40px;
-                left: 50%;
-                transform: translateX(-50%);
-
-                > div {
-                    display: flex;
-                }
-
-                p {
-                    font-size: 14px;
-                }
-
-                .imgBox {
-                    margin-right: 12px;
-                    width: 17px;
-                    height: 17px;
-                    display: inline-block;
-                    overflow: hidden;
-                }
-
-                img {
-                    position: relative;
-                    top: 0;
-                    animation: 2s infinite ease-in-out downArrow;
-                    width: 17px;
-                    height: 10px;
-                }
-
-                @keyframes downArrow {
-                    0% {
-                        top: -300%;
-                    }
-                    40% {
-                        top: 10%;
-                    }
-                    50% {
-                        top: 20%;
-                    }
-                    70% {
-                        top: 20%;
-                    }
-                    100% {
-                        top: 200%;
-                    }
-                }
-            }
-        }
-
-        .contentBox {
-            top: 100%;
-            transition: all 0.7s cubic-bezier(0.72, 0, 1, 1);
-            height: 100%;
-            position: relative;
-            z-index: 3;
-
-            &.on {
-                top: 35px;
-
-                .closeBtnBox {
-                    top: -17px;
-                }
-            }
-
-            .closeBtnBox {
-                width: 100%;
-                max-width: 1420px;
-                position: absolute;
-                z-index: 299;
-                left: 50%;
-                top: 17px;
-                transition: all 0.5s;
-                transform: translateX(-50%);
-
-                display: flex;
-                justify-content: flex-end;
-            }
-
-            .contentSection {
-                padding: 60px 0 52px;
-                background: #f6f1ed;
-                border-top-left-radius: 18px;
-                border-top-right-radius: 18px;
-                height: 100%;
-
-                overflow-x: hidden;
-                overflow-y: auto;
-
-                // 스크롤바 숨기기
-                -ms-overflow-style: none; /* IE and Edge */
-                scrollbar-width: none; /* Firefox */
-                &::-webkit-scrollbar {
-                    display: none;
-                }
-
-                .section {
-                    margin-bottom: 200px;
-
-                    .sectionTitle {
-                        font-weight: 700;
-                        font-size: 29px;
-                        width: 100%;
-                        max-width: 1420px;
-                        margin: auto;
-                        margin-bottom: 42px;
-                        color: #02131e;
-
-                        .ref {
-                            margin-top: 12px;
-                            font-size: 15px;
-                            color: #b0b0b0;
                             display: block;
-                            line-height: 1em;
-
-                            span {
-                                color: #7c8286;
-                            }
+                            width: 5px;
+                            height: 5px;
+                            background: #677178;
+                            border-radius: 50%;
+                            margin-right: 12px;
                         }
-                    }
-
-                    .sectionContent {
-                        &.movieBox {
-                            .flex {
-                                width: 1420px;
-                                margin: auto;
-                                justify-content: space-between;
-                            }
-
-                            .row {
-                                display: flex;
-                                justify-content: space-between;
-                                flex-direction: column;
-                            }
-
-                            .row_1 {
-                                display: flex;
-                                justify-content: space-between;
-                            }
-
-                            .filmBtn {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: flex-end;
-                                align-items: flex-end;
-                                overflow: hidden;
-                                position: relative;
-                                color: #fff;
-
-                                &:hover {
-                                    .btnBg {
-                                        transform: scale(1.1);
-                                    }
-                                }
-
-                                p,
-                                img {
-                                    position: relative;
-                                    z-index: 3;
-                                }
-
-                                p {
-                                    font-size: 20px;
-
-                                    .slash {
-                                        margin-right: 30px;
-                                    }
-
-                                    &.sub {
-                                        margin-bottom: 10px;
-                                    }
-
-                                    &.main {
-                                        margin-bottom: 28px;
-                                    }
-                                }
-
-                                .dimBg {
-                                    position: absolute;
-                                    top: 0;
-                                    left: 0;
-                                    width: 100%;
-                                    height: 100%;
-                                    z-index: 2;
-                                    background-color: #000;
-                                    opacity: 0.3;
-                                }
-
-                                .btnBg {
-                                    position: absolute;
-                                    top: 0;
-                                    left: 0;
-                                    width: 100%;
-                                    height: 100%;
-                                    z-index: 1;
-
-                                    transition: all 0.2s;
-                                }
-
-                                &.film_1 {
-                                    width: 986px;
-                                    height: 264px;
-                                    padding-bottom: 68px;
-                                    padding-right: 42px;
-                                }
-                                &.film_2 {
-                                    width: 462px;
-                                    height: 381px;
-                                    padding-bottom: 40px;
-                                    padding-right: 40px;
-                                }
-                                &.film_3 {
-                                    width: 500px;
-                                    height: 381px;
-                                    padding-bottom: 40px;
-                                    padding-right: 40px;
-                                }
-                                &.film_4 {
-                                    width: 410px;
-                                    height: 670px;
-                                    padding-bottom: 40px;
-                                    padding-right: 40px;
-                                }
-                            }
-                        }
-
-                        &.featureBox {
-                            .toggleBtnBox {
-                                display: flex;
-                                justify-content: center;
-                                margin-bottom: 52px;
-
-                                button {
-                                    display: flex;
-                                    justify-content: center;
-                                    align-items: center;
-
-                                    width: 310px;
-                                    height: 70px;
-                                    border-radius: 70px;
-                                    border: 2px solid #03131f;
-                                    background: none;
-                                    color: #03131f;
-                                    font-size: 18px;
-                                    margin-right: 20px;
-
-                                    span img {
-                                        margin-left: 28px;
-                                        &.on {
-                                            display: none;
-                                        }
-                                    }
-
-                                    &.on {
-                                        background: #03131f;
-                                        color: #fff;
-
-                                        span img {
-                                            display: none;
-
-                                            &.on {
-                                                display: inline;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-
-                            .featureList {
-                                display: none;
-                                width: 1534px;
-                                margin: auto;
-
-                                &.on {
-                                    display: flex;
-                                }
-
-                                .featureItem {
-                                    width: 500px;
-                                    margin-right: 20px;
-
-                                    &:last-of-type {
-                                        margin-right: 0;
-                                    }
-
-                                    .imgBox {
-                                        height: 345px;
-                                        position: relative;
-                                        margin-bottom: 26px;
-
-                                        img {
-                                            width: 100%;
-                                            height: 100%;
-                                        }
-
-                                        p {
-                                            position: absolute;
-                                            left: 30px;
-                                            bottom: 40px;
-                                            font-size: 20px;
-                                            color: #fff;
-                                        }
-                                    }
-
-                                    .decBox {
-                                        display: flex;
-                                        padding: 0 20px 0 12px;
-
-                                        .verticalBar {
-                                            width: 4px;
-                                            height: 16px;
-                                            background-color: #03131f;
-                                            margin-right: 14px;
-                                        }
-
-                                        .decText {
-                                            position: relative;
-                                            top: -5px;
-                                            font-size: 17px;
-                                            line-height: 27px;
-                                            color: #03131f;
-
-                                            .main {
-                                                font-size: 17px;
-                                                line-height: 27px;
-                                                color: #03131f;
-                                                margin-bottom: 10px;
-                                            }
-
-                                            .sub {
-                                                font-size: 14px;
-                                                line-height: 24px;
-                                                color: #b0b0b0;
-                                                display: flex;
-
-                                                span {
-                                                    color: #7c8286;
-                                                    display: block;
-                                                    margin-right: 4px;
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-
-                        &.cPillarBox {
-                            width: 1534px;
-                            margin: auto;
-
-                            .row {
-                                display: flex;
-                                justify-content: space-between;
-                                margin-bottom: 40px;
-
-                                .pillarItem {
-                                    width: 746px;
-                                    height: 320px;
-                                    position: relative;
-
-                                    .pillarName {
-                                        color: #7c8286;
-                                        font-size: 15px;
-                                        position: absolute;
-                                        top: 20px;
-                                        right: 20px;
-                                    }
-
-                                    img {
-                                        width: 100%;
-                                        height: 100%;
-                                    }
-                                }
-                            }
-
-                            .refBox {
-                                p {
-                                    color: #b0b0b0;
-                                    font-size: 15px;
-
-                                    & + p {
-                                        margin-top: 8px;
-                                    }
-
-                                    span {
-                                        color: #7c8286;
-                                    }
-                                }
-                            }
-                        }
-
-                        &.slideDivBox {
-                            display: flex;
-                            justify-content: space-between;
-                            width: 1420px;
-                            margin: auto;
-
-                            .slideBox {
-                                width: 662px;
-
-                                .slideTitle {
-                                    font-size: 29px;
-                                    text-align: right;
-                                    color: #646c71;
-                                    margin-bottom: 22px;
-                                }
-
-                                .slideDiv {
-                                    width: 662px;
-                                    height: 386px;
-
-                                    .slideItem {
-                                        width: 662px;
-                                        height: 386px;
-
-                                        > img {
-                                            width: 662px;
-                                            height: 386px;
-                                        }
-                                    }
-
-                                    .slick-arrow {
-                                        position: absolute;
-                                        top: auto;
-                                        bottom: -78px;
-                                        left: 0;
-                                        width: 54px;
-                                        height: 54px;
-                                        border-radius: 50%;
-                                        z-index: 99;
-                                        background-size: cover;
-                                        background-image: url(../static/slideBtn.png);
-                                        transform: rotateY(0deg);
-
-                                        &:hover {
-                                            background-image: url(../static/slideBtn-hover.png);
-                                        }
-
-                                        &::before {
-                                            display: none;
-                                        }
-
-                                        &.slick-prev {
-                                            transform: rotateY(180deg);
-                                        }
-
-                                        &.slick-next {
-                                            right: 0;
-                                            left: auto;
-                                        }
-                                    }
-
-                                    .slick-dots {
-                                        display: flex;
-                                        justify-content: center;
-                                        height: 8px;
-                                        bottom: -62px;
-
-                                        li {
-                                            margin-left: 16px;
-                                            transition: all 0.2s;
-                                            width: 8px;
-                                            height: 8px;
-                                            border-radius: 8px;
-                                            background: #c7c5c4;
-                                        }
-
-                                        button {
-                                            width: 100%;
-                                            height: 100%;
-                                            border-radius: 8px;
-                                            &::before {
-                                                display: none;
-                                            }
-                                        }
-
-                                        .slick-active {
-                                            width: 65px;
-                                            background: #0a1622;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-
-                        &.orderBox {
-                            width: 100%;
-                            max-width: 1710px;
-                            margin: auto;
-
-                            .pBox {
-                                height: 400px;
-                                padding: 125px 150px 0;
-                                margin-bottom: 48px;
-                                position: relative;
-                                box-sizing: border-box;
-                                text-align: right;
-
-                                p,
-                                button {
-                                    position: relative;
-                                    z-index: 1;
-                                    margin-bottom: 28px;
-                                }
-
-                                .main {
-                                    font-size: 29px;
-                                }
-
-                                .sub {
-                                    font-size: 18px;
-                                }
-
-                                button {
-                                    width: 180px;
-                                    height: 50px;
-                                    line-height: 50px;
-                                    border: 1px solid #fff;
-                                    text-align: center;
-                                    color: #fff;
-
-                                    &:hover {
-                                        text-decoration: underline;
-                                    }
-                                }
-
-                                > img {
-                                    width: 100%;
-                                    height: 100%;
-                                    position: absolute;
-                                    top: 0;
-                                    left: 0;
-                                    z-index: 0;
-                                }
-                            }
-
-                            .btnBox {
-                                width: 100%;
-                                max-width: 1420px;
-                                margin: auto;
-
-                                button {
-                                    height: 94px;
-
-                                    img {
-                                        margin-bottom: 12px;
-                                    }
-                                    p {
-                                        color: #000;
-                                        font-size: 14px;
-                                    }
-                                }
-                            }
+                        & + a {
+                            margin-left: 30px;
                         }
                     }
                 }
             }
         }
-
-        .mainBg {
+        .lineBox {
             position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
+            height: 150%;
+            right: 0;
+            top: -25%;
 
-            .blackWrap {
-                position: absolute;
-                left: 0;
-                top: 0;
-                width: 100%;
+            .circleLine {
                 height: 100%;
-                background: #000000;
-                opacity: 0;
-                transition: all 0.5s;
-                z-index: 2;
+                width: 100%;
+
+                border-radius: 50%;
+                border: 1px solid #fff;
             }
 
-            video {
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                width: auto;
-                min-width: 1440px;
-                min-height: 100%;
-                transform: translate(-50%, -50%);
+            img {
+                height: 100%;
             }
         }
 
@@ -708,7 +409,7 @@ body {
         .contentDiv {
             color: #0a1622;
             padding-top: 100px;
-            padding-bottom: 1000px;
+            padding-bottom: 300px;
             height: 100%;
             box-sizing: border-box;
             overflow: auto;

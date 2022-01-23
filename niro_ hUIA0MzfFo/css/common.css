@@ -12,7 +12,7 @@
 }
 
 .fw0 {
-  font-weight: 000;
+  font-weight: 000 !important;
 }
 
 .transi0 {
@@ -20,7 +20,7 @@
 }
 
 .fw1 {
-  font-weight: 100;
+  font-weight: 100 !important;
 }
 
 .transi1 {
@@ -28,7 +28,7 @@
 }
 
 .fw2 {
-  font-weight: 200;
+  font-weight: 200 !important;
 }
 
 .transi2 {
@@ -36,7 +36,7 @@
 }
 
 .fw3 {
-  font-weight: 300;
+  font-weight: 300 !important;
 }
 
 .transi3 {
@@ -44,7 +44,7 @@
 }
 
 .fw4 {
-  font-weight: 400;
+  font-weight: 400 !important;
 }
 
 .transi4 {
@@ -52,7 +52,7 @@
 }
 
 .fw5 {
-  font-weight: 500;
+  font-weight: 500 !important;
 }
 
 .transi5 {
@@ -60,7 +60,7 @@
 }
 
 .fw6 {
-  font-weight: 600;
+  font-weight: 600 !important;
 }
 
 .transi6 {
@@ -68,7 +68,7 @@
 }
 
 .fw7 {
-  font-weight: 700;
+  font-weight: 700 !important;
 }
 
 .transi7 {
@@ -76,7 +76,7 @@
 }
 
 .fw8 {
-  font-weight: 800;
+  font-weight: 800 !important;
 }
 
 .transi8 {
@@ -84,7 +84,7 @@
 }
 
 .fw9 {
-  font-weight: 900;
+  font-weight: 900 !important;
 }
 
 .transi9 {
@@ -92,7 +92,7 @@
 }
 
 .fw10 {
-  font-weight: 1000;
+  font-weight: 1000 !important;
 }
 
 .transi10 {
