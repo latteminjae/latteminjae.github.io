@@ -14,7 +14,7 @@ export function animate(type: "intro" | HTMLElement) {
             {
                 opacity: 1,
                 top: 0,
-                delay: 1.2,
+                delay: 1,
             },
             0.4
         );

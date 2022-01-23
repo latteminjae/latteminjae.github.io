@@ -100,4 +100,12 @@ window.onload = function () {
 
     // init animation
     func.animate("intro");
+
+    // 앵커
+    const hash = window.location.hash.slice(1);
+    const sectionsName = ["tvc", "brand", "sustainability", "technology", "image"];
+    if (sectionsName.some((v) => v === hash)) {
+        const index = sectionsName.indexOf(hash);
+        func.slideTo(sections, listItems, index);
+    }
 };
