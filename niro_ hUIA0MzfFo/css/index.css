@@ -11000,7 +11000,8 @@ body {
   margin-bottom: 20px;
 }
 #ms_niro-launching-wrap .ms_container .sectionSlideBox .section .contentBox .sub {
-  height: 125px;
+  height: auto;
+  margin-bottom: 46px;
 }
 #ms_niro-launching-wrap .ms_container .sectionSlideBox .section .contentBox .sub p {
   font-size: 17px;
@@ -11041,6 +11042,7 @@ body {
 }
 #ms_niro-launching-wrap .ms_container .sectionSlideBox .section .contentBox .sub2 button.center {
   justify-content: center;
+  padding-right: 0;
 }
 #ms_niro-launching-wrap .ms_container .sectionSlideBox .section .contentBox .sub2 button .bgDiv {
   position: absolute;
@@ -11072,6 +11074,7 @@ body {
 #ms_niro-launching-wrap .ms_container .sectionSlideBox .section .contentBox .btnBox.col button {
   margin-right: 0;
   margin-bottom: 24px;
+  width: 247px;
 }
 #ms_niro-launching-wrap .ms_container .sectionSlideBox .section .contentBox .btnBox button {
   height: 56px;
@@ -11248,9 +11251,8 @@ body {
   height: 44px;
   border-radius: 44px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  padding-left: 26px;
   box-sizing: border-box;
 }
 #ms_niro-launching-wrap .ms_container .fixedBox .footerBox .linkBox a {
@@ -11461,10 +11463,7 @@ body {
     font-size: 6.2962962963vw;
   }
   #ms_niro-launching-wrap .ms_container .sectionSlideBox .section .contentBox .sub {
-    height: 19.4444444444vw;
-  }
-  #ms_niro-launching-wrap .ms_container .sectionSlideBox .section .contentBox .sub.opt1 {
-    height: 23.5185185185vw;
+    margin-bottom: 5.5555555556vw;
   }
   #ms_niro-launching-wrap .ms_container .sectionSlideBox .section .contentBox .sub p {
     font-size: 3.3333333333vw;
@@ -11526,7 +11525,7 @@ body {
     padding-right: 0;
   }
   #ms_niro-launching-wrap .ms_container .sectionSlideBox .section .contentBox .btnBox.opt1 button + button {
-    margin-top: 5.5555555556vw;
+    margin-top: 3.7037037037vw;
   }
   #ms_niro-launching-wrap .ms_container .sectionSlideBox .section .contentBox .btnBox button {
     height: 8.7962962963vw;
