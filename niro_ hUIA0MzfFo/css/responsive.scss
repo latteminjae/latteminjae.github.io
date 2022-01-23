@@ -128,6 +128,7 @@ div {
                         &.col {
                             flex-direction: row;
                             justify-content: space-between;
+                            @include px2vwm("padding-right", 66);
 
                             button {
                                 @include px2vwm("width", 455);
@@ -172,9 +173,10 @@ div {
                 }
                 .bgBox {
                     img {
-                        min-width: 100%;
+                        height: 100%;
+                        width: auto;
                     }
-                    
+
                     video {
                         min-width: 100%;
                         width: 100%;

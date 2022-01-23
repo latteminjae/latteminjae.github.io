@@ -97,7 +97,7 @@ export function slideUp(sections: NodeListOf<HTMLElement>, listItems: NodeListOf
 
     setTimeout(() => {
         isSliding = false;
-    }, 700);
+    }, 1000);
 }
 
 export function slideDown(sections: NodeListOf<HTMLElement>, listItems: NodeListOf<HTMLElement>): void {
@@ -131,7 +131,7 @@ export function slideDown(sections: NodeListOf<HTMLElement>, listItems: NodeList
 
     setTimeout(() => {
         isSliding = false;
-    }, 700);
+    }, 1000);
 }
 
 export function slideTo(sections: NodeListOf<HTMLElement>, listItems: NodeListOf<HTMLElement>, index: number): void {
@@ -162,5 +162,5 @@ export function slideTo(sections: NodeListOf<HTMLElement>, listItems: NodeListOf
 
     setTimeout(() => {
         isSliding = false;
-    }, 700);
+    }, 1000);
 }

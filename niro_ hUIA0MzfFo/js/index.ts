@@ -37,14 +37,15 @@ window.onload = function () {
     });
 
     let lastY = 0;
-    ms_container.addEventListener("touchmove", (e) => {
-        const currentY = e.touches[0].clientY;
-        if (currentY > lastY) {
-            func.slideDown(sections, listItems);
-        } else if (currentY < lastY) {
-            func.slideUp(sections, listItems);
-        }
-        lastY = currentY;
+    ms_container.addEventListener("touchstart", (e) => {
+        // const currentY = e.touches[0].clientY;
+        console.log(e)
+        // if (currentY > lastY) {
+        //     func.slideDown(sections, listItems);
+        // } else if (currentY < lastY) {
+        //     func.slideUp(sections, listItems);
+        // }
+        // lastY = currentY;
     });
 
     // section list click -> slide

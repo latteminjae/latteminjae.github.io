@@ -157,6 +157,7 @@ body {
                         &.col {
                             flex-direction: column;
                             align-items: flex-start;
+                            
 
                             button {
                                 margin-right: 0;
@@ -215,6 +216,7 @@ body {
                     top: 0;
                     width: 100%;
                     height: 100%;
+                    overflow: hidden;
 
                     .blackWrap {
                         position: absolute;
