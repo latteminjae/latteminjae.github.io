@@ -36,16 +36,18 @@ window.onload = function () {
         });
     });
 
-    let lastY = 0;
+    let startY = 0;
     ms_container.addEventListener("touchstart", (e) => {
-        // const currentY = e.touches[0].clientY;
-        console.log(e)
-        // if (currentY > lastY) {
-        //     func.slideDown(sections, listItems);
-        // } else if (currentY < lastY) {
-        //     func.slideUp(sections, listItems);
-        // }
-        // lastY = currentY;
+        startY = e.touches[0].clientY;
+    });
+
+    ms_container.addEventListener("touchend", (e) => {
+        const endY = e.changedTouches[0].clientY;
+        if (endY > startY) {
+            func.slideDown(sections, listItems);
+        } else if (endY < startY) {
+            func.slideUp(sections, listItems);
+        }
     });
 
     // section list click -> slide
