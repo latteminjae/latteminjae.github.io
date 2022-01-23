@@ -11117,6 +11117,7 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 #ms_niro-launching-wrap .ms_container .sectionSlideBox .section .bgBox .blackWrap {
   position: absolute;
@@ -11544,7 +11545,8 @@ body {
     margin: 0vw 1.1111111111vw;
   }
   #ms_niro-launching-wrap .ms_container .sectionSlideBox .section .bgBox img {
-    min-width: 100%;
+    height: auto;
+    width: auto;
   }
   #ms_niro-launching-wrap .ms_container .sectionSlideBox .section .bgBox video {
     min-width: 100%;
