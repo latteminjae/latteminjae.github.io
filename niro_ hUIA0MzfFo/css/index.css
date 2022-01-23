@@ -11510,6 +11510,7 @@ body {
   #ms_niro-launching-wrap .ms_container .sectionSlideBox .section .contentBox .btnBox.col {
     flex-direction: row;
     justify-content: space-between;
+    padding-right: 6.1111111111vw;
   }
   #ms_niro-launching-wrap .ms_container .sectionSlideBox .section .contentBox .btnBox.col button {
     width: 42.1296296296vw;
@@ -11545,7 +11546,7 @@ body {
     margin: 0vw 1.1111111111vw;
   }
   #ms_niro-launching-wrap .ms_container .sectionSlideBox .section .bgBox img {
-    height: auto;
+    height: 100%;
     width: auto;
   }
   #ms_niro-launching-wrap .ms_container .sectionSlideBox .section .bgBox video {
