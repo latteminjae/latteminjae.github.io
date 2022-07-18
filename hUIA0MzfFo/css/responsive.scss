@@ -1,0 +1,45 @@
+// display
+div {
+    .ms_tab,
+    .ms_tab_inline,
+    .ms_tab_flex {
+        display: none !important;
+    }
+    .ms_nontab {
+        display: block !important;
+    }
+    .ms_nontab_flex {
+        display: flex !important;
+    }
+    .ms_nontab_inline {
+        display: inline !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    div {
+        .ms_tab {
+            display: block !important;
+        }
+        .ms_tab_inline {
+            display: inline !important;
+        }
+        .ms_tab_flex {
+            display: flex !important;
+        }
+        .ms_nontab,
+        .ms_nontab_flex,
+        .ms_nontab_inline {
+            display: none !important;
+        }
+    }
+
+    .ms_nontab_only {
+        display: none !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    #wrap {
+    }
+}
