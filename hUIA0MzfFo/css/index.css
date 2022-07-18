@@ -14659,7 +14659,8 @@ label {
 #wrap .loginWrap .slideBox .slick-dots > li {
   width: 70px;
   height: 2px;
-  background: #dedede;
+  background: #fff;
+  opacity: 0.3;
   transition: all 0.3s;
 }
 #wrap .loginWrap .slideBox .slick-dots > li:not(:last-of-type) {
@@ -14673,7 +14674,7 @@ label {
   display: none;
 }
 #wrap .loginWrap .slideBox .slick-dots > li.slick-active {
-  background: #fff;
+  opacity: 1;
 }
 #wrap .loginWrap .loginBox {
   display: flex;

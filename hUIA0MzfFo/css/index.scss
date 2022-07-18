@@ -152,7 +152,8 @@ $fs-b: 40px;
                 > li {
                     width: 70px;
                     height: 2px;
-                    background: #dedede;
+                    background: #fff;
+                    opacity: 0.3;
                     transition: all 0.3s;
 
                     &:not(:last-of-type) {
@@ -169,7 +170,7 @@ $fs-b: 40px;
                     }
 
                     &.slick-active {
-                        background: #fff;
+                        opacity: 1;
                     }
                 }
             }
