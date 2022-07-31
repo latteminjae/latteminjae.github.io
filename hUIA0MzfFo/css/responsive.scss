@@ -1,3 +1,5 @@
+@import "./func.scss";
+
 // display
 div {
     .ms_tab,
@@ -33,13 +35,214 @@ div {
             display: none !important;
         }
     }
-
-    .ms_nontab_only {
-        display: none !important;
-    }
 }
 
 @media (max-width: 1024px) {
-    #wrap {
+    .container {
+        .section1 {
+            height: calc((var(--vh, 1vh) * 100) - 116px);
+            min-height: auto;
+
+            .contentBox {
+                @include px2vwm("max-width", 948);
+                @include px2vwm("padding-top", 128);
+
+                .main {
+                    @include px2vwm("font-size", 68);
+                    @include px2vwm("margin-bottom", 30);
+                }
+
+                .sub {
+                    @include px2vwm("font-size", 36);
+                    @include px2vwm("margin-right", 45);
+                }
+
+                .divider {
+                    @include px2vwm("width", 622);
+                    @include px2vwm("height", 2);
+                    min-height: 1px;
+                }
+            }
+
+            .footerBox {
+                @include px2vwm("bottom", 92);
+
+                .scrollGuideBox {
+                    position: relative;
+
+                    > div {
+                        align-items: center;
+                    }
+                    p {
+                        @include px2vwm("font-size", 34);
+                    }
+
+                    .imgBox {
+                        top: -1px;
+                        @include px2vwm("width", 50);
+                        @include px2vwm("height", 50);
+                        @include px2vwm("margin-right", 34);
+                    }
+
+                    img {
+                        @include px2vwm("width", 49);
+                        @include px2vwm("height", 27);
+                    }
+                }
+            }
+
+            .bgBox {
+                img {
+                    height: auto;
+                    width: 100%;
+                }
+
+                video {
+                    min-width: 100%;
+                    width: 100%;
+                }
+
+                @media screen and (max-aspect-ratio: 700/1282) {
+                    img {
+                        height: 100%;
+                        width: auto;
+                    }
+                }
+
+                @media screen and (max-aspect-ratio: 700/1282) {
+                    video {
+                        width: auto;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+
+        .section2 {
+            height: auto;
+
+            .contentBox {
+                max-width: 100%;
+                @include px2vwm("margin-top", 128);
+
+                .main {
+                    position: relative;
+                    @include px2vwm("font-size", 60);
+                    margin: auto;
+                    @include px2vwm("margin-bottom", 65);
+                    @include px2vwm("width", 944);
+
+                    font-weight: 700px;
+                }
+
+                .slideBox {
+                    @include px2vwm("width", 944);
+                    @include px2vwm("margin-bottom", 172);
+
+                    .slideDiv {
+                        &.slider-for {
+                            @include px2vwm("margin-bottom", 44);
+                            box-shadow: 3px 3px 24px 10px #57291223;
+
+                            .slideItem {
+                                @include px2vwm("height", 584);
+                            }
+                        }
+                        &.slider-nav {
+                            @include px2vwm("width", 576);
+
+                            .slideItem {
+                                @include px2vwm("width", 192);
+                                @include px2vwm("height", 120);
+                            }
+
+                            .slick-arrow {
+                                @include px2vwm("width", 80);
+                                @include px2vwm("height", 80);
+                                @include px2vwm("top", 24);
+                                @include px2vwm("background-position", 34 26);
+                                @include px2vwm("background-size", 15 25);
+
+                                @include px2vwm("left", -124);
+
+                                &.slick-next {
+                                    left: auto;
+                                    @include px2vwm("right", -124);
+                                }
+                            }
+
+                            .slick-track {
+                                transform: translate3d(-196px, 0px, 0px) !important;
+                            }
+                        }
+                    }
+                }
+
+                .scrollGuideBox {
+                    position: relative;
+                    @include px2vwm("margin-bottom", 80);
+
+                    > div {
+                        align-items: center;
+                    }
+                    p {
+                        @include px2vwm("font-size", 34);
+                    }
+
+                    .imgBox {
+                        top: -1px;
+                        @include px2vwm("width", 50);
+                        @include px2vwm("height", 50);
+                        @include px2vwm("margin-right", 34);
+                    }
+
+                    img {
+                        @include px2vwm("width", 49);
+                        @include px2vwm("height", 27);
+                    }
+                }
+            }
+
+            .dividerBox {
+                width: 100%;
+
+                .divider {
+                    @include px2vwm("width", 2);
+                    @include px2vwm("height", 2);
+                    min-width: 1px;
+                    min-height: 1px;
+
+                    span {
+                        background-color: #c9b0a4;
+                    }
+
+                    &.divider0 {
+                        @include px2vwm("top", 164);
+                        @include px2vwm("left", 361);
+                        @include px2vwm("width", 444);
+                    }
+                    &.divider1 {
+                        @include px2vwm("top", 164);
+                        @include px2vwm("left", 803);
+                        @include px2vwm("height", 332);
+                    }
+                    &.divider2 {
+                        display: none;
+                        @include px2vwm("top", 476);
+                        @include px2vwm("right", 234);
+                        @include px2vwm("height", 712);
+                    }
+                    &.divider3 {
+                        display: none;
+                        @include px2vwm("top", 1186);
+                        @include px2vwm("width", 234);
+                    }
+                }
+            }
+
+            .bgBox {
+                width: 100%;
+            }
+        }
     }
 }

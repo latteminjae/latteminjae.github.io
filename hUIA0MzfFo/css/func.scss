@@ -1,0 +1,50 @@
+@mixin px2vw($property, $valueList) {
+    $vwList: ();
+    $pxList: ();
+    $viewportWidth: 19.2;
+    @each $px in $valueList {
+        $vwList: append($vwList, ($px / $viewportWidth) + vw);
+    }
+    #{$property}: $vwList;
+}
+@mixin px2vw2($property, $valueList) {
+    $vwList: ();
+    $pxList: ();
+    $viewportWidth: 14.8;
+    @each $px in $valueList {
+        $vwList: append($vwList, ($px / $viewportWidth) + vw);
+    }
+    #{$property}: $vwList;
+}
+@mixin px2vwm($property, $valueList) {
+    $vwList: ();
+    $pxList: ();
+    $viewportWidth: 10.8;
+    @each $px in $valueList {
+        $vwList: append($vwList, ($px / $viewportWidth) + vw);
+    }
+    #{$property}: $vwList;
+}
+@mixin px2vh($property, $valueList) {
+    $vhList: ();
+    $pxList: ();
+    $viewportHeight: 10.5;
+    @each $px in $valueList {
+        $vhList: append($vhList, ($px / $viewportHeight) + vh);
+    }
+    #{$property}: $vhList;
+}
+@mixin px2vhm($property, $valueList) {
+    $vhList: ();
+    $pxList: ();
+    $viewportHeight: 1920;
+    @each $px in $valueList {
+        $vhList: append(
+            $vhList,
+            calc(#{$px}px * (var(--inner-height) / #{$viewportHeight}))
+        );
+    }
+    #{$property}: $vhList;
+}
+
+

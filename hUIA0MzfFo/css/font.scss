@@ -1,64 +1,27 @@
 @font-face {
-    font-family: "Pretendard";
-    font-weight: 100;
-    font-display: swap;
-    src: local("Pretendard Thin"), url("./fonts/PretendardStd-Thin.woff2") format("woff2"),
-        url("./fonts/PretendardStd-Thin.woff") format("woff");
-}
-
-@font-face {
-    font-family: "Pretendard";
-    font-weight: 200;
-    font-display: swap;
-    src: local("Pretendard ExtraLight"), url("./fonts/PretendardStd-ExtraLight.woff2") format("woff2"),
-        url("./fonts/PretendardStd-ExtraLight.woff") format("woff");
-}
-@font-face {
-    font-family: "Pretendard";
-    font-weight: 300;
-    font-display: swap;
-    src: local("Pretendard Light"), url("./fonts/PretendardStd-Light.woff2") format("woff2"),
-        url("./fonts/PretendardStd-Light.woff") format("woff");
-}
-@font-face {
-    font-family: "Pretendard";
-    font-weight: 400;
-    font-display: swap;
-    src: local("Pretendard Regular"), url("./fonts/PretendardStd-Regular.woff2") format("woff2"),
-        url("./fonts/PretendardStd-Regular.woff") format("woff");
-}
-@font-face {
-    font-family: "Pretendard";
-    font-weight: 500;
-    font-display: swap;
-    src: local("Pretendard Medium"), url("./fonts/PretendardStd-Medium.woff2") format("woff2"),
-        url("./fonts/PretendardStd-Medium.woff") format("woff");
-}
-@font-face {
-    font-family: "Pretendard";
-    font-weight: 600;
-    font-display: swap;
-    src: local("Pretendard SemiBold"), url("./fonts/PretendardStd-SemiBold.woff2") format("woff2"),
-        url("./fonts/PretendardStd-SemiBold.woff") format("woff");
-}
-@font-face {
-    font-family: "Pretendard";
+    font-family: "Kia";
+    font-style: normal;
+    src: url("./font/KiaSignatureBold.eot");
+    src: url("./font/KiaSignatureBold.eot?#iefix") format("embedded-opentype"),
+        url("./font/KiaSignatureBold.woff") format("woff"), url("./font/KiaSignatureBold.woff2") format("woff2");
     font-weight: 700;
-    font-display: swap;
-    src: local("Pretendard Bold"), url("./fonts/PretendardStd-Bold.woff2") format("woff2"),
-        url("./fonts/PretendardStd-Bold.woff") format("woff");
+    font-style: normal;
 }
 @font-face {
-    font-family: "Pretendard";
-    font-weight: 800;
-    font-display: swap;
-    src: local("Pretendard ExtraBold"), url("./fonts/PretendardStd-ExtraBold.woff2") format("woff2"),
-        url("./fonts/PretendardStd-ExtraBold.woff") format("woff");
+    font-family: "Kia";
+    font-style: normal;
+    src: url("./font/KiaSignatureRegular.eot");
+    src: url("./font/KiaSignatureRegular.eot?#iefix") format("embedded-opentype"),
+        url("./font/KiaSignatureRegular.woff") format("woff"), url("./font/KiaSignatureRegular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
 }
 @font-face {
-    font-family: "Pretendard";
-    font-weight: 900;
-    font-display: swap;
-    src: local("Pretendard Black"), url("./fonts/PretendardStd-Black.woff2") format("woff2"),
-        url("./fonts/PretendardStd-Black.woff") format("woff");
+    font-family: "Kia";
+    font-style: normal;
+    src: url("./font/KiaSignatureLight.eot");
+    src: url("./font/KiaSignatureLight.eot?#iefix") format("embedded-opentype"),
+        url("./font/KiaSignatureLight.woff") format("woff"), url("./font/KiaSignatureLight.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
 }
