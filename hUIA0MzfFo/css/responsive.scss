@@ -46,6 +46,8 @@ div {
             .contentBox {
                 @include px2vwm("max-width", 948);
                 @include px2vwm("padding-top", 128);
+                padding-left: 0;
+                padding-right: 0;
 
                 .main {
                     @include px2vwm("font-size", 68);
@@ -124,6 +126,8 @@ div {
             .contentBox {
                 max-width: 100%;
                 @include px2vwm("margin-top", 128);
+                padding-left: 0;
+                padding-right: 0;
 
                 .main {
                     position: relative;
@@ -151,6 +155,10 @@ div {
                         &.slider-nav {
                             @include px2vwm("width", 576);
 
+                            .slick-list {
+                                @include px2vwm("height", 120);
+                            }
+
                             .slideItem {
                                 @include px2vwm("width", 192);
                                 @include px2vwm("height", 120);
@@ -172,7 +180,7 @@ div {
                             }
 
                             .slick-track {
-                                transform: translate3d(-196px, 0px, 0px) !important;
+                                // transform: translate3d(-196px, 0px, 0px) !important;
                             }
                         }
                     }

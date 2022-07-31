@@ -37,6 +37,8 @@ div .ms_nontab_inline {
   .container .section1 .contentBox {
     max-width: 87.7777777778vw;
     padding-top: 11.8518518519vw;
+    padding-left: 0;
+    padding-right: 0;
   }
   .container .section1 .contentBox .main {
     font-size: 6.2962962963vw;
@@ -101,6 +103,8 @@ div .ms_nontab_inline {
   .container .section2 .contentBox {
     max-width: 100%;
     margin-top: 11.8518518519vw;
+    padding-left: 0;
+    padding-right: 0;
   }
   .container .section2 .contentBox .main {
     position: relative;
@@ -124,6 +128,9 @@ div .ms_nontab_inline {
   .container .section2 .contentBox .slideBox .slideDiv.slider-nav {
     width: 53.3333333333vw;
   }
+  .container .section2 .contentBox .slideBox .slideDiv.slider-nav .slick-list {
+    height: 11.1111111111vw;
+  }
   .container .section2 .contentBox .slideBox .slideDiv.slider-nav .slideItem {
     width: 17.7777777778vw;
     height: 11.1111111111vw;
@@ -139,9 +146,6 @@ div .ms_nontab_inline {
   .container .section2 .contentBox .slideBox .slideDiv.slider-nav .slick-arrow.slick-next {
     left: auto;
     right: -11.4814814815vw;
-  }
-  .container .section2 .contentBox .slideBox .slideDiv.slider-nav .slick-track {
-    transform: translate3d(-196px, 0px, 0px) !important;
   }
   .container .section2 .contentBox .scrollGuideBox {
     position: relative;

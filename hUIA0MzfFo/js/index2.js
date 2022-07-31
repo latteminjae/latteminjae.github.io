@@ -13,5 +13,6 @@ $(document).ready(function () {
         centerMode: true,
         speed: 300,
         variableWidth: true,
+        focusOnSelect: true,
     });
 });

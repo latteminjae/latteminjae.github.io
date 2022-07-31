@@ -23,7 +23,7 @@ window.onload = function () {
         (
             new ScrollMagic.Scene({
                 duration: 1,
-                offset: v.getBoundingClientRect().height / 2,
+                offset: v.getBoundingClientRect().height / 2 - 200,
                 triggerElement: v,
                 triggerHook: 1,
             }) as Scene_

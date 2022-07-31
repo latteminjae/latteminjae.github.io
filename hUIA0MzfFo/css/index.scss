@@ -199,7 +199,7 @@
                 .main {
                     position: absolute;
                     top: 0;
-                    left: 0;
+                    left: 20px;
                     color: #0a0b0e;
                     font-size: 30px;
                 }
@@ -228,11 +228,27 @@
                         }
 
                         &.slider-nav {
-                            width: 494px;
+                            width: 495px;
                             margin: auto;
+
+                            .slick-list {
+                                padding: 0 !important;
+                                height: 103px;
+                            }
 
                             .slideItem {
                                 position: relative;
+                                height: 103px;
+                                cursor: pointer;
+
+                                display: none;
+
+                                &[data-slick-index="0"],
+                                &[data-slick-index="1"],
+                                &[data-slick-index="2"] {
+                                    display: block;
+                                }
+
                                 img {
                                     width: 100%;
                                     height: 100%;
@@ -257,7 +273,8 @@
                             }
 
                             .slick-track {
-                                transform: translate3d(-380px, 0px, 0px) !important;
+                                transform: translate3d(0, 0px, 0px) !important;
+                                width: 100% !important;
                             }
 
                             .slick-arrow {
