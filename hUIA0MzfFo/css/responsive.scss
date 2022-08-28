@@ -37,219 +37,332 @@ div {
     }
 }
 
+@media (max-width: 1488px) {
+    .ms_container {
+        .fixedBox {
+            .listBox {
+                margin-left: 0;
+                transform: translateY(0);
+                left: 50px;
+            }
+            .menuBtnBox {
+                right: 60px;
+                margin-right: 0;
+            }
+        }
+    }
+}
+
 @media (max-width: 1024px) {
-    .container {
-        .section1 {
-            height: calc((var(--vh, 1vh) * 100) - 116px);
-            min-height: auto;
+    .ms_container {
+        height: calc((var(--vh, 1vh) * 100) - 116px);
+        min-height: auto;
 
-            .contentBox {
-                @include px2vwm("max-width", 948);
-                @include px2vwm("padding-top", 128);
-                padding-left: 0;
-                padding-right: 0;
+        .sectionSlideBox {
+            .section {
+                .contentBox {
+                    @include px2vwm("padding", 220 0 0 68);
+                    box-sizing: border-box;
 
-                .main {
-                    @include px2vwm("font-size", 68);
-                    @include px2vwm("margin-bottom", 30);
-                }
+                    .copywritingBox {
+                        padding: 0;
+                        @include px2vwm("margin-bottom", 200);
 
-                .sub {
-                    @include px2vwm("font-size", 36);
-                    @include px2vwm("margin-right", 45);
-                }
+                        .main {
+                            @include px2vwm("margin-bottom", 50);
+                            @include px2vwm("font-size", 58);
+                        }
 
-                .divider {
-                    @include px2vwm("width", 622);
-                    @include px2vwm("height", 2);
-                    min-height: 1px;
-                }
-            }
+                        .sub1 {
+                            @include px2vwm("margin-bottom", 70);
+                            @include px2vwm("font-size", 68);
+                        }
 
-            .footerBox {
-                @include px2vwm("bottom", 92);
+                        .sub2 {
+                            @include px2vwm("font-size", 36);
 
-                .scrollGuideBox {
-                    position: relative;
-
-                    > div {
-                        align-items: center;
-                    }
-                    p {
-                        @include px2vwm("font-size", 34);
+                            &:not(:last-of-type) {
+                                @include px2vwm("margin-bottom", 20);
+                            }
+                        }
                     }
 
-                    .imgBox {
-                        top: -1px;
-                        @include px2vwm("width", 50);
-                        @include px2vwm("height", 50);
-                        @include px2vwm("margin-right", 34);
+                    .movieListBox {
+                        .movieList {
+                            flex-direction: column;
+
+                            li {
+                                @include px2vwm("width", 436);
+                                @include px2vwm("height", 90);
+
+                                &:not(:last-of-type) {
+                                    margin-right: 0;
+                                    @include px2vwm("margin-bottom", 74);
+                                }
+
+                                &.on {
+                                    @include px2vwm("height", 348);
+
+                                    .nameBox {
+                                        opacity: 0;
+                                    }
+                                    .thumbnail {
+                                        top: 0;
+                                        height: 100%;
+
+                                        .bg,
+                                        .dim {
+                                            opacity: 1;
+                                        }
+                                    }
+                                }
+
+                                .name {
+                                    @include px2vwm("font-size", 40);
+                                }
+
+                                .nameBox {
+                                    justify-content: space-between;
+                                    top: 0;
+
+                                    img {
+                                        margin-left: 0;
+                                        @include px2vwm("width", 60);
+                                        @include px2vwm("height", 60);
+                                    }
+                                }
+
+                                .thumbnail {
+                                    top: 100%;
+                                    height: 2px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .galleryBox {
+                    .gallery {
+                        > li {
+                            &:not(:last-of-type) {
+                                @include px2vwm("margin-right", 250);
+                            }
+
+                            // FIXME: temporary
+
+                            &:nth-of-type(1) {
+                                img {
+                                    @include px2vwm("width", 882);
+                                    @include px2vwm("height", 499);
+                                }
+                            }
+                            &:nth-of-type(2) {
+                                img {
+                                    @include px2vwm("width", 1430);
+                                    @include px2vwm("height", 840);
+                                }
+                            }
+                            &:nth-of-type(3) {
+                                img {
+                                    @include px2vwm("width", 838);
+                                    @include px2vwm("height", 475);
+                                }
+                            }
+                            &:nth-of-type(4) {
+                                img {
+                                    @include px2vwm("width", 1229);
+                                    @include px2vwm("height", 695);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .galleryController {
+                    @include px2vwm("bottom", 270);
+                    @include px2vwm("padding", 0 64);
+
+                    .dragIcon {
+                        @include px2vwm("left", 109);
+                        @include px2vwm("top", 218);
+
+                        @include px2vwm("width", 148);
+                        @include px2vwm("height", 167);
+
+                        animation: dragIconMo 0.7s ease-in infinite alternate;
+
+                        @keyframes dragIconMo {
+                            from {
+                                @include px2vwm("top", -228);
+                            }
+                            to {
+                                @include px2vwm("top", -200);
+                            }
+                        }
                     }
 
+                    .controller {
+                        @include px2vwm("width", 228);
+                        height: 4px;
+                        top: 3px;
+                    }
+
+                    .range {
+                        height: 2px;
+                    }
+                }
+
+                .bgBox {
                     img {
-                        @include px2vwm("width", 49);
-                        @include px2vwm("height", 27);
+                        height: auto;
+                        width: 100%;
                     }
-                }
-            }
 
-            .bgBox {
-                img {
-                    height: auto;
-                    width: 100%;
-                }
-
-                video {
-                    min-width: 100%;
-                    width: 100%;
-                }
-
-                @media screen and (max-aspect-ratio: 700/1282) {
-                    img {
-                        height: 100%;
-                        width: auto;
-                    }
-                }
-
-                @media screen and (max-aspect-ratio: 700/1282) {
                     video {
-                        width: auto;
-                        height: 100%;
+                        min-width: 100%;
+                        width: 100%;
+                    }
+
+                    @media screen and (max-aspect-ratio: 700/1282) {
+                        img {
+                            height: 100%;
+                            width: auto;
+                        }
+                    }
+
+                    @media screen and (max-aspect-ratio: 700/1282) {
+                        video {
+                            width: auto;
+                            height: 100%;
+                        }
                     }
                 }
             }
         }
 
-        .section2 {
-            height: auto;
+        .fixedBox {
+            .listBox {
+                @include px2vwm("left", 66);
+                @include px2vwm("bottom", 50);
 
-            .contentBox {
-                max-width: 100%;
-                @include px2vwm("margin-top", 128);
-                padding-left: 0;
-                padding-right: 0;
+                ul {
+                    align-items: flex-start;
 
-                .main {
-                    position: relative;
-                    @include px2vwm("font-size", 60);
-                    margin: auto;
-                    @include px2vwm("margin-bottom", 65);
-                    @include px2vwm("width", 944);
+                    > li {
+                        @include px2vwm("margin-bottom", 20);
+                        @include px2vwm("font-size", 29);
+                        flex-direction: row-reverse;
 
-                    font-weight: 700px;
-                }
-
-                .slideBox {
-                    @include px2vwm("width", 944);
-                    @include px2vwm("margin-bottom", 172);
-
-                    .slideDiv {
-                        &.slider-for {
-                            @include px2vwm("margin-bottom", 44);
-                            box-shadow: 3px 3px 24px 10px #57291223;
-
-                            .slideItem {
-                                @include px2vwm("height", 584);
-                            }
+                        .circle {
+                            @include px2vwm("width", 17);
+                            @include px2vwm("height", 17);
+                            @include px2vwm("margin-right", 24);
+                            margin-left: 0;
                         }
-                        &.slider-nav {
-                            @include px2vwm("width", 576);
-
-                            .slick-list {
-                                @include px2vwm("height", 120);
-                            }
-
-                            .slideItem {
-                                @include px2vwm("width", 192);
-                                @include px2vwm("height", 120);
-                            }
-
-                            .slick-arrow {
-                                @include px2vwm("width", 80);
-                                @include px2vwm("height", 80);
-                                @include px2vwm("top", 24);
-                                @include px2vwm("background-position", 34 26);
-                                @include px2vwm("background-size", 15 25);
-
-                                @include px2vwm("left", -124);
-
-                                &.slick-next {
-                                    left: auto;
-                                    @include px2vwm("right", -124);
-                                }
-                            }
-
-                            .slick-track {
-                                // transform: translate3d(-196px, 0px, 0px) !important;
-                            }
-                        }
-                    }
-                }
-
-                .scrollGuideBox {
-                    position: relative;
-                    @include px2vwm("margin-bottom", 80);
-
-                    > div {
-                        align-items: center;
-                    }
-                    p {
-                        @include px2vwm("font-size", 34);
-                    }
-
-                    .imgBox {
-                        top: -1px;
-                        @include px2vwm("width", 50);
-                        @include px2vwm("height", 50);
-                        @include px2vwm("margin-right", 34);
-                    }
-
-                    img {
-                        @include px2vwm("width", 49);
-                        @include px2vwm("height", 27);
                     }
                 }
             }
+            .footerBox {
+                @include px2vwm("width", 700);
+                @include px2vwm("height", 120);
 
-            .dividerBox {
-                width: 100%;
+                .bgImg {
+                    width: 100%;
+                    height: 100%;
+                }
 
-                .divider {
-                    @include px2vwm("width", 2);
-                    @include px2vwm("height", 2);
-                    min-width: 1px;
-                    min-height: 1px;
+                .linkList {
+                    @include px2vwm("padding-left", 140);
+
+                    li:not(:last-of-type) {
+                        @include px2vwm("margin-right", 66);
+                    }
+
+                    a {
+                        @include px2vwm("font-size", 32);
+                        img {
+                            @include px2vwm("margin-right", 26);
+                        }
+                    }
+                }
+            }
+            .menuBtnBox {
+                @include px2vwm("top", 60);
+                @include px2vwm("right", 60);
+
+                &.on {
+                    span {
+                    }
+                }
+
+                .menuBtn {
+                    @include px2vwm("width", 110);
+                    @include px2vwm("height", 110);
 
                     span {
-                        background-color: #c9b0a4;
-                    }
+                        @include px2vwm("width", 46);
+                        @include px2vwm("height", 3);
+                        @include px2vwm("transform-origin", 11 1);
 
-                    &.divider0 {
-                        @include px2vwm("top", 164);
-                        @include px2vwm("left", 361);
-                        @include px2vwm("width", 444);
-                    }
-                    &.divider1 {
-                        @include px2vwm("top", 164);
-                        @include px2vwm("left", 803);
-                        @include px2vwm("height", 332);
-                    }
-                    &.divider2 {
-                        display: none;
-                        @include px2vwm("top", 476);
-                        @include px2vwm("right", 234);
-                        @include px2vwm("height", 712);
-                    }
-                    &.divider3 {
-                        display: none;
-                        @include px2vwm("top", 1186);
-                        @include px2vwm("width", 234);
+                        @include px2vwm("top", 45);
+                        @include px2vwm("left", 34);
+
+                        &:last-of-type {
+                            @include px2vwm("top", 60);
+                        }
                     }
                 }
             }
+            .menuBox {
+                .menuList {
+                    li {
+                        @include px2vwm("font-size", 50);
 
-            .bgBox {
+                        &:not(:last-of-type) {
+                            @include px2vwm("margin-bottom", 90);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .moviePopup {
+        .iframeBox {
+            @include px2vwm("width", 950);
+
+            > div {
                 width: 100%;
+            }
+
+            button {
+                img {
+                    @include px2vwm("width", 54);
+                    @include px2vwm("height", 54);
+                }
+
+                @include px2vwm("margin-bottom", 40);
+            }
+
+            iframe {
+                width: 100%;
+                height: auto;
+                @include px2vwm("min-height", 534);
+            }
+        }
+
+        .descriptionBox {
+            width: 100%;
+            height: 240px;
+            overflow-x: hidden;
+            overflow-y: auto;
+            padding: 24px;
+
+            .descriptionTitle {
+                font-size: 18px;
+            }
+            .descriptionContent {
+                font-size: 14px;
+                line-height: 23px;
             }
         }
     }

@@ -2,7 +2,7 @@
 @import "./font.scss";
 
 // pc
-#ms_ray-teaser-wrap {
+#ms_ray-launching-wrap {
     @import "./reset.scss";
     @import "./common.scss";
 
@@ -11,467 +11,565 @@
     position: relative;
     overflow: hidden;
 
-    .container {
-        color: #03141f;
+    .ms_container {
+        color: #fff;
         position: relative;
         width: 100%;
         max-width: 1920px;
         overflow: hidden;
+        height: calc(100vh - 159px);
+        min-height: 580px;
+        background: #000;
 
-        .section1 {
-            width: 100%;
-            max-width: 1920px;
-            overflow: hidden;
-            height: calc(100vh - 159px);
-            min-height: 580px;
-            background: #000;
+        .sectionSlideBox {
             position: relative;
+            width: 100%;
+            height: 100%;
 
-            > div {
-                position: relative;
-                z-index: 2;
-            }
-
-            .contentBox {
+            .section {
+                position: absolute;
                 width: 100%;
-                margin: auto;
+                height: 100%;
+                top: 0;
+                transition: all 0.3s ease-in;
+                z-index: 1;
 
-                max-width: 1480px;
-                padding: 87px 20px 0;
-                box-sizing: border-box;
-
-                .main {
-                    font-size: 35px;
-                    font-weight: 700;
-                    margin-bottom: 20px;
-                }
-
-                .sub {
-                    font-size: 18px;
-                    font-weight: 300;
-                    margin-right: 14px;
-                }
-
-                .divider {
-                    width: 450px;
-                    height: 1px;
-                    position: relative;
+                &.top {
+                    top: -100%;
                     overflow: hidden;
+                }
 
-                    &.on {
-                        span {
-                            left: 0;
+                .contentBox {
+                    width: 100%;
+                    max-width: 1480px;
+                    margin: auto;
+                    padding: 114px 15px 0;
+                    color: #fff;
+                    position: relative;
+                    z-index: 2;
+                    box-sizing: border-box;
+
+                    .copywritingBox {
+                        width: 100%;
+                        max-width: 1480px;
+                        margin: auto;
+                        padding: 114px 15px 0;
+                        box-sizing: border-box;
+                        color: #111a24;
+                        margin-bottom: 220px;
+
+                        &.white {
+                            color: #fff;
+                        }
+
+                        .main {
+                            font-size: 27px;
+                            font-weight: 700;
+                            margin-bottom: 24px;
+
+                            &.galleryText {
+                                opacity: 0;
+                                transition: all 0.4s;
+
+                                &.on {
+                                    opacity: 1;
+                                }
+                            }
+                        }
+
+                        .sub1 {
+                            font-size: 36px;
+                            font-weight: 700;
+                            margin-bottom: 40px;
+                        }
+
+                        .sub2 {
+                            font-size: 16px;
+                            font-weight: 300;
+
+                            &:not(:last-of-type) {
+                                margin-bottom: 10px;
+                            }
                         }
                     }
 
-                    span {
-                        display: block;
-                        position: absolute;
-                        top: 0;
-                        left: -100%;
-                        transition: all 0.8s;
+                    .movieListBox {
+                        .movieList {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
 
+                            li {
+                                width: 246px;
+                                height: 196px;
+                                position: relative;
+                                cursor: pointer;
+
+                                &:not(:last-of-type) {
+                                    margin-right: 30px;
+                                }
+
+                                &:hover {
+                                    .nameBox {
+                                        opacity: 0;
+                                    }
+                                    .thumbnail {
+                                        top: 0;
+                                        height: 100%;
+
+                                        .bg,
+                                        .dim {
+                                            opacity: 1;
+                                        }
+                                    }
+                                }
+
+                                .name {
+                                    color: #fff;
+                                    font-size: 18px;
+                                }
+
+                                .nameBox {
+                                    position: absolute;
+                                    top: 48px;
+                                    left: 0;
+                                    width: 100%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    opacity: 1;
+                                    transition: all 0.1s;
+
+                                    img {
+                                        margin-left: 16px;
+                                    }
+                                }
+
+                                .thumbnail {
+                                    position: relative;
+                                    width: 100%;
+                                    height: 4px;
+
+                                    background: #fff;
+                                    top: 50%;
+                                    border-radius: 4px;
+                                    transition: all 0.4s;
+                                    overflow: hidden;
+
+                                    .bg {
+                                        opacity: 0;
+                                        transition: all 0.2s;
+                                    }
+
+                                    .dim {
+                                        opacity: 0;
+                                        transition: all 0.2s;
+
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        width: 100%;
+                                        height: 50%;
+                                        background: linear-gradient(#111a24, transparent);
+                                    }
+
+                                    .name {
+                                        position: absolute;
+                                        top: 30px;
+                                        left: 0;
+                                        z-index: 2;
+                                        text-align: center;
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .galleryBox {
+                    position: absolute;
+                    z-index: 2;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+
+                    > div {
+                        position: absolute;
+                        top: 50%;
+                        width: 100%;
+                    }
+
+                    .gallery {
+                        display: flex;
+                        position: absolute;
+                        align-items: center;
+                        left: 50%;
+
+                        > li {
+                            &:not(:last-of-type) {
+                                margin-right: 210px;
+                            }
+                        }
+                    }
+                }
+
+                .galleryController {
+                    position: absolute;
+                    z-index: 3;
+                    bottom: 80px;
+                    width: 100%;
+                    max-width: 1440px;
+                    padding: 0 100px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    box-sizing: border-box;
+
+                    .dragIcon {
+                        position: absolute;
+                        left: 74px;
+                        transform: translateX(-50%);
+                        top: -100px;
+                        animation: dragIcon 0.7s ease-in infinite alternate;
+                        opacity: 0;
+                        transition: all 0.4s;
+
+                        &.on {
+                            opacity: 1;
+                        }
+
+                        @keyframes dragIcon {
+                            from {
+                                top: -112px;
+                            }
+                            to {
+                                top: -100px;
+                            }
+                        }
+                    }
+
+                    .controlBox {
+                        position: relative;
+                        cursor: pointer;
+                        padding: 4px 0;
+                    }
+
+                    .range {
+                        width: 100%;
+                        height: 4px;
+                        background: #565759;
+                        border-radius: 4px;
+                    }
+
+                    .controller {
+                        width: 148px;
+                        height: 8px;
+                        position: absolute;
+                        z-index: 2;
+                        top: 2px;
+                        left: 0;
+
+                        span {
+                            width: 100%;
+                            height: 100%;
+                            display: block;
+                            border-radius: 2px;
+                            background-color: #fff;
+                        }
+                    }
+                }
+
+                .followCursorBtn {
+                    position: absolute;
+                    z-index: 2;
+
+                    top: 50%;
+                    left: 50%;
+
+                    width: 105px;
+                    height: 105px;
+                    transform: translate(-50%, -50%);
+                    transition: all 0.3s ease-out;
+
+                    cursor: pointer;
+
+                    .bg {
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+
+                        width: 92px;
+                        height: 92px;
+                        transform: translate(-50%, -50%);
+
+                        background: #111a24;
+                        border-radius: 50%;
+                    }
+
+                    p {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
                         width: 100%;
                         height: 100%;
-                        background-color: #03131f;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    .circleBox {
+                        transform-origin: center;
+                        transform: rotateZ(0deg);
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    .circle {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+
+                        animation: circle infinite 8s linear;
+
+                        transform-origin: center;
+                    }
+
+                    @keyframes circle {
+                        from {
+                            transform: rotateZ(0deg);
+                        }
+
+                        to {
+                            transform: rotateZ(360deg);
+                        }
+                    }
+                }
+
+                .bgBox {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+
+                    .blackWrap {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: #000000;
+                        opacity: 0.25;
+                        transition: all 0.5s;
+                    }
+
+                    img {
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+
+                        width: auto;
+                        height: 100%;
+                        min-width: 100%;
+                        min-height: 100%;
+
+                        object-fit: cover;
+                    }
+
+                    video {
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        width: auto;
+                        min-width: 1440px;
+                        min-height: 100%;
+
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            button {
+                position: relative;
+                z-index: 2;
+            }
+        }
+
+        .fixedBox {
+            .listBox {
+                position: absolute;
+                z-index: 2;
+                bottom: 34px;
+                left: 50%;
+                margin-left: -722px;
+                transform: translateY(-50%);
+
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+
+                    > li {
+                        display: flex;
+                        opacity: 0.2;
+                        margin-bottom: 13px;
+                        cursor: pointer;
+                        align-items: center;
+
+                        &.on {
+                            opacity: 1;
+                        }
+
+                        .circle {
+                            display: block;
+                            width: 9px;
+                            height: 9px;
+                            background: #fff;
+                            border-radius: 50%;
+                        }
                     }
                 }
             }
 
             .footerBox {
                 position: absolute;
-                left: 50%;
-                bottom: 50px;
-                transform: translateX(-50%);
-
-                .scrollGuideBox {
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    display: flex;
-                    align-items: center;
-
-                    > div {
-                        display: flex;
-                    }
-
-                    p {
-                        font-size: 15px;
-                    }
-
-                    .imgBox {
-                        margin-right: 9px;
-                        width: 17px;
-                        height: 18px;
-                        display: inline-block;
-                        overflow: hidden;
-                        position: relative;
-                        top: -3px;
-                    }
-
-                    img {
-                        position: relative;
-                        top: 0;
-                        animation: 2s infinite ease-in-out downArrow;
-                        width: 17px;
-                        height: 10px;
-                    }
-
-                    @keyframes downArrow {
-                        0% {
-                            top: -300%;
-                        }
-                        40% {
-                            top: 10%;
-                        }
-                        50% {
-                            top: 20%;
-                        }
-                        70% {
-                            top: 20%;
-                        }
-                        100% {
-                            top: 200%;
-                        }
-                    }
-                }
-            }
-
-            .bgBox {
-                position: absolute;
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                overflow: hidden;
-                z-index: 1;
-
-                .blackWrap {
-                    position: absolute;
-                    left: 0;
-                    top: 0;
-                    width: 100%;
-                    height: 100%;
-                    background: #000000;
-                    opacity: 0.3;
-                    transition: all 0.5s;
-                }
-
-                img {
-                    position: absolute;
-                    left: 50%;
-                    top: 50%;
-                    transform: translate(-50%, -50%);
-
-                    width: auto;
-                    height: 100%;
-                    min-width: 100%;
-                    min-height: 100%;
-                }
-
-                video {
-                    position: absolute;
-                    left: 50%;
-                    top: 50%;
-                    transform: translate(-50%, -50%);
-                    width: auto;
-                    min-width: 1440px;
-                    min-height: 100%;
-                }
-            }
-        }
-
-        .section2 {
-            height: 860px;
-            position: relative;
-            overflow: hidden;
-
-            .contentBox {
-                width: 100%;
-                margin: auto;
-                max-width: 1480px;
-                padding: 0 20px;
-                box-sizing: border-box;
-                margin-top: 107px;
-                position: relative;
-                z-index: 3;
-
-                .main {
-                    position: absolute;
-                    top: 0;
-                    left: 20px;
-                    color: #0a0b0e;
-                    font-size: 30px;
-                }
-
-                .slideBox {
-                    width: 840px;
-                    margin: auto;
-
-                    .navWrap {
-                        width: 100%;
-                        position: relative;
-                    }
-
-                    .slideDiv {
-                        &.slider-for {
-                            box-shadow: 5px 5px 40px 20px #57291223;
-                            margin-bottom: 30px;
-
-                            .slideItem {
-                                height: 520px;
-                                img {
-                                    width: 100%;
-                                    height: 100%;
-                                }
-                            }
-                        }
-
-                        &.slider-nav {
-                            width: 495px;
-                            margin: auto;
-
-                            .slick-list {
-                                padding: 0 !important;
-                                height: 103px;
-                            }
-
-                            .slideItem {
-                                position: relative;
-                                height: 103px;
-                                cursor: pointer;
-
-                                display: none;
-
-                                &[data-slick-index="0"],
-                                &[data-slick-index="1"],
-                                &[data-slick-index="2"] {
-                                    display: block;
-                                }
-
-                                img {
-                                    width: 100%;
-                                    height: 100%;
-                                }
-                            }
-
-                            .wrap {
-                                opacity: 0;
-                                background-color: #b98484;
-                                transition: all 0.15s;
-                                height: 100%;
-                                width: 100%;
-                                top: 0;
-                                left: 0;
-                                position: absolute;
-                            }
-
-                            .slick-active {
-                                .wrap {
-                                    opacity: 0.5;
-                                }
-                            }
-
-                            .slick-track {
-                                transform: translate3d(0, 0px, 0px) !important;
-                                width: 100% !important;
-                            }
-
-                            .slick-arrow {
-                                position: absolute;
-
-                                top: 26px;
-                                left: -80px;
-
-                                width: 50px;
-                                height: 50px;
-                                border-radius: 50%;
-                                z-index: 99;
-                                transform: rotateY(0deg);
-
-                                background-color: #fff;
-                                background-image: url(../static/icon_slidearrow_right.png);
-
-                                background-position: 22px 18px;
-                                background-repeat: no-repeat;
-
-                                transition: all 0.1s;
-
-                                &:hover {
-                                    background-color: #e3dbd2;
-                                }
-
-                                &::before {
-                                    display: none;
-                                }
-
-                                &.slick-prev {
-                                    transform: rotateY(180deg);
-                                }
-
-                                &.slick-next {
-                                    right: -80px;
-                                    left: auto;
-                                }
-                            }
-                        }
-                    }
-                }
-
-                .scrollGuideBox {
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    display: flex;
-                    align-items: center;
-
-                    > div {
-                        display: flex;
-                    }
-
-                    p {
-                        font-size: 15px;
-                    }
-
-                    .imgBox {
-                        margin-right: 9px;
-                        width: 17px;
-                        height: 18px;
-                        display: inline-block;
-                        overflow: hidden;
-                        position: relative;
-                        top: -5px;
-                    }
-
-                    img {
-                        position: relative;
-                        top: 0;
-                        animation: 2s infinite ease-in-out upArrow;
-                        width: 17px;
-                        height: 10px;
-                        transform: rotateX(180deg);
-                    }
-
-                    @keyframes upArrow {
-                        0% {
-                            top: 200%;
-                        }
-                        40% {
-                            top: 20%;
-                        }
-                        50% {
-                            top: 20%;
-                        }
-                        70% {
-                            top: 10%;
-                        }
-                        100% {
-                            top: -300%;
-                        }
-                    }
-                }
-            }
-
-            .dividerBox {
-                position: absolute;
-                top: 0;
-                left: 50%;
-                transform: translateX(-50%);
-                width: 1920px;
-                height: 100%;
-                overflow: hidden;
+                bottom: 0;
+                right: 0;
                 z-index: 2;
 
-                .divider {
+                display: flex;
+                align-items: center;
+
+                .linkList {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding-left: 90px;
                     position: absolute;
-                    overflow: hidden;
-                    width: 2px;
-                    height: 2px;
+                    left: 0;
+                    top: 0;
+                    height: 100%;
 
-                    span {
-                        display: block;
-                        background-color: #ddd2ce;
-                        width: 100%;
-                        height: 100%;
-                        position: relative;
-                        left: 0;
-                        top: 0;
-                        transition: all 0.4s;
+                    li:not(:last-of-type) {
+                        margin-right: 30px;
                     }
 
-                    &.divider0 {
-                        top: 617px;
-                        left: 0;
-                        width: 273px;
+                    a {
+                        display: flex;
+                        align-items: center;
+                        font-size: 14px;
 
-                        &.on {
-                            span {
-                                left: 0;
-                            }
-                        }
-                        span {
-                            left: -100%;
-                        }
-                    }
-                    &.divider1 {
-                        top: 175px;
-                        left: 271px;
-                        height: 444px;
-                        &.on {
-                            span {
-                                top: 0;
-                            }
-                        }
-                        span {
-                            top: -100%;
-                        }
-                    }
-                    &.divider2 {
-                        top: 0;
-                        right: 271px;
-                        height: 712px;
-                        &.on {
-                            span {
-                                top: 0;
-                            }
-                        }
-                        span {
-                            top: -100%;
-                        }
-                    }
-                    &.divider3 {
-                        top: 710px;
-                        right: 0;
-                        width: 273px;
-                        &.on {
-                            span {
-                                left: 0;
-                            }
-                        }
-                        span {
-                            left: -100%;
+                        img {
+                            margin-right: 12px;
                         }
                     }
                 }
             }
 
-            .bgBox {
+            .menuBtnBox {
+                position: absolute;
+                top: 58px;
+                right: 50%;
+                margin-right: -722px;
+                z-index: 4;
+
+                .menuBtn {
+                    width: 56px;
+                    height: 56px;
+                    background: #111a24;
+                    border-radius: 4px;
+                    transition: all 0.3s;
+                    position: relative;
+                    cursor: pointer;
+
+                    &.on {
+                        background: #fff;
+
+                        span {
+                            background-color: #111a24;
+
+                            transform: rotateZ(45deg);
+
+                            &:last-of-type {
+                                transform: rotateZ(-45deg);
+                            }
+                        }
+                    }
+
+                    span {
+                        width: 24px;
+                        height: 2px;
+                        border-radius: 2px;
+                        transform-origin: 6px 2px;
+
+                        position: absolute;
+                        top: 23px;
+                        left: 17px;
+
+                        display: block;
+                        background-color: #fff;
+                        transition: all 0.3s;
+
+                        &:last-of-type {
+                            top: 31px;
+                        }
+                    }
+                }
+            }
+
+            .menuBox {
                 position: absolute;
                 top: 0;
-                left: 50%;
-                transform: translateX(-50%);
-                width: 1920px;
+                left: 0;
+                width: 100%;
                 height: 100%;
-                overflow: hidden;
-                z-index: 1;
-                background: #f0ecea;
+                z-index: 3;
+                display: none;
 
-                img {
+                &.on {
+                    display: block;
+                }
+
+                .bgDiv {
                     position: absolute;
-                    left: 0;
                     top: 0;
+                    left: 0;
                     width: 100%;
                     height: 100%;
+                    background-color: #000;
+                    opacity: 0.6;
+                }
+
+                .menuList {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+
+                    li {
+                        color: #fff;
+                        transition: all 0.15s;
+                        font-size: 25px;
+                        cursor: pointer;
+
+                        opacity: 0.6;
+
+                        &:not(:last-of-type) {
+                            margin-bottom: 75px;
+                        }
+
+                        &:hover {
+                            opacity: 0.95;
+                        }
+                    }
                 }
             }
         }
@@ -485,9 +583,102 @@
         }
 
         .tween2 {
-            position: relative;
-            top: 30px;
             opacity: 0;
+        }
+    }
+
+    .moviePopup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+
+        &.on {
+            display: block;
+        }
+
+        .iframeBox {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+            width: 1080px;
+            margin: auto;
+
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+
+            button {
+                margin-bottom: 52px;
+            }
+
+            iframe {
+                width: 1080px;
+                height: 800px;
+            }
+
+            > div {
+                display: flex;
+            }
+        }
+
+        .bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            opacity: 0.6;
+        }
+
+        .descriptionBox {
+            overflow-y: auto;
+            width: 300px;
+            padding: 50px 30px;
+            background: #fff;
+            box-sizing: border-box;
+            display: none;
+
+            &.on {
+                display: inline-block;
+            }
+
+            .descriptionTitle {
+                font-family: "kiaL";
+                font-size: 28px;
+                line-height: 1.3em;
+                word-break: keep-all;
+                color: rgb(5, 20, 31);
+
+                > div {
+                    display: none;
+
+                    &.on {
+                        display: block;
+                    }
+                }
+            }
+
+            .descriptionContent {
+                font-family: "kiaL";
+                font-size: 14px;
+                line-height: 20px;
+                margin-top: 30px;
+                color: rgb(5, 20, 31);
+
+                > div {
+                    display: none;
+
+                    &.on {
+                        display: block;
+                    }
+                }
+            }
         }
     }
 
